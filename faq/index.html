@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>关于拾得 Ensō 的常见问题 | 拾得 Ensō</title>
+  <meta name="description" content="直接回答拾得的数据保存、账户、网络、离线成书、双语内容、文化坐标和当前发布状态。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://decnet105.github.io/enso-shide/faq/">
+  <link rel="alternate" type="text/markdown" href="https://decnet105.github.io/enso-shide/faq.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <link rel="stylesheet" href="https://decnet105.github.io/enso-shide/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="关于拾得 Ensō 的常见问题">
+  <meta property="og:description" content="直接回答拾得的数据保存、账户、网络、离线成书、双语内容、文化坐标和当前发布状态。">
+  <meta property="og:url" content="https://decnet105.github.io/enso-shide/faq/">
+  <meta property="og:image" content="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"拾得的回忆保存在哪里？","acceptedAnswer":{"@type":"Answer","text":"核心 Memory、Profile、Keepsake 和 CompanionState 以 iPhone 上的 SwiftData 为权威源。"}},{"@type":"Question","name":"拾得当前需要账户吗？","acceptedAnswer":{"@type":"Answer","text":"需要。当前 ContentView 在进入首跑流程和主界面前检查登录状态。"}},{"@type":"Question","name":"拾得是否会使用网络？","acceptedAnswer":{"@type":"Answer","text":"会。账户、公共文化内容、在线陪聊、AI 成书和部分旧同步路径使用网络；本机成书与核心 SwiftData 存储是端上路径。"}},{"@type":"Question","name":"没有 AI 服务时还能生成书吗？","acceptedAnswer":{"@type":"Answer","text":"可以走本机成书路径。AI 轨失败或未通过 BookEnvelope 验证时会回落到本机轨。"}},{"@type":"Question","name":"拾得如何处理中文与英文？","acceptedAnswer":{"@type":"Answer","text":"Memory 和成书协议保留中文与英文内容字段，目标是支持海外华语家庭的中英对照阅读。"}},{"@type":"Question","name":"文化坐标会写进私人回忆吗？","acceptedAnswer":{"@type":"Answer","text":"公共文化条目只读下发。用户盖印时保存的是端上私域快照和关联标识，不应把用户自述回写公共文化库。"}},{"@type":"Question","name":"拾得已经在 App Store 上线了吗？","acceptedAnswer":{"@type":"Answer","text":"本仓库目前没有可核验的公开 App Store 下载 URL，因此 GEO 构建默认不生成下载按钮。"}},{"@type":"Question","name":"为什么官网提供 Markdown 页面？","acceptedAnswer":{"@type":"Answer","text":"HTML 与 Markdown 由同一结构化内容生成，方便辅助工具、搜索系统和读者以低噪声格式读取，并降低两套文案不一致的风险。"}}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="https://decnet105.github.io/enso-shide/">拾得 Ensō</a>
+    <nav aria-label="主导航"><a href="https://decnet105.github.io/enso-shide/">首页</a><a href="https://decnet105.github.io/enso-shide/features/">功能</a><a href="https://decnet105.github.io/enso-shide/privacy/">隐私边界</a><a href="https://decnet105.github.io/enso-shide/book-engine/">成书引擎</a><a href="https://decnet105.github.io/enso-shide/evidence/">事实证据</a><a href="https://decnet105.github.io/enso-shide/faq/" aria-current="page">问答</a></nav>
+    
+  </header>
+  <main id="main"><p class="eyebrow">直接回答</p><h1>关于拾得 Ensō 的常见问题</h1><p class="lede">下面的回答以 2026-06-21 的仓库状态为准。后续能力变化需要同步更新代码证据与事实核验日期。</p><section><h2>常见问题</h2><div class="faq-list"><details><summary>拾得的回忆保存在哪里？</summary><p>核心 Memory、Profile、Keepsake 和 CompanionState 以 iPhone 上的 SwiftData 为权威源。</p></details><details><summary>拾得当前需要账户吗？</summary><p>需要。当前 ContentView 在进入首跑流程和主界面前检查登录状态。</p></details><details><summary>拾得是否会使用网络？</summary><p>会。账户、公共文化内容、在线陪聊、AI 成书和部分旧同步路径使用网络；本机成书与核心 SwiftData 存储是端上路径。</p></details><details><summary>没有 AI 服务时还能生成书吗？</summary><p>可以走本机成书路径。AI 轨失败或未通过 BookEnvelope 验证时会回落到本机轨。</p></details><details><summary>拾得如何处理中文与英文？</summary><p>Memory 和成书协议保留中文与英文内容字段，目标是支持海外华语家庭的中英对照阅读。</p></details><details><summary>文化坐标会写进私人回忆吗？</summary><p>公共文化条目只读下发。用户盖印时保存的是端上私域快照和关联标识，不应把用户自述回写公共文化库。</p></details><details><summary>拾得已经在 App Store 上线了吗？</summary><p>本仓库目前没有可核验的公开 App Store 下载 URL，因此 GEO 构建默认不生成下载按钮。</p></details><details><summary>为什么官网提供 Markdown 页面？</summary><p>HTML 与 Markdown 由同一结构化内容生成，方便辅助工具、搜索系统和读者以低噪声格式读取，并降低两套文案不一致的风险。</p></details></div></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="https://decnet105.github.io/enso-shide/evidence/"><strong>事实证据表</strong><span>拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。</span></a><a class="text-card" href="https://decnet105.github.io/enso-shide/features/"><strong>功能说明</strong><span>从 SwiftData 记忆模型、文化坐标、足迹地图到本机成书，逐项说明拾得当前已落地能力及联网要求。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li><a href="https://decnet105.github.io/enso-shide/evidence/">应用入口（内部代码审计）</a></li><li><a href="https://decnet105.github.io/enso-shide/evidence/">成书网关（内部代码审计）</a></li></ol></section></main>
+  <footer>
+    <p>公开说明以已落地代码为准；愿景、实验功能与已上线能力分开标注。</p>
+    <p><a href="https://decnet105.github.io/enso-shide/faq.md">阅读本页 Markdown</a> · 事实核验日期 2026-06-21</p>
+  </footer>
+</body>
+</html>

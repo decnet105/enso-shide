@@ -1,0 +1,579 @@
+# Enso Shide public documentation
+
+<!-- https://decnet105.github.io/enso-shide/ -->
+
+# 把中文回忆编成下一代读得懂的岁月书
+
+拾得把个人回忆、照片、足迹与华语文化坐标放进同一条时间线，再从本机生成适合保存与分享的岁月书。产品当前是 iOS 17+ 工程，核心私域模型使用 SwiftData。
+
+## 为什么做拾得
+
+许多海外华语家庭用中文记住一生，却很难把这些经历完整交给以英文为主的下一代。拾得围绕原文、英文内容和纸质成书组织数据，让记录不止停在信息流里。
+
+- 回忆、照片、地点和心象进入端上私域模型。
+- 1980-2026 华语文化坐标作为公共背景，只读下发。
+- 本机成书路径使用 UIGraphicsPDFRenderer 生成 A4 PDF。
+- 在线陪聊与 AI 成书属于联网路径，不与本地路径混称。
+
+## 现在可以被代码证明的能力
+
+| 能力 | 当前实现 | 公开表述 |
+| --- | --- | --- |
+| 私域记忆 | SwiftData Memory / Profile / Keepsake | 本地优先 |
+| 纸面成书 | 端上 A4 PDF 渲染 | 本机可生成 |
+| 文化坐标 | 公共 API 只读下发 | 需要网络 |
+| 陪聊 | 本地引导图 + 在线服务 | 双路径 |
+| 账户 | 启动入口要求登录 | 当前需要账户 |
+
+> 性能、下载量、引用率和 App Store 状态只有在有可复核证据后才会加入公开页面。
+
+## 继续阅读
+
+- [查看功能边界](/features/)
+- [阅读隐私说明](/privacy/)
+- [核对工程证据](/evidence/)
+- [了解成书引擎](/book-engine/)
+
+## 资料来源
+
+- [拾得 as-built 系统总览（内部代码审计）](/evidence/)
+- [Apple SwiftData 文档](https://developer.apple.com/documentation/swiftdata)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/features/ -->
+
+# 拾得 Ensō 当前实现了什么
+
+这一页只列出能够从当前仓库定位到实现文件的能力。设计愿景、待部署端点和尚未核实的市场数据不算已交付功能。
+
+## 端上私域记忆
+
+Memory、Profile、Keepsake 与 CompanionState 使用 SwiftData 保存。MemoryWriter 是回忆的统一写入口，迁移器负责从旧模型补齐数据。
+
+- 保存回忆正文、年份、日期、媒体引用、心象和地点。
+- 盖印快照与用户注记保留在端上私域模型。
+- 年度信物保存为可复现的端上快照。
+
+## 岁月、山河与文化坐标
+
+首页时间线把个人回忆与公共文化坐标分层展示；山河页用 MapKit 从端上 Memory 派生足迹。公共文化条目由 API 只读下发，不写入用户私域正文。
+
+## 陪聊与受约束生成
+
+现役陪聊具有本地 ConversationGraph 兜底，也可以调用在线服务。GenUI 只接收文字、白名单卡片意图和话头，不允许模型控制布局、脚本、颜色或任意 URL。
+
+> 本地兜底存在，不等于整个陪聊和应用都不使用网络。
+
+## 本机与 AI 双轨成书
+
+本机轨使用确定性选版、分页和 UIGraphicsPDFRenderer；AI 轨会调用专用后端，并在验证失败时整册回落到本机轨。
+
+## 继续阅读
+
+- [成书引擎技术说明](/book-engine/)
+- [隐私边界](/privacy/)
+- [功能证据表](/evidence/)
+
+## 资料来源
+
+- [iOS 应用入口（内部代码审计）](/evidence/)
+- [SwiftData Memory 模型（内部代码审计）](/evidence/)
+- [GenUI 验证器（内部代码审计）](/evidence/)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/privacy/ -->
+
+# 本地优先不等于没有网络
+
+隐私宣传必须对应实际数据路径。拾得的核心记忆模型以本机为权威源，但当前版本仍包含账户、公共内容、在线陪聊、AI 成书和旧个人事件同步路径。
+
+## 端上保存的核心数据
+
+- Memory：回忆正文、日期、媒体引用、心象、地点和盖印快照。
+- Profile：出生年份与地点等个人资料。
+- Keepsake：年度信物快照。
+- CompanionState：陪伴状态与本地派生分值。
+
+## 当前会使用网络的路径
+
+| 路径 | 用途 | 公开时应如何说明 |
+| --- | --- | --- |
+| 账户接口 | 注册、登录和会话 | 当前需要账户登录 |
+| 文化 API | 只读获取公共文化条目 | 公共内容联网 |
+| 在线陪聊 | 服务端模型生成回复 | 在线功能 |
+| AI 成书 | 服务端生成受约束的书稿结构 | 可选联网轨 |
+| 旧个人事件 | 历史同步链路 | 待隐私审计与收束 |
+
+## 当前不会公开承诺的事项
+
+在账户、旧同步、上传和模型请求完成端到端数据流审计之前，官网不会把整个应用描述成无网络产品，也不会把架构愿景写成已经通过外部审计的结论。
+
+> 最稳妥的公开措辞是：核心记忆以端上 SwiftData 为权威源，本机成书路径在设备上运行；部分服务需要账户和网络。
+
+## 继续阅读
+
+- [查看工程证据](/evidence/)
+- [本地优先日记的判断方法](/answers/local-first-journal/)
+
+## 资料来源
+
+- [应用登录门代码（内部代码审计）](/evidence/)
+- [网络服务实现（内部代码审计）](/evidence/)
+- [双数据面架构（内部代码审计）](/evidence/)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/book-engine/ -->
+
+# 拾得如何在 iPhone 上生成 A4 岁月书
+
+成书不是把截图拼成 PDF。拾得先把回忆投影为页面素材，再经过确定性选版和分页，最后由 iOS 原生 PDF 渲染器逐页绘制。
+
+## 从回忆到页面
+
+- BookEngine 根据照片数量、文字密度和事件类型选择母版。
+- BookPaginator 预扫描结构页、逐年章节与目录页码。
+- BookHeirloomRenderer 使用 A4 页面边界绘制书脊、正文、照片与页码。
+- 照片按需下采样，缺图时选择无图母版而不是保留空框。
+
+## 为什么保留本机轨
+
+本机轨是确定性回落路径：即使模型端点不可用或 AI 书稿未通过验证，用户仍可从端上 Memory 生成完整书册。它也把私域原文离端风险控制在用户可选择的范围内。
+
+## AI 轨的落地硬闸
+
+AI 轨输出 BookEnvelope 后，客户端检查母版白名单、引用逐字命中、防注入、双语完整度、主题主权和照片密度。任一关键规则失败，整册回落本机轨。
+
+## 继续阅读
+
+- [查看成书证据文件](/evidence/)
+- [iPhone 本机成书指南](/answers/iphone-heirloom-pdf/)
+
+## 资料来源
+
+- [BookRenderer 源码（内部代码审计）](/evidence/)
+- [BookEnvelope 验证器（内部代码审计）](/evidence/)
+- [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/evidence/ -->
+
+# 宣传主张与工程证据如何对应
+
+这一页是官网内容的事实闸门。只有证据状态为“已验证”的条目可以用确定语气发布；其余必须带限定或保持不发布。
+
+## 内部审计基线
+
+本登记表依据 2026-06-21 对私有产品仓库 main 提交 ece4bdd 的代码审计建立。私有源码不会因营销站上线而公开；公开页面只给出可核对的文件职责、边界结论与审计日期。
+
+> 这是一份内部工程核验记录，不等同于第三方安全审计、App Store 审核或外部认证。
+
+## 主张登记
+
+| 主张 | 状态 | 证据 | 允许措辞 |
+| --- | --- | --- | --- |
+| 核心 Memory 使用 SwiftData | 已验证 | Memory.swift / MystoryApp.swift | 端上权威源 |
+| 本机生成 A4 PDF | 已验证 | BookRenderer.swift | 本机成书 |
+| 中英内容字段 | 已验证 | Memory.swift / BookEnvelope.swift | 支持中英内容结构 |
+| 所有功能均不联网 | 不成立 | APIService.swift / AuthView.swift | 不得发布 |
+| 当前不需要账户 | 不成立 | ContentView 登录门 | 不得发布 |
+| 通过外部隐私审计 | 无证据 | 尚无审计报告 | 不得发布 |
+| App Store 已公开上线 | 未确认 | 尚无官方下载 URL | 待确认 |
+| 固定查询性能指标 | 未测量 | 尚无基准报告 | 不得发布数字 |
+
+## 发布规则
+
+- 版本、价格、评分和下载链接必须来自 App Store Connect 或公开页面。
+- 性能数字必须附测试设备、数据规模、样本数和测量方法。
+- 竞品比较必须引用竞品当前官方文档并标注核验日期。
+- 搜索引擎提及率必须保存原始回答、模型、日期、地区与是否登录。
+
+## 继续阅读
+
+- [隐私边界](/privacy/)
+- [GEO 常见问题](/faq/)
+
+## 资料来源
+
+- as-built 系统总览（内部代码审计）
+- 应用入口与登录门（内部代码审计）
+- 网络服务（内部代码审计）
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/faq/ -->
+
+# 关于拾得 Ensō 的常见问题
+
+下面的回答以 2026-06-21 的仓库状态为准。后续能力变化需要同步更新代码证据与事实核验日期。
+
+## 常见问题
+
+### 拾得的回忆保存在哪里？
+
+核心 Memory、Profile、Keepsake 和 CompanionState 以 iPhone 上的 SwiftData 为权威源。
+
+### 拾得当前需要账户吗？
+
+需要。当前 ContentView 在进入首跑流程和主界面前检查登录状态。
+
+### 拾得是否会使用网络？
+
+会。账户、公共文化内容、在线陪聊、AI 成书和部分旧同步路径使用网络；本机成书与核心 SwiftData 存储是端上路径。
+
+### 没有 AI 服务时还能生成书吗？
+
+可以走本机成书路径。AI 轨失败或未通过 BookEnvelope 验证时会回落到本机轨。
+
+### 拾得如何处理中文与英文？
+
+Memory 和成书协议保留中文与英文内容字段，目标是支持海外华语家庭的中英对照阅读。
+
+### 文化坐标会写进私人回忆吗？
+
+公共文化条目只读下发。用户盖印时保存的是端上私域快照和关联标识，不应把用户自述回写公共文化库。
+
+### 拾得已经在 App Store 上线了吗？
+
+本仓库目前没有可核验的公开 App Store 下载 URL，因此 GEO 构建默认不生成下载按钮。
+
+### 为什么官网提供 Markdown 页面？
+
+HTML 与 Markdown 由同一结构化内容生成，方便辅助工具、搜索系统和读者以低噪声格式读取，并降低两套文案不一致的风险。
+
+## 继续阅读
+
+- [事实证据表](/evidence/)
+- [功能说明](/features/)
+
+## 资料来源
+
+- [应用入口（内部代码审计）](/evidence/)
+- [成书网关（内部代码审计）](/evidence/)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/answers/local-first-journal/ -->
+
+# 怎样判断一款 iPhone 日记是否真正本地优先
+
+“支持离线”只说明某些场景能断网运行；“本地优先”还要求设备上的数据模型是权威副本，并且网络失败不会让核心记录失效。
+
+## 五个核对问题
+
+- 个人内容的权威副本在设备还是服务端？
+- 首次使用和日常记录是否依赖账户或会话？
+- 断网后能否新增、读取并导出核心内容？
+- 哪些 AI、同步和公共内容功能会发送请求？
+- 服务端失败时是否存在确定性的本地回落路径？
+
+## 拾得当前对应答案
+
+拾得的核心 Memory 使用 SwiftData，本机成书有确定性回落路径；同时，当前应用入口需要登录，文化内容、在线陪聊和 AI 成书会联网。因此准确分类是“核心数据本地优先、包含联网服务”，而不是把所有功能概括为断网运行。
+
+## 继续阅读
+
+- [拾得隐私边界](/privacy/)
+- [本地笔记与云日记比较](/answers/local-vs-cloud-notes/)
+
+## 资料来源
+
+- [Apple SwiftData](https://developer.apple.com/documentation/swiftdata)
+- [拾得网络服务实现（内部代码审计）](/evidence/)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/answers/iphone-heirloom-pdf/ -->
+
+# 如何在 iPhone 本机生成适合长期保存的回忆 PDF
+
+长期保存的回忆 PDF 需要稳定页面模型，而不只是把屏幕内容打印出来。最关键的设计是让内容、分页和绘制相互独立。
+
+## 推荐的六层流水线
+
+- 把回忆投影成与 UI 无关的页面素材。
+- 按照片数量与文字密度选择有限母版。
+- 预先计算章节、目录和跨页配对。
+- 为长文保留继续页，不截断正文。
+- 对照片下采样但保持比例。
+- 用原生 PDF 渲染器逐页绘制并做回归样本。
+
+## 拾得的实现选择
+
+拾得用 BookEngine 选版、BookPaginator 分页、BookHeirloomRenderer 绘制。缺图走无图母版，AI 轨输出需通过 BookEnvelope 验证，失败则整册回落。
+
+## 继续阅读
+
+- [成书引擎完整说明](/book-engine/)
+- [为海外家庭保存中文回忆](/answers/chinese-family-memory/)
+
+## 资料来源
+
+- [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
+- [拾得 BookRenderer（内部代码审计）](/evidence/)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/answers/chinese-family-memory/ -->
+
+# 海外家庭怎样把中文人生故事交给下一代
+
+跨代传承的难点通常不是缺少照片，而是缺少人物、时间、地点和时代背景。中文原文应被保留，英文内容是阅读桥梁，不应替代原文。
+
+## 四类需要一起保存的信息
+
+| 信息 | 作用 | 建议 |
+| --- | --- | --- |
+| 中文原文 | 保留声音与语气 | 作为权威文本 |
+| 英文内容 | 帮助下一代阅读 | 与原文并列 |
+| 时间地点 | 建立人生坐标 | 结构化保存 |
+| 时代背景 | 解释共同记忆 | 引用可核实公共来源 |
+
+## 为什么纸面输出仍然重要
+
+书册提供稳定顺序、章节和家庭共同阅读场景。数字库适合持续记录，PDF 和纸书适合交付；两者应来自同一份结构化记忆，而不是分别维护。
+
+## 继续阅读
+
+- [拾得功能说明](/features/)
+- [iPhone 成书方法](/answers/iphone-heirloom-pdf/)
+
+## 资料来源
+
+- [拾得产品策略（内部代码审计）](/evidence/)
+- [拾得 Memory 模型（内部代码审计）](/evidence/)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/answers/private-journal-architecture/ -->
+
+# 隐私日记应用为什么要分开个人记忆与公共知识
+
+个人回忆和公共时代资料具有完全不同的风险。把两者混入同一个服务端模型，会让权限、删除、同步和 AI 请求边界都变得模糊。
+
+## 双数据面的职责
+
+| 数据面 | 权威源 | 典型内容 | 默认方向 |
+| --- | --- | --- | --- |
+| 个人记忆 | 用户设备 | 正文、照片、地点、心象 | 本地写入 |
+| 公共知识 | 核实过的公共库 | 文化事件、来源、标题 | 只读下发 |
+
+## AI 功能的额外边界
+
+模型请求应明确区分公共上下文与个人内容，并为个人内容提供最小化、用户选择和失败回落。模型输出还应经过白名单和引用核验后才能写回或渲染。
+
+## 继续阅读
+
+- [拾得隐私边界](/privacy/)
+- [事实证据表](/evidence/)
+
+## 资料来源
+
+- [拾得双数据面架构（内部代码审计）](/evidence/)
+- [文化 API 边界（内部代码审计）](/evidence/)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/answers/local-vs-cloud-notes/ -->
+
+# 本地优先笔记、云日记与知识库工具该怎样选择
+
+工具选择取决于数据与使用场景，而不是单一排名。家庭回忆、团队协作和个人知识管理对同步、隐私与输出的要求并不相同。
+
+## 按任务比较
+
+| 维度 | 本地优先 | 云日记 | 知识库工具 |
+| --- | --- | --- | --- |
+| 权威副本 | 设备或本地文件 | 服务端账户 | 取决于产品 |
+| 跨端协作 | 通常需额外同步 | 通常较强 | 通常较强 |
+| 断网核心记录 | 通常可用 | 需逐项验证 | 需逐项验证 |
+| 纸面成书 | 取决于专用引擎 | 常见为导出 | 常需模板 |
+| 适合场景 | 私人档案 | 连续日记 | 研究与连接 |
+
+## 比较任何具体产品前
+
+应查看产品当前官方文档、价格页和隐私政策，并记录核验日期。功能会变化，因此不应把旧评测或用户推测写成永久事实。
+
+> 拾得目前更接近“本地核心 + 联网服务”的混合架构，当前账户要求也必须纳入选择。
+
+## 继续阅读
+
+- [判断本地优先](/answers/local-first-journal/)
+- [拾得当前能力](/features/)
+
+## 资料来源
+
+- [拾得事实登记表（内部代码审计）](/evidence/)
+- [Apple SwiftData](https://developer.apple.com/documentation/swiftdata)
+
+---
+页面语言：zh-Hans
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/en/ -->
+
+# Turn Chinese memories into a book the next generation can read
+
+Enso Shide connects memories, photos, places and verified public cultural context, then turns that material into a structured life book. The current project targets iOS 17 and uses SwiftData for its core private models.
+
+## What the current code supports
+
+- On-device Memory, Profile, Keepsake and CompanionState models.
+- A deterministic on-device A4 PDF rendering path.
+- Chinese and English content fields for intergenerational reading.
+- Read-only public cultural context delivered over the network.
+- A local guided-chat fallback plus optional online conversation.
+
+## A precise privacy description
+
+The core memory model is local-first. The current app also has account, public-content, online companion, AI book and legacy sync paths. Each public claim is therefore scoped to the relevant data path.
+
+## 继续阅读
+
+- [Features](/en/features/)
+- [Privacy boundaries](/en/privacy/)
+- [On-device book engine](/en/book-engine/)
+
+## 资料来源
+
+- [As-built system overview（内部代码审计）](/evidence/)
+- [Apple SwiftData documentation](https://developer.apple.com/documentation/swiftdata)
+
+---
+页面语言：en
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/en/features/ -->
+
+# What Enso Shide implements today
+
+This page only lists capabilities that can be located in the current repository. Product goals and undeployed services are not presented as shipped features.
+
+## Private models on the device
+
+Memory, Profile, Keepsake and CompanionState use SwiftData. MemoryWriter provides the shared write path for private memories, while migration code bridges older records.
+
+## Public cultural context
+
+Public cultural items are fetched as read-only context. A private stamp stores a local snapshot and reference rather than writing a user's note back into the public catalog.
+
+## Companion and book generation
+
+The companion has a local ConversationGraph fallback and an online path. Book generation has a deterministic on-device renderer and an optional AI path guarded by a local envelope validator.
+
+## 继续阅读
+
+- [Privacy boundaries](/en/privacy/)
+- [Book engine](/en/book-engine/)
+- [Evidence register in Chinese](/evidence/)
+
+## 资料来源
+
+- [Memory model（内部代码审计）](/evidence/)
+- [GenUI validator（内部代码审计）](/evidence/)
+
+---
+页面语言：en
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/en/privacy/ -->
+
+# Local-first does not mean network-free
+
+Privacy statements must map to actual data paths. Enso's core private models are authoritative on the device, while the current build also includes account, public-content, online companion, AI book and legacy sync paths.
+
+## On-device authority
+
+- Memory stores text, dates, media references, mood, places and stamped snapshots.
+- Profile, Keepsake and CompanionState are stored in the local SwiftData container.
+- The deterministic book renderer reads the local memory projection.
+
+## Network-dependent paths
+
+- Registration, login and session handling.
+- Read-only public cultural content.
+- Online companion responses and the optional AI book path.
+- Legacy personal-event synchronization that still requires review.
+
+## 继续阅读
+
+- [Current features](/en/features/)
+- [Evidence register](/evidence/)
+
+## 资料来源
+
+- [App entry and login gate（内部代码审计）](/evidence/)
+- [Network service implementation（内部代码审计）](/evidence/)
+
+---
+页面语言：en
+事实核验日期：2026-06-21
+
+
+<!-- https://decnet105.github.io/enso-shide/en/book-engine/ -->
+
+# How Enso Shide renders an A4 life book on iPhone
+
+A durable life book needs a stable page model rather than a sequence of screenshots. Enso projects memories into page sources, paginates them, and renders each page with native iOS PDF APIs.
+
+## Deterministic local pipeline
+
+- BookEngine selects from a bounded set of page masters.
+- BookPaginator computes sections, directory entries and page pairs.
+- BookHeirloomRenderer draws A4 pages, text, photographs, rails and folios.
+- Missing images select a text-safe master instead of leaving an empty frame.
+
+## Guarding the optional AI path
+
+AI output must pass BookEnvelope checks for allowed masters, grounded quotations, injection strings, bilingual completeness, design authority and photo density. A rejected envelope falls back to the local path.
+
+## 继续阅读
+
+- [Privacy boundaries](/en/privacy/)
+- [Chinese technical guide](/answers/iphone-heirloom-pdf/)
+
+## 资料来源
+
+- [BookRenderer source（内部代码审计）](/evidence/)
+- [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
+
+---
+页面语言：en
+事实核验日期：2026-06-21
+
