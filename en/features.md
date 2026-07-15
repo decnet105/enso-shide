@@ -14,17 +14,17 @@ Public cultural items are fetched as read-only context. A private stamp stores a
 
 The companion has a local ConversationGraph fallback and an online path. Book generation has a deterministic on-device renderer and an optional AI path guarded by a local envelope validator.
 
-## 继续阅读
+## Keep reading
 
 - [Privacy boundaries](/en/privacy/)
 - [Book engine](/en/book-engine/)
 - [Evidence register in Chinese](/evidence/)
 
-## 资料来源
+## Sources
 
-- [Memory model（内部代码审计）](/evidence/)
-- [GenUI validator（内部代码审计）](/evidence/)
+- [Memory model (internal code audit)](/evidence/)
+- [GenUI validator (internal code audit)](/evidence/)
 
 ---
-页面语言：en
-事实核验日期：2026-06-21
+Page language: en
+Fact-checked: 2026-07-15

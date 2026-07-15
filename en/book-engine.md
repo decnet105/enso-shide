@@ -13,16 +13,16 @@ A durable life book needs a stable page model rather than a sequence of screensh
 
 AI output must pass BookEnvelope checks for allowed masters, grounded quotations, injection strings, bilingual completeness, design authority and photo density. A rejected envelope falls back to the local path.
 
-## 继续阅读
+## Keep reading
 
 - [Privacy boundaries](/en/privacy/)
 - [Chinese technical guide](/answers/iphone-heirloom-pdf/)
 
-## 资料来源
+## Sources
 
-- [BookRenderer source（内部代码审计）](/evidence/)
+- [BookRenderer source (internal code audit)](/evidence/)
 - [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
 
 ---
-页面语言：en
-事实核验日期：2026-06-21
+Page language: en
+Fact-checked: 2026-07-15

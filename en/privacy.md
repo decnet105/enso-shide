@@ -15,16 +15,16 @@ Privacy statements must map to actual data paths. Enso's core private models are
 - Online companion responses and the optional AI book path.
 - Legacy personal-event synchronization that still requires review.
 
-## 继续阅读
+## Keep reading
 
 - [Current features](/en/features/)
 - [Evidence register](/evidence/)
 
-## 资料来源
+## Sources
 
-- [App entry and login gate（内部代码审计）](/evidence/)
-- [Network service implementation（内部代码审计）](/evidence/)
+- [App entry and login gate (internal code audit)](/evidence/)
+- [Network service implementation (internal code audit)](/evidence/)
 
 ---
-页面语言：en
-事实核验日期：2026-06-21
+Page language: en
+Fact-checked: 2026-07-15
