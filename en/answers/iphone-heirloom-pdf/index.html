@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to generate a long-lasting memory PDF on iPhone | Enso Shide</title>
+  <meta name="description" content="The engineering behind an on-device memory PDF on iPhone: structured memory, layout selection, pagination, fonts, image handling and fallback validation.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://decnet105.github.io/enso-shide/en/answers/iphone-heirloom-pdf/">
+  <link rel="alternate" type="text/markdown" href="https://decnet105.github.io/enso-shide/en/answers/iphone-heirloom-pdf.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <link rel="stylesheet" href="https://decnet105.github.io/enso-shide/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How to generate a long-lasting memory PDF on iPhone">
+  <meta property="og:description" content="The engineering behind an on-device memory PDF on iPhone: structured memory, layout selection, pagination, fonts, image handling and fallback validation.">
+  <meta property="og:url" content="https://decnet105.github.io/enso-shide/en/answers/iphone-heirloom-pdf/">
+  <meta property="og:image" content="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to generate a long-lasting memory PDF on iPhone","description":"The engineering behind an on-device memory PDF on iPhone: structured memory, layout selection, pagination, fonts, image handling and fallback validation.","inLanguage":"en","mainEntityOfPage":"https://decnet105.github.io/enso-shide/en/answers/iphone-heirloom-pdf/","dateModified":"2026-07-15"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="https://decnet105.github.io/enso-shide/en/">Enso Shide</a>
+    <nav aria-label="Primary navigation"><a href="https://decnet105.github.io/enso-shide/en/">Home</a><a href="https://decnet105.github.io/enso-shide/en/features/">Features</a><a href="https://decnet105.github.io/enso-shide/en/privacy/">Privacy</a><a href="https://decnet105.github.io/enso-shide/en/book-engine/">Book engine</a><a href="https://decnet105.github.io/enso-shide/en/evidence/">Evidence</a><a href="https://decnet105.github.io/enso-shide/en/faq/">FAQ</a></nav>
+    <a class="language-link" href="https://decnet105.github.io/enso-shide/answers/iphone-heirloom-pdf/" hreflang="zh-Hans">简体中文</a>
+  </header>
+  <main id="main"><p class="eyebrow">Technical answer</p><h1>How to generate a long-lasting memory PDF on iPhone</h1><p class="lede">A memory PDF meant to last needs a stable page model, not just a printout of what is on screen. The most important design choice is to keep content, pagination and drawing independent of one another.</p><section><h2>A recommended six-stage pipeline</h2><ul><li>Project memories into page sources that are independent of the UI.</li><li>Select from a bounded set of masters based on photo count and text density.</li><li>Precompute chapters, the table of contents and facing-page pairs.</li><li>Reserve continuation pages for long text instead of truncating the body.</li><li>Downsample photos while preserving their aspect ratio.</li><li>Draw each page with the native PDF renderer and keep regression samples.</li></ul></section><section><h2>Enso Shide's implementation choices</h2><p>Enso Shide uses BookEngine to select masters, BookPaginator to paginate and BookHeirloomRenderer to draw. Missing images use a text-only master, AI-track output must pass BookEnvelope validation, and a failure falls the whole book back to the local path.</p></section><section><h2>Keep reading</h2><div class="card-grid"><a class="text-card" href="https://decnet105.github.io/enso-shide/en/book-engine/"><strong>The full book engine</strong><span>The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, UIGraphicsPDFRenderer and AI output validation.</span></a><a class="text-card" href="https://decnet105.github.io/enso-shide/en/answers/chinese-family-memory/"><strong>Preserving Chinese memories for overseas families</strong><span>A method for organizing memories in overseas Chinese-speaking families: keep the Chinese original, build an English reading layer, connect the era's context, and produce a book made to last.</span></a></div></section><section class="sources"><h2>Sources</h2><ol><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li><li><a href="https://decnet105.github.io/enso-shide/en/evidence/">Enso Shide BookRenderer (internal code audit)</a></li></ol></section></main>
+  <footer>
+    <p>Public claims reflect only shipped code; vision, experimental features, and released capabilities are labeled separately.</p>
+    <p><a href="https://decnet105.github.io/enso-shide/en/answers/iphone-heirloom-pdf.md">Read this page in Markdown</a> · Fact-checked 2026-07-15</p>
+  </footer>
+</body>
+</html>

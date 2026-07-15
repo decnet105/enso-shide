@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Why a private journal separates personal memory from public knowledge | Enso Shide</title>
+  <meta name="description" content="Why a private journal keeps two data planes apart: on-device personal memory and server-side public cultural knowledge, each with its own storage, authorization and audit.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://decnet105.github.io/enso-shide/en/answers/private-journal-architecture/">
+  <link rel="alternate" type="text/markdown" href="https://decnet105.github.io/enso-shide/en/answers/private-journal-architecture.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <link rel="stylesheet" href="https://decnet105.github.io/enso-shide/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Why a private journal separates personal memory from public knowledge">
+  <meta property="og:description" content="Why a private journal keeps two data planes apart: on-device personal memory and server-side public cultural knowledge, each with its own storage, authorization and audit.">
+  <meta property="og:url" content="https://decnet105.github.io/enso-shide/en/answers/private-journal-architecture/">
+  <meta property="og:image" content="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why a private journal separates personal memory from public knowledge","description":"Why a private journal keeps two data planes apart: on-device personal memory and server-side public cultural knowledge, each with its own storage, authorization and audit.","inLanguage":"en","mainEntityOfPage":"https://decnet105.github.io/enso-shide/en/answers/private-journal-architecture/","dateModified":"2026-07-15"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="https://decnet105.github.io/enso-shide/en/">Enso Shide</a>
+    <nav aria-label="Primary navigation"><a href="https://decnet105.github.io/enso-shide/en/">Home</a><a href="https://decnet105.github.io/enso-shide/en/features/">Features</a><a href="https://decnet105.github.io/enso-shide/en/privacy/">Privacy</a><a href="https://decnet105.github.io/enso-shide/en/book-engine/">Book engine</a><a href="https://decnet105.github.io/enso-shide/en/evidence/">Evidence</a><a href="https://decnet105.github.io/enso-shide/en/faq/">FAQ</a></nav>
+    <a class="language-link" href="https://decnet105.github.io/enso-shide/answers/private-journal-architecture/" hreflang="zh-Hans">简体中文</a>
+  </header>
+  <main id="main"><p class="eyebrow">Architecture answer</p><h1>Why a private journal separates personal memory from public knowledge</h1><p class="lede">Personal memories and public historical material carry very different risks. Mixing them into a single server-side model blurs the boundaries of authorization, deletion, synchronization and AI requests.</p><section><h2>Responsibilities of the two data planes</h2><div class="table-wrap"><table><thead><tr><th>Data plane</th><th>Source of truth</th><th>Typical content</th><th>Default direction</th></tr></thead><tbody><tr><td>Personal memory</td><td>The user's device</td><td>Text, photos, places, mood imagery</td><td>Written locally</td></tr><tr><td>Public knowledge</td><td>A verified public catalog</td><td>Cultural events, sources, titles</td><td>Delivered read-only</td></tr></tbody></table></div></section><section><h2>The extra boundary for AI features</h2><p>Model requests should clearly separate public context from personal content, and for personal content should provide minimization, user choice and a failure fallback. Model output should also pass allow-list and citation checks before it is written back or rendered.</p></section><section><h2>Keep reading</h2><div class="card-grid"><a class="text-card" href="https://decnet105.github.io/enso-shide/en/privacy/"><strong>Enso Shide privacy boundaries</strong><span>A precise description of which Enso Shide data is authoritative on the device and which current features require an account or network service.</span></a><a class="text-card" href="https://decnet105.github.io/enso-shide/en/evidence/"><strong>Evidence register</strong><span>Enso Shide's GEO fact register: verified capabilities, capabilities that must be qualified, claims not yet publishable, and their source-code evidence.</span></a></div></section><section class="sources"><h2>Sources</h2><ol><li><a href="https://decnet105.github.io/enso-shide/en/evidence/">Enso Shide two-plane architecture (internal code audit)</a></li><li><a href="https://decnet105.github.io/enso-shide/en/evidence/">Cultural API boundary (internal code audit)</a></li></ol></section></main>
+  <footer>
+    <p>Public claims reflect only shipped code; vision, experimental features, and released capabilities are labeled separately.</p>
+    <p><a href="https://decnet105.github.io/enso-shide/en/answers/private-journal-architecture.md">Read this page in Markdown</a> · Fact-checked 2026-07-15</p>
+  </footer>
+</body>
+</html>
