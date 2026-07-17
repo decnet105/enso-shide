@@ -7,30 +7,30 @@
   <meta name="description" content="从 SwiftData 记忆模型、文化坐标、足迹地图到本机成书，逐项说明拾得当前已落地能力及联网要求。">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#a4472d">
-  <link rel="canonical" href="https://decnet105.github.io/enso-shide/features/">
-  <link rel="alternate" type="text/markdown" href="https://decnet105.github.io/enso-shide/features.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
-  <link rel="stylesheet" href="https://decnet105.github.io/enso-shide/assets/styles.css">
+  <link rel="canonical" href="https://shide.app/features/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/features.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="拾得 Ensō 当前实现了什么">
   <meta property="og:description" content="从 SwiftData 记忆模型、文化坐标、足迹地图到本机成书，逐项说明拾得当前已落地能力及联网要求。">
-  <meta property="og:url" content="https://decnet105.github.io/enso-shide/features/">
-  <meta property="og:image" content="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <meta property="og:url" content="https://shide.app/features/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
   <meta name="twitter:card" content="summary">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"拾得 Ensō 当前实现了什么","description":"从 SwiftData 记忆模型、文化坐标、足迹地图到本机成书，逐项说明拾得当前已落地能力及联网要求。","inLanguage":"zh-Hans","mainEntityOfPage":"https://decnet105.github.io/enso-shide/features/","dateModified":"2026-06-21"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"拾得 Ensō 当前实现了什么","description":"从 SwiftData 记忆模型、文化坐标、足迹地图到本机成书，逐项说明拾得当前已落地能力及联网要求。","inLanguage":"zh-Hans","mainEntityOfPage":"https://shide.app/features/","dateModified":"2026-07-16"}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="https://decnet105.github.io/enso-shide/">拾得 Ensō</a>
-    <nav aria-label="主导航"><a href="https://decnet105.github.io/enso-shide/">首页</a><a href="https://decnet105.github.io/enso-shide/features/" aria-current="page">功能</a><a href="https://decnet105.github.io/enso-shide/privacy/">隐私边界</a><a href="https://decnet105.github.io/enso-shide/book-engine/">成书引擎</a><a href="https://decnet105.github.io/enso-shide/evidence/">事实证据</a><a href="https://decnet105.github.io/enso-shide/faq/">问答</a></nav>
-    <a class="language-link" href="https://decnet105.github.io/enso-shide/en/features/" hreflang="en">English</a>
+    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
+    <nav aria-label="主导航"><a href="https://shide.app/">首页</a><a href="https://shide.app/features/" aria-current="page">功能</a><a href="https://shide.app/privacy/">隐私边界</a><a href="https://shide.app/book-engine/">成书引擎</a><a href="https://shide.app/evidence/">事实证据</a><a href="https://shide.app/faq/">问答</a></nav>
+    <a class="language-link" href="https://shide.app/en/features/" hreflang="en">English</a>
   </header>
-  <main id="main"><p class="eyebrow">功能与状态</p><h1>拾得 Ensō 当前实现了什么</h1><p class="lede">这一页只列出能够从当前仓库定位到实现文件的能力。设计愿景、待部署端点和尚未核实的市场数据不算已交付功能。</p><section><h2>端上私域记忆</h2><p>Memory、Profile、Keepsake 与 CompanionState 使用 SwiftData 保存。MemoryWriter 是回忆的统一写入口，迁移器负责从旧模型补齐数据。</p><ul><li>保存回忆正文、年份、日期、媒体引用、心象和地点。</li><li>盖印快照与用户注记保留在端上私域模型。</li><li>年度信物保存为可复现的端上快照。</li></ul></section><section><h2>岁月、山河与文化坐标</h2><p>首页时间线把个人回忆与公共文化坐标分层展示；山河页用 MapKit 从端上 Memory 派生足迹。公共文化条目由 API 只读下发，不写入用户私域正文。</p></section><section><h2>陪聊与受约束生成</h2><p>现役陪聊具有本地 ConversationGraph 兜底，也可以调用在线服务。GenUI 只接收文字、白名单卡片意图和话头，不允许模型控制布局、脚本、颜色或任意 URL。</p><p class="callout">本地兜底存在，不等于整个陪聊和应用都不使用网络。</p></section><section><h2>本机与 AI 双轨成书</h2><p>本机轨使用确定性选版、分页和 UIGraphicsPDFRenderer；AI 轨会调用专用后端，并在验证失败时整册回落到本机轨。</p></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="https://decnet105.github.io/enso-shide/book-engine/"><strong>成书引擎技术说明</strong><span>拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。</span></a><a class="text-card" href="https://decnet105.github.io/enso-shide/privacy/"><strong>隐私边界</strong><span>拾得隐私边界说明：哪些数据以 SwiftData 为端上权威源，哪些功能需要账户或网络，以及目前不能做出的宣传承诺。</span></a><a class="text-card" href="https://decnet105.github.io/enso-shide/evidence/"><strong>功能证据表</strong><span>拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li><a href="https://decnet105.github.io/enso-shide/evidence/">iOS 应用入口（内部代码审计）</a></li><li><a href="https://decnet105.github.io/enso-shide/evidence/">SwiftData Memory 模型（内部代码审计）</a></li><li><a href="https://decnet105.github.io/enso-shide/evidence/">GenUI 验证器（内部代码审计）</a></li></ol></section></main>
+  <main id="main"><p class="eyebrow">功能与状态</p><h1>拾得 Ensō 当前实现了什么</h1><p class="lede">这一页只列出能够从当前仓库定位到实现文件的能力。设计愿景、待部署端点和尚未核实的市场数据不算已交付功能。</p><section><h2>端上私域记忆</h2><p>Memory、Profile、Keepsake 与 CompanionState 使用 SwiftData 保存。MemoryWriter 是回忆的统一写入口，迁移器负责从旧模型补齐数据。</p><ul><li>保存回忆正文、年份、日期、媒体引用、心象和地点。</li><li>盖印快照与用户注记保留在端上私域模型。</li><li>年度信物保存为可复现的端上快照。</li></ul></section><section><h2>岁月、山河与文化坐标</h2><p>首页时间线把个人回忆与公共文化坐标分层展示；山河页用 MapKit 从端上 Memory 派生足迹。公共文化条目由 API 只读下发，不写入用户私域正文。</p></section><section><h2>陪聊与受约束生成</h2><p>现役陪聊具有本地 ConversationGraph 兜底，也可以调用在线服务。GenUI 只接收文字、白名单卡片意图和话头，不允许模型控制布局、脚本、颜色或任意 URL。</p><p class="callout">本地兜底存在，不等于整个陪聊和应用都不使用网络。</p></section><section><h2>本机与 AI 双轨成书</h2><p>本机轨使用确定性选版、分页和 UIGraphicsPDFRenderer；AI 轨会调用专用后端，并在验证失败时整册回落到本机轨。</p></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="https://shide.app/book-engine/"><strong>成书引擎技术说明</strong><span>拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。</span></a><a class="text-card" href="https://shide.app/privacy/"><strong>隐私边界</strong><span>拾得 Ensō 公开 v1 的隐私政策：本机数据、可选联网功能、匿名分析、StoreKit 订阅、导出与删除。</span></a><a class="text-card" href="https://shide.app/evidence/"><strong>功能证据表</strong><span>拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li><a href="https://shide.app/evidence/">iOS 应用入口（内部代码审计）</a></li><li><a href="https://shide.app/evidence/">SwiftData Memory 模型（内部代码审计）</a></li><li><a href="https://shide.app/evidence/">GenUI 验证器（内部代码审计）</a></li></ol></section></main>
   <footer>
     <p>公开说明以已落地代码为准；愿景、实验功能与已上线能力分开标注。</p>
-    <p><a href="https://decnet105.github.io/enso-shide/features.md">阅读本页 Markdown</a> · 事实核验日期 2026-06-21</p>
+    <p><a href="https://shide.app/features.md">阅读本页 Markdown</a> · 事实核验日期 2026-07-16</p>
   </footer>
 </body>
 </html>

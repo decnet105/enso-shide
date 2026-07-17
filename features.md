@@ -38,4 +38,4 @@ Memory、Profile、Keepsake 与 CompanionState 使用 SwiftData 保存。MemoryW
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-06-21
+事实核验日期：2026-07-16

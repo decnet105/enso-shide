@@ -7,30 +7,30 @@
   <meta name="description" content="拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#a4472d">
-  <link rel="canonical" href="https://decnet105.github.io/enso-shide/book-engine/">
-  <link rel="alternate" type="text/markdown" href="https://decnet105.github.io/enso-shide/book-engine.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
-  <link rel="stylesheet" href="https://decnet105.github.io/enso-shide/assets/styles.css">
+  <link rel="canonical" href="https://shide.app/book-engine/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/book-engine.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="拾得如何在 iPhone 上生成 A4 岁月书">
   <meta property="og:description" content="拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。">
-  <meta property="og:url" content="https://decnet105.github.io/enso-shide/book-engine/">
-  <meta property="og:image" content="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <meta property="og:url" content="https://shide.app/book-engine/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
   <meta name="twitter:card" content="summary">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"拾得如何在 iPhone 上生成 A4 岁月书","description":"拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。","inLanguage":"zh-Hans","mainEntityOfPage":"https://decnet105.github.io/enso-shide/book-engine/","dateModified":"2026-06-21"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"拾得如何在 iPhone 上生成 A4 岁月书","description":"拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。","inLanguage":"zh-Hans","mainEntityOfPage":"https://shide.app/book-engine/","dateModified":"2026-07-16"}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="https://decnet105.github.io/enso-shide/">拾得 Ensō</a>
-    <nav aria-label="主导航"><a href="https://decnet105.github.io/enso-shide/">首页</a><a href="https://decnet105.github.io/enso-shide/features/">功能</a><a href="https://decnet105.github.io/enso-shide/privacy/">隐私边界</a><a href="https://decnet105.github.io/enso-shide/book-engine/" aria-current="page">成书引擎</a><a href="https://decnet105.github.io/enso-shide/evidence/">事实证据</a><a href="https://decnet105.github.io/enso-shide/faq/">问答</a></nav>
-    <a class="language-link" href="https://decnet105.github.io/enso-shide/en/book-engine/" hreflang="en">English</a>
+    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
+    <nav aria-label="主导航"><a href="https://shide.app/">首页</a><a href="https://shide.app/features/">功能</a><a href="https://shide.app/privacy/">隐私边界</a><a href="https://shide.app/book-engine/" aria-current="page">成书引擎</a><a href="https://shide.app/evidence/">事实证据</a><a href="https://shide.app/faq/">问答</a></nav>
+    <a class="language-link" href="https://shide.app/en/book-engine/" hreflang="en">English</a>
   </header>
-  <main id="main"><p class="eyebrow">端上成书</p><h1>拾得如何在 iPhone 上生成 A4 岁月书</h1><p class="lede">成书不是把截图拼成 PDF。拾得先把回忆投影为页面素材，再经过确定性选版和分页，最后由 iOS 原生 PDF 渲染器逐页绘制。</p><section><h2>从回忆到页面</h2><ul><li>BookEngine 根据照片数量、文字密度和事件类型选择母版。</li><li>BookPaginator 预扫描结构页、逐年章节与目录页码。</li><li>BookHeirloomRenderer 使用 A4 页面边界绘制书脊、正文、照片与页码。</li><li>照片按需下采样，缺图时选择无图母版而不是保留空框。</li></ul></section><section><h2>为什么保留本机轨</h2><p>本机轨是确定性回落路径：即使模型端点不可用或 AI 书稿未通过验证，用户仍可从端上 Memory 生成完整书册。它也把私域原文离端风险控制在用户可选择的范围内。</p></section><section><h2>AI 轨的落地硬闸</h2><p>AI 轨输出 BookEnvelope 后，客户端检查母版白名单、引用逐字命中、防注入、双语完整度、主题主权和照片密度。任一关键规则失败，整册回落本机轨。</p></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="https://decnet105.github.io/enso-shide/evidence/"><strong>查看成书证据文件</strong><span>拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。</span></a><a class="text-card" href="https://decnet105.github.io/enso-shide/answers/iphone-heirloom-pdf/"><strong>iPhone 本机成书指南</strong><span>从结构化记忆、选版、分页、字体、图片处理和回落验证解释 iPhone 本机回忆 PDF 的工程方法。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li><a href="https://decnet105.github.io/enso-shide/evidence/">BookRenderer 源码（内部代码审计）</a></li><li><a href="https://decnet105.github.io/enso-shide/evidence/">BookEnvelope 验证器（内部代码审计）</a></li><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li></ol></section></main>
+  <main id="main"><p class="eyebrow">端上成书</p><h1>拾得如何在 iPhone 上生成 A4 岁月书</h1><p class="lede">成书不是把截图拼成 PDF。拾得先把回忆投影为页面素材，再经过确定性选版和分页，最后由 iOS 原生 PDF 渲染器逐页绘制。</p><section><h2>从回忆到页面</h2><ul><li>BookEngine 根据照片数量、文字密度和事件类型选择母版。</li><li>BookPaginator 预扫描结构页、逐年章节与目录页码。</li><li>BookHeirloomRenderer 使用 A4 页面边界绘制书脊、正文、照片与页码。</li><li>照片按需下采样，缺图时选择无图母版而不是保留空框。</li></ul></section><section><h2>为什么保留本机轨</h2><p>本机轨是确定性回落路径：即使模型端点不可用或 AI 书稿未通过验证，用户仍可从端上 Memory 生成完整书册。它也把私域原文离端风险控制在用户可选择的范围内。</p></section><section><h2>AI 轨的落地硬闸</h2><p>AI 轨输出 BookEnvelope 后，客户端检查母版白名单、引用逐字命中、防注入、双语完整度、主题主权和照片密度。任一关键规则失败，整册回落本机轨。</p></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="https://shide.app/evidence/"><strong>查看成书证据文件</strong><span>拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。</span></a><a class="text-card" href="https://shide.app/answers/iphone-heirloom-pdf/"><strong>iPhone 本机成书指南</strong><span>从结构化记忆、选版、分页、字体、图片处理和回落验证解释 iPhone 本机回忆 PDF 的工程方法。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li><a href="https://shide.app/evidence/">BookRenderer 源码（内部代码审计）</a></li><li><a href="https://shide.app/evidence/">BookEnvelope 验证器（内部代码审计）</a></li><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li></ol></section></main>
   <footer>
     <p>公开说明以已落地代码为准；愿景、实验功能与已上线能力分开标注。</p>
-    <p><a href="https://decnet105.github.io/enso-shide/book-engine.md">阅读本页 Markdown</a> · 事实核验日期 2026-06-21</p>
+    <p><a href="https://shide.app/book-engine.md">阅读本页 Markdown</a> · 事实核验日期 2026-07-16</p>
   </footer>
 </body>
 </html>

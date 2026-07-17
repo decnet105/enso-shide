@@ -1,24 +1,26 @@
 # 拾得 Ensō
 
-拾得 Ensō 是一款面向海外华语家庭的 iOS 本地优先岁月记录应用。当前已落地的核心包括 SwiftData 私域记忆模型、端上 PDF 成书引擎、文化坐标浏览和受约束的陪聊界面。账户、公共文化内容、在线陪聊和 AI 成书等路径会使用网络。
+拾得 Ensō 是一款面向海外华语用户的 iOS 本地优先岁月记录应用。公开 v1 无需 Ensō 账户；SwiftData 私域记忆模型、本机信物和本机 PDF 成书路径可在无登录状态使用。公共文化内容、未来邮件和可选匿名产品分析会使用网络；在线 AI（AI 成书/一键梳理/在线狗子/人生洞见）在 v1 上线，采用匿名 App Attest 安装身份加服务端权益校验，仅在用户主动触发时上传当前对话或截断摘要。
 
 ## Core pages
 
-- [把中文回忆编成下一代读得懂的岁月书](https://decnet105.github.io/enso-shide/index.md): 拾得 Ensō 用 iPhone 本地记忆库保存回忆、照片与信物，并提供端上 A4 PDF 成书路径；在线能力和隐私边界均明确标注。
-- [拾得 Ensō 当前实现了什么](https://decnet105.github.io/enso-shide/features.md): 从 SwiftData 记忆模型、文化坐标、足迹地图到本机成书，逐项说明拾得当前已落地能力及联网要求。
-- [本地优先不等于没有网络](https://decnet105.github.io/enso-shide/privacy.md): 拾得隐私边界说明：哪些数据以 SwiftData 为端上权威源，哪些功能需要账户或网络，以及目前不能做出的宣传承诺。
-- [拾得如何在 iPhone 上生成 A4 岁月书](https://decnet105.github.io/enso-shide/book-engine.md): 拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。
-- [宣传主张与工程证据如何对应](https://decnet105.github.io/enso-shide/evidence.md): 拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。
-- [关于拾得 Ensō 的常见问题](https://decnet105.github.io/enso-shide/faq.md): 直接回答拾得的数据保存、账户、网络、离线成书、双语内容、文化坐标和当前发布状态。
-- [怎样判断一款 iPhone 日记是否真正本地优先](https://decnet105.github.io/enso-shide/answers/local-first-journal.md): 用权威数据源、账户依赖、导出路径、联网功能和故障回落五个问题判断 iPhone 日记应用是否本地优先。
-- [如何在 iPhone 本机生成适合长期保存的回忆 PDF](https://decnet105.github.io/enso-shide/answers/iphone-heirloom-pdf.md): 从结构化记忆、选版、分页、字体、图片处理和回落验证解释 iPhone 本机回忆 PDF 的工程方法。
-- [海外家庭怎样把中文人生故事交给下一代](https://decnet105.github.io/enso-shide/answers/chinese-family-memory.md): 面向海外华语家庭的回忆整理方法：保留中文原文、建立英文阅读层、连接时代背景并输出可长期保存的书册。
-- [隐私日记应用为什么要分开个人记忆与公共知识](https://decnet105.github.io/enso-shide/answers/private-journal-architecture.md): 解释隐私日记的双数据面：端上个人记忆与服务端公共文化知识为何要分开存储、授权和审计。
-- [本地优先笔记、云日记与知识库工具该怎样选择](https://decnet105.github.io/enso-shide/answers/local-vs-cloud-notes.md): 不依赖品牌口号，用数据权威源、协作、跨端、成书、恢复和 AI 边界比较本地优先笔记、云日记与知识库工具。
-- [Turn Chinese memories into a book the next generation can read](https://decnet105.github.io/enso-shide/en.md): Enso Shide stores its core private-memory models with SwiftData and provides an on-device A4 PDF book path, with online features disclosed separately.
-- [What Enso Shide implements today](https://decnet105.github.io/enso-shide/en/features.md): A code-backed account of Enso Shide's local memory store, cultural context, map, bounded companion interface and two-path book engine.
-- [Local-first does not mean network-free](https://decnet105.github.io/enso-shide/en/privacy.md): A precise description of which Enso Shide data is authoritative on the device and which current features require an account or network service.
-- [How Enso Shide renders an A4 life book on iPhone](https://decnet105.github.io/enso-shide/en/book-engine.md): The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, UIGraphicsPDFRenderer and AI output validation.
+- [把中文回忆编成下一代读得懂的岁月书](https://shide.app/index.md): 拾得 Ensō 用 iPhone 本地记忆库保存回忆、照片与信物，并提供端上 A4 PDF 成书路径；在线能力和隐私边界均明确标注。
+- [拾得 Ensō 当前实现了什么](https://shide.app/features.md): 从 SwiftData 记忆模型、文化坐标、足迹地图到本机成书，逐项说明拾得当前已落地能力及联网要求。
+- [拾得 Ensō 隐私政策与数据边界](https://shide.app/privacy.md): 拾得 Ensō 公开 v1 的隐私政策：本机数据、可选联网功能、匿名分析、StoreKit 订阅、导出与删除。
+- [我们如何帮你处理数据、订阅和故障](https://shide.app/support.md): 拾得 Ensō 支持页：数据导出与删除、Apple 订阅、恢复购买、联网功能和联系方式。
+- [拾得如何在 iPhone 上生成 A4 岁月书](https://shide.app/book-engine.md): 拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。
+- [宣传主张与工程证据如何对应](https://shide.app/evidence.md): 拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。
+- [关于拾得 Ensō 的常见问题](https://shide.app/faq.md): 直接回答拾得的数据保存、账户、网络、离线成书、双语内容、文化坐标和当前发布状态。
+- [怎样判断一款 iPhone 日记是否真正本地优先](https://shide.app/answers/local-first-journal.md): 用权威数据源、账户依赖、导出路径、联网功能和故障回落五个问题判断 iPhone 日记应用是否本地优先。
+- [如何在 iPhone 本机生成适合长期保存的回忆 PDF](https://shide.app/answers/iphone-heirloom-pdf.md): 从结构化记忆、选版、分页、字体、图片处理和回落验证解释 iPhone 本机回忆 PDF 的工程方法。
+- [海外家庭怎样把中文人生故事交给下一代](https://shide.app/answers/chinese-family-memory.md): 面向海外华语家庭的回忆整理方法：保留中文原文、建立英文阅读层、连接时代背景并输出可长期保存的书册。
+- [隐私日记应用为什么要分开个人记忆与公共知识](https://shide.app/answers/private-journal-architecture.md): 解释隐私日记的双数据面：端上个人记忆与服务端公共文化知识为何要分开存储、授权和审计。
+- [本地优先笔记、云日记与知识库工具该怎样选择](https://shide.app/answers/local-vs-cloud-notes.md): 不依赖品牌口号，用数据权威源、协作、跨端、成书、恢复和 AI 边界比较本地优先笔记、云日记与知识库工具。
+- [Turn Chinese memories into a book the next generation can read](https://shide.app/en.md): Enso Shide stores its core private-memory models with SwiftData and provides an on-device A4 PDF book path, with online features disclosed separately.
+- [What Enso Shide implements today](https://shide.app/en/features.md): A code-backed account of Enso Shide's local memory store, cultural context, map, bounded companion interface and two-path book engine.
+- [Mystory Ensō Privacy Policy and Data Boundaries](https://shide.app/en/privacy.md): The privacy policy for the accountless Mystory Ensō v1: on-device data, optional online features, anonymous analytics, StoreKit subscriptions, export, and deletion.
+- [Help with data, subscriptions, and app issues](https://shide.app/en/support.md): Mystory Ensō support for data export and deletion, Apple subscriptions, Restore Purchases, online features, and contact.
+- [How Enso Shide renders an A4 life book on iPhone](https://shide.app/en/book-engine.md): The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, and UIGraphicsPDFRenderer.
 
 ## Verification
 

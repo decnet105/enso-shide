@@ -3,34 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>What Enso Shide implements today | Enso Shide</title>
+  <title>What Enso Shide implements today | 拾得 Ensō</title>
   <meta name="description" content="A code-backed account of Enso Shide&#x27;s local memory store, cultural context, map, bounded companion interface and two-path book engine.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#a4472d">
-  <link rel="canonical" href="https://decnet105.github.io/enso-shide/en/features/">
-  <link rel="alternate" type="text/markdown" href="https://decnet105.github.io/enso-shide/en/features.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
-  <link rel="stylesheet" href="https://decnet105.github.io/enso-shide/assets/styles.css">
+  <link rel="canonical" href="https://shide.app/en/features/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/en/features.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="What Enso Shide implements today">
   <meta property="og:description" content="A code-backed account of Enso Shide&#x27;s local memory store, cultural context, map, bounded companion interface and two-path book engine.">
-  <meta property="og:url" content="https://decnet105.github.io/enso-shide/en/features/">
-  <meta property="og:image" content="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <meta property="og:url" content="https://shide.app/en/features/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
   <meta name="twitter:card" content="summary">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"What Enso Shide implements today","description":"A code-backed account of Enso Shide's local memory store, cultural context, map, bounded companion interface and two-path book engine.","inLanguage":"en","mainEntityOfPage":"https://decnet105.github.io/enso-shide/en/features/","dateModified":"2026-07-15"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"What Enso Shide implements today","description":"A code-backed account of Enso Shide's local memory store, cultural context, map, bounded companion interface and two-path book engine.","inLanguage":"en","mainEntityOfPage":"https://shide.app/en/features/","dateModified":"2026-07-16"}</script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="https://decnet105.github.io/enso-shide/en/">Enso Shide</a>
-    <nav aria-label="Primary navigation"><a href="https://decnet105.github.io/enso-shide/en/">Home</a><a href="https://decnet105.github.io/enso-shide/en/features/">Features</a><a href="https://decnet105.github.io/enso-shide/en/privacy/">Privacy</a><a href="https://decnet105.github.io/enso-shide/en/book-engine/">Book engine</a><a href="https://decnet105.github.io/enso-shide/en/evidence/">Evidence</a><a href="https://decnet105.github.io/enso-shide/en/faq/">FAQ</a></nav>
-    <a class="language-link" href="https://decnet105.github.io/enso-shide/features/" hreflang="zh-Hans">简体中文</a>
+    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
+    <nav aria-label="主导航"><a href="https://shide.app/">首页</a><a href="https://shide.app/features/">功能</a><a href="https://shide.app/privacy/">隐私边界</a><a href="https://shide.app/book-engine/">成书引擎</a><a href="https://shide.app/evidence/">事实证据</a><a href="https://shide.app/faq/">问答</a></nav>
+    <a class="language-link" href="https://shide.app/features/" hreflang="zh-Hans">简体中文</a>
   </header>
-  <main id="main"><p class="eyebrow">Features and implementation status</p><h1>What Enso Shide implements today</h1><p class="lede">This page only lists capabilities that can be located in the current repository. Product goals and undeployed services are not presented as shipped features.</p><section><h2>Private models on the device</h2><p>Memory, Profile, Keepsake and CompanionState use SwiftData. MemoryWriter provides the shared write path for private memories, while migration code bridges older records.</p></section><section><h2>Public cultural context</h2><p>Public cultural items are fetched as read-only context. A private stamp stores a local snapshot and reference rather than writing a user&#x27;s note back into the public catalog.</p></section><section><h2>Companion and book generation</h2><p>The companion has a local ConversationGraph fallback and an online path. Book generation has a deterministic on-device renderer and an optional AI path guarded by a local envelope validator.</p></section><section><h2>Keep reading</h2><div class="card-grid"><a class="text-card" href="https://decnet105.github.io/enso-shide/en/privacy/"><strong>Privacy boundaries</strong><span>A precise description of which Enso Shide data is authoritative on the device and which current features require an account or network service.</span></a><a class="text-card" href="https://decnet105.github.io/enso-shide/en/book-engine/"><strong>Book engine</strong><span>The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, UIGraphicsPDFRenderer and AI output validation.</span></a><a class="text-card" href="https://decnet105.github.io/enso-shide/evidence/"><strong>Evidence register in Chinese</strong><span>Enso Shide's GEO fact register: verified capabilities, capabilities that must be qualified, claims not yet publishable, and their source-code evidence.</span></a></div></section><section class="sources"><h2>Sources</h2><ol><li><a href="https://decnet105.github.io/enso-shide/evidence/">Memory model (internal code audit)</a></li><li><a href="https://decnet105.github.io/enso-shide/evidence/">GenUI validator (internal code audit)</a></li></ol></section></main>
+  <main id="main"><p class="eyebrow">Features and implementation status</p><h1>What Enso Shide implements today</h1><p class="lede">This page only lists capabilities that can be located in the current repository. Product goals and undeployed services are not presented as shipped features.</p><section><h2>Private models on the device</h2><p>Memory, Profile, Keepsake and CompanionState use SwiftData. MemoryWriter provides the shared write path for private memories, while migration code bridges older records.</p></section><section><h2>Public cultural context</h2><p>Public cultural items are fetched as read-only context. A private stamp stores a local snapshot and reference rather than writing a user&#x27;s note back into the public catalog.</p></section><section><h2>Companion and book generation</h2><p>The v1 companion uses a local ConversationGraph path. Premium book generation uses the deterministic on-device renderer; cost-bearing online AI is disabled in the Release build and is not sold as a subscription benefit.</p></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="https://shide.app/en/privacy/"><strong>Privacy boundaries</strong><span>The privacy policy for the accountless Mystory Ensō v1: on-device data, optional online features, anonymous analytics, StoreKit subscriptions, export, and deletion.</span></a><a class="text-card" href="https://shide.app/en/book-engine/"><strong>Book engine</strong><span>The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, and UIGraphicsPDFRenderer.</span></a><a class="text-card" href="https://shide.app/evidence/"><strong>Evidence register in Chinese</strong><span>拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li><a href="https://shide.app/evidence/">Memory model（内部代码审计）</a></li><li><a href="https://shide.app/evidence/">GenUI validator（内部代码审计）</a></li></ol></section></main>
   <footer>
-    <p>Public claims reflect only shipped code; vision, experimental features, and released capabilities are labeled separately.</p>
-    <p><a href="https://decnet105.github.io/enso-shide/en/features.md">Read this page in Markdown</a> · Fact-checked 2026-07-15</p>
+    <p>公开说明以已落地代码为准；愿景、实验功能与已上线能力分开标注。</p>
+    <p><a href="https://shide.app/en/features.md">阅读本页 Markdown</a> · 事实核验日期 2026-07-16</p>
   </footer>
 </body>
 </html>

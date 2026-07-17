@@ -1,14 +1,14 @@
 {
   "name": "拾得 Ensō",
   "short_name": "拾得",
-  "start_url": "https://decnet105.github.io/enso-shide/",
+  "start_url": "https://shide.app/",
   "display": "browser",
   "lang": "zh-Hans",
   "theme_color": "#a4472d",
   "background_color": "#f4efe5",
   "icons": [
     {
-      "src": "https://decnet105.github.io/enso-shide/assets/app-icon.png",
+      "src": "https://shide.app/assets/app-icon.png",
       "sizes": "1024x1024",
       "type": "image/png"
     }

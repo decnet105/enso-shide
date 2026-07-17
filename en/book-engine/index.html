@@ -3,34 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>How Enso Shide renders an A4 life book on iPhone | Enso Shide</title>
-  <meta name="description" content="The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, UIGraphicsPDFRenderer and AI output validation.">
+  <title>How Enso Shide renders an A4 life book on iPhone | 拾得 Ensō</title>
+  <meta name="description" content="The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, and UIGraphicsPDFRenderer.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#a4472d">
-  <link rel="canonical" href="https://decnet105.github.io/enso-shide/en/book-engine/">
-  <link rel="alternate" type="text/markdown" href="https://decnet105.github.io/enso-shide/en/book-engine.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://decnet105.github.io/enso-shide/assets/app-icon.png">
-  <link rel="stylesheet" href="https://decnet105.github.io/enso-shide/assets/styles.css">
+  <link rel="canonical" href="https://shide.app/en/book-engine/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/en/book-engine.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="How Enso Shide renders an A4 life book on iPhone">
-  <meta property="og:description" content="The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, UIGraphicsPDFRenderer and AI output validation.">
-  <meta property="og:url" content="https://decnet105.github.io/enso-shide/en/book-engine/">
-  <meta property="og:image" content="https://decnet105.github.io/enso-shide/assets/app-icon.png">
+  <meta property="og:description" content="The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, and UIGraphicsPDFRenderer.">
+  <meta property="og:url" content="https://shide.app/en/book-engine/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
   <meta name="twitter:card" content="summary">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Enso Shide renders an A4 life book on iPhone","description":"The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, UIGraphicsPDFRenderer and AI output validation.","inLanguage":"en","mainEntityOfPage":"https://decnet105.github.io/enso-shide/en/book-engine/","dateModified":"2026-07-15"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Enso Shide renders an A4 life book on iPhone","description":"The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, and UIGraphicsPDFRenderer.","inLanguage":"en","mainEntityOfPage":"https://shide.app/en/book-engine/","dateModified":"2026-07-16"}</script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="https://decnet105.github.io/enso-shide/en/">Enso Shide</a>
-    <nav aria-label="Primary navigation"><a href="https://decnet105.github.io/enso-shide/en/">Home</a><a href="https://decnet105.github.io/enso-shide/en/features/">Features</a><a href="https://decnet105.github.io/enso-shide/en/privacy/">Privacy</a><a href="https://decnet105.github.io/enso-shide/en/book-engine/">Book engine</a><a href="https://decnet105.github.io/enso-shide/en/evidence/">Evidence</a><a href="https://decnet105.github.io/enso-shide/en/faq/">FAQ</a></nav>
-    <a class="language-link" href="https://decnet105.github.io/enso-shide/book-engine/" hreflang="zh-Hans">简体中文</a>
+    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
+    <nav aria-label="主导航"><a href="https://shide.app/">首页</a><a href="https://shide.app/features/">功能</a><a href="https://shide.app/privacy/">隐私边界</a><a href="https://shide.app/book-engine/">成书引擎</a><a href="https://shide.app/evidence/">事实证据</a><a href="https://shide.app/faq/">问答</a></nav>
+    <a class="language-link" href="https://shide.app/book-engine/" hreflang="zh-Hans">简体中文</a>
   </header>
-  <main id="main"><p class="eyebrow">On-device publishing</p><h1>How Enso Shide renders an A4 life book on iPhone</h1><p class="lede">A durable life book needs a stable page model rather than a sequence of screenshots. Enso projects memories into page sources, paginates them, and renders each page with native iOS PDF APIs.</p><section><h2>Deterministic local pipeline</h2><ul><li>BookEngine selects from a bounded set of page masters.</li><li>BookPaginator computes sections, directory entries and page pairs.</li><li>BookHeirloomRenderer draws A4 pages, text, photographs, rails and folios.</li><li>Missing images select a text-safe master instead of leaving an empty frame.</li></ul></section><section><h2>Guarding the optional AI path</h2><p>AI output must pass BookEnvelope checks for allowed masters, grounded quotations, injection strings, bilingual completeness, design authority and photo density. A rejected envelope falls back to the local path.</p></section><section><h2>Keep reading</h2><div class="card-grid"><a class="text-card" href="https://decnet105.github.io/enso-shide/en/privacy/"><strong>Privacy boundaries</strong><span>A precise description of which Enso Shide data is authoritative on the device and which current features require an account or network service.</span></a><a class="text-card" href="https://decnet105.github.io/enso-shide/answers/iphone-heirloom-pdf/"><strong>Chinese technical guide</strong><span>The engineering behind Enso Shide's on-device memory PDF on iPhone — from structured memory, layout selection, pagination, fonts, and image handling, to fallback validation.</span></a></div></section><section class="sources"><h2>Sources</h2><ol><li><a href="https://decnet105.github.io/enso-shide/evidence/">BookRenderer source (internal code audit)</a></li><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li></ol></section></main>
+  <main id="main"><p class="eyebrow">On-device publishing</p><h1>How Enso Shide renders an A4 life book on iPhone</h1><p class="lede">A durable life book needs a stable page model rather than a sequence of screenshots. Enso projects memories into page sources, paginates them, and renders each page with native iOS PDF APIs.</p><section><h2>Deterministic local pipeline</h2><ul><li>BookEngine selects from a bounded set of page masters.</li><li>BookPaginator computes sections, directory entries and page pairs.</li><li>BookHeirloomRenderer draws A4 pages, text, photographs, rails and folios.</li><li>Missing images select a text-safe master instead of leaving an empty frame.</li></ul></section><section><h2>Release boundary for online generation</h2><p>The repository contains a validated experimental online generation track, but the v1 Release disables cost-bearing online AI. Shipping premium books use the deterministic local path.</p></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="https://shide.app/en/privacy/"><strong>Privacy boundaries</strong><span>The privacy policy for the accountless Mystory Ensō v1: on-device data, optional online features, anonymous analytics, StoreKit subscriptions, export, and deletion.</span></a><a class="text-card" href="https://shide.app/answers/iphone-heirloom-pdf/"><strong>Chinese technical guide</strong><span>从结构化记忆、选版、分页、字体、图片处理和回落验证解释 iPhone 本机回忆 PDF 的工程方法。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li><a href="https://shide.app/evidence/">BookRenderer source（内部代码审计）</a></li><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li></ol></section></main>
   <footer>
-    <p>Public claims reflect only shipped code; vision, experimental features, and released capabilities are labeled separately.</p>
-    <p><a href="https://decnet105.github.io/enso-shide/en/book-engine.md">Read this page in Markdown</a> · Fact-checked 2026-07-15</p>
+    <p>公开说明以已落地代码为准；愿景、实验功能与已上线能力分开标注。</p>
+    <p><a href="https://shide.app/en/book-engine.md">阅读本页 Markdown</a> · 事实核验日期 2026-07-16</p>
   </footer>
 </body>
 </html>

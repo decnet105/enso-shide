@@ -1,21 +1,13 @@
 :root {
   color-scheme: light;
-  /* Enso v5 设计令牌（对齐 App：深蓝承载时间·古金承载仪式·玉色标记生命/选中） */
-  --paper: #f5f1e8;
-  --paper-card: #f8f3e9;
-  --paper-deep: #ede6d6;
-  --ink: #242321;
-  --ink-soft: #756e63;
-  --navy: #12365e;
-  --navy-deep: #0d2a4b;
-  --gold: #a77a2d;
-  --gold-light: #d3b064;
-  --jade: #5e9b83;
-  --cinnabar: #a4472d; /* 仅极少点缀，不作主色（创始人裁决：主 CTA=暗金，朱砂只作点睛/错误） */
-  --line-blue: #8fa6bc;
-  --rule: rgba(36, 35, 33, 0.14);
-  --shadow: 0 18px 50px rgba(40, 30, 15, 0.08);
-  --shadow-navy: 0 30px 70px rgba(13, 42, 75, 0.28);
+  --paper: #f4efe5;
+  --paper-deep: #e9dfcf;
+  --ink: #372d28;
+  --ink-soft: #6c5b51;
+  --cinnabar: #a4472d;
+  --gold: #a77b38;
+  --rule: rgba(55, 45, 40, 0.18);
+  --shadow: 0 18px 50px rgba(76, 53, 38, 0.09);
   font-family: ui-serif, "Noto Serif CJK SC", "Songti SC", Georgia, serif;
   line-height: 1.75;
   background: var(--paper);
@@ -29,13 +21,12 @@
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 88% -2%, rgba(18, 54, 94, 0.10), transparent 26rem),
-    radial-gradient(circle at 8% 1%, rgba(167, 122, 45, 0.10), transparent 28rem),
+    radial-gradient(circle at 10% 0%, rgba(167, 123, 56, 0.11), transparent 29rem),
     linear-gradient(180deg, #f8f4ec 0%, var(--paper) 32rem);
 }
 
 a {
-  color: var(--navy);
+  color: var(--cinnabar);
   text-underline-offset: 0.2em;
 }
 
@@ -87,7 +78,7 @@ nav a,
 }
 
 nav a[aria-current="page"] {
-  color: var(--gold);
+  color: var(--cinnabar);
   font-weight: 700;
 }
 
@@ -104,32 +95,11 @@ main {
   gap: clamp(2rem, 7vw, 5.5rem);
 }
 
-/* 深蓝夜境 hero 视觉（呼应 App 的深蓝天幕 + 古金晕） */
-.hero-visual {
-  position: relative;
-  padding: clamp(1.6rem, 4vw, 2.6rem);
-  border-radius: 2rem;
-  background:
-    radial-gradient(circle at 40% 24%, rgba(211, 176, 100, 0.22), transparent 60%),
-    linear-gradient(160deg, #1c4370 0%, var(--navy) 46%, var(--navy-deep) 100%);
-  box-shadow: var(--shadow-navy);
-}
-
-.hero-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 2rem;
-  border: 1px solid rgba(245, 241, 232, 0.14);
-  pointer-events: none;
-}
-
 .app-mark {
-  display: block;
   width: 100%;
   height: auto;
   border-radius: 24%;
-  box-shadow: 0 22px 50px rgba(9, 25, 45, 0.45);
+  box-shadow: 0 30px 70px rgba(104, 55, 35, 0.22);
   transform: rotate(2deg);
 }
 
@@ -140,27 +110,9 @@ main {
   margin-top: 1.8rem;
 }
 
-.hero-note {
-  margin: 1rem 0 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--ink-soft);
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.82rem;
-}
-
-.hero-note .dot {
-  width: 0.52rem;
-  height: 0.52rem;
-  border-radius: 999px;
-  background: var(--jade);
-  box-shadow: 0 0 0 3px rgba(94, 155, 131, 0.18);
-}
-
 .eyebrow {
   margin: 0 0 1rem;
-  color: var(--gold);
+  color: var(--cinnabar);
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-size: 0.78rem;
   font-weight: 750;
@@ -174,7 +126,6 @@ h1 {
   font-size: clamp(2.4rem, 7vw, 5.2rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
-  color: var(--navy);
 }
 
 .lede {
@@ -187,23 +138,22 @@ h1 {
 .primary-cta {
   display: inline-block;
   margin-top: 1.3rem;
-  padding: 0.8rem 1.35rem;
+  padding: 0.78rem 1.25rem;
   border-radius: 999px;
-  background: linear-gradient(150deg, var(--gold-light) 0%, var(--gold) 52%, #8a6220 100%);
-  color: #fdfaf1;
+  background: var(--cinnabar);
+  color: #fffaf2;
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 750;
   text-decoration: none;
-  box-shadow: 0 12px 26px rgba(122, 88, 26, 0.28);
+  box-shadow: var(--shadow);
 }
 
 .secondary-cta {
   display: inline-block;
-  margin-top: 1.3rem;
-  padding: 0.74rem 1.2rem;
-  border: 1px solid var(--navy);
+  padding: 0.72rem 1.15rem;
+  border: 1px solid var(--cinnabar);
   border-radius: 999px;
-  color: var(--navy);
+  color: var(--cinnabar);
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 750;
   text-decoration: none;
@@ -219,7 +169,6 @@ h2 {
   border-top: 1px solid var(--rule);
   font-size: clamp(1.45rem, 3vw, 2rem);
   line-height: 1.3;
-  color: var(--navy);
 }
 
 p,
@@ -241,7 +190,7 @@ li + li {
   margin-top: 1.5rem;
   padding: 1.1rem 1.25rem;
   border-left: 3px solid var(--gold);
-  background: var(--paper-card);
+  background: rgba(255, 255, 255, 0.55);
   box-shadow: var(--shadow);
 }
 
@@ -250,7 +199,7 @@ li + li {
   margin-top: 1.5rem;
   border: 1px solid var(--rule);
   border-radius: 0.9rem;
-  background: var(--paper-card);
+  background: rgba(255, 255, 255, 0.52);
 }
 
 table {
@@ -292,14 +241,10 @@ tr:last-child td {
   gap: 1rem;
   border: 1px solid var(--rule);
   border-radius: 1rem;
-  background: var(--paper-card);
+  background: rgba(255, 255, 255, 0.56);
   color: var(--ink);
   text-decoration: none;
   box-shadow: var(--shadow);
-}
-
-.text-card strong {
-  color: var(--navy);
 }
 
 .text-card span {
@@ -353,11 +298,10 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .hero-visual {
+  .app-mark {
     grid-row: 1;
-    width: min(13rem, 54vw);
-    padding: 1.1rem;
-    border-radius: 1.5rem;
+    width: min(11rem, 48vw);
+    transform: rotate(0deg);
   }
 }
 
@@ -367,8 +311,7 @@ footer p {
   }
 
   .text-card:hover,
-  .primary-cta:hover,
-  .secondary-cta:hover {
+  .primary-cta:hover {
     transform: translateY(-2px);
   }
 }

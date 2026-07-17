@@ -9,20 +9,20 @@ A durable life book needs a stable page model rather than a sequence of screensh
 - BookHeirloomRenderer draws A4 pages, text, photographs, rails and folios.
 - Missing images select a text-safe master instead of leaving an empty frame.
 
-## Guarding the optional AI path
+## Release boundary for online generation
 
-AI output must pass BookEnvelope checks for allowed masters, grounded quotations, injection strings, bilingual completeness, design authority and photo density. A rejected envelope falls back to the local path.
+The repository contains a validated experimental online generation track, but the v1 Release disables cost-bearing online AI. Shipping premium books use the deterministic local path.
 
-## Keep reading
+## 继续阅读
 
 - [Privacy boundaries](/en/privacy/)
 - [Chinese technical guide](/answers/iphone-heirloom-pdf/)
 
-## Sources
+## 资料来源
 
-- [BookRenderer source (internal code audit)](/evidence/)
+- [BookRenderer source（内部代码审计）](/evidence/)
 - [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
 
 ---
-Page language: en
-Fact-checked: 2026-07-15
+页面语言：en
+事实核验日期：2026-07-16

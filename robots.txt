@@ -22,4 +22,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://decnet105.github.io/enso-shide/sitemap.xml
+Sitemap: https://shide.app/sitemap.xml
