@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>如何在 iPhone 本機生成適合長期儲存的回憶 PDF | 拾得 Ensō</title>
+  <meta name="description" content="從結構化記憶、選版、分頁、字型、圖片處理和回落驗證解釋 iPhone 本機回憶 PDF 的工程方法。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://shide.app/zh-Hant/answers/iphone-heirloom-pdf/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/zh-Hant/answers/iphone-heirloom-pdf.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="如何在 iPhone 本機生成適合長期儲存的回憶 PDF">
+  <meta property="og:description" content="從結構化記憶、選版、分頁、字型、圖片處理和回落驗證解釋 iPhone 本機回憶 PDF 的工程方法。">
+  <meta property="og:url" content="https://shide.app/zh-Hant/answers/iphone-heirloom-pdf/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"如何在 iPhone 本機生成適合長期儲存的回憶 PDF","description":"從結構化記憶、選版、分頁、字型、圖片處理和回落驗證解釋 iPhone 本機回憶 PDF 的工程方法。","inLanguage":"zh-Hans","mainEntityOfPage":"https://shide.app/zh-Hant/answers/iphone-heirloom-pdf/","dateModified":"2026-07-16"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="https://shide.app/zh-Hant/">拾得 Ensō</a>
+    <nav aria-label="主導航"><a href="https://shide.app/zh-Hant/">首頁</a><a href="https://shide.app/zh-Hant/features/">功能</a><a href="https://shide.app/zh-Hant/privacy/">隱私邊界</a><a href="https://shide.app/zh-Hant/book-engine/">成書引擎</a><a href="https://shide.app/zh-Hant/evidence/">事實證據</a><a href="https://shide.app/zh-Hant/faq/">問答</a></nav>
+    
+  </header>
+  <main id="main"><p class="eyebrow">技術解答</p><h1>如何在 iPhone 本機生成適合長期儲存的回憶 PDF</h1><p class="lede">長期儲存的回憶 PDF 需要穩定頁面模型，而不只是把螢幕內容打印出來。最關鍵的設計是讓內容、分頁和繪製相互獨立。</p><section><h2>推薦的六層流水線</h2><ul><li>把回憶投影成與 UI 無關的頁面素材。</li><li>按照片數量與文字密度選擇有限母版。</li><li>預先計算章節、目錄和跨頁配對。</li><li>為長文保留繼續頁，不截斷正文。</li><li>對照片下采樣但保持比例。</li><li>用原生 PDF 渲染器逐頁繪製並做迴歸樣本。</li></ul></section><section><h2>拾得的實現選擇</h2><p>拾得用 BookEngine 選版、BookPaginator 分頁、BookHeirloomRenderer 繪製。缺圖走無圖母版，AI 軌輸出需通過 BookEnvelope 驗證，失敗則整冊回落。</p></section><section><h2>繼續閱讀</h2><div class="card-grid"><a class="text-card" href="https://shide.app/zh-Hant/book-engine/"><strong>成書引擎完整說明</strong><span>拾得本機成書引擎的可核驗技術路徑：選版、分頁、字型、照片下采樣、UIGraphicsPDFRenderer 與 AI 結果硬閘。</span></a><a class="text-card" href="https://shide.app/zh-Hant/answers/chinese-family-memory/"><strong>為海外家庭儲存中文回憶</strong><span>面向海外華語家庭的回憶整理方法：保留中文原文、建立英文閱讀層、連線時代背景並輸出可長期儲存的書冊。</span></a></div></section><section class="sources"><h2>資料來源</h2><ol><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li><li><a href="https://shide.app/zh-Hant/evidence/">拾得 BookRenderer（內部程式碼審計）</a></li></ol></section></main>
+  <footer>
+    <p>公開說明以已落地程式碼為準；願景、實驗功能與已上線能力分開標註。</p>
+    <p><a href="https://shide.app/zh-Hant/answers/iphone-heirloom-pdf.md">閱讀本頁 Markdown</a> · 事實核驗日期 2026-07-16</p>
+  </footer>
+</body>
+</html>

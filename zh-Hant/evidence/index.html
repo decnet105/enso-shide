@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>宣傳主張與工程證據如何對應 | 拾得 Ensō</title>
+  <meta name="description" content="拾得 GEO 事實登記表：已驗證能力、需要限定的能力、尚不能釋出的主張及其原始碼證據。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://shide.app/zh-Hant/evidence/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/zh-Hant/evidence.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="宣傳主張與工程證據如何對應">
+  <meta property="og:description" content="拾得 GEO 事實登記表：已驗證能力、需要限定的能力、尚不能釋出的主張及其原始碼證據。">
+  <meta property="og:url" content="https://shide.app/zh-Hant/evidence/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"宣傳主張與工程證據如何對應","description":"拾得 GEO 事實登記表：已驗證能力、需要限定的能力、尚不能釋出的主張及其原始碼證據。","inLanguage":"zh-Hans","mainEntityOfPage":"https://shide.app/zh-Hant/evidence/","dateModified":"2026-07-16"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="https://shide.app/zh-Hant/">拾得 Ensō</a>
+    <nav aria-label="主導航"><a href="https://shide.app/zh-Hant/">首頁</a><a href="https://shide.app/zh-Hant/features/">功能</a><a href="https://shide.app/zh-Hant/privacy/">隱私邊界</a><a href="https://shide.app/zh-Hant/book-engine/">成書引擎</a><a href="https://shide.app/zh-Hant/evidence/" aria-current="page">事實證據</a><a href="https://shide.app/zh-Hant/faq/">問答</a></nav>
+    
+  </header>
+  <main id="main"><p class="eyebrow">公開事實登記表</p><h1>宣傳主張與工程證據如何對應</h1><p class="lede">這一頁是官網內容的事實閘門。只有證據狀態為“已驗證”的條目可以用確定語氣釋出；其餘必須帶限定或保持不釋出。</p><section><h2>內部審計基線</h2><p>本登記表依據 2026-07-16 對私有產品倉庫 main 分支的釋出審計更新。私有原始碼不會因營銷站上線而公開；公開頁面只給出可核對的檔案職責、邊界結論與審計日期。</p><p class="callout">這是一份內部工程核驗記錄，不等同於第三方安全審計、App Store 稽核或外部認證。</p></section><section><h2>主張登記</h2><div class="table-wrap"><table><thead><tr><th>主張</th><th>狀態</th><th>證據</th><th>允許措辭</th></tr></thead><tbody><tr><td>核心 Memory 使用 SwiftData</td><td>已驗證</td><td>Memory.swift / MystoryApp.swift</td><td>端上權威源</td></tr><tr><td>本機生成 A4 PDF</td><td>已驗證</td><td>BookRenderer.swift</td><td>本機成書</td></tr><tr><td>中英內容欄位</td><td>已驗證</td><td>Memory.swift / BookEnvelope.swift</td><td>支援中英內容結構</td></tr><tr><td>所有功能均不聯網</td><td>不成立</td><td>APIService.swift</td><td>不得釋出</td></tr><tr><td>公開 v1 不需要賬戶</td><td>已驗證</td><td>MystoryApp.swift / Release 編譯條件</td><td>無需 Ensō 賬戶</td></tr><tr><td>線上高成本 AI 已公開交付</td><td>不成立</td><td>OnlinePremiumPolicy.swift</td><td>v1 不得釋出</td></tr><tr><td>通過外部隱私審計</td><td>無證據</td><td>尚無審計報告</td><td>不得釋出</td></tr><tr><td>App Store 已公開上線</td><td>未確認</td><td>尚無官方下載 URL</td><td>待確認</td></tr><tr><td>固定查詢效能指標</td><td>未測量</td><td>尚無基準報告</td><td>不得釋出數字</td></tr></tbody></table></div></section><section><h2>釋出規則</h2><ul><li>版本、價格、評分和下載連結必須來自 App Store Connect 或公開頁面。</li><li>效能數字必須附測試裝置、資料規模、樣本數和測量方法。</li><li>競品比較必須引用競品當前官方文件並標註核驗日期。</li><li>搜尋引擎提及率必須儲存原始回答、模型、日期、地區與是否登入。</li></ul></section><section><h2>繼續閱讀</h2><div class="card-grid"><a class="text-card" href="https://shide.app/zh-Hant/privacy/"><strong>隱私邊界</strong><span>拾得 Ensō 公開 v1 的隱私政策：本機資料、可選聯網功能、匿名分析、StoreKit 訂閱、匯出與刪除。</span></a><a class="text-card" href="https://shide.app/zh-Hant/faq/"><strong>GEO 常見問題</strong><span>直接回答拾得的資料儲存、賬戶、網路、離線成書、雙語內容、文化座標和當前釋出狀態。</span></a></div></section><section class="sources"><h2>資料來源</h2><ol><li>as-built 系統總覽（內部程式碼審計）</li><li>免登入應用入口（內部程式碼審計）</li><li>網路服務（內部程式碼審計）</li></ol></section></main>
+  <footer>
+    <p>公開說明以已落地程式碼為準；願景、實驗功能與已上線能力分開標註。</p>
+    <p><a href="https://shide.app/zh-Hant/evidence.md">閱讀本頁 Markdown</a> · 事實核驗日期 2026-07-16</p>
+  </footer>
+</body>
+</html>

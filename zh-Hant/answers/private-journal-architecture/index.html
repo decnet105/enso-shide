@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>隱私日記應用為什麼要分開個人記憶與公共知識 | 拾得 Ensō</title>
+  <meta name="description" content="解釋隱私日記的雙資料面：端上個人記憶與服務端公共文化知識為何要分開儲存、授權和審計。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://shide.app/zh-Hant/answers/private-journal-architecture/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/zh-Hant/answers/private-journal-architecture.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="隱私日記應用為什麼要分開個人記憶與公共知識">
+  <meta property="og:description" content="解釋隱私日記的雙資料面：端上個人記憶與服務端公共文化知識為何要分開儲存、授權和審計。">
+  <meta property="og:url" content="https://shide.app/zh-Hant/answers/private-journal-architecture/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"隱私日記應用為什麼要分開個人記憶與公共知識","description":"解釋隱私日記的雙資料面：端上個人記憶與服務端公共文化知識為何要分開儲存、授權和審計。","inLanguage":"zh-Hans","mainEntityOfPage":"https://shide.app/zh-Hant/answers/private-journal-architecture/","dateModified":"2026-07-16"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="https://shide.app/zh-Hant/">拾得 Ensō</a>
+    <nav aria-label="主導航"><a href="https://shide.app/zh-Hant/">首頁</a><a href="https://shide.app/zh-Hant/features/">功能</a><a href="https://shide.app/zh-Hant/privacy/">隱私邊界</a><a href="https://shide.app/zh-Hant/book-engine/">成書引擎</a><a href="https://shide.app/zh-Hant/evidence/">事實證據</a><a href="https://shide.app/zh-Hant/faq/">問答</a></nav>
+    
+  </header>
+  <main id="main"><p class="eyebrow">架構解答</p><h1>隱私日記應用為什麼要分開個人記憶與公共知識</h1><p class="lede">個人回憶和公共時代資料具有完全不同的風險。把兩者混入同一個服務端模型，會讓許可權、刪除、同步和 AI 請求邊界都變得模糊。</p><section><h2>雙資料面的職責</h2><div class="table-wrap"><table><thead><tr><th>資料面</th><th>權威源</th><th>典型內容</th><th>預設方向</th></tr></thead><tbody><tr><td>個人記憶</td><td>使用者裝置</td><td>正文、照片、地點、心象</td><td>本地寫入</td></tr><tr><td>公共知識</td><td>核實過的公共庫</td><td>文化事件、來源、標題</td><td>只讀下發</td></tr></tbody></table></div></section><section><h2>AI 功能的額外邊界</h2><p>模型請求應明確區分公共上下文與個人內容，併為個人內容提供最小化、使用者選擇和失敗回落。模型輸出還應經過白名單和引用核驗後才能寫回或渲染。</p></section><section><h2>繼續閱讀</h2><div class="card-grid"><a class="text-card" href="https://shide.app/zh-Hant/privacy/"><strong>拾得隱私邊界</strong><span>拾得 Ensō 公開 v1 的隱私政策：本機資料、可選聯網功能、匿名分析、StoreKit 訂閱、匯出與刪除。</span></a><a class="text-card" href="https://shide.app/zh-Hant/evidence/"><strong>事實證據表</strong><span>拾得 GEO 事實登記表：已驗證能力、需要限定的能力、尚不能釋出的主張及其原始碼證據。</span></a></div></section><section class="sources"><h2>資料來源</h2><ol><li><a href="https://shide.app/zh-Hant/evidence/">拾得雙資料面架構（內部程式碼審計）</a></li><li><a href="https://shide.app/zh-Hant/evidence/">文化 API 邊界（內部程式碼審計）</a></li></ol></section></main>
+  <footer>
+    <p>公開說明以已落地程式碼為準；願景、實驗功能與已上線能力分開標註。</p>
+    <p><a href="https://shide.app/zh-Hant/answers/private-journal-architecture.md">閱讀本頁 Markdown</a> · 事實核驗日期 2026-07-16</p>
+  </footer>
+</body>
+</html>
