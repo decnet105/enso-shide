@@ -18,12 +18,12 @@ The v1 companion uses a local ConversationGraph path. Premium book generation us
 
 - [Privacy boundaries](/en/privacy/)
 - [Book engine](/en/book-engine/)
-- [Evidence register in Chinese](/evidence/)
+- [Evidence register](/en/evidence/)
 
 ## 资料来源
 
-- [Memory model（内部代码审计）](/evidence/)
-- [GenUI validator（内部代码审计）](/evidence/)
+- [Memory model（内部代码审计）](/en/evidence/)
+- [GenUI validator（内部代码审计）](/en/evidence/)
 
 ---
 页面语言：en

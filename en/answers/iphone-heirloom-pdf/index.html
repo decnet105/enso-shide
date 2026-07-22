@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to generate a long-lasting memory PDF on-device on iPhone | 拾得 Ensō</title>
+  <meta name="description" content="How an iPhone builds a lasting memory PDF on device, explained through structured memory, layout selection, pagination, fonts, image handling, and fallback validation.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://shide.app/en/answers/iphone-heirloom-pdf/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/en/answers/iphone-heirloom-pdf.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How to generate a long-lasting memory PDF on-device on iPhone">
+  <meta property="og:description" content="How an iPhone builds a lasting memory PDF on device, explained through structured memory, layout selection, pagination, fonts, image handling, and fallback validation.">
+  <meta property="og:url" content="https://shide.app/en/answers/iphone-heirloom-pdf/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to generate a long-lasting memory PDF on-device on iPhone","description":"How an iPhone builds a lasting memory PDF on device, explained through structured memory, layout selection, pagination, fonts, image handling, and fallback validation.","inLanguage":"en","mainEntityOfPage":"https://shide.app/en/answers/iphone-heirloom-pdf/","dateModified":"2026-07-16"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
+    <nav aria-label="Main navigation"><a href="https://shide.app/en/">Home</a><a href="https://shide.app/en/features/">Features</a><a href="https://shide.app/en/privacy/">Privacy boundaries</a><a href="https://shide.app/en/book-engine/">Book engine</a><a href="https://shide.app/en/evidence/">Evidence</a><a href="https://shide.app/en/faq/">FAQ</a></nav>
+  <span class="language-switch"><a class="language-link" href="https://shide.app/answers/iphone-heirloom-pdf/" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="https://shide.app/zh-Hant/answers/iphone-heirloom-pdf/" hreflang="zh-Hant">繁體中文</a> · <strong class="language-link" aria-current="true">English</strong> · <a class="language-link" href="https://shide.app/ja/answers/iphone-heirloom-pdf/" hreflang="ja">日本語</a></span></header>
+  <main id="main"><p class="eyebrow">Technical answer</p><h1>How to generate a long-lasting memory PDF on-device on iPhone</h1><p class="lede">A long-lasting memory PDF needs a stable page model, not just a printout of what is on screen. The most important design decision is keeping content, pagination, and drawing independent of one another.</p><section><h2>A recommended six-stage pipeline</h2><ul><li>Project memories into page material that is independent of the UI.</li><li>Select from a limited set of master layouts based on photo count and text density.</li><li>Precompute chapters, the table of contents, and facing-page pairings.</li><li>Reserve continuation pages for long text; never truncate the body.</li><li>Downsample photos while preserving their aspect ratio.</li><li>Draw page by page with the native PDF renderer and keep regression samples.</li></ul></section><section><h2>How Ensō implements this</h2><p>Ensō uses BookEngine for layout selection, BookPaginator for pagination, and BookHeirloomRenderer for drawing. When images are missing it falls back to image-free master layouts; AI-track output must pass BookEnvelope validation, and on failure the entire book falls back.</p></section><section><h2>Continue reading</h2><div class="card-grid"><a class="text-card" href="https://shide.app/en/book-engine/"><strong>The full book engine overview</strong><span>The verifiable technical path of Ensō on-device book engine: layout selection, pagination, fonts, photo downsampling, UIGraphicsPDFRenderer, and the hard gate on AI output.</span></a><a class="text-card" href="https://shide.app/en/answers/chinese-family-memory/"><strong>Preserving Chinese memories for overseas families</strong><span>A memory-organizing method for overseas Chinese-speaking families: preserve the original Chinese text, build an English reading layer, connect the era context, and produce a book that lasts.</span></a></div></section><section class="sources"><h2>Sources</h2><ol><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li><li><a href="https://shide.app/en/evidence/">Ensō BookRenderer (internal code audit)</a></li></ol></section></main>
+  <footer>
+    <p>Public statements reflect shipped code; vision, experimental features, and released capabilities are labeled separately.</p>
+    <p><a href="https://shide.app/en/answers/iphone-heirloom-pdf.md">Read this page in Markdown</a> · Fact-checked 2026-07-16</p>
+  </footer>
+</body>
+</html>

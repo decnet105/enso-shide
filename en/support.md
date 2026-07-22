@@ -21,7 +21,7 @@ For product and technical support email support@shide.app. For privacy, anonymou
 ## 继续阅读
 
 - [Privacy policy](/en/privacy/)
-- [Frequently asked questions](/faq/)
+- [Frequently asked questions](/en/faq/)
 
 ## 资料来源
 

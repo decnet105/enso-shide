@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Why a private journal app should separate personal memory from public knowledge | 拾得 Ensō</title>
+  <meta name="description" content="Explaining the two data planes of a private journal: why on-device personal memory and server-side public cultural knowledge should be stored, authorized, and audited separately.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://shide.app/en/answers/private-journal-architecture/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/en/answers/private-journal-architecture.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Why a private journal app should separate personal memory from public knowledge">
+  <meta property="og:description" content="Explaining the two data planes of a private journal: why on-device personal memory and server-side public cultural knowledge should be stored, authorized, and audited separately.">
+  <meta property="og:url" content="https://shide.app/en/answers/private-journal-architecture/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why a private journal app should separate personal memory from public knowledge","description":"Explaining the two data planes of a private journal: why on-device personal memory and server-side public cultural knowledge should be stored, authorized, and audited separately.","inLanguage":"en","mainEntityOfPage":"https://shide.app/en/answers/private-journal-architecture/","dateModified":"2026-07-16"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
+    <nav aria-label="Main navigation"><a href="https://shide.app/en/">Home</a><a href="https://shide.app/en/features/">Features</a><a href="https://shide.app/en/privacy/">Privacy boundaries</a><a href="https://shide.app/en/book-engine/">Book engine</a><a href="https://shide.app/en/evidence/">Evidence</a><a href="https://shide.app/en/faq/">FAQ</a></nav>
+  <span class="language-switch"><a class="language-link" href="https://shide.app/answers/private-journal-architecture/" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="https://shide.app/zh-Hant/answers/private-journal-architecture/" hreflang="zh-Hant">繁體中文</a> · <strong class="language-link" aria-current="true">English</strong> · <a class="language-link" href="https://shide.app/ja/answers/private-journal-architecture/" hreflang="ja">日本語</a></span></header>
+  <main id="main"><p class="eyebrow">Architecture answer</p><h1>Why a private journal app should separate personal memory from public knowledge</h1><p class="lede">Personal memories and public era material carry entirely different risks. Mixing the two into the same server-side model blurs the boundaries of permissions, deletion, sync, and AI requests.</p><section><h2>Responsibilities of the two data planes</h2><div class="table-wrap"><table><thead><tr><th>Data plane</th><th>Source of truth</th><th>Typical content</th><th>Default direction</th></tr></thead><tbody><tr><td>Personal memory</td><td>The user&#x27;s device</td><td>Text, photos, places, mental images</td><td>Written locally</td></tr><tr><td>Public knowledge</td><td>A verified public library</td><td>Cultural events, sources, headlines</td><td>Delivered read-only</td></tr></tbody></table></div></section><section><h2>Extra boundaries for AI features</h2><p>Model requests should clearly distinguish public context from personal content, and for personal content provide minimization, user choice, and failure fallback. Model output should also pass allowlist and citation verification before it can be written back or rendered.</p></section><section><h2>Continue reading</h2><div class="card-grid"><a class="text-card" href="https://shide.app/en/privacy/"><strong>Ensō privacy boundaries</strong><span>The public v1 privacy policy for 拾得 Ensō: on-device data, optional networked features, anonymous analytics, StoreKit subscriptions, export, and deletion.</span></a><a class="text-card" href="https://shide.app/en/evidence/"><strong>The evidence register</strong><span>The Ensō GEO fact register: verified capabilities, capabilities that need qualification, claims that cannot yet be published, and the source-code evidence for each.</span></a></div></section><section class="sources"><h2>Sources</h2><ol><li><a href="https://shide.app/en/evidence/">Ensō two-data-plane architecture (internal code audit)</a></li><li><a href="https://shide.app/en/evidence/">Cultural API boundaries (internal code audit)</a></li></ol></section></main>
+  <footer>
+    <p>Public statements reflect shipped code; vision, experimental features, and released capabilities are labeled separately.</p>
+    <p><a href="https://shide.app/en/answers/private-journal-architecture.md">Read this page in Markdown</a> · Fact-checked 2026-07-16</p>
+  </footer>
+</body>
+</html>

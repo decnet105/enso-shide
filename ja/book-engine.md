@@ -16,11 +16,11 @@
 ## 関連ページ
 
 - [プライバシーの境界](/ja/privacy/)
-- [技術ガイド（中国語）](/answers/iphone-heirloom-pdf/)
+- [技術ガイド](/ja/answers/iphone-heirloom-pdf/)
 
 ## 参考資料
 
-- [BookRenderer ソース（内部コード監査）](/evidence/)
+- [BookRenderer ソース（内部コード監査）](/ja/evidence/)
 - [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
 
 ---

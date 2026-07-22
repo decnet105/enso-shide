@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>公開する主張はコード上の根拠とどう対応するか | 拾得 Ensō</title>
+  <meta name="description" content="Ensō の GEO エビデンス台帳：検証済みの機能、条件付きで説明が必要な機能、まだ公表できない主張と、そのソースコード上の根拠。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://shide.app/ja/evidence/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/ja/evidence.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="公開する主張はコード上の根拠とどう対応するか">
+  <meta property="og:description" content="Ensō の GEO エビデンス台帳：検証済みの機能、条件付きで説明が必要な機能、まだ公表できない主張と、そのソースコード上の根拠。">
+  <meta property="og:url" content="https://shide.app/ja/evidence/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"公開する主張はコード上の根拠とどう対応するか","description":"Ensō の GEO エビデンス台帳：検証済みの機能、条件付きで説明が必要な機能、まだ公表できない主張と、そのソースコード上の根拠。","inLanguage":"ja","mainEntityOfPage":"https://shide.app/ja/evidence/","dateModified":"2026-07-16"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  <header class="site-header">
+    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
+    <nav aria-label="メインナビゲーション"><a href="https://shide.app/ja/">ホーム</a><a href="https://shide.app/ja/features/">機能</a><a href="https://shide.app/ja/privacy/">プライバシー</a><a href="https://shide.app/ja/book-engine/">製本エンジン</a><a href="https://shide.app/ja/evidence/" aria-current="page">エビデンス</a><a href="https://shide.app/ja/faq/">FAQ</a></nav>
+  <span class="language-switch"><a class="language-link" href="https://shide.app/evidence/" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="https://shide.app/zh-Hant/evidence/" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="https://shide.app/en/evidence/" hreflang="en">English</a> · <strong class="language-link" aria-current="true">日本語</strong></span></header>
+  <main id="main"><p class="eyebrow">公開エビデンス台帳</p><h1>公開する主張はコード上の根拠とどう対応するか</h1><p class="lede">このページはサイト掲載内容の事実ゲートです。証拠ステータスが「検証済み」の項目だけを断定的な表現で公開できます。それ以外は条件を付けるか、公開を控えます。</p><section><h2>内部監査のベースライン</h2><p>この台帳は、2026-07-16 に非公開の製品リポジトリ main ブランチに対して実施したリリース監査に基づいて更新しています。マーケティングサイトの公開によって非公開のソースコードが開示されることはありません。公開ページでは、確認可能なファイルの役割・境界に関する結論・監査日のみを示します。</p><p class="callout">これは社内のエンジニアリング検証記録であり、第三者によるセキュリティ監査・App Store の審査・外部認証と同等のものではありません。</p></section><section><h2>主張の台帳</h2><div class="table-wrap"><table><thead><tr><th>主張</th><th>ステータス</th><th>根拠</th><th>許容される表現</th></tr></thead><tbody><tr><td>コア Memory は SwiftData を使用</td><td>検証済み</td><td>Memory.swift / MystoryApp.swift</td><td>端末上の権威ソース</td></tr><tr><td>端末での A4 PDF 生成</td><td>検証済み</td><td>BookRenderer.swift</td><td>端末での製本</td></tr><tr><td>中国語・英語のコンテンツフィールド</td><td>検証済み</td><td>Memory.swift / BookEnvelope.swift</td><td>中英コンテンツ構造をサポート</td></tr><tr><td>すべての機能がネットワークなしで動作</td><td>成立しない</td><td>APIService.swift</td><td>公開不可</td></tr><tr><td>公開 v1 はアカウント不要</td><td>検証済み</td><td>MystoryApp.swift / Release ビルド条件</td><td>Ensō アカウント不要</td></tr><tr><td>高コストのオンライン AI を公開提供済み</td><td>成立しない</td><td>OnlinePremiumPolicy.swift</td><td>v1 では公開不可</td></tr><tr><td>外部プライバシー監査に合格</td><td>根拠なし</td><td>監査報告書なし</td><td>公開不可</td></tr><tr><td>App Store で公開済み</td><td>未確認</td><td>公式ダウンロード URL なし</td><td>要確認</td></tr><tr><td>固定クエリのパフォーマンス指標</td><td>未計測</td><td>ベンチマーク報告書なし</td><td>数値は公開不可</td></tr></tbody></table></div></section><section><h2>公開ルール</h2><ul><li>バージョン・価格・評価・ダウンロードリンクは、App Store Connect または公開ページに基づく必要があります。</li><li>パフォーマンスの数値には、テスト端末・データ規模・サンプル数・計測方法を併記する必要があります。</li><li>競合比較は、競合の最新の公式ドキュメントを引用し、確認日を明記する必要があります。</li><li>検索エンジンでの言及率は、元の回答・モデル・日付・地域・サインイン状態を保存する必要があります。</li></ul></section><section><h2>関連ページ</h2><div class="card-grid"><a class="text-card" href="https://shide.app/ja/privacy/"><strong>プライバシーの境界</strong><span>アカウント不要の Mystory Ensō v1 のプライバシーポリシー：端末内データ、任意のオンライン機能、匿名分析、StoreKit サブスクリプション、エクスポート、削除。</span></a><a class="text-card" href="https://shide.app/ja/faq/"><strong>GEO のよくある質問</strong><span>拾得のデータ保存・アカウント・ネットワーク・オフライン製本・バイリンガルコンテンツ・文化コンテキスト・現在のリリース状況に直接お答えします。</span></a></div></section><section class="sources"><h2>参考資料</h2><ol><li>as-built システム概要（内部コード監査）</li><li>アカウント不要のアプリ入口（内部コード監査）</li><li>ネットワークサービス（内部コード監査）</li></ol></section></main>
+  <footer>
+    <p>公開している記述は出荷済みのコードを反映しています。ビジョン・実験的機能・リリース済み機能は、それぞれ区別して表示します。</p>
+    <p><a href="https://shide.app/ja/evidence.md">このページを Markdown で読む</a> · 事実確認日 2026-07-16</p>
+  </footer>
+</body>
+</html>

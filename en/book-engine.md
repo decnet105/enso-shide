@@ -16,11 +16,11 @@ The repository contains a validated experimental online generation track, but th
 ## 继续阅读
 
 - [Privacy boundaries](/en/privacy/)
-- [Chinese technical guide](/answers/iphone-heirloom-pdf/)
+- [Technical guide](/en/answers/iphone-heirloom-pdf/)
 
 ## 资料来源
 
-- [BookRenderer source（内部代码审计）](/evidence/)
+- [BookRenderer source（内部代码审计）](/en/evidence/)
 - [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
 
 ---

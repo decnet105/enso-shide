@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How public claims map to engineering evidence | 拾得 Ensō</title>
+  <meta name="description" content="Ensō's GEO evidence register: verified capabilities, capabilities that need qualification, claims not yet publishable, and their source-code evidence.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#a4472d">
+  <link rel="canonical" href="https://shide.app/en/evidence/">
+  <link rel="alternate" type="text/markdown" href="https://shide.app/en/evidence.md" title="Markdown twin">
+  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
+  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How public claims map to engineering evidence">
+  <meta property="og:description" content="Ensō's GEO evidence register: verified capabilities, capabilities that need qualification, claims not yet publishable, and their source-code evidence.">
+  <meta property="og:url" content="https://shide.app/en/evidence/">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"How public claims map to engineering evidence","description":"Ensō's GEO evidence register: verified capabilities, capabilities that need qualification, claims not yet publishable, and their source-code evidence.","inLanguage":"en","mainEntityOfPage":"https://shide.app/en/evidence/","dateModified":"2026-07-16"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
+    <nav aria-label="Main navigation"><a href="https://shide.app/en/">Home</a><a href="https://shide.app/en/features/">Features</a><a href="https://shide.app/en/privacy/">Privacy boundaries</a><a href="https://shide.app/en/book-engine/">Book engine</a><a href="https://shide.app/en/evidence/" aria-current="page">Evidence</a><a href="https://shide.app/en/faq/">FAQ</a></nav>
+  <span class="language-switch"><a class="language-link" href="https://shide.app/evidence/" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="https://shide.app/zh-Hant/evidence/" hreflang="zh-Hant">繁體中文</a> · <strong class="language-link" aria-current="true">English</strong> · <a class="language-link" href="https://shide.app/ja/evidence/" hreflang="ja">日本語</a></span></header>
+  <main id="main"><p class="eyebrow">Public evidence register</p><h1>How public claims map to engineering evidence</h1><p class="lede">This page is the fact gate for everything published on the site. Only entries whose evidence status is “verified” may be stated in a definitive voice; everything else must be qualified or withheld.</p><section><h2>Internal audit baseline</h2><p>This register was updated from a release audit of the private product repository's main branch on 2026-07-16. The private source code is not disclosed because the marketing site is live; public pages give only checkable file responsibilities, boundary conclusions, and audit dates.</p><p class="callout">This is an internal engineering verification record. It is not equivalent to a third-party security audit, App Store review, or external certification.</p></section><section><h2>Claim register</h2><div class="table-wrap"><table><thead><tr><th>Claim</th><th>Status</th><th>Evidence</th><th>Allowed wording</th></tr></thead><tbody><tr><td>Core Memory uses SwiftData</td><td>Verified</td><td>Memory.swift / MystoryApp.swift</td><td>On-device source of truth</td></tr><tr><td>On-device A4 PDF generation</td><td>Verified</td><td>BookRenderer.swift</td><td>On-device book making</td></tr><tr><td>Chinese and English content fields</td><td>Verified</td><td>Memory.swift / BookEnvelope.swift</td><td>Supports a Chinese/English content structure</td></tr><tr><td>Every feature works without any network</td><td>Does not hold</td><td>APIService.swift</td><td>Must not be published</td></tr><tr><td>Public v1 requires no account</td><td>Verified</td><td>MystoryApp.swift / Release build conditions</td><td>No Ensō account required</td></tr><tr><td>Cost-bearing online AI is publicly delivered</td><td>Does not hold</td><td>OnlinePremiumPolicy.swift</td><td>Must not be published for v1</td></tr><tr><td>Passed an external privacy audit</td><td>No evidence</td><td>No audit report yet</td><td>Must not be published</td></tr><tr><td>Publicly live on the App Store</td><td>Unconfirmed</td><td>No official download URL yet</td><td>To be confirmed</td></tr><tr><td>Fixed-query performance metrics</td><td>Not measured</td><td>No benchmark report yet</td><td>Do not publish numbers</td></tr></tbody></table></div></section><section><h2>Publishing rules</h2><ul><li>Version, price, ratings, and download links must come from App Store Connect or a public page.</li><li>Performance numbers must include the test device, data scale, sample count, and measurement method.</li><li>Competitive comparisons must cite the competitor's current official documentation and note the verification date.</li><li>Search-engine mention rates must retain the raw answer, model, date, region, and whether the session was signed in.</li></ul></section><section><h2>Keep reading</h2><div class="card-grid"><a class="text-card" href="https://shide.app/en/privacy/"><strong>Privacy boundaries</strong><span>The privacy policy for the accountless Mystory Ensō v1: on-device data, optional online features, anonymous analytics, StoreKit subscriptions, export, and deletion.</span></a><a class="text-card" href="https://shide.app/en/faq/"><strong>GEO FAQ</strong><span>Direct answers on how Ensō stores data, accounts, networking, offline book generation, bilingual content, cultural context, and current release status.</span></a></div></section><section class="sources"><h2>Sources</h2><ol><li>As-built system overview (internal code audit)</li><li>Accountless app entry (internal code audit)</li><li>Network services (internal code audit)</li></ol></section></main>
+  <footer>
+    <p>Public statements reflect shipped code; vision, experimental features, and released capabilities are labeled separately.</p>
+    <p><a href="https://shide.app/en/evidence.md">Read this page in Markdown</a> · Fact-checked 2026-07-16</p>
+  </footer>
+</body>
+</html>

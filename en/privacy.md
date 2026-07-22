@@ -37,12 +37,12 @@ Camera and photo-library access is requested only when you choose to capture, se
 
 - [Support and contact](/en/support/)
 - [Current features](/en/features/)
-- [Evidence register](/evidence/)
+- [Evidence register](/en/evidence/)
 
 ## 资料来源
 
-- [Accountless app entry（内部代码审计）](/evidence/)
-- [Network service implementation（内部代码审计）](/evidence/)
+- [Accountless app entry（内部代码审计）](/en/evidence/)
+- [Network service implementation（内部代码审计）](/en/evidence/)
 
 ---
 页面语言：en
