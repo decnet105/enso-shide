@@ -24,13 +24,17 @@ Yes. The v1 Release digital book uses a deterministic on-device path, and cost-b
 
 The Memory and book protocols keep separate Chinese and English content fields, aiming to support side-by-side Chinese/English reading for overseas Chinese-speaking families.
 
+### Which languages does Enso Shide support?
+
+The Enso Shide app and this website are available in Simplified Chinese, Traditional Chinese, English, and Japanese. The Memory and book protocols also keep separate Chinese and English content fields for side-by-side bilingual reading.
+
 ### Does cultural context get written into private memories?
 
 Public cultural items are delivered read-only. When a user stamps one, what is saved is an on-device private snapshot and a reference identifier; a user's own notes are not written back into the public cultural catalog.
 
 ### Is Ensō already live on the App Store?
 
-This repository currently has no verifiable public App Store download URL, so the GEO build does not generate a download button by default.
+Not yet publicly. As of 2026-07-22, the app's notification-email infrastructure is still awaiting approval — specifically AWS SES production sending access and the associated toll-free number (TFN) verification. Until that clears we are holding the public App Store listing, so the GEO build also omits a download button by default. This page will update the launch status and the download link once approval comes through.
 
 ### Why does the site provide Markdown pages?
 
@@ -48,4 +52,4 @@ The HTML and Markdown are generated from the same structured content, so assisti
 
 ---
 页面语言：en
-事实核验日期：2026-07-16
+事实核验日期：2026-07-22
