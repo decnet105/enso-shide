@@ -34,7 +34,7 @@ Public cultural items are delivered read-only. When a user stamps one, what is s
 
 ### Is Ensō already live on the App Store?
 
-Not yet publicly. As of 2026-07-22, the app's notification-email infrastructure is still awaiting approval — specifically AWS SES production sending access and the associated toll-free number (TFN) verification. Until that clears we are holding the public App Store listing, so the GEO build also omits a download button by default. This page will update the launch status and the download link once approval comes through.
+Not yet publicly. As of 2026-07-22, the launch is still waiting on approval of a piece of notification-email infrastructure; until that clears we are holding the public App Store listing, so the GEO build also omits a download button by default. This page will update the launch status and the download link once approval comes through.
 
 ### Why does the site provide Markdown pages?
 
