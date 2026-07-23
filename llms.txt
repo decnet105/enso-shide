@@ -11,6 +11,8 @@
 - [拾得如何在 iPhone 上生成 A4 岁月书](https://shide.app/book-engine.md): 拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。
 - [宣传主张与工程证据如何对应](https://shide.app/evidence.md): 拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。
 - [关于拾得 Ensō 的常见问题](https://shide.app/faq.md): 直接回答拾得的数据保存、账户、网络、离线成书、双语内容、文化坐标和当前发布状态。
+- [拾得 Ensō 与 Day One、Apple 手记、Journey、Diarium 逐项对比](https://shide.app/compare.md): 面向海外华语家庭的本地优先日记 App 对比：本地存储、无需账户、中文界面、中英双语数字成书、AI 整理与价格的逐项差异，附各家官方来源。
+- [2026 隐私优先日记 App 怎么选（海外华人视角）](https://shide.app/best-private-journal-apps.md): 本地优先、隐私优先日记 App 选购指南，如实写出拾得、Day One、Apple 手记、Journey、Diarium 各自最适合谁。
 - [怎样判断一款 iPhone 日记是否真正本地优先](https://shide.app/answers/local-first-journal.md): 用权威数据源、账户依赖、导出路径、联网功能和故障回落五个问题判断 iPhone 日记应用是否本地优先。
 - [如何在 iPhone 本机生成适合长期保存的回忆 PDF](https://shide.app/answers/iphone-heirloom-pdf.md): 从结构化记忆、选版、分页、字体、图片处理和回落验证解释 iPhone 本机回忆 PDF 的工程方法。
 - [海外家庭怎样把中文人生故事交给下一代](https://shide.app/answers/chinese-family-memory.md): 面向海外华语家庭的回忆整理方法：保留中文原文、建立英文阅读层、连接时代背景并输出可长期保存的书册。
@@ -21,6 +23,8 @@
 - [Mystory Ensō Privacy Policy and Data Boundaries](https://shide.app/en/privacy.md): The privacy policy for the accountless Mystory Ensō v1: on-device data, optional online features, anonymous analytics, StoreKit subscriptions, export, and deletion.
 - [Help with data, subscriptions, and app issues](https://shide.app/en/support.md): Mystory Ensō support for data export and deletion, Apple subscriptions, Restore Purchases, online features, and contact.
 - [How Enso Shide renders an A4 life book on iPhone](https://shide.app/en/book-engine.md): The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, and UIGraphicsPDFRenderer.
+- [Enso Shide vs Day One, Apple Journal, Journey, Diarium](https://shide.app/en/compare.md): A local-first journaling comparison for overseas Chinese families across local storage, no account, Chinese support, bilingual digital book, AI, and price, with each vendor's official sources.
+- [Best Private Journal Apps in 2026 (Local-First, Ranked)](https://shide.app/en/best-private-journal-apps.md): A privacy-first buyer's guide stating honestly who Enso Shide, Day One, Apple Journal, Journey, and Diarium each suit best.
 
 ## Verification
 
