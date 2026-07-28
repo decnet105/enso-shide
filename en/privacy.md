@@ -16,6 +16,8 @@ Mystory Ensō is an accountless, local-first memory app. This policy separates d
 - Future Mail sends the address, delivery time, and content you explicitly submit.
 - Anonymous entitlement verification may send a random installation identifier, App Attest evidence, and verified StoreKit product or transaction state. It does not receive payment-card details.
 
+These online AI features (companion chat, AI structuring, AI book) are processed by **third-party AI providers**: primarily **OpenAI**, and, when it is unavailable, potentially Anthropic (Claude) or Google (Gemini). Only when you actively invoke a feature do we send the relevant derived text (the current conversation, the draft being structured, or a truncated book excerpt) over an encrypted connection to these providers to generate the result; **photos, your full archive, names, and contact details are never sent**. Per these providers' public terms, this data is not used to train their models.
+
 ## Analytics and tracking
 
 When Help Improve Mystory is on, the app sends anonymous action types, short categories, app version, and a random installation identifier. Analytics events exclude memory text, photos, names, and contact details. You can turn analytics off, delete server analytics, and reset the identifier in Your Space > Privacy & Data. Raw anonymous events are designed for a 90-day retention period.
