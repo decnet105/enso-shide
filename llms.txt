@@ -26,6 +26,12 @@
 - [Enso Shide vs Day One, Apple Journal, Journey, Diarium](https://shide.app/en/compare.md): A local-first journaling comparison for overseas Chinese families across local storage, no account, Chinese support, bilingual digital book, AI, and price, with each vendor's official sources.
 - [Best Private Journal Apps in 2026 (Local-First, Ranked)](https://shide.app/en/best-private-journal-apps.md): A privacy-first buyer's guide stating honestly who Enso Shide, Day One, Apple Journal, Journey, and Diarium each suit best.
 
+## Timelines（华人集体记忆时间线）
+
+- [1995年华人集体记忆时间线](https://shide.app/timeline/1995.md): 那一年的电视剧、电影、歌、游戏与大事——拾得文化坐标库人工核验精选，四语可读。
+- [1998年华人集体记忆时间线](https://shide.app/timeline/1998.md): 那一年的电视剧、电影、歌、游戏与大事——拾得文化坐标库人工核验精选，四语可读。
+- [2008年华人集体记忆时间线](https://shide.app/timeline/2008.md): 那一年的电视剧、电影、歌、游戏与大事——拾得文化坐标库人工核验精选，四语可读。
+
 ## Verification
 
 公开能力清单来自仓库中的 as-built 系统总览与对应 Swift 源码。App Store 下载地址、公开版本号、性能数据和上线域名在得到可验证证据前不会发布。
