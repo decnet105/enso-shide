@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["X5L4GA7WZP.com.mystory.MystoryApp"],
+        "components": [
+          { "/": "/e/*", "comment": "季节专题活动深链 (In-App Event / DEEPLINK-1)" },
+          { "/": "/gift/*", "comment": "受赠页唤起 App (送礼裂变少一跳)" }
+        ]
+      }
+    ]
+  }
+}
