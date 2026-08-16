@@ -24,3 +24,7 @@
 **母の物語をバイリンガルの本にできますか？** はい——拾得は中国語の原文を保持し、英語層を添えるので、二つの世代がともに読めます。
 
 **サブスクリプションは必要ですか？** 記録と端末内での利用にアカウントやサブスクリプションは不要です。より豊かな本を作成するプレミアム AI は任意のサブスクリプション（Ensō+）です。
+
+App Store で拾得をダウンロード：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+フォロー：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

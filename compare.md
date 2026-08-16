@@ -44,6 +44,8 @@ Apple 手记免费、系统内置。Diarium 免费加一次性买断 Pro（各�
 - [2026 隐私优先日记 App 怎么选](/best-private-journal-apps/)
 - [拾得当前能力](/features/)
 
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## 资料来源
 
 - [拾得事实登记表（内部代码审计）](/evidence/)
@@ -54,4 +56,6 @@ Apple 手记免费、系统内置。Diarium 免费加一次性买断 Pro（各�
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-23
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

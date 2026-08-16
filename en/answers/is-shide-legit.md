@@ -30,3 +30,7 @@ Search "拾得" or "Shide" on the App Store to see the listing and reviews. Read
 **Is Shide free?** Recording and local use are free with no account; the premium AI book is an optional subscription (Ensō+).
 
 **Who is behind shide.app?** An independent overseas Chinese developer, under the registered business ENSO SHIDE.
+
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

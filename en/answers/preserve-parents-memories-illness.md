@@ -46,3 +46,7 @@ Shide is not a medical product and can't help with treatment; what it helps with
 **Do I have to record audio or write things down?** Whatever's easiest for you. A voice memo is the least effort and keeps the sound of their voice; a few lines of text work too. Shide supports both, and recording itself is free.
 
 **Is what I save private? Does it get uploaded?** Shide is local-first — memories and photos stay on your own iPhone by default, with no signup. Only when you choose to use an optional AI feature does the short passage you select get sent; photos and full archives are never uploaded.
+
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

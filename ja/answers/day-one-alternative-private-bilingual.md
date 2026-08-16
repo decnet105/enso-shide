@@ -30,3 +30,7 @@ Day One は優れた日記アプリです。ただ、すべてをスマホの中
 **Day One の中国語対応の代替はありますか？** 拾得は中国語・英語のバイリンガルで、中国語の時代背景を軸に作られています。
 
 **拾得は Day One のように端末間で同期しますか？** 拾得は意図的にローカルファーストにしています。思い出は一台のスマホの中にあります——端末間の同期は目的ではなく、一台の端末でのプライバシーが目的です。
+
+App Store で拾得をダウンロード：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+フォロー：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

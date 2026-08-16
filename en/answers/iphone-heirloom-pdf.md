@@ -20,11 +20,15 @@ Ensō uses BookEngine for layout selection, BookPaginator for pagination, and Bo
 - [The full book engine overview](/en/book-engine/)
 - [Preserving Chinese memories for overseas families](/en/answers/chinese-family-memory/)
 
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## Sources
 
 - [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
 - [Ensō BookRenderer (internal code audit)](/en/evidence/)
 
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide
+
 ---
 页面语言：en
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16

@@ -44,6 +44,8 @@ Enso Shide offers optional online AI tidy-up and book generation that only proce
 - [Best private journal apps in 2026](/en/best-private-journal-apps/)
 - [What Enso Shide does today](/en/features/)
 
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## Sources
 
 - [Enso Shide evidence register (internal code audit)](/en/evidence/)
@@ -52,6 +54,8 @@ Enso Shide offers optional online AI tidy-up and book generation that only proce
 - [Journey official site](https://journey.cloud/)
 - [Diarium official site](https://diariumapp.com/en)
 
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide
+
 ---
 页面语言：en
-事实核验日期：2026-07-23
+事实核验日期：2026-08-16

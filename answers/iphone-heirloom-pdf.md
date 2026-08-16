@@ -20,6 +20,8 @@
 - [成书引擎完整说明](/book-engine/)
 - [为海外家庭保存中文回忆](/answers/chinese-family-memory/)
 
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## 资料来源
 
 - [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
@@ -27,4 +29,6 @@
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

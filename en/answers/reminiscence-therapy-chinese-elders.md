@@ -35,3 +35,7 @@ The evidence for reminiscence therapy comes from the research cited below; Shide
 **Should I correct them when what they say doesn't match the facts?** Usually no. Reminiscence is about the feeling and the connection in the moment, not a memory test. Going with what they say and keeping them comfortable matters more than getting the facts right.
 
 **Does my parent need to use the phone themselves?** No. Usually it's the adult child or caregiver who does it — you play the music, you look up that year, you write down what they share. Shide is local-first and needs no signup, and recording itself is free.
+
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

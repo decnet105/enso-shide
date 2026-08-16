@@ -4,7 +4,7 @@
 
 ## 內部審計基線
 
-本登記表依據 2026-07-16 對私有產品倉庫 main 分支的釋出審計更新。私有原始碼不會因營銷站上線而公開；公開頁面只給出可核對的檔案職責、邊界結論與審計日期。
+本登記表依據 2026-07-16 對私有產品倉庫 main 分支的釋出審計更新（2026-08-16 複核：App Store 已上線）。私有原始碼不會因營銷站上線而公開；公開頁面只給出可核對的檔案職責、邊界結論與審計日期。
 
 > 這是一份內部工程核驗記錄，不等同於第三方安全審計、App Store 稽核或外部認證。
 
@@ -17,9 +17,9 @@
 | 中英內容欄位 | 已驗證 | Memory.swift / BookEnvelope.swift | 支援中英內容結構 |
 | 所有功能均不聯網 | 不成立 | APIService.swift | 不得釋出 |
 | 公開 v1 不需要賬戶 | 已驗證 | MystoryApp.swift / Release 編譯條件 | 無需 Ensō 賬戶 |
-| 線上高成本 AI 已公開交付 | 不成立 | OnlinePremiumPolicy.swift | v1 不得釋出 |
+| 線上 AI 成書（Ensō+ 訂閱權益） | 已驗證 | OnlinePremiumPolicy.swift + 生產後端 | 訂閱權益·非免費 v1 |
 | 通過外部隱私審計 | 無證據 | 尚無審計報告 | 不得釋出 |
-| App Store 已公開上線 | 未確認 | 尚無官方下載 URL | 待確認 |
+| App Store 已公開上線 | 已驗證 | App Store id6787128369（2026-08-11 發布） | 已上線，可下載 |
 | 固定查詢效能指標 | 未測量 | 尚無基準報告 | 不得釋出數字 |
 
 ## 釋出規則
@@ -34,6 +34,8 @@
 - [隱私邊界](/privacy/)
 - [GEO 常見問題](/faq/)
 
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
 ## 資料來源
 
 - as-built 系統總覽（內部程式碼審計）
@@ -41,5 +43,7 @@
 - 網路服務（內部程式碼審計）
 
 ---
-頁面語言：zh-Hans
-事實核驗日期：2026-07-16
+頁面語言：zh-Hant
+事實核驗日期：2026-08-16
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

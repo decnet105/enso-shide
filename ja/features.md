@@ -14,6 +14,14 @@ Memory・Profile・Keepsake・CompanionState は SwiftData を使用します。
 
 v1 のコンパニオンはローカルの ConversationGraph 経路を使用します。プレミアムの製本は決定論的な端末内レンダラーを用います。課金が発生するオンライン AI はリリースビルドでは無効で、サブスクリプションの特典として販売することはありません。
 
+## 季節の文化特集とディープリンク共有
+
+拾得は節句・行事に合わせて季節の文化特集（中秋節など）を公開し、その時節の公共文化座標を一つの入り口にまとめます。特集も個々の文化イベントもユニバーサルリンク（Universal Link）によるディープリンクに対応し、開くとそのまま App 内の該当ページに遷移します。
+
+## 製本のスタイルと言語
+
+端末内と AI の二経路による製本は、複数の作家文体スタイルと版式に対応します。完成した本は中国語・英語の対訳に対応し、さらに中国語・英語・日本語それぞれの単一言語版も用意しているため、年配のご家族と次の世代がそれぞれ読みやすい版を選べます。
+
 ## 関連ページ
 
 - [プライバシーの境界](/ja/privacy/)
@@ -27,4 +35,8 @@ v1 のコンパニオンはローカルの ConversationGraph 経路を使用し�
 
 ---
 ページ言語：ja
-事実確認日：2026-07-16
+事実確認日：2026-08-16
+
+App Store で拾得をダウンロード：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+フォロー：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

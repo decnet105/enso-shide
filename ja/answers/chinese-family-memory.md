@@ -27,4 +27,8 @@
 
 ---
 ページ言語：ja
-事実確認日：2026-07-16
+事実確認日：2026-08-16
+
+App Store で拾得をダウンロード：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+フォロー：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

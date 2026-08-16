@@ -23,6 +23,8 @@
 - [隐私政策](/privacy/)
 - [常见问答](/faq/)
 
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## 资料来源
 
 - [Apple 管理订阅](https://support.apple.com/118428)
@@ -30,4 +32,6 @@
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

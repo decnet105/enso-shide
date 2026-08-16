@@ -25,3 +25,7 @@
 **能離線用嗎？** 能——記錄和翻看都不用連網、不用註冊。
 
 **拾得收集資料嗎？** 無廣告識別碼、無跨 App 追蹤、不出售資料；匿名分析是選擇開啟的，且不含你的回憶正文和照片。
+
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

@@ -23,11 +23,15 @@ Check the product's current official documentation, pricing page, and privacy po
 - [Judging local-first](/en/answers/local-first-journal/)
 - [What Ensō can do today](/en/features/)
 
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## Sources
 
 - [Ensō fact register (internal code audit)](/en/evidence/)
 - [Apple SwiftData](https://developer.apple.com/documentation/swiftdata)
 
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide
+
 ---
 页面语言：en
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16

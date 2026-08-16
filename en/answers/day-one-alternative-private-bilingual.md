@@ -30,3 +30,7 @@ Want mature, cross-platform daily journaling with encrypted sync across devices?
 **Is there a Chinese alternative to Day One?** Shide is bilingual Chinese–English and built around Chinese cultural context.
 
 **Does Shide sync across devices like Day One?** Shide is local-first by design; a memory lives on your phone. Cross-device sync is not the goal — privacy on one device is.
+
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

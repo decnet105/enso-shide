@@ -20,11 +20,15 @@ The core memory model is local-first and the public v1 requires no Ensō account
 - [Privacy boundaries](/en/privacy/)
 - [On-device book engine](/en/book-engine/)
 
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## 资料来源
 
 - [As-built system overview（内部代码审计）](/evidence/)
 - [Apple SwiftData documentation](https://developer.apple.com/documentation/swiftdata)
 
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide
+
 ---
 页面语言：en
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16

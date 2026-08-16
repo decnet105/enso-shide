@@ -1,6 +1,6 @@
 # 關於拾得 Ensō 的常見問題
 
-下面的回答以 2026-07-16 的 v1 Release 審計為準。後續能力變化需要同步更新程式碼證據與事實核驗日期。
+下面的回答以 2026-08-16 的核驗為準（拾得已於 2026-08-11 在 App Store 上線）。後續能力變化需要同步更新程式碼證據與事實核驗日期。
 
 ## 常見問題
 
@@ -34,7 +34,7 @@ Memory 和成書協議保留中文與英文內容欄位，目標是支援海外�
 
 ### 拾得已經在 App Store 上線了嗎？
 
-尚未公開上線。截至 2026-07-22，App 的上線仍在等待一項通知郵件基建的審批完成；在這一步通過前，我們暫不放出 App Store 下載入口，因此 GEO 建置預設也不生成下載按鈕。審批通過後，本頁會更新上線狀態與下載連結。
+已經上線。拾得已於 2026-08-11 在 App Store 公開發布，iPhone（iOS 17 及以上）可直接下載：在 App Store 搜「拾得」，或開啟 [App Store 頁面](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)。
 
 ### 為什麼官網提供 Markdown 頁面？
 
@@ -45,11 +45,15 @@ HTML 與 Markdown 由同一結構化內容生成，方便輔助工具、搜尋�
 - [事實證據表](/evidence/)
 - [功能說明](/features/)
 
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
 ## 資料來源
 
 - [應用入口（內部程式碼審計）](/evidence/)
 - [成書閘道器（內部程式碼審計）](/evidence/)
 
 ---
-頁面語言：zh-Hans
-事實核驗日期：2026-07-22
+頁面語言：zh-Hant
+事實核驗日期：2026-08-16
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

@@ -19,6 +19,8 @@
 - [拾得隐私边界](/privacy/)
 - [本地笔记与云日记比较](/answers/local-vs-cloud-notes/)
 
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## 资料来源
 
 - [Apple SwiftData](https://developer.apple.com/documentation/swiftdata)
@@ -26,4 +28,6 @@
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

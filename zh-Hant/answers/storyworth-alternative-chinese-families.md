@@ -36,3 +36,7 @@ Storyworth 每週給長輩發一道英文問題，攢一年後寄回一本印好
 **能把爸媽的故事做成雙語書嗎？** 能——拾得到年底整理成中英雙語電子書並匯出 PDF。
 
 **家裡的故事會保持私密嗎？** 拾得本地優先、不用註冊，只在你主動用可選 AI 功能時才上傳你選的那一小段。
+
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

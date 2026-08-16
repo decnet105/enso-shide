@@ -45,6 +45,8 @@
 - [檢視工程證據](/evidence/)
 - [本地優先日記的判斷方法](/answers/local-first-journal/)
 
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
 ## 資料來源
 
 - [免登入應用入口（內部程式碼審計）](/evidence/)
@@ -52,5 +54,7 @@
 - [雙資料面架構（內部程式碼審計）](/evidence/)
 
 ---
-頁面語言：zh-Hans
-事實核驗日期：2026-07-16
+頁面語言：zh-Hant
+事實核驗日期：2026-08-16
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

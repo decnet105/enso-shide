@@ -35,3 +35,7 @@
 **話が事実と食い違っても、直したほうがいいですか？** たいてい直す必要はありません。回想は「今の気持ちとやりとり」が大切で、記憶のテストではありません。話に寄り添い、安心してもらうことのほうが、事実の正しさより大切です。
 
 **親自身がスマホを使えないと駄目ですか？** いいえ。多くの場合、子どもや介護者が操作します――あなたが曲を流し、あの年の思い出をたどり、話してくれたことを書きとめます。拾得はローカル優先・登録不要で、記録そのものは無料です。
+
+App Store で拾得をダウンロード：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+フォロー：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

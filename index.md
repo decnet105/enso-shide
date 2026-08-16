@@ -21,7 +21,7 @@
 | 陪聊 | 本地 ConversationGraph | v1 本机路径 |
 | 账户 | 公开消费路径免登录 | 无需 Ensō 账户 |
 
-> 性能、下载量、引用率和 App Store 状态只有在有可复核证据后才会加入公开页面。
+> 拾得已于 2026-08-11 在 App Store 上线；性能、下载量与引用率等数字仍需可复核证据后才会加入公开页面。
 
 ## 继续阅读
 
@@ -30,6 +30,8 @@
 - [核对工程证据](/evidence/)
 - [了解成书引擎](/book-engine/)
 
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## 资料来源
 
 - [拾得 as-built 系统总览（内部代码审计）](/evidence/)
@@ -37,4 +39,6 @@
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

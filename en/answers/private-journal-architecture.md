@@ -18,11 +18,15 @@ Model requests should clearly distinguish public context from personal content, 
 - [Ensō privacy boundaries](/en/privacy/)
 - [The evidence register](/en/evidence/)
 
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## Sources
 
 - [Ensō two-data-plane architecture (internal code audit)](/en/evidence/)
 - [Cultural API boundaries (internal code audit)](/en/evidence/)
 
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide
+
 ---
 页面语言：en
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16

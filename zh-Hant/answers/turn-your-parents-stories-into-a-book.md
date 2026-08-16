@@ -24,3 +24,7 @@
 **能把媽媽的故事做成雙語書嗎？** 能——拾得保留中文原文、配英文層，兩代人都能讀。
 
 **需要訂閱嗎？** 記錄和本機使用不用註冊、不用訂閱；年底整理成更精緻的書用到的高級 AI 是可選訂閱（Ensō+）。
+
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

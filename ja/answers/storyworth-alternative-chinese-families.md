@@ -36,3 +36,7 @@ Storyworth は毎週ご両親に英語の質問をメールで送り、一年か
 **両親の物語をバイリンガルの本にできますか？** はい——拾得は年末に中英バイリンガルのデジタルブックにまとめ、PDF を書き出します。
 
 **家族の物語はプライベートに保たれますか？** 拾得はローカルファーストでアカウントは不要です。任意の AI 機能を使うときに、あなたが選んだわずかなテキストだけを送信します。
+
+App Store で拾得をダウンロード：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+フォロー：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

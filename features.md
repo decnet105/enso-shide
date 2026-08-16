@@ -24,11 +24,21 @@ Memory、Profile、Keepsake 与 CompanionState 使用 SwiftData 保存。MemoryW
 
 本机轨使用确定性选版、分页和 UIGraphicsPDFRenderer；AI 轨会调用专用后端，并在验证失败时整册回落到本机轨。
 
+## 季节文化专题与深链分享
+
+拾得按节令推出季节文化专题（如中秋），把该时节的公共文化坐标聚成一个可进入的入口；专题与单条文化事件支持通用链接（Universal Link）深链，点开直接落到 App 内对应页面。
+
+## 数字成书的款式与语言
+
+本机与 AI 双轨成书支持多种作者文风款式与版式；成书覆盖中英双语对照，并提供中文、英文、日文单语版本，便于长辈与下一代各取所需。
+
 ## 继续阅读
 
 - [成书引擎技术说明](/book-engine/)
 - [隐私边界](/privacy/)
 - [功能证据表](/evidence/)
+
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
 
 ## 资料来源
 
@@ -38,4 +48,6 @@ Memory、Profile、Keepsake 与 CompanionState 使用 SwiftData 保存。MemoryW
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

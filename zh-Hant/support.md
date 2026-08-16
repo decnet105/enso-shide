@@ -23,11 +23,15 @@
 - [隱私政策](/privacy/)
 - [常見問答](/faq/)
 
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
 ## 資料來源
 
 - [Apple 管理訂閱](https://support.apple.com/118428)
 - [Apple 申請退款](https://support.apple.com/118223)
 
 ---
-頁面語言：zh-Hans
-事實核驗日期：2026-07-16
+頁面語言：zh-Hant
+事實核驗日期：2026-08-16
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

@@ -25,3 +25,7 @@
 **オフラインで使えますか？** はい——記録も閲覧もネットワークなし・アカウントなしで使えます。
 
 **拾得はデータを収集しますか？** 広告識別子なし、アプリをまたぐトラッキングなし、データ販売なし。匿名の分析はオプトイン方式で、あなたの記憶の本文や写真は含まれません。
+
+App Store で拾得をダウンロード：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+フォロー：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

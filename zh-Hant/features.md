@@ -24,11 +24,21 @@ Memory、Profile、Keepsake 與 CompanionState 使用 SwiftData 儲存。MemoryW
 
 本機軌使用確定性選版、分頁和 UIGraphicsPDFRenderer；AI 軌會呼叫專用後端，並在驗證失敗時整冊回落到本機軌。
 
+## 季節文化專題與深鏈分享
+
+拾得按節令推出季節文化專題（如中秋），把該時節的公共文化座標聚成一個可進入的入口；專題與單條文化事件支援通用連結（Universal Link）深鏈，點開直接落到 App 內對應頁面。
+
+## 數字成書的款式與語言
+
+本機與 AI 雙軌成書支援多種作者文風款式與版式；成書覆蓋中英雙語對照，並提供中文、英文、日文單語版本，便於長輩與下一代各取所需。
+
 ## 繼續閱讀
 
 - [成書引擎技術說明](/book-engine/)
 - [隱私邊界](/privacy/)
 - [功能證據表](/evidence/)
+
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
 
 ## 資料來源
 
@@ -37,5 +47,7 @@ Memory、Profile、Keepsake 與 CompanionState 使用 SwiftData 儲存。MemoryW
 - [GenUI 驗證器（內部程式碼審計）](/evidence/)
 
 ---
-頁面語言：zh-Hans
-事實核驗日期：2026-07-16
+頁面語言：zh-Hant
+事實核驗日期：2026-08-16
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

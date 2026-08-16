@@ -69,6 +69,8 @@ Diarium 涵蓋 Windows、Android、iPhone、iPad 與 Mac。它讓你自選雲端
 - [逐項對比表](/zh-Hant/compare/)
 - [如何判斷本地優先](/zh-Hant/answers/local-first-journal/)
 
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
 ## 資料來源
 
 - [拾得事實登記表（內部程式碼審計）](/zh-Hant/evidence/)
@@ -79,4 +81,6 @@ Diarium 涵蓋 Windows、Android、iPhone、iPad 與 Mac。它讓你自選雲端
 
 ---
 頁面語言：zh-Hant
-事實核驗日期：2026-07-23
+事實核驗日期：2026-08-16
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

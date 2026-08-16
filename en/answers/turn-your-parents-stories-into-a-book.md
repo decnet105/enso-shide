@@ -24,3 +24,7 @@ Shide's book is digital: you read it on your phone and export a PDF, and you can
 **Can I make a bilingual book of my mom's stories?** Yes — Shide keeps the original Chinese and adds an English layer so both generations can read it.
 
 **Do I need a subscription?** Recording and local use need no account or subscription; the premium AI that composes the richer book is an optional subscription (Ensō+).
+
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

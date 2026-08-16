@@ -46,3 +46,7 @@
 **一定要录音或写字吗？** 看你们方便。录一段语音最省事，也留住了声音；也可以只记几行字。拾得两种都行，记录本身免费。
 
 **我的记录安全吗？会被上传吗？** 拾得本地优先，回忆和照片默认留在你自己手机里、不用注册。只有你主动使用可选的 AI 功能时，才会上传你选的那一小段文字；从不上传照片或整册资料。
+
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

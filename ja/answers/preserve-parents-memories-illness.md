@@ -46,3 +46,7 @@
 **録音や書き取りは必須ですか？** やりやすいほうで。音声メモがいちばん手軽で、声も残せます。数行の文字だけでもかまいません。拾得はどちらにも対応し、記録そのものは無料です。
 
 **記録した内容は安全ですか？アップロードされますか？** 拾得はローカル優先で、思い出と写真は既定で自分の iPhone のなかに残り、登録も不要です。任意の AI 機能を自分で使うときにだけ、選んだ短い一節が送られます。写真や記録全体がアップロードされることはありません。
+
+App Store で拾得をダウンロード：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+フォロー：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

@@ -35,3 +35,7 @@
 **長輩記不清、說的和事實對不上，要糾正嗎？** 一般不用。懷舊重在此刻的感受和交流，不是考記性。順著他的話走、讓他舒服，比事實準確更重要。
 
 **用拾得需要長輩自己會用手機嗎？** 不需要。通常是子女或照護者來操作——你放歌、你翻那年的往事、你把他講的記下來。拾得本地優先、免註冊，記錄本身免費。
+
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

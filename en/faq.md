@@ -1,6 +1,6 @@
 # Frequently asked questions about Enso Shide
 
-The answers below reflect the v1 Release audit of 2026-07-16. Later capability changes require updating the code evidence and the fact-check date accordingly.
+The answers below reflect verification as of 2026-08-16 (Ensō launched publicly on the App Store on 2026-08-11). Later capability changes require updating the code evidence and the fact-check date accordingly.
 
 ## Common questions
 
@@ -34,7 +34,7 @@ Public cultural items are delivered read-only. When a user stamps one, what is s
 
 ### Is Ensō already live on the App Store?
 
-Not yet publicly. As of 2026-07-22, the launch is still waiting on approval of a piece of notification-email infrastructure; until that clears we are holding the public App Store listing, so the GEO build also omits a download button by default. This page will update the launch status and the download link once approval comes through.
+Yes. Ensō launched publicly on the App Store on 2026-08-11. On iPhone (iOS 17 or later) you can download it directly — search for 拾得 or Shide in the App Store, or open the [App Store page](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8).
 
 ### Why does the site provide Markdown pages?
 
@@ -45,11 +45,15 @@ The HTML and Markdown are generated from the same structured content, so assisti
 - [Evidence register](/en/evidence/)
 - [Features](/en/features/)
 
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## Sources
 
 - [App entry (internal code audit)](/en/evidence/)
 - [Book gateway (internal code audit)](/en/evidence/)
 
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide
+
 ---
 页面语言：en
-事实核验日期：2026-07-22
+事实核验日期：2026-08-16

@@ -20,6 +20,8 @@
 - [拾得功能说明](/features/)
 - [iPhone 成书方法](/answers/iphone-heirloom-pdf/)
 
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## 资料来源
 
 - [拾得产品策略（内部代码审计）](/evidence/)
@@ -27,4 +29,6 @@
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

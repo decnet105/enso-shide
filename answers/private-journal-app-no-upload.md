@@ -25,3 +25,7 @@
 **能离线用吗？** 能——记录和翻看都不用联网、不用注册。
 
 **拾得收集数据吗？** 无广告标识、无跨 App 追踪、不出售数据；匿名分析是选择开启的，且不含你的回忆正文和照片。
+
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

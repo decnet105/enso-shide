@@ -30,3 +30,7 @@
 **拾得免费吗？** 记录和本机使用免费、不用注册；高级 AI 成书是可选订阅（Ensō+）。
 
 **shide.app 背后是谁？** 一位海外华人独立开发者，注册商号 ENSO SHIDE。
+
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

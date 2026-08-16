@@ -22,6 +22,8 @@ AI 軌輸出 BookEnvelope 後，客戶端檢查母版白名單、引用逐字命
 - [檢視成書證據檔案](/evidence/)
 - [iPhone 本機成書指南](/answers/iphone-heirloom-pdf/)
 
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
 ## 資料來源
 
 - [BookRenderer 原始碼（內部程式碼審計）](/evidence/)
@@ -29,5 +31,7 @@ AI 軌輸出 BookEnvelope 後，客戶端檢查母版白名單、引用逐字命
 - [Apple UIGraphicsPDFRenderer](https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer)
 
 ---
-頁面語言：zh-Hans
-事實核驗日期：2026-07-16
+頁面語言：zh-Hant
+事實核驗日期：2026-08-16
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

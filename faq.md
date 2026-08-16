@@ -1,6 +1,6 @@
 # 关于拾得 Ensō 的常见问题
 
-下面的回答以 2026-07-16 的 v1 Release 审计为准。后续能力变化需要同步更新代码证据与事实核验日期。
+下面的回答以 2026-08-16 的核验为准（拾得已于 2026-08-11 在 App Store 上线）。后续能力变化需同步更新代码证据与事实核验日期。
 
 ## 常见问题
 
@@ -34,7 +34,7 @@ Memory 和成书协议保留中文与英文内容字段，目标是支持海外�
 
 ### 拾得已经在 App Store 上线了吗？
 
-尚未公开上线。截至 2026-07-22，App 的上线仍在等待一项通知邮件基建的审批完成；在这一步通过前，我们暂不放出 App Store 下载入口，因此 GEO 构建默认也不生成下载按钮。审批通过后，本页会更新上线状态与下载链接。
+已经上线。拾得已于 2026-08-11 在 App Store 公开发布，iPhone（iOS 17 及以上）可直接下载：在 App Store 搜「拾得」，或打开 [App Store 页面](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)。
 
 ### 为什么官网提供 Markdown 页面？
 
@@ -52,4 +52,6 @@ HTML 与 Markdown 由同一结构化内容生成，方便辅助工具、搜索�
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-22
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

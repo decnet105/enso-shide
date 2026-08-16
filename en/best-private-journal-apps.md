@@ -69,6 +69,8 @@ This page is maintained by the Enso Shide team. We include ourselves and state p
 - [Point-by-point comparison](/en/compare/)
 - [How to tell if a journal is local-first](/en/answers/local-first-journal/)
 
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## Sources
 
 - [Enso Shide evidence register (internal code audit)](/en/evidence/)
@@ -77,6 +79,8 @@ This page is maintained by the Enso Shide team. We include ourselves and state p
 - [Journey official site](https://journey.cloud/)
 - [Diarium official site](https://diariumapp.com/en)
 
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide
+
 ---
 页面语言：en
-事实核验日期：2026-07-23
+事实核验日期：2026-08-16

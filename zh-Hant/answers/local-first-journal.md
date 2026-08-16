@@ -19,6 +19,8 @@
 - [拾得隱私邊界](/zh-Hant/privacy/)
 - [本地筆記與雲日記比較](/zh-Hant/answers/local-vs-cloud-notes/)
 
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
 ## 資料來源
 
 - [Apple SwiftData](https://developer.apple.com/documentation/swiftdata)
@@ -26,4 +28,6 @@
 
 ---
 頁面語言：zh-Hant
-事實核驗日期：2026-07-16
+事實核驗日期：2026-08-16
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

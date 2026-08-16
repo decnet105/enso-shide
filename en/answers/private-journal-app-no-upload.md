@@ -25,3 +25,7 @@ If you write things you would not want on someone else's server — family stori
 **Does it work offline?** Yes — recording and reading work with no network and no account.
 
 **Does Shide collect data?** No advertising identifier, no cross-app tracking, no sale of data. Anonymous analytics are opt-in and exclude your memory text and photos.
+
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

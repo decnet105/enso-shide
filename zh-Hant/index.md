@@ -21,7 +21,7 @@
 | 陪聊 | 本地 ConversationGraph | v1 本機路徑 |
 | 賬戶 | 公開消費路徑免登入 | 無需 Ensō 賬戶 |
 
-> 效能、下載量、引用率和 App Store 狀態只有在有可複核證據後才會加入公開頁面。
+> 拾得已於 2026-08-11 在 App Store 上線；效能、下載量與引用率等數字仍需可複核證據後才會加入公開頁面。
 
 ## 繼續閱讀
 
@@ -30,11 +30,15 @@
 - [核對工程證據](/evidence/)
 - [瞭解成書引擎](/book-engine/)
 
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
 ## 資料來源
 
 - [拾得 as-built 系統總覽（內部程式碼審計）](/evidence/)
 - [Apple SwiftData 文件](https://developer.apple.com/documentation/swiftdata)
 
 ---
-頁面語言：zh-Hans
-事實核驗日期：2026-07-16
+頁面語言：zh-Hant
+事實核驗日期：2026-08-16
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

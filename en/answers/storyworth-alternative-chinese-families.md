@@ -36,3 +36,7 @@ Want a printed hardcover mailed to you, and everyone reads English? Storyworth d
 **Can I make a bilingual book of my parents' stories?** Yes — Shide composes a Chinese–English digital book at year's end and exports a PDF.
 
 **Do my family's stories stay private?** Shide is local-first and needs no account; it only sends the small text you choose when you use an optional AI feature.
+
+[Download Ensō on the App Store](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
+Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

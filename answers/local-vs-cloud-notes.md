@@ -23,6 +23,8 @@
 - [判断本地优先](/answers/local-first-journal/)
 - [拾得当前能力](/features/)
 
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## 资料来源
 
 - [拾得事实登记表（内部代码审计）](/evidence/)
@@ -30,4 +32,6 @@
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

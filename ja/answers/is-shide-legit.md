@@ -30,3 +30,7 @@ App Store で「拾得」または「Shide」を検索して、掲載情報と�
 **Shide は無料ですか？** 記録と端末上での利用はアカウント不要で無料です。プレミアムな AI 書籍は任意のサブスクリプション（Ensō+）です。
 
 **shide.app の背後にいるのは誰ですか？** 独立した海外華人の開発者で、登録事業者 ENSO SHIDE のもとで運営しています。
+
+App Store で拾得をダウンロード：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+フォロー：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

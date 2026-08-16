@@ -22,6 +22,8 @@ AI 轨输出 BookEnvelope 后，客户端检查母版白名单、引用逐字命
 - [查看成书证据文件](/evidence/)
 - [iPhone 本机成书指南](/answers/iphone-heirloom-pdf/)
 
+[在 App Store 下载拾得](https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8)
+
 ## 资料来源
 
 - [BookRenderer 源码（内部代码审计）](/evidence/)
@@ -30,4 +32,6 @@ AI 轨输出 BookEnvelope 后，客户端检查母版白名单、引用逐字命
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-07-16
+事实核验日期：2026-08-16
+
+关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

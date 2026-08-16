@@ -30,3 +30,7 @@ Day One 是很好的日記 App。但如果你就是想要一款把東西全留�
 **Day One 有中文替代嗎？** 拾得是中英雙語，圍繞中文時代背景而做。
 
 **拾得像 Day One 那樣跨裝置同步嗎？** 拾得刻意做成本地優先，回憶留在一台手機上——目標不是跨裝置同步，而是單機隱私。
+
+在 App Store 下載拾得：https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8
+
+關注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide
