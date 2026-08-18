@@ -1,25 +1,69 @@
+# shide.app content usage policy
+#
+# Public content may be indexed by search engines and used as
+# real-time input for AI search, RAG, grounding, and citations.
+# Permission is not granted for AI model training or fine-tuning.
+
+User-agent: *
+Content-signal: search=yes, ai-input=yes, ai-train=no, use=reference
+Allow: /
+
+# OpenAI — search and user-triggered access allowed
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: GPTBot
+User-agent: ChatGPT-User
 Allow: /
 
+# OpenAI — training/general crawler blocked
+User-agent: GPTBot
+Disallow: /
+
+# Anthropic — search and user-triggered access allowed
 User-agent: Claude-SearchBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: Claude-User
 Allow: /
 
+# Anthropic — general crawler blocked
+User-agent: ClaudeBot
+Disallow: /
+
+# Perplexity — search and user-triggered access allowed
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Applebot-Extended
+User-agent: Perplexity-User
 Allow: /
 
+# Traditional search engines
 User-agent: Googlebot
 Allow: /
 
-User-agent: *
+User-agent: Bingbot
 Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI training / bulk crawlers
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
 
 Sitemap: https://shide.app/sitemap.xml
