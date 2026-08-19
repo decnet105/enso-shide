@@ -11,7 +11,7 @@ A durable life book needs a stable page model rather than a sequence of screensh
 
 ## Release boundary for online generation
 
-The repository contains a validated experimental online generation track, but the v1 Release disables cost-bearing online AI. Shipping premium books use the deterministic local path.
+The repository contains a validated experimental online generation track, but online AI is offered as an optional Ensō+ subscription; shipping premium books can also use the deterministic local path.
 
 ## 继续阅读
 

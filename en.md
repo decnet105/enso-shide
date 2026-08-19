@@ -8,11 +8,11 @@ Enso Shide connects memories, photos, places and verified public cultural contex
 - A deterministic on-device A4 PDF rendering path.
 - Chinese and English content fields for intergenerational reading.
 - Read-only public cultural context delivered over the network.
-- A local guided-chat path; cost-bearing online AI is disabled in the v1 Release.
+- A local guided-chat path; online AI structuring and book generation are an optional Ensō+ subscription capability, used only when you invoke them.
 
 ## A precise privacy description
 
-The core memory model is local-first and the public v1 requires no Ensō account. Public cultural content, Future Mail, and optional anonymous analytics use the network; cost-bearing online AI is disabled in this release.
+The core memory model is local-first and the public v1 requires no Ensō account. Public cultural content, Future Mail, and optional anonymous analytics use the network; online AI structuring and book generation are an optional Ensō+ subscription capability, used only when you invoke them.
 
 ## 继续阅读
 

@@ -12,7 +12,7 @@ Public cultural items are fetched as read-only context. A private stamp stores a
 
 ## Companion and book generation
 
-The v1 companion uses a local ConversationGraph path. Premium book generation uses the deterministic on-device renderer; cost-bearing online AI is disabled in the Release build and is not sold as a subscription benefit.
+The v1 companion uses a local ConversationGraph path. Premium book generation uses the deterministic on-device renderer; online AI is an optional Ensō+ subscription capability, invoked only when you choose to; the deterministic on-device path works without it.
 
 ## Seasonal cultural features and deep-link sharing
 

@@ -13,7 +13,7 @@
 - 回忆、照片、地点和心象进入端上私域模型。
 - 1980-2026 华语文化坐标作为公共背景，只读下发。
 - 本机成书路径使用 UIGraphicsPDFRenderer 生成 A4 PDF。
-- 公共文化内容与未来邮件属于联网路径；高成本在线 AI 在 v1 Release 中关闭。
+- 公共文化内容与未来邮件属于联网路径；在线 AI 整理与成书属 Ensō+ 可选订阅，仅在你主动触发时联网。
 
 ## 现在可以被代码证明的能力
 
@@ -292,7 +292,7 @@ AI 轨输出 BookEnvelope 后，客户端检查母版白名单、引用逐字命
 
 ### 没有 AI 服务时还能生成书吗？
 
-可以。v1 Release 的数字成书使用确定性的本机路径，高成本在线 AI 不作为已交付权益。
+可以。v1 Release 的数字成书使用确定性的本机路径，在线 AI 整理与成书属 Ensō+ 可选订阅，不影响本机成书。
 
 ### 拾得如何处理中文与英文？
 
@@ -507,11 +507,11 @@ Enso Shide connects memories, photos, places and verified public cultural contex
 - A deterministic on-device A4 PDF rendering path.
 - Chinese and English content fields for intergenerational reading.
 - Read-only public cultural context delivered over the network.
-- A local guided-chat path; cost-bearing online AI is disabled in the v1 Release.
+- A local guided-chat path; online AI structuring and book generation are an optional Ensō+ subscription capability, used only when you invoke them.
 
 ## A precise privacy description
 
-The core memory model is local-first and the public v1 requires no Ensō account. Public cultural content, Future Mail, and optional anonymous analytics use the network; cost-bearing online AI is disabled in this release.
+The core memory model is local-first and the public v1 requires no Ensō account. Public cultural content, Future Mail, and optional anonymous analytics use the network; online AI structuring and book generation are an optional Ensō+ subscription capability, used only when you invoke them.
 
 ## 继续阅读
 
@@ -545,7 +545,7 @@ Public cultural items are fetched as read-only context. A private stamp stores a
 
 ## Companion and book generation
 
-The v1 companion uses a local ConversationGraph path. Premium book generation uses the deterministic on-device renderer; cost-bearing online AI is disabled in the Release build and is not sold as a subscription benefit.
+The v1 companion uses a local ConversationGraph path. Premium book generation uses the deterministic on-device renderer; online AI is an optional Ensō+ subscription capability, invoked only when you choose to; the deterministic on-device path works without it.
 
 ## 继续阅读
 
@@ -668,7 +668,7 @@ A durable life book needs a stable page model rather than a sequence of screensh
 
 ## Release boundary for online generation
 
-The repository contains a validated experimental online generation track, but the v1 Release disables cost-bearing online AI. Shipping premium books use the deterministic local path.
+The repository contains a validated experimental online generation track, but online AI is offered as an optional Ensō+ subscription; shipping premium books can also use the deterministic local path.
 
 ## 继续阅读
 
