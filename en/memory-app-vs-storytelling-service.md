@@ -1,4 +1,4 @@
-# Memory app vs. storytelling service — which one do you actually need?
+# Memory app vs. storytelling service — how to choose
 
 Storytelling and memoir services such as StoryWorth, Baohua and Remento typically use prompts or interviews to help someone reconstruct past stories, often with a memoir or keepsake book as the end product. A personal life archive such as Shide starts from a different job: continuously keeping your own life as it happens, on-device, and organizing it into a bilingual Life Book. Choose a service to capture a parent's past as a gift; choose an archive app to keep your own ongoing life. They can be complementary.
 

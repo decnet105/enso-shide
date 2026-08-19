@@ -1,4 +1,4 @@
-# Record your life as it happens — a private, local-first living archive
+# Record your life as it happens — a living archive
 
 Shide is a living archive — an iPhone app for keeping your life as it happens: important events, places, annual keepsakes and reflections. Its core archive is local-first, and no account is required for core recording and book-making; online AI is optional through Ensō+. When you're ready, Shide can organize what you've kept into a digital Life Book, with Chinese and English support. It is not a daily diary, and not a service built around interviewing someone about their past.
 
