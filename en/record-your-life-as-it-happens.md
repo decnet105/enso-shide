@@ -8,7 +8,7 @@ A living archive is a running record of your life kept as it happens, rather tha
 
 ## Not a diary, not a memoir service
 
-A journal asks you to write every day, and the value comes from the streak. A living archive has no daily-writing burden: you add meaningful moments whenever they happen. A storytelling or memoir service is different again — it interviews someone, usually a parent, about their past and produces a book of it. Shide is neither. It is an app you use yourself, to keep your own life as it unfolds.
+Many journals are organized around daily entries. A living archive does not require a daily cadence — you add something when it is meaningful enough to keep. A storytelling or memoir service is different again — it interviews someone, usually a parent, about their past and produces a book of it. Shide is neither. It is an app you use yourself, to keep your own life as it unfolds.
 
 ## How Shide keeps a life
 
@@ -33,7 +33,7 @@ A running record of your life kept as it happens — events, places, annual keep
 
 ## How is a life archive different from a journal?
 
-A journal asks you to write every day; a living archive lets you capture meaningful moments over time, organized by event, place and year, with no daily-writing burden.
+Journals are usually organized around continuous daily entries; a living archive does not require a daily cadence, letting you capture meaningful moments over time, organized by event, place and year.
 
 ## Can I record my life without journaling every day?
 

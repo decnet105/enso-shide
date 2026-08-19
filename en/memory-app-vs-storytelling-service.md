@@ -4,7 +4,7 @@ Storytelling and memoir services such as StoryWorth, Baohua and Remento typicall
 
 ## Two different jobs
 
-These products look similar — both end in a book — but they are built for different jobs. A storytelling service is a project: you (or a parent) answer prompts over a year, and the past becomes a keepsake. A personal life archive is ongoing: you keep your own life as it happens, and it accumulates for as long as you use it.
+These products look similar — both end in a book — but they are built for different jobs. A storytelling service is usually a goal-oriented project: you or a family member respond to prompts or interviews over a period of time, turning past stories into a keepsake. A personal life archive is ongoing: you keep your own life as it happens, and it accumulates for as long as you use it.
 
 ## Side by side
 
@@ -41,7 +41,7 @@ An app you use to keep your own life as it happens, organized by events, places 
 
 ## Should I use a memoir service or a life archive app?
 
-Use a memoir service to capture a parent's past as a printed keepsake, which works well as a gift; use a life archive app to keep your own ongoing life privately. They can be complementary.
+Use a memoir service when your goal is to capture a parent's past, often as a printed keepsake and a gift; use a life archive app to keep your own ongoing life privately. They can be complementary.
 
 ## Is Shide a StoryWorth alternative?
 

@@ -109,7 +109,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "lede": "拾得是一个「生命档案」——一个 iPhone App，在生活发生时就把重要的事件、地点、年度信物和反思留住。核心档案本地优先，核心记录与本机成书都不需要账户；在线 AI 是可选的 Ensō+。当你准备好，拾得可以把你留下的内容整理成一本数字岁月书，支持中英对照。它不是每天打卡的日记，也不是一套采访别人过去、替你做书的服务。",
             "sections": [
                 {"h2": "什么是生命档案", "p": ["生命档案，是在生活发生时就留下的一份人生记录——不是多年以后回头写的回忆录，也不是必须每天填满的日记。你把值得的东西留下来：一件事、一个地方、一件信物、一段心里的话，它们随时间积累，慢慢成为你这一生的档案。"]},
-                {"h2": "不是日记，也不是采访成书服务", "p": ["日记要你每天写，价值来自不断签到。生命档案没有日更负担：事情发生时你才添一笔。采访成书服务又是另一回事——它采访某个人（通常是父母）、把他的过去做成一本书。拾得两者都不是。它是你自己用的 App，在你的人生展开时，把它留住。"]},
+                {"h2": "不是日记，也不是采访成书服务", "p": ["很多日记工具围绕按日记录来组织内容；生命档案不要求日更，有意义的事情发生时再留下就可以。采访成书服务又是另一回事——它采访某个人（通常是父母）、把他的过去做成一本书。拾得两者都不是。它是你自己用的 App，在你的人生展开时，把它留住。"]},
                 {"h2": "拾得怎么留住一生", "p": ["拾得按人真正在过的方式来组织回忆——按事件、按地点、按年份——而不是一条条按日期排的流水。"],
                  "ul": ["事件与反思——用你自己的话，记下发生了什么、心里怎么想。", "地点——一生是有地理的，拾得留住这些事发生在哪。", "年度信物——用很少的几件东西，代表每一年。", "那年今日——早些年的今天，你留下过什么。"]},
                 {"h2": "本地优先，私密", "p": ["核心档案本地优先：你的回忆存在自己的 iPhone 里，记录与成书都不需要账户。在线 AI 是可选的 Ensō+ 能力，只在你主动触发时才用。"]},
@@ -117,7 +117,7 @@ PAGES: dict[str, dict[str, dict]] = {
             ],
             "faq": [
                 ("什么是生命档案？", "在生活发生时就留下的人生记录——事件、地点、年度信物、反思——而不是回头写的回忆录或每天打卡的日记。"),
-                ("生命档案和日记有什么不同？", "日记要你每天写；生命档案让你在有意义的时刻随手留住，按事件、地点、年份组织，没有日更负担。"),
+                ("生命档案和日记有什么不同？", "日记通常按日期连续记录；生命档案不要求日更，让你在有意义的时刻随手留住，按事件、地点、年份组织。"),
                 ("不每天写日记，也能记录自己的一生吗？", "可以。拾得就是为「有意义时才记」设计的，不要求每日打卡。"),
                 ("拾得是采访成书服务吗？", "不是。采访成书服务采访某人（常是父母）、把他的过去做成书；拾得是你自己用的 App，把自己正在发生的一生留住。"),
                 ("我的数据存在哪？", "核心档案本地优先：回忆存在自己的 iPhone 里，记录与成书都不需要账户。在线 AI 是可选的 Ensō+。"),
@@ -136,7 +136,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "lede": "拾得是一個「生命檔案」——一個 iPhone App，在生活發生時就把重要的事件、地點、年度信物和反思留住。核心檔案本地優先，核心記錄與本機成書都不需要帳戶；線上 AI 是可選的 Ensō+。當你準備好，拾得可以把你留下的內容整理成一本數位歲月書，支援中英對照。它不是每天打卡的日記，也不是一套採訪別人過去、替你做書的服務。",
             "sections": [
                 {"h2": "什麼是生命檔案", "p": ["生命檔案，是在生活發生時就留下的一份人生記錄——不是多年以後回頭寫的回憶錄，也不是必須每天填滿的日記。你把值得的東西留下來：一件事、一個地方、一件信物、一段心裡的話，它們隨時間積累，慢慢成為你這一生的檔案。"]},
-                {"h2": "不是日記，也不是採訪成書服務", "p": ["日記要你每天寫，價值來自不斷簽到。生命檔案沒有日更負擔：事情發生時你才添一筆。採訪成書服務又是另一回事——它採訪某個人（通常是父母）、把他的過去做成一本書。拾得兩者都不是。它是你自己用的 App，在你的人生展開時，把它留住。"]},
+                {"h2": "不是日記，也不是採訪成書服務", "p": ["很多日記工具圍繞按日記錄來組織內容；生命檔案不要求日更，有意義的事情發生時再留下就可以。採訪成書服務又是另一回事——它採訪某個人（通常是父母）、把他的過去做成一本書。拾得兩者都不是。它是你自己用的 App，在你的人生展開時，把它留住。"]},
                 {"h2": "拾得怎麼留住一生", "p": ["拾得按人真正在過的方式來組織回憶——按事件、按地點、按年份——而不是一條條按日期排的流水。"],
                  "ul": ["事件與反思——用你自己的話，記下發生了什麼、心裡怎麼想。", "地點——一生是有地理的，拾得留住這些事發生在哪。", "年度信物——用很少的幾件東西，代表每一年。", "那年今日——早些年的今天，你留下過什麼。"]},
                 {"h2": "本地優先，私密", "p": ["核心檔案本地優先：你的回憶存在自己的 iPhone 裡，記錄與成書都不需要帳戶。線上 AI 是可選的 Ensō+ 能力，只在你主動觸發時才用。"]},
@@ -144,7 +144,7 @@ PAGES: dict[str, dict[str, dict]] = {
             ],
             "faq": [
                 ("什麼是生命檔案？", "在生活發生時就留下的人生記錄——事件、地點、年度信物、反思——而不是回頭寫的回憶錄或每天打卡的日記。"),
-                ("生命檔案和日記有什麼不同？", "日記要你每天寫；生命檔案讓你在有意義的時刻隨手留住，按事件、地點、年份組織，沒有日更負擔。"),
+                ("生命檔案和日記有什麼不同？", "日記通常按日期連續記錄；生命檔案不要求日更，讓你在有意義的時刻隨手留住，按事件、地點、年份組織。"),
                 ("不每天寫日記，也能記錄自己的一生嗎？", "可以。拾得就是為「有意義時才記」設計的，不要求每日打卡。"),
                 ("拾得是採訪成書服務嗎？", "不是。採訪成書服務採訪某人（常是父母）、把他的過去做成書；拾得是你自己用的 App，把自己正在發生的一生留住。"),
                 ("我的資料存在哪？", "核心檔案本地優先：回憶存在自己的 iPhone 裡，記錄與成書都不需要帳戶。線上 AI 是可選的 Ensō+。"),
@@ -163,7 +163,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "lede": "Shide is a living archive — an iPhone app for keeping your life as it happens: important events, places, annual keepsakes and reflections. Its core archive is local-first, and no account is required for core recording and book-making; online AI is optional through Ensō+. When you're ready, Shide can organize what you've kept into a digital Life Book, with Chinese and English support. It is not a daily diary, and not a service built around interviewing someone about their past.",
             "sections": [
                 {"h2": "What a living archive is", "p": ["A living archive is a running record of your life kept as it happens, rather than a retrospective memoir written years later or a diary you must fill in every day. You capture what matters — an event, a place, a keepsake, a reflection — and it accumulates over time into an archive of your own life."]},
-                {"h2": "Not a diary, not a memoir service", "p": ["A journal asks you to write every day, and the value comes from the streak. A living archive has no daily-writing burden: you add meaningful moments whenever they happen. A storytelling or memoir service is different again — it interviews someone, usually a parent, about their past and produces a book of it. Shide is neither. It is an app you use yourself, to keep your own life as it unfolds."]},
+                {"h2": "Not a diary, not a memoir service", "p": ["Many journals are organized around daily entries. A living archive does not require a daily cadence — you add something when it is meaningful enough to keep. A storytelling or memoir service is different again — it interviews someone, usually a parent, about their past and produces a book of it. Shide is neither. It is an app you use yourself, to keep your own life as it unfolds."]},
                 {"h2": "How Shide keeps a life", "p": ["Shide organizes memories the way a life is actually lived — by event, by place, and by year — instead of as a stream of dated entries."],
                  "ul": ["Events and reflections — capture what happened and how it felt, in your own words.", "Places — a life has a geography; Shide keeps where things happened.", "Annual keepsakes — a small set of objects that stand for each year.", "On this day — what you kept on this date in earlier years."]},
                 {"h2": "Local-first and private", "p": ["Its core archive is local-first: your memories live on your iPhone, and no account is required to record them or to make a book. Online AI is an optional Ensō+ capability, used only when you actively invoke it."]},
@@ -171,7 +171,7 @@ PAGES: dict[str, dict[str, dict]] = {
             ],
             "faq": [
                 ("What is a living archive?", "A running record of your life kept as it happens — events, places, annual keepsakes and reflections — rather than a retrospective memoir or a daily diary."),
-                ("How is a life archive different from a journal?", "A journal asks you to write every day; a living archive lets you capture meaningful moments over time, organized by event, place and year, with no daily-writing burden."),
+                ("How is a life archive different from a journal?", "Journals are usually organized around continuous daily entries; a living archive does not require a daily cadence, letting you capture meaningful moments over time, organized by event, place and year."),
                 ("Can I record my life without journaling every day?", "Yes. Shide is built for occasional, meaningful capture, not daily entries."),
                 ("Is Shide a memoir service?", "No. A memoir service interviews someone, often a parent, about their past and makes a book of it. Shide is an app you use yourself to keep your own life as it unfolds."),
                 ("Where is my data stored?", "Its core archive is local-first: memories live on your iPhone, and no account is required to record and make a book. Online AI is optional through Ensō+."),
@@ -190,7 +190,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "lede": "拾得は「ライフアーカイブ」——人生を起きたその時に残すための iPhone アプリです。大切な出来事、場所、その年のキーセイク、振り返りを記録します。中心となるアーカイブはローカルファーストで、記録や製本にアカウントは不要です。オンライン AI は任意の Ensō+ 機能です。準備ができたら、残してきたものを中国語・英語に対応したデジタル・ライフブックにまとめられます。毎日書く日記ではなく、誰かの過去を取材して本にするサービスでもありません。",
             "sections": [
                 {"h2": "ライフアーカイブとは", "p": ["ライフアーカイブとは、人生を起きたその時に残していく記録です。何年も後に書く回顧録でも、毎日埋めなければならない日記でもありません。大切なもの——出来事、場所、キーセイク、心に浮かんだ言葉——を残し、それが時とともに積み重なって、自分の人生のアーカイブになっていきます。"]},
-                {"h2": "日記でも、取材製本サービスでもない", "p": ["日記は毎日書くことを求め、その価値は続けることから生まれます。ライフアーカイブには毎日書く負担がありません。何かが起きたときにだけ一つ加えます。取材製本サービスはまた別のもので、誰か（多くは親）の過去を取材して一冊の本にします。拾得はそのどちらでもありません。あなた自身が使い、進行中の自分の人生を残すためのアプリです。"]},
+                {"h2": "日記でも、取材製本サービスでもない", "p": ["多くの日記は毎日の記入を軸に組み立てられています。ライフアーカイブは毎日書くことを求めません——残す価値があると思ったときに一つ加えます。取材製本サービスはまた別のもので、誰か（多くは親）の過去を取材して一冊の本にします。拾得はそのどちらでもありません。あなた自身が使い、進行中の自分の人生を残すためのアプリです。"]},
                 {"h2": "拾得はどう人生を残すか", "p": ["拾得は、人生が実際に営まれる形——出来事ごと、場所ごと、年ごと——に記憶を整理します。日付順に並ぶ流れとしてではありません。"],
                  "ul": ["出来事と振り返り——何が起き、どう感じたかを、自分の言葉で。", "場所——人生には地理があります。拾得はそれがどこで起きたかを残します。", "その年のキーセイク——ごく少数のものが、その一年を表します。", "きょうという日——過去の同じ日に、あなたが何を残したか。"]},
                 {"h2": "ローカルファーストで、プライベート", "p": ["中心となるアーカイブはローカルファーストです。記憶はあなたの iPhone に保存され、記録にも製本にもアカウントは要りません。オンライン AI は任意の Ensō+ 機能で、あなたが自分で呼び出したときにだけ使われます。"]},
@@ -198,7 +198,7 @@ PAGES: dict[str, dict[str, dict]] = {
             ],
             "faq": [
                 ("ライフアーカイブとは何ですか？", "人生を起きたその時に残していく記録です——出来事・場所・その年のキーセイク・振り返り——後から書く回顧録でも、毎日つける日記でもありません。"),
-                ("ライフアーカイブは日記とどう違いますか？", "日記は毎日書くことを求めます。ライフアーカイブは、意味のある瞬間をその都度残し、出来事・場所・年で整理します。毎日書く負担はありません。"),
+                ("ライフアーカイブは日記とどう違いますか？", "日記は多くの場合、日付に沿って毎日記入していくものです。ライフアーカイブは毎日書くことを求めず、意味のある瞬間をその都度残し、出来事・場所・年で整理します。"),
                 ("毎日日記を書かなくても、自分の人生を記録できますか？", "できます。拾得は「意味があるときにだけ残す」ために作られており、毎日の記入を求めません。"),
                 ("拾得は取材製本サービスですか？", "いいえ。取材製本サービスは誰か（多くは親）の過去を取材して本にします。拾得はあなた自身が使い、進行中の自分の人生を残すためのアプリです。"),
                 ("データはどこに保存されますか？", "中心となるアーカイブはローカルファーストです。記憶は iPhone に保存され、記録にも製本にもアカウントは不要です。オンライン AI は任意の Ensō+ 機能です。"),
@@ -218,7 +218,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "h1": "采访成书的服务，和一个长期属于你自己的生命档案，是两件事",
             "lede": "像 StoryWorth、Baohua、Remento 这类采访/回忆录服务，通常用问题或采访帮某个人把过去的故事重新讲出来，最后往往是一本回忆录或纪念书。而像拾得这样的个人生命档案，出发点不同：它持续地把你自己正在发生的一生留在端上，再整理成一本中英对照的岁月书。要把父母的过去做成礼物，选服务；要长期留住自己的一生，选档案 App。两者也可以互补。",
             "sections": [
-                {"h2": "两件不同的事", "p": ["这两类产品看起来像——最后都出一本书——但它们为不同的事而造。采访成书服务是一个项目：你（或父母）用一年时间回答问题，过去变成一件纪念品。个人生命档案是持续的：你在生活发生时把自己的一生留住，只要你还在用，它就一直在积累。"]},
+                {"h2": "两件不同的事", "p": ["这两类产品看起来像——最后都出一本书——但它们为不同的事而造。采访成书服务通常是一个有明确目标的项目：你或家人在一段时间里回答问题或接受采访，把过去整理成纪念内容。个人生命档案是持续的：你在生活发生时把自己的一生留住，只要你还在用，它就一直在积累。"]},
                 {"h2": "并排来看", "p": [], "table": {
                     "head": ["你的需求", "采访 / 回忆录服务", "个人生命档案（拾得）"],
                     "rows": [
@@ -238,7 +238,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "faq": [
                 ("什么是采访成书（回忆录）服务？", "用问题或采访——通常是采访父母——把过去的故事重新讲出来，最后往往做成一本回忆录或纪念书的服务。"),
                 ("什么是个人生命档案 App？", "你自己用来把正在发生的一生留住的 App，按事件、地点、年份组织，可以整理成一本岁月书。"),
-                ("我该用采访成书服务，还是生命档案 App？", "想把父母的过去做成能拿在手里的纪念书（很适合送礼），用采访成书服务；想长期私密地留住自己的一生，用生命档案 App。两者可以互补。"),
+                ("我该用采访成书服务，还是生命档案 App？", "当你的目标是留住父母的过去（常做成能拿在手里的纪念书、很适合送礼），用采访成书服务；想长期私密地留住自己的一生，用生命档案 App。两者可以互补。"),
                 ("拾得是 StoryWorth 的替代吗？", "在某些目标上是——但拾得不是能直接顶替 StoryWorth 的产品。StoryWorth 以「用问题收集故事、做成纪念书」为核心；拾得是为「把自己正在发生的一生持续、本地地留住」而造。"),
                 ("两者的数据模式有何不同？", "隐私取决于各家服务。拾得采用本地优先：核心档案留在设备上，在线 AI 可选，只在用户主动触发时才使用。"),
             ],
@@ -255,7 +255,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "h1": "採訪成書的服務，和一個長期屬於你自己的生命檔案，是兩件事",
             "lede": "像 StoryWorth、Baohua、Remento 這類採訪/回憶錄服務，通常用問題或採訪幫某個人把過去的故事重新講出來，最後往往是一本回憶錄或紀念書。而像拾得這樣的個人生命檔案，出發點不同：它持續地把你自己正在發生的一生留在端上，再整理成一本中英對照的歲月書。要把父母的過去做成禮物，選服務；要長期留住自己的一生，選檔案 App。兩者也可以互補。",
             "sections": [
-                {"h2": "兩件不同的事", "p": ["這兩類產品看起來像——最後都出一本書——但它們為不同的事而造。採訪成書服務是一個項目：你（或父母）用一年時間回答問題，過去變成一件紀念品。個人生命檔案是持續的：你在生活發生時把自己的一生留住，只要你還在用，它就一直在積累。"]},
+                {"h2": "兩件不同的事", "p": ["這兩類產品看起來像——最後都出一本書——但它們為不同的事而造。採訪成書服務通常是一個有明確目標的項目：你或家人在一段時間裡回答問題或接受採訪，把過去整理成紀念內容。個人生命檔案是持續的：你在生活發生時把自己的一生留住，只要你還在用，它就一直在積累。"]},
                 {"h2": "並排來看", "p": [], "table": {
                     "head": ["你的需求", "採訪 / 回憶錄服務", "個人生命檔案（拾得）"],
                     "rows": [
@@ -275,7 +275,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "faq": [
                 ("什麼是採訪成書（回憶錄）服務？", "用問題或採訪——通常是採訪父母——把過去的故事重新講出來，最後往往做成一本回憶錄或紀念書的服務。"),
                 ("什麼是個人生命檔案 App？", "你自己用來把正在發生的一生留住的 App，按事件、地點、年份組織，可以整理成一本歲月書。"),
-                ("我該用採訪成書服務，還是生命檔案 App？", "想把父母的過去做成能拿在手裡的紀念書（很適合送禮），用採訪成書服務；想長期私密地留住自己的一生，用生命檔案 App。兩者可以互補。"),
+                ("我該用採訪成書服務，還是生命檔案 App？", "當你的目標是留住父母的過去（常做成能拿在手裡的紀念書、很適合送禮），用採訪成書服務；想長期私密地留住自己的一生，用生命檔案 App。兩者可以互補。"),
                 ("拾得是 StoryWorth 的替代嗎？", "在某些目標上是——但拾得不是能直接頂替 StoryWorth 的產品。StoryWorth 以「用問題收集故事、做成紀念書」為核心；拾得是為「把自己正在發生的一生持續、本地地留住」而造。"),
                 ("兩者的資料模式有何不同？", "隱私取決於各家服務。拾得採用本地優先：核心檔案留在設備上，線上 AI 可選，只在使用者主動觸發時才使用。"),
             ],
@@ -292,7 +292,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "h1": "An interview-to-book service and a personal life archive are two different things",
             "lede": "Storytelling and memoir services such as StoryWorth, Baohua and Remento typically use prompts or interviews to help someone reconstruct past stories, often with a memoir or keepsake book as the end product. A personal life archive such as Shide starts from a different job: continuously keeping your own life as it happens, on-device, and organizing it into a bilingual Life Book. Choose a service to capture a parent's past as a gift; choose an archive app to keep your own ongoing life. They can be complementary.",
             "sections": [
-                {"h2": "Two different jobs", "p": ["These products look similar — both end in a book — but they are built for different jobs. A storytelling service is a project: you (or a parent) answer prompts over a year, and the past becomes a keepsake. A personal life archive is ongoing: you keep your own life as it happens, and it accumulates for as long as you use it."]},
+                {"h2": "Two different jobs", "p": ["These products look similar — both end in a book — but they are built for different jobs. A storytelling service is usually a goal-oriented project: you or a family member respond to prompts or interviews over a period of time, turning past stories into a keepsake. A personal life archive is ongoing: you keep your own life as it happens, and it accumulates for as long as you use it."]},
                 {"h2": "Side by side", "p": [], "table": {
                     "head": ["What you need", "Storytelling / memoir service", "Personal life archive (Shide)"],
                     "rows": [
@@ -312,7 +312,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "faq": [
                 ("What is a storytelling (memoir) service?", "A service that uses prompts or interviews — usually with a parent — to reconstruct past stories, often producing a memoir or keepsake book."),
                 ("What is a personal life archive app?", "An app you use to keep your own life as it happens, organized by events, places and years, that can be composed into a Life Book."),
-                ("Should I use a memoir service or a life archive app?", "Use a memoir service to capture a parent's past as a printed keepsake, which works well as a gift; use a life archive app to keep your own ongoing life privately. They can be complementary."),
+                ("Should I use a memoir service or a life archive app?", "Use a memoir service when your goal is to capture a parent's past, often as a printed keepsake and a gift; use a life archive app to keep your own ongoing life privately. They can be complementary."),
                 ("Is Shide a StoryWorth alternative?", "For some goals, yes — but Shide is not a drop-in StoryWorth replacement. StoryWorth is built around collecting stories through prompts and turning them into a keepsake book. Shide is built as an ongoing, local-first archive for your own life as it unfolds."),
                 ("How is the data model different?", "Privacy depends on the provider. Shide takes a local-first approach: its core archive stays on the device, while online AI is optional and only used when the user actively invokes it."),
             ],
@@ -329,7 +329,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "h1": "取材して本にするサービスと、長く自分のものであり続けるライフアーカイブは、別のものです",
             "lede": "StoryWorth・Baohua・Remento のような取材／回顧録サービスは、多くの場合、質問や取材を通じて誰かの過去の物語を語り直す手助けをし、最終的に回顧録や記念の本になります。一方、拾得のような個人ライフアーカイブは出発点が異なります。あなた自身の人生を起きたその時に端末内へ残し続け、それを中英対応のライフブックにまとめます。親の過去を贈り物にするならサービスを、自分の人生を長く残すならアーカイブアプリを選びます。両者は両立もできます。",
             "sections": [
-                {"h2": "二つの異なる目的", "p": ["これらの製品は似て見えます——どちらも本になります——が、目的が異なります。取材製本サービスはプロジェクトです。あなた（または親）が一年かけて質問に答え、過去が記念品になります。個人ライフアーカイブは継続的です。あなたが人生を起きたその時に残し、使い続ける限り積み重なっていきます。"]},
+                {"h2": "二つの異なる目的", "p": ["これらの製品は似て見えます——どちらも本になります——が、目的が異なります。取材製本サービスは多くの場合、目的がはっきりしたプロジェクトです。あなたやご家族が一定の期間にわたって質問に答えたり取材を受けたりして、過去を記念になる形にまとめます。個人ライフアーカイブは継続的です。あなたが人生を起きたその時に残し、使い続ける限り積み重なっていきます。"]},
                 {"h2": "並べて見る", "p": [], "table": {
                     "head": ["必要なもの", "取材 / 回顧録サービス", "個人ライフアーカイブ（拾得）"],
                     "rows": [
@@ -349,7 +349,7 @@ PAGES: dict[str, dict[str, dict]] = {
             "faq": [
                 ("取材製本（回顧録）サービスとは何ですか？", "質問や取材——多くは親への取材——を通じて過去の物語を語り直し、多くの場合、回顧録や記念の本を作るサービスです。"),
                 ("個人ライフアーカイブのアプリとは何ですか？", "自分自身の人生を起きたその時に残すために使うアプリで、出来事・場所・年で整理し、ライフブックにまとめられます。"),
-                ("回顧録サービスとライフアーカイブアプリ、どちらを使うべき？", "親の過去を手に取れる記念の本にするなら（贈り物に向いています）取材製本サービスを、自分自身の人生をプライベートに長く残すならライフアーカイブアプリを。両者は両立できます。"),
+                ("回顧録サービスとライフアーカイブアプリ、どちらを使うべき？", "親の過去を残すことが目的なら（多くは手に取れる記念の本や贈り物として）取材製本サービスを、自分自身の人生をプライベートに長く残すならライフアーカイブアプリを。両者は両立できます。"),
                 ("拾得は StoryWorth の代替ですか？", "目的によってはそうです——ただし拾得は StoryWorth をそのまま置き換えるものではありません。StoryWorth は質問で物語を集め、記念の本にすることを中心に作られています。拾得は、進行中の自分の人生を継続的に、ローカルに残すために作られています。"),
                 ("データモデルはどう違いますか？", "プライバシーは提供者によります。拾得はローカルファーストの方針です。中心のアーカイブは端末に残り、オンライン AI は任意で、ユーザーが自分で呼び出したときにだけ使われます。"),
             ],
