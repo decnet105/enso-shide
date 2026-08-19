@@ -22,9 +22,11 @@ LOCALES = ("zh-Hans", "zh-Hant", "en", "ja")
 LOCALE_DIRS = {"zh-Hant": "zh-Hant", "en": "en", "ja": "ja"}
 
 # ---- baseline snapshot (captured before patch, 2026-08-19) ----
-BASE_HTML = 101
-BASE_LOCALE = {"zh-Hans": 26, "en": 25, "zh-Hant": 25, "ja": 25}
-BASE_SITEMAP = 100
+# 2026-08-19 Batch 2A: +2 pages (record-your-life-as-it-happens,
+# memory-app-vs-storytelling-service) × 4 locales = +8 html, +8 sitemap loc.
+BASE_HTML = 109
+BASE_LOCALE = {"zh-Hans": 28, "en": 27, "zh-Hant": 27, "ja": 27}
+BASE_SITEMAP = 108
 BASE_ROBOTS_MD5 = "35a4f54e4501dceaad6c62538171fff8"
 
 # obsolete claims that must NOT remain anywhere
@@ -172,6 +174,22 @@ def main() -> int:
         fail("content: optional Ensō+ wording not found")
     if "本地优先" not in home and "本地记忆" not in home:
         fail("content: local-first positioning not found on home")
+
+    # STRONG-BOOK-CLAIM REGRESSION (Batch 2A) — the two intent clusters that
+    # overlap the new pages must not reassert a "year-end automatic book" promise
+    # that contradicts the tightened "when you're ready, can organize" fact model.
+    STRONG_SLUGS = ("storyworth-alternative-chinese-families", "turn-your-parents-stories-into-a-book")
+    STRONG_TOKENS = ("year's end", "year-end", "到年底", "年底", "年末")
+    for slug in STRONG_SLUGS:
+        for pre in ("", "en/", "zh-Hant/", "ja/"):
+            for name in (f"{pre}answers/{slug}/index.html", f"{pre}answers/{slug}.md"):
+                fp = ROOT / name
+                if not fp.exists():
+                    fail(f"regression: expected cluster file missing {name}"); continue
+                raw = fp.read_text(encoding="utf-8")
+                for tok in STRONG_TOKENS:
+                    if tok in raw:
+                        fail(f"regression: strong year-end book claim {tok!r} still in {name}")
 
     # SITE INTEGRITY
     n_html = sum(1 for _ in ROOT.rglob("*.html") if ".git" not in _.parts)
