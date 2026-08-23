@@ -1,5 +1,7 @@
 # Frequently asked questions about Enso Shide
 
+Enso Shide (拾得) is a local-first iOS app for overseas Chinese families: record your life's memories against the cultural coordinates generations have shared since 1980, and turn them into a bilingual Chinese–English keepsake book to pass on to the next generation — no account, no uploads.
+
 The answers below reflect verification as of 2026-08-16 (Ensō launched publicly on the App Store on 2026-08-11). Later capability changes require updating the code evidence and the fact-check date accordingly.
 
 ## Common questions

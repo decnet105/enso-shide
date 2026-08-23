@@ -1,5 +1,7 @@
 # What Enso Shide implements today
 
+Enso Shide (拾得) is a local-first iOS app for overseas Chinese families: record your life's memories against the cultural coordinates generations have shared since 1980, and turn them into a bilingual Chinese–English keepsake book to pass on to the next generation — no account, no uploads.
+
 This page only lists capabilities that can be located in the current repository. Product goals and undeployed services are not presented as shipped features.
 
 ## Private models on the device
