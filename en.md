@@ -1,6 +1,6 @@
-# Turn Chinese memories into a book the next generation can read
+# Four decades of shared Chinese cultural memory, told well and passed on to the next generation
 
-Enso Shide connects memories, photos, places and verified public cultural context, then turns that material into a structured life book. The current project targets iOS 17 and uses SwiftData for its core private models.
+Enso Shide maps four decades of Chinese songs, shows, books, games, and milestone events into cultural coordinates shared across generations. It is also a space to record your own journey: the years behind, the present moment, and future hopes—crafted into a bilingual keepsake book the next generation can truly connect with. Built local-first with zero accounts or uploads. AI-driven animated stories and dramas are currently in the works: a new medium to carry these memories forward.
 
 ## What the current code supports
 
