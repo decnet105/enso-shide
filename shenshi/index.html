@@ -4,69 +4,137 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>沈拾 Shen Shi｜拾得原创音乐 · Enso Shide</title>
-  <meta name="description" content="沈拾 Shen Shi 是拾得 Ensō 世界观里的虚构角色、由 AI 创作的原创音乐声音。首支单曲《长风》。官方艺人页，含联系方式。">
+  <meta name="description" content="沈拾 Shen Shi — 拾得 Ensō 世界观里的虚构角色、由 AI 创作的原创音乐声音。首支单曲《长风》。官方艺人页。">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#a4472d">
   <link rel="canonical" href="https://shide.app/shenshi/">
   <link rel="alternate" type="text/markdown" href="https://shide.app/shenshi.md" title="Markdown twin">
   <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
   <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
-  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="沈拾 Shen Shi｜拾得原创音乐">
   <meta property="og:description" content="拾得 Ensō 世界观里的虚构角色、AI 创作的原创音乐声音。首支单曲《长风》。">
   <meta property="og:url" content="https://shide.app/shenshi/">
   <meta property="og:image" content="https://shide.app/assets/shenshi-avatar.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"沈拾 Shen Shi","alternateName":"Shen Shi","url":"https://shide.app/shenshi/","image":"https://shide.app/assets/shenshi-avatar.jpg","description":"拾得 Ensō 世界观里的虚构角色、AI 创作的原创音乐声音。首支单曲《长风》。","genre":["Mandopop","World","Electronic"],"email":"support@shide.app","sameAs":["https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj"],"member":{"@type":"Organization","name":"Enso Shide","email":"support@shide.app"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"沈拾 Shen Shi","alternateName":"Shen Shi","url":"https://shide.app/shenshi/","image":"https://shide.app/assets/shenshi-avatar.jpg","description":"拾得 Ensō 世界观里的虚构角色、AI 创作的原创音乐声音。首支单曲《长风》。","genre":["Mandopop","World","Electronic"],"email":"ensoshide@gmail.com","sameAs":["https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj","https://www.youtube.com/@EnsoShide","https://www.instagram.com/ensoshide"],"member":{"@type":"Organization","name":"Enso Shide","email":"ensoshide@gmail.com"}}</script>
   <style>
-    .artist-hero{text-align:center;margin:1.5rem 0 2rem}
-    .artist-hero img{width:200px;height:200px;border-radius:50%;object-fit:cover;box-shadow:0 6px 22px rgba(0,0,0,.16)}
-    .artist-hero h1{margin:1rem 0 .25rem}
-    .artist-hero .roman{color:#8a6b3a;letter-spacing:.04em}
-    .listen-btn{display:inline-block;margin:.4rem 0;padding:.7rem 1.4rem;border-radius:999px;background:#a4472d;color:#fff;text-decoration:none;font-weight:600}
-    .contact-block{font-size:.95rem;line-height:1.9}
-    .contact-block strong{color:#a4472d}
+    :root{
+      --paper:#f6f1e7; --paper-2:#efe7d6; --ink:#2a2118; --ink-soft:#5c5040;
+      --gold:#a4772d; --gold-soft:#c69a53; --vermilion:#a4472d; --navy:#12365e;
+      --serif:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+      --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",Roboto,sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:var(--sans);color:var(--ink);
+      background:radial-gradient(120% 80% at 72% -10%,#fdf6e6 0%,var(--paper) 42%,var(--paper-2) 100%);
+      -webkit-font-smoothing:antialiased;line-height:1.75}
+    a{color:var(--vermilion)}
+    .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+    .topbar{display:flex;justify-content:center;padding:22px 0 6px}
+    .topbar a{color:var(--ink-soft);text-decoration:none;font-size:.86rem;letter-spacing:.06em;border-bottom:1px solid transparent}
+    .topbar a:hover{border-color:var(--gold-soft)}
+
+    .hero{text-align:center;padding:26px 0 8px;position:relative}
+    .hero .dust{position:absolute;inset:0;pointer-events:none;
+      background:radial-gradient(closest-side at 50% 30%,rgba(198,154,83,.16),transparent 70%)}
+    .avatar{width:220px;height:220px;border-radius:50%;object-fit:cover;
+      border:3px solid rgba(255,255,255,.75);
+      box-shadow:0 10px 34px rgba(90,60,20,.22),0 0 0 1px rgba(164,119,45,.25);position:relative}
+    .name{font-family:var(--serif);font-size:2.9rem;font-weight:600;letter-spacing:.02em;margin:.7rem 0 .1rem}
+    .roman{color:var(--gold);font-size:1.02rem;letter-spacing:.32em;text-transform:uppercase;margin:0}
+    .tagline{font-family:var(--serif);font-size:1.18rem;color:var(--ink-soft);margin:.9rem 0 1.2rem;font-style:italic}
+    .cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--vermilion);color:#fff;
+      text-decoration:none;font-weight:600;padding:.78rem 1.6rem;border-radius:999px;
+      box-shadow:0 6px 18px rgba(164,71,45,.28);transition:transform .15s}
+    .cta:hover{transform:translateY(-1px)}
+
+    .rule{height:1px;border:0;margin:2.4rem 0;
+      background:linear-gradient(90deg,transparent,rgba(164,119,45,.4),transparent)}
+    section{margin:2.2rem 0}
+    h2{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin:0 0 1rem;
+      display:flex;align-items:center;gap:.6rem}
+    h2::before{content:"";width:22px;height:2px;background:var(--gold-soft);display:inline-block}
+    .lede{font-size:1.12rem;color:var(--ink);margin:1rem 0}
+    .en{color:var(--ink-soft);font-size:.98rem}
+
+    .track{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.55);
+      border:1px solid rgba(164,119,45,.18);border-radius:16px;padding:14px;margin-bottom:16px;
+      box-shadow:0 4px 16px rgba(90,60,20,.08)}
+    .track img{width:88px;height:88px;border-radius:10px;object-fit:cover;flex:0 0 auto}
+    .track .t-title{font-family:var(--serif);font-size:1.25rem;font-weight:600;margin:0}
+    .track .t-sub{color:var(--ink-soft);font-size:.9rem;margin:.2rem 0 0}
+    .track .t-hook{color:var(--gold);font-style:italic;margin:.35rem 0 0;font-family:var(--serif)}
+    iframe.spotify{border-radius:14px;width:100%;height:352px;border:0;
+      box-shadow:0 6px 20px rgba(90,60,20,.12)}
+
+    .about p{margin:.8rem 0}
+    .meta{background:rgba(255,255,255,.5);border:1px solid rgba(164,119,45,.18);
+      border-radius:16px;padding:18px 20px;font-size:.95rem;line-height:2}
+    .meta b{color:var(--vermilion);font-weight:600}
+    .meta .lbl{display:inline-block;min-width:112px;color:var(--ink-soft)}
+
+    footer{text-align:center;color:var(--ink-soft);font-size:.86rem;padding:2.6rem 0 3rem;line-height:1.9}
+    footer a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(164,119,45,.35)}
+    footer .apps{display:inline-block;margin:.4rem 0;color:var(--vermilion);font-weight:600;border-bottom:0}
+    @media (max-width:480px){.name{font-size:2.3rem}.avatar{width:172px;height:172px}}
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到正文</a>
-  <header class="site-header">
-    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
-    <nav aria-label="主导航"><a href="https://shide.app/">首页</a><a href="https://shide.app/features/">功能</a><a href="https://shide.app/privacy/">隐私边界</a><a href="https://shide.app/book-engine/">成书引擎</a><a href="https://shide.app/faq/">问答</a></nav>
+  <div class="topbar wrap"><a href="https://shide.app/">← 拾得 Ensō · shide.app</a></div>
+
+  <header class="hero wrap">
+    <div class="dust"></div>
+    <img class="avatar" src="https://shide.app/assets/shenshi-avatar.jpg" alt="沈拾 Shen Shi">
+    <h1 class="name">沈拾</h1>
+    <p class="roman">Shen Shi</p>
+    <p class="tagline">拾得的声音，唱众生</p>
+    <a class="cta" href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" rel="external">在 Spotify 收听</a>
   </header>
-  <main id="main">
-    <p class="eyebrow">拾得原创音乐 · Enso Shide Original Music</p>
-    <div class="artist-hero">
-      <img src="https://shide.app/assets/shenshi-avatar.jpg" alt="沈拾 Shen Shi 头像">
-      <h1>沈拾 Shen Shi</h1>
-      <p class="roman">拾得的声音 · 唱众生</p>
-    </div>
 
-    <p class="lede">沈拾，二十七岁，钟表修复师。她修停摆的钟，也修被删改先后的历史——那些被压成「若干」和「无名」的普通人，她替他们把走过的时刻放回原位，唱给你听。她是「拾得 Ensō」世界观里的虚构角色，由 AI 创作、如实标注：一个不存在的人，替存在过的人作证。尘埃里抬头，把光传下去。</p>
+  <hr class="rule">
 
-    <p>Shen Shi is not a real person — and that's the point. She is a fictional character from the Enso Shide story universe, a 27-year-old restorer of stopped clocks and rewritten timelines, performed entirely with AI and labeled as such. She sings for the ordinary people history erased into "nobody" — the ones filed under "unknown," whose before and after were quietly reordered. Testimony, not tearjerkers. Look up from the dust, and pass the light on.</p>
-
+  <main class="wrap">
     <section>
       <h2>音乐 · Music</h2>
-      <p><strong>《长风》Chang Feng</strong> — 首支单曲 / debut single (2026)。「我把这一生走给自己听。」</p>
-      <p><a class="listen-btn" href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" rel="external">在 Spotify 收听 · Listen on Spotify</a></p>
+      <div class="track">
+        <img src="https://shide.app/assets/changfeng-cover.jpg" alt="《长风》单曲封面">
+        <div>
+          <p class="t-title">长风 · Chang Feng</p>
+          <p class="t-sub">首支单曲 / Debut single · 2026</p>
+          <p class="t-hook">「我把这一生，走给自己听。」</p>
+        </div>
+      </div>
+      <iframe class="spotify" src="https://open.spotify.com/embed/artist/2IHdUak0czspKuDbYluycj?utm_source=generator&theme=0" loading="lazy" allow="autoplay;clipboard-write;encrypted-media;fullscreen;picture-in-picture"></iframe>
     </section>
 
-    <section>
+    <hr class="rule">
+
+    <section class="about">
       <h2>关于 · About</h2>
-      <p class="contact-block">
-        艺人 / Artist：<strong>沈拾 Shen Shi</strong>（拾得 Ensō 世界观虚构角色 · AI 创作 · fictional AI persona）<br>
-        厂牌 / Label · Management：<strong>Enso Shide（ENSO SHIDE）</strong>，Oakville, Ontario, Canada<br>
-        联系 / Email：<strong>support@shide.app</strong><br>
-        官网 / Website：<a href="https://shide.app/">shide.app</a>
-      </p>
+      <p class="lede">沈拾，二十七岁，钟表修复师。她修停摆的钟，也修被删改先后的历史——那些被压成「若干」和「无名」的普通人，她替他们把走过的时刻放回原位，唱给你听。</p>
+      <p>她是「拾得 Ensō」世界观里的虚构角色，由 AI 创作、如实标注：一个不存在的人，替存在过的人作证。尘埃里抬头，把光传下去。</p>
+      <p class="en">Shen Shi is not a real person — and that's the point. She is a fictional character from the Enso Shide story universe, a 27-year-old restorer of stopped clocks and rewritten timelines, performed entirely with AI and labeled as such. She sings for the ordinary people history erased into "nobody" — the ones filed under "unknown," whose before and after were quietly reordered. Testimony, not tearjerkers. Look up from the dust, and pass the light on.</p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>联系 · Contact</h2>
+      <div class="meta">
+        <div><span class="lbl">艺人 / Artist</span><b>沈拾 Shen Shi</b> · 虚构 AI 角色 fictional AI persona</div>
+        <div><span class="lbl">出品 / Label</span><b>Enso Shide</b>（ENSO SHIDE · Oakville, Ontario, Canada）</div>
+        <div><span class="lbl">主理 / Managed by</span><b>Fan Wu</b></div>
+        <div><span class="lbl">邮箱 / Email</span><b>ensoshide@gmail.com</b></div>
+        <div><span class="lbl">官网 / Website</span><a href="https://shide.app/">shide.app</a></div>
+      </div>
     </section>
   </main>
-  <footer>
-    <p class="store-line"><a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">在 App Store 下载拾得</a></p>
-    <p class="social-line">关注：<a href="https://x.com/ensoshide" rel="external">X</a> · <a href="https://www.instagram.com/ensoshide" rel="external">Instagram</a> · <a href="https://www.youtube.com/@EnsoShide" rel="external">YouTube</a></p>
-    <p>沈拾是拾得 Ensō 用 AI 创作的虚构音乐角色；音乐由 Enso Shide 出品。联系：support@shide.app</p>
+
+  <footer class="wrap">
+    <p><a class="apps" href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">在 App Store 下载拾得</a></p>
+    <p><a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" rel="external">Spotify</a> · <a href="https://www.youtube.com/@EnsoShide" rel="external">YouTube</a> · <a href="https://www.instagram.com/ensoshide" rel="external">Instagram</a> · <a href="https://x.com/ensoshide" rel="external">X</a></p>
+    <p>沈拾 Shen Shi · Managed by Fan Wu · Enso Shide · ensoshide@gmail.com<br>拾得 Ensō 用 AI 创作的虚构音乐角色 — 尘埃里抬头，把光传下去。</p>
   </footer>
 </body>
 </html>
