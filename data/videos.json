@@ -1,8 +1,71 @@
 {
-  "version": "2026-08-23T20:49:04Z",
+  "version": "2026-08-27T19:48:35Z",
   "channel": "Enso Shide",
-  "count": 13,
+  "count": 18,
   "videos": [
+    {
+      "videoId": "shenshi-changfeng",
+      "url": "https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj",
+      "title": "长风",
+      "rawTitle": "沈拾《长风》",
+      "year": null,
+      "series": "music",
+      "kind": "spotify",
+      "featured": true,
+      "subtitle": "沈拾原创 · 主题曲",
+      "thumbnail": "https://shide.app/data/changfeng-cover.jpg",
+      "publishedAt": "2026-08-26",
+      "durationSec": 0,
+      "views": 0
+    },
+    {
+      "videoId": "t6ULwmO1Rtk",
+      "url": "https://youtube.com/shorts/t6ULwmO1Rtk",
+      "title": "沈拾《雪落二十年》Twenty Years of Snow 官方MV · 致敬日剧《初恋 First Love》",
+      "rawTitle": "沈拾《雪落二十年》Twenty Years of Snow 官方MV · 致敬日剧《初恋 First Love》 #沈拾, #ShenShi, #拾得原创音乐,#初恋 #firstlove",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/t6ULwmO1Rtk/hqdefault.jpg",
+      "publishedAt": "2026-08-26",
+      "durationSec": 110,
+      "views": 65
+    },
+    {
+      "videoId": "YlpFdhP2yxE",
+      "url": "https://youtube.com/shorts/YlpFdhP2yxE",
+      "title": "沈拾《安静的刺》Quiet Thorns 官方MV · 致敬韩剧《我的大叔》",
+      "rawTitle": "沈拾《安静的刺》Quiet Thorns 官方MV · 致敬韩剧《我的大叔》#我的大叔, #mymister , #나의 아저씨, #安静的刺, #沈拾, #ShenShi, #拾得原创音乐",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/YlpFdhP2yxE/hqdefault.jpg",
+      "publishedAt": "2026-08-26",
+      "durationSec": 130,
+      "views": 8
+    },
+    {
+      "videoId": "xjemS0zb-Vk",
+      "url": "https://youtube.com/shorts/xjemS0zb-Vk",
+      "title": "《海阔天空》发行一个月，写它的人就走了——黄家驹的光辉岁月",
+      "rawTitle": "《海阔天空》发行一个月，写它的人就走了——黄家驹的光辉岁月 #拾光音乐传记 #Beyond #黄家驹 #海阔天空 #光辉岁月 #真的爱你 #华语摇滚 #粤语歌 #回忆杀 #shorts",
+      "year": null,
+      "series": "music",
+      "thumbnail": "https://img.youtube.com/vi/xjemS0zb-Vk/hqdefault.jpg",
+      "publishedAt": "2026-08-25",
+      "durationSec": 71,
+      "views": 1421
+    },
+    {
+      "videoId": "eB1KLmh8wTg",
+      "url": "https://youtube.com/shorts/eB1KLmh8wTg",
+      "title": "要不是有人病倒，就没有周润发的许文强《上海滩》幕后",
+      "rawTitle": "要不是有人病倒，就没有周润发的许文强《上海滩》幕后#华人文化 #文化坐标 #80后 #90后 #chineseculture  #Shide拾得 #上海滩 #许文强 #周润发 #郑少秋 #黄沾",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/eB1KLmh8wTg/hqdefault.jpg",
+      "publishedAt": "2026-08-24",
+      "durationSec": 97,
+      "views": 525
+    },
     {
       "videoId": "VEPcRDWNTTE",
       "url": "https://youtube.com/shorts/VEPcRDWNTTE",
@@ -13,7 +76,7 @@
       "thumbnail": "https://img.youtube.com/vi/VEPcRDWNTTE/hqdefault.jpg",
       "publishedAt": "2026-08-23",
       "durationSec": 62,
-      "views": 30
+      "views": 68
     },
     {
       "videoId": "mLO-HGyMvGA",
@@ -25,7 +88,7 @@
       "thumbnail": "https://img.youtube.com/vi/mLO-HGyMvGA/hqdefault.jpg",
       "publishedAt": "2026-08-23",
       "durationSec": 50,
-      "views": 36
+      "views": 163
     },
     {
       "videoId": "jp7wLFTtJOs",
@@ -37,7 +100,7 @@
       "thumbnail": "https://img.youtube.com/vi/jp7wLFTtJOs/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 55,
-      "views": 1230
+      "views": 1247
     },
     {
       "videoId": "-_6r6OtcOCc",
@@ -49,7 +112,7 @@
       "thumbnail": "https://img.youtube.com/vi/-_6r6OtcOCc/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 66,
-      "views": 45
+      "views": 64
     },
     {
       "videoId": "lBqVWN4C3mg",
@@ -61,7 +124,7 @@
       "thumbnail": "https://img.youtube.com/vi/lBqVWN4C3mg/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 22,
-      "views": 4
+      "views": 8
     },
     {
       "videoId": "EcGaI4XXSm0",
@@ -73,7 +136,7 @@
       "thumbnail": "https://img.youtube.com/vi/EcGaI4XXSm0/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 49,
-      "views": 33
+      "views": 38
     },
     {
       "videoId": "E6XiTaCmTJM",
@@ -85,7 +148,7 @@
       "thumbnail": "https://img.youtube.com/vi/E6XiTaCmTJM/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 47,
-      "views": 23
+      "views": 26
     },
     {
       "videoId": "ZQerFWKhFa8",
@@ -97,7 +160,7 @@
       "thumbnail": "https://img.youtube.com/vi/ZQerFWKhFa8/hqdefault.jpg",
       "publishedAt": "2026-08-21",
       "durationSec": 21,
-      "views": 850
+      "views": 851
     },
     {
       "videoId": "9CK0WcJvcsg",
@@ -133,7 +196,7 @@
       "thumbnail": "https://img.youtube.com/vi/v-CTizxDVvg/hqdefault.jpg",
       "publishedAt": "2026-08-20",
       "durationSec": 35,
-      "views": 83
+      "views": 88
     },
     {
       "videoId": "yDX-j2rGemQ",
@@ -157,7 +220,7 @@
       "thumbnail": "https://img.youtube.com/vi/tAG-qdnsZ9s/hqdefault.jpg",
       "publishedAt": "2026-08-17",
       "durationSec": 13,
-      "views": 27
+      "views": 30
     }
   ]
 }
