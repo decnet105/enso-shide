@@ -498,7 +498,14 @@
     try {
       const stored = localStorage.getItem("shide_spacetime_wall");
       if (stored) {
-        return JSON.parse(stored);
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          // 清理任何历史遗留的瞬态动画标记
+          return parsed.map(p => {
+            const { justLiked, ...clean } = p;
+            return clean;
+          });
+        }
       }
     } catch(e) {}
     return SEED_WALL_POSTS;
@@ -506,7 +513,13 @@
 
   function saveSpacetimeWall(posts) {
     try {
-      localStorage.setItem("shide_spacetime_wall", JSON.stringify(posts));
+      if (Array.isArray(posts)) {
+        const cleanList = posts.map(p => {
+          const { justLiked, ...clean } = p;
+          return clean;
+        });
+        localStorage.setItem("shide_spacetime_wall", JSON.stringify(cleanList));
+      }
     } catch(e) {}
   }
 

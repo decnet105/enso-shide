@@ -791,8 +791,8 @@
             <button @click="likePost(post)" class="hover:text-cinnabar transition flex items-center gap-1.5 group/btn relative">
               <span class="group-hover/btn:scale-125 transition-transform">❤️</span>
               <span class="font-bold">{{ post.likes }} 钤印共鸣</span>
-              <!-- 钤印动画效果 -->
-              <span v-if="post.justLiked" class="absolute -top-6 left-2 text-cinnabar font-serif font-bold text-xs animate-ping">
+              <!-- 钤印单次动画效果 -->
+              <span v-if="likedPostId === post.id" class="absolute -top-6 left-2 text-cinnabar font-serif font-bold text-xs animate-ping pointer-events-none">
                 印
               </span>
             </button>
@@ -1397,14 +1397,14 @@
         return newPost;
       };
 
+      const likedPostId = ref(null);
+
       const postToWallDirectly = () => {
         const post = createWallPost();
         if (post) {
           userMemoryInput.value = '';
           boundMemoryOutput.value = '';
-          alert('🎉 已成功贴到时空留声墙！正在前往便签板围观～');
-          const el = document.getElementById('spacetime-wall');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
+          window.location.href = `./spacetime-wall/index.html?highlight=${post.id}`;
         }
       };
 
@@ -1412,8 +1412,7 @@
         showModal.value = false;
         const post = createWallPost(userMemoryInput.value.trim() || `在那一年，我认领了属于自己的时代印笺《${currentData.value.event}》`);
         if (post) {
-          const el = document.getElementById('spacetime-wall');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
+          window.location.href = `./spacetime-wall/index.html?highlight=${post.id}`;
         }
       };
 
@@ -1455,10 +1454,12 @@
 
       const likePost = (post) => {
         post.likes++;
-        post.justLiked = true;
+        likedPostId.value = post.id;
         setTimeout(() => {
-          post.justLiked = false;
-        }, 1500);
+          if (likedPostId.value === post.id) {
+            likedPostId.value = null;
+          }
+        }, 1200);
         if (window.ShideChronoscope) {
           window.ShideChronoscope.saveSpacetimeWall(allWallPosts.value);
         }
@@ -1672,10 +1673,16 @@
         postToWallFromModal,
         allWallPosts,
         filteredWallPosts,
+        visibleWallPosts,
         selectedWallTag,
+        boardViewMode,
+        searchQuery,
+        displayLimit,
         popularTags,
         filterWallByTag,
         likePost,
+        likedPostId,
+        drawRandomMemory,
         submitEmail
       };
     }

@@ -66,6 +66,14 @@
       background-image: radial-gradient(#E2D8C7 1.5px, transparent 1.5px);
       background-size: 20px 20px;
     }
+    @keyframes pulseRing {
+      0% { box-shadow: 0 0 0 0 rgba(188, 56, 44, 0.6); }
+      70% { box-shadow: 0 0 0 16px rgba(188, 56, 44, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(188, 56, 44, 0); }
+    }
+    .highlight-beacon {
+      animation: pulseRing 1.5s infinite;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col items-center">
@@ -89,7 +97,7 @@
         <span>返回首页</span>
       </a>
       <a href="../index.html#portal" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono px-3.5 py-1.5 rounded-lg font-bold transition shadow-sm">
-        ✍️ 显影新便签
+        ✍️ 显影新印笺
       </a>
     </div>
   </header>
@@ -127,7 +135,7 @@
         <span class="text-xs font-mono text-ink-sub flex items-center gap-1">
           <span>⏱️ 年代飞梭筛选 (1980–2026):</span>
           <strong v-if="selectedYearFilter !== 'all'" class="text-cinnabar font-serif ml-1">
-            {{ selectedYearFilter }} 年
+            {{ selectedYearFilter }} 年 · {{ getYearData(selectedYearFilter).event }}
           </strong>
         </span>
         <button v-if="selectedYearFilter !== 'all'" @click="selectedYearFilter = 'all'" class="text-xs font-mono text-stone-500 hover:text-navy underline">
@@ -157,17 +165,17 @@
       <div class="flex flex-wrap items-center gap-2 flex-1">
         <span class="text-xs font-mono text-ink-sub">🏷️ 标签:</span>
         <button @click="selectedTag = 'all'"
-          :class="selectedTag === 'all' && !searchQuery ? 'bg-navy text-white' : 'bg-paper text-navy hover:bg-gold/20'"
+          :class="selectedTag === 'all' && !searchQuery ? 'bg-navy text-white font-bold' : 'bg-paper text-navy hover:bg-gold/20'"
           class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition">
           全部
         </button>
         <button @click="selectedTag = 'hot'"
-          :class="selectedTag === 'hot' ? 'bg-cinnabar text-white' : 'bg-paper text-navy hover:bg-gold/20'"
+          :class="selectedTag === 'hot' ? 'bg-cinnabar text-white font-bold' : 'bg-paper text-navy hover:bg-gold/20'"
           class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition flex items-center gap-1">
           <span>🔥 最多共鸣</span>
         </button>
         <button v-for="tag in popularTags" :key="tag" @click="selectedTag = tag"
-          :class="selectedTag === tag ? 'bg-navy text-white' : 'bg-paper text-navy hover:bg-gold/20'"
+          :class="selectedTag === tag ? 'bg-navy text-white font-bold' : 'bg-paper text-navy hover:bg-gold/20'"
           class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition">
           {{ tag }}
         </button>
@@ -178,21 +186,21 @@
         <!-- 视图切换 -->
         <div class="inline-flex rounded-xl bg-paper border border-gold/30 p-0.5 text-xs font-mono">
           <button @click="viewMode = 'board'"
-            :class="viewMode === 'board' ? 'bg-navy text-white font-bold' : 'text-stone-600 hover:text-navy'"
+            :class="viewMode === 'board' ? 'bg-navy text-white font-bold shadow' : 'text-stone-600 hover:text-navy'"
             class="px-3 py-1.5 rounded-lg transition flex items-center gap-1">
-            <span>📌 公告板</span>
+            <span>📌 便签公告板</span>
           </button>
           <button @click="viewMode = 'grid'"
-            :class="viewMode === 'grid' ? 'bg-navy text-white font-bold' : 'text-stone-600 hover:text-navy'"
+            :class="viewMode === 'grid' ? 'bg-navy text-white font-bold shadow' : 'text-stone-600 hover:text-navy'"
             class="px-3 py-1.5 rounded-lg transition flex items-center gap-1">
-            <span>📰 画卷流</span>
+            <span>📰 典雅画卷流</span>
           </button>
         </div>
 
         <!-- 搜索框 -->
-        <div class="relative flex-1 lg:w-60">
-          <input type="text" v-model="searchQuery" placeholder="搜索年代/小事/物件..."
-            class="w-full text-xs pl-8 pr-3 py-1.5 rounded-lg border border-stone-300 focus:outline-none focus:border-navy bg-paper">
+        <div class="relative flex-1 lg:w-64">
+          <input type="text" v-model="searchQuery" placeholder="搜索年代/小事/人物/物件..."
+            class="w-full text-xs pl-8 pr-7 py-1.5 rounded-lg border border-stone-300 focus:outline-none focus:border-navy bg-paper">
           <span class="absolute left-2.5 top-1.5 text-stone-400 text-xs">🔍</span>
           <button v-if="searchQuery" @click="searchQuery = ''" class="absolute right-2.5 top-1.5 text-stone-400 hover:text-navy text-xs">✕</button>
         </div>
@@ -201,14 +209,17 @@
     </div>
 
     <!-- 5. 公告板大画布 (The Spacetime Board) -->
-    <div :class="viewMode === 'board' ? 'corkboard border-2 border-gold/40 rounded-3xl p-6 sm:p-10 shadow-inner' : ''">
+    <div :class="viewMode === 'board' ? 'corkboard border-2 border-gold/40 rounded-3xl p-6 sm:p-10 shadow-inner' : 'bg-white/70 border border-gold/30 rounded-3xl p-6 sm:p-8 shadow-sm'">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6">
         <div v-for="(post, idx) in filteredPosts" :key="post.id" :id="'card-' + post.id"
-          class="bg-white border border-gold/35 rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between space-y-4 relative group"
-          :class="viewMode === 'board' ? 'transform hover:scale-[1.03] hover:rotate-0 hover:z-30' : ''"
-          :style="viewMode === 'board' ? { transform: 'rotate(' + (post.tilt || (idx % 2 === 0 ? -1.5 : 1.2)) + 'deg)' } : {}">
+          class="bg-white border rounded-2xl p-6 shadow-md transition-all duration-300 flex flex-col justify-between space-y-4 relative group"
+          :class="[
+            viewMode === 'board' ? 'border-gold/35 hover:shadow-2xl transform hover:scale-[1.03] hover:rotate-0 hover:z-30' : 'border-stone-200 hover:border-gold/60 hover:shadow-lg',
+            highlightedId === post.id ? 'ring-4 ring-cinnabar scale-105 shadow-2xl highlight-beacon' : ''
+          ]"
+          :style="viewMode === 'board' ? { transform: 'rotate(' + (post.tilt || (idx % 2 === 0 ? -1.5 : 1.2)) + 'deg)' } : { transform: 'none' }">
           
-          <!-- 胶带或图钉装饰 -->
+          <!-- 胶带或图钉装饰 (仅便签板模式展示) -->
           <div v-if="viewMode === 'board'" class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-5 opacity-85 shadow-sm rounded-sm z-20 pointer-events-none"
             :style="{ backgroundColor: getYearColor(post.year) + '45', border: '1px dashed ' + getYearColor(post.year) }">
           </div>
@@ -218,7 +229,10 @@
             <div class="flex items-center gap-2.5">
               <span class="text-2xl">{{ post.avatar || '🏮' }}</span>
               <div>
-                <div class="text-xs font-serif font-bold text-navy">{{ post.author }}</div>
+                <div class="text-xs font-serif font-bold text-navy flex items-center gap-1.5">
+                  <span>{{ post.author }}</span>
+                  <span v-if="highlightedId === post.id" class="text-[9px] bg-cinnabar text-white px-1.5 py-0.2 rounded font-mono font-normal">刚贴上</span>
+                </div>
                 <div class="text-[10px] font-mono text-ink-sub">{{ post.timestamp }}</div>
               </div>
             </div>
@@ -253,7 +267,8 @@
             <button @click="likePost(post)" class="hover:text-cinnabar transition flex items-center gap-1.5 group/btn relative">
               <span class="group-hover/btn:scale-125 transition-transform">❤️</span>
               <span class="font-bold">{{ post.likes }} 钤印共鸣</span>
-              <span v-if="post.justLiked" class="absolute -top-6 left-2 text-cinnabar font-serif font-bold text-xs animate-ping">
+              <!-- 钤印单次动效 -->
+              <span v-if="likedPostId === post.id" class="absolute -top-6 left-2 text-cinnabar font-serif font-bold text-xs animate-ping pointer-events-none">
                 印
               </span>
             </button>
@@ -340,7 +355,7 @@
 <script src="../assets/chronoscope-data.js"></script>
 
 <script>
-  const { createApp, ref, computed } = Vue;
+  const { createApp, ref, computed, onMounted } = Vue;
 
   createApp({
     setup() {
@@ -350,6 +365,8 @@
       const selectedTag = ref('all');
       const searchQuery = ref('');
       const viewMode = ref('board');
+      const likedPostId = ref(null);
+      const highlightedId = ref(null);
       
       const showAddModal = ref(false);
       const modalYear = ref(1998);
@@ -404,29 +421,40 @@
 
       const likePost = (post) => {
         post.likes++;
-        post.justLiked = true;
+        likedPostId.value = post.id;
         setTimeout(() => {
-          post.justLiked = false;
-        }, 1500);
+          if (likedPostId.value === post.id) {
+            likedPostId.value = null;
+          }
+        }, 1200);
         if (window.ShideChronoscope) {
           window.ShideChronoscope.saveSpacetimeWall(allPosts.value);
         }
       };
 
       const drawRandomMemory = () => {
-        const posts = filteredPosts.value;
-        if (posts.length === 0) return;
-        const randIdx = Math.floor(Math.random() * posts.length);
-        const target = posts[randIdx];
-        
-        const cardEl = document.getElementById('card-' + target.id);
-        if (cardEl) {
-          cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          cardEl.classList.add('ring-4', 'ring-gold', 'scale-105');
-          setTimeout(() => {
-            cardEl.classList.remove('ring-4', 'ring-gold', 'scale-105');
-          }, 2500);
+        // 如果当前筛选后为空，重置筛选
+        if (filteredPosts.value.length === 0) {
+          selectedYearFilter.value = 'all';
+          selectedTag.value = 'all';
+          searchQuery.value = '';
         }
+        
+        setTimeout(() => {
+          const posts = filteredPosts.value;
+          if (posts.length === 0) return;
+          const randIdx = Math.floor(Math.random() * posts.length);
+          const target = posts[randIdx];
+          
+          const cardEl = document.getElementById('card-' + target.id);
+          if (cardEl) {
+            cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            highlightedId.value = target.id;
+            setTimeout(() => {
+              highlightedId.value = null;
+            }, 3000);
+          }
+        }, 100);
       };
 
       const resetFilters = () => {
@@ -483,8 +511,35 @@
 
         modalContent.value = '';
         showAddModal.value = false;
-        alert('🎉 你的便签已成功钉在时空大公告板上！');
+        highlightedId.value = newPost.id;
+        setTimeout(() => {
+          const cardEl = document.getElementById('card-' + newPost.id);
+          if (cardEl) {
+            cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
+        setTimeout(() => {
+          highlightedId.value = null;
+        }, 3500);
       };
+
+      onMounted(() => {
+        // 检测 URL 是否带有新上墙的 post id
+        const params = new URLSearchParams(window.location.search);
+        const hl = params.get('highlight');
+        if (hl) {
+          setTimeout(() => {
+            const cardEl = document.getElementById('card-' + hl);
+            if (cardEl) {
+              cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              highlightedId.value = hl;
+              setTimeout(() => {
+                highlightedId.value = null;
+              }, 4000);
+            }
+          }, 300);
+        }
+      });
 
       return {
         allPosts,
@@ -499,6 +554,8 @@
         modalYear,
         modalContent,
         modalRedlineError,
+        likedPostId,
+        highlightedId,
         getYearData,
         getYearColor,
         likePost,
