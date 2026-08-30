@@ -1710,6 +1710,9 @@
           }).catch(() => {});
         } catch (e) {}
 
+        subscribed.value = true;
+      };
+
       const activeCommentPostId = ref(null);
       const commentAuthorInput = ref('');
       const commentTextInput = ref('');
