@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时代大公告板 · 47年时光便签留声墙 (1980–2026) | 拾得 ENSŌ</title>
+  <meta name="description" content="拾得 ENSŌ 47年社区时空大公告板——每一粒微尘的故事，都在这里被端侧见证。探索1980至2026年华语时代记忆与公域信物。">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F8F6F0',
+            'paper-tint': '#F0ECE1',
+            navy: '#12365E',
+            'navy-deep': '#0B223D',
+            cinnabar: '#BC382C',
+            'cinnabar-glow': '#D64537',
+            gold: '#C5A059',
+            'gold-light': '#DFC48B',
+            ink: '#111111',
+            'ink-sub': '#55524E'
+          },
+          fontFamily: {
+            serif: ['"Noto Serif SC"', 'SimSun', 'Songti SC', 'serif'],
+            display: ['Cinzel', '"Noto Serif SC"', 'serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Noto+Serif+SC:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vue 3 CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+  <style>
+    body {
+      background-color: #F8F6F0;
+      color: #111111;
+      font-family: "Noto Serif SC", serif;
+      background-image: radial-gradient(rgba(197, 160, 89, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #C5A059;
+      border-radius: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #F0ECE1;
+    }
+    .corkboard {
+      background-color: #F2EDE4;
+      background-image: radial-gradient(#E2D8C7 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center">
+
+<div id="app" class="w-full flex flex-col items-center">
+
+  <!-- 1. 顶栏导航与返回首页 -->
+  <header class="w-full max-w-7xl px-6 md:px-12 py-5 flex items-center justify-between border-b border-gold/30 bg-paper/90 backdrop-blur sticky top-0 z-40">
+    <div class="flex items-center space-x-3">
+      <a href="../index.html" class="flex items-center gap-2 group">
+        <img src="../assets/enso-seal-official.png" alt="拾得" class="w-7 h-7 rounded border border-gold/40 shadow-sm group-hover:scale-105 transition-transform">
+        <span class="font-display font-bold text-navy text-base tracking-wider">ENSO SHIDE</span>
+      </a>
+      <span class="text-stone-400 font-mono text-xs">/</span>
+      <span class="text-xs font-serif font-bold text-navy">47年时空大公告板</span>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <a href="../index.html" class="text-xs font-mono text-ink-sub hover:text-cinnabar transition flex items-center gap-1">
+        <span>←</span>
+        <span>返回首页</span>
+      </a>
+      <a href="../index.html#portal" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono px-3.5 py-1.5 rounded-lg font-bold transition shadow-sm">
+        ✍️ 显影新便签
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. 主标题 Banner -->
+  <main class="w-full max-w-7xl px-6 md:px-12 py-10">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase mb-2">
+          <span>SPACETIME BULLETIN BOARD // 1980–2026 ALL-ERA ARCHIVE</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy tracking-tight">
+          时代大公告板 · 47年时光便签墙
+        </h1>
+        <p class="text-xs sm:text-sm text-ink-sub font-serif mt-2 max-w-2xl leading-relaxed">
+          浩瀚岁月里的一面公共时代留言墙。从 1980 庐山恋到 2026 丙午新篇，每一段被历史一笔带过的脚步，都在这里被端侧见证。
+        </p>
+      </div>
+
+      <!-- 操作按钮群 -->
+      <div class="flex flex-wrap items-center gap-3">
+        <button @click="drawRandomMemory" class="bg-white hover:bg-gold/15 text-navy border border-gold/40 text-xs font-mono py-2.5 px-4 rounded-xl font-bold transition flex items-center gap-1.5 shadow-sm">
+          <span>🎲 随手抽一张便签</span>
+        </button>
+        <button @click="showAddModal = true" class="bg-navy hover:bg-navy-deep text-white text-xs font-mono py-2.5 px-4 rounded-xl font-bold transition flex items-center gap-1.5 shadow">
+          <span>📌 现场贴一张便签</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 3. 年代横向滑动飞梭导轨 (1980–2026 47年快速筛选) -->
+    <div class="bg-paper-tint/80 border border-gold/30 rounded-2xl p-4 mb-6 shadow-sm">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-mono text-ink-sub flex items-center gap-1">
+          <span>⏱️ 年代飞梭筛选 (1980–2026):</span>
+          <strong v-if="selectedYearFilter !== 'all'" class="text-cinnabar font-serif ml-1">
+            {{ selectedYearFilter }} 年
+          </strong>
+        </span>
+        <button v-if="selectedYearFilter !== 'all'" @click="selectedYearFilter = 'all'" class="text-xs font-mono text-stone-500 hover:text-navy underline">
+          查看全部年份
+        </button>
+      </div>
+
+      <div class="flex gap-1.5 overflow-x-auto pb-2 custom-scroll">
+        <button @click="selectedYearFilter = 'all'"
+          :class="selectedYearFilter === 'all' ? 'bg-navy text-white font-bold' : 'bg-white text-navy hover:bg-gold/15'"
+          class="px-3 py-1.5 rounded-lg text-xs font-mono border border-gold/30 flex-shrink-0 transition">
+          全部 ({{ allPosts.length }})
+        </button>
+        <button v-for="y in allYears" :key="y" @click="selectedYearFilter = y"
+          :class="selectedYearFilter === y ? 'bg-cinnabar text-white font-bold' : 'bg-white text-navy hover:bg-gold/15'"
+          class="px-2.5 py-1.5 rounded-lg text-xs font-mono border border-gold/30 flex-shrink-0 transition flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full inline-block" :style="{ backgroundColor: getYearColor(y) }"></span>
+          <span>{{ y }}</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 4. 筛选与控制栏 -->
+    <div class="bg-white border border-gold/35 rounded-2xl p-4 mb-8 shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+      
+      <!-- 标签筛选 -->
+      <div class="flex flex-wrap items-center gap-2 flex-1">
+        <span class="text-xs font-mono text-ink-sub">🏷️ 标签:</span>
+        <button @click="selectedTag = 'all'"
+          :class="selectedTag === 'all' && !searchQuery ? 'bg-navy text-white' : 'bg-paper text-navy hover:bg-gold/20'"
+          class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition">
+          全部
+        </button>
+        <button @click="selectedTag = 'hot'"
+          :class="selectedTag === 'hot' ? 'bg-cinnabar text-white' : 'bg-paper text-navy hover:bg-gold/20'"
+          class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition flex items-center gap-1">
+          <span>🔥 最多共鸣</span>
+        </button>
+        <button v-for="tag in popularTags" :key="tag" @click="selectedTag = tag"
+          :class="selectedTag === tag ? 'bg-navy text-white' : 'bg-paper text-navy hover:bg-gold/20'"
+          class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition">
+          {{ tag }}
+        </button>
+      </div>
+
+      <!-- 右侧：视图切换与实时搜索 -->
+      <div class="flex items-center gap-3 w-full lg:w-auto">
+        <!-- 视图切换 -->
+        <div class="inline-flex rounded-xl bg-paper border border-gold/30 p-0.5 text-xs font-mono">
+          <button @click="viewMode = 'board'"
+            :class="viewMode === 'board' ? 'bg-navy text-white font-bold' : 'text-stone-600 hover:text-navy'"
+            class="px-3 py-1.5 rounded-lg transition flex items-center gap-1">
+            <span>📌 公告板</span>
+          </button>
+          <button @click="viewMode = 'grid'"
+            :class="viewMode === 'grid' ? 'bg-navy text-white font-bold' : 'text-stone-600 hover:text-navy'"
+            class="px-3 py-1.5 rounded-lg transition flex items-center gap-1">
+            <span>📰 画卷流</span>
+          </button>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="relative flex-1 lg:w-60">
+          <input type="text" v-model="searchQuery" placeholder="搜索年代/小事/物件..."
+            class="w-full text-xs pl-8 pr-3 py-1.5 rounded-lg border border-stone-300 focus:outline-none focus:border-navy bg-paper">
+          <span class="absolute left-2.5 top-1.5 text-stone-400 text-xs">🔍</span>
+          <button v-if="searchQuery" @click="searchQuery = ''" class="absolute right-2.5 top-1.5 text-stone-400 hover:text-navy text-xs">✕</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 5. 公告板大画布 (The Spacetime Board) -->
+    <div :class="viewMode === 'board' ? 'corkboard border-2 border-gold/40 rounded-3xl p-6 sm:p-10 shadow-inner' : ''">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6">
+        <div v-for="(post, idx) in filteredPosts" :key="post.id" :id="'card-' + post.id"
+          class="bg-white border border-gold/35 rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between space-y-4 relative group"
+          :class="viewMode === 'board' ? 'transform hover:scale-[1.03] hover:rotate-0 hover:z-30' : ''"
+          :style="viewMode === 'board' ? { transform: 'rotate(' + (post.tilt || (idx % 2 === 0 ? -1.5 : 1.2)) + 'deg)' } : {}">
+          
+          <!-- 胶带或图钉装饰 -->
+          <div v-if="viewMode === 'board'" class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-5 opacity-85 shadow-sm rounded-sm z-20 pointer-events-none"
+            :style="{ backgroundColor: getYearColor(post.year) + '45', border: '1px dashed ' + getYearColor(post.year) }">
+          </div>
+
+          <!-- Top Info Header -->
+          <div class="flex items-start justify-between border-b border-gold/20 pb-3 pt-1">
+            <div class="flex items-center gap-2.5">
+              <span class="text-2xl">{{ post.avatar || '🏮' }}</span>
+              <div>
+                <div class="text-xs font-serif font-bold text-navy">{{ post.author }}</div>
+                <div class="text-[10px] font-mono text-ink-sub">{{ post.timestamp }}</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono font-bold text-white shadow-sm"
+                :style="{ backgroundColor: getYearColor(post.year) }">
+                {{ post.year }} 年
+              </span>
+            </div>
+          </div>
+
+          <!-- User Memory Story -->
+          <div class="text-xs sm:text-sm font-serif text-ink leading-relaxed font-medium">
+            {{ post.content }}
+          </div>
+
+          <!-- 修复师手记随笔（纯净无多余“沈拾调侃”字样） -->
+          <div class="bg-paper-tint/70 p-3 rounded-xl border-l-2 border-cinnabar/70 text-xs font-serif text-ink-sub italic leading-relaxed">
+            “{{ post.reply }}”
+          </div>
+
+          <!-- Tags List -->
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <button v-for="tag in post.tags" :key="tag" @click.stop="selectedTag = tag"
+              class="px-2 py-0.5 rounded-md text-[10px] font-mono bg-paper hover:bg-gold/20 text-stone-600 hover:text-navy border border-stone-200 transition">
+              {{ tag }}
+            </button>
+          </div>
+
+          <!-- Bottom Action Bar -->
+          <div class="flex items-center justify-between pt-2 border-t border-gold/20 text-[11px] font-mono text-ink-sub">
+            <button @click="likePost(post)" class="hover:text-cinnabar transition flex items-center gap-1.5 group/btn relative">
+              <span class="group-hover/btn:scale-125 transition-transform">❤️</span>
+              <span class="font-bold">{{ post.likes }} 钤印共鸣</span>
+              <span v-if="post.justLiked" class="absolute -top-6 left-2 text-cinnabar font-serif font-bold text-xs animate-ping">
+                印
+              </span>
+            </button>
+            <span class="text-[10px] text-stone-400 font-mono">#时光便签</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 空状态 -->
+    <div v-if="filteredPosts.length === 0" class="text-center py-20 bg-white/60 rounded-3xl border border-gold/30 my-6">
+      <span class="text-4xl block mb-2">📜</span>
+      <p class="text-base font-serif text-navy font-bold">该筛选条件下暂无便签</p>
+      <p class="text-xs font-serif text-ink-sub mt-1">换个年份或搜索词试试，或者现场贴上你的第一张便签！</p>
+      <button @click="resetFilters" class="mt-4 px-5 py-2.5 rounded-xl bg-navy text-white text-xs font-mono font-bold">
+        查看全部便签
+      </button>
+    </div>
+
+  </main>
+
+  <!-- 6. 现场贴便签弹窗 (Add Note Modal) -->
+  <div v-if="showAddModal" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-paper rounded-3xl max-w-lg w-full p-6 shadow-2xl relative border border-gold/40 text-navy">
+      <button @click="showAddModal = false" class="absolute top-4 right-4 text-stone-400 hover:text-navy text-xl font-bold">✕</button>
+      
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-lg">📌</span>
+        <h3 class="text-lg font-serif font-bold text-navy">贴上你的时代便签</h3>
+      </div>
+      <p class="text-xs text-ink-sub font-serif mb-4">
+        输入你在某一年经历的一件小事，系统将自动生成时代标签并钉在时空大公告板上。
+      </p>
+
+      <div class="space-y-3 mb-4">
+        <div>
+          <label class="block text-xs font-mono text-ink-sub mb-1">选择年代 (1980–2026):</label>
+          <select v-model="modalYear" class="w-full text-xs px-3 py-2 rounded-xl border border-stone-300 bg-white focus:outline-none focus:border-navy font-mono">
+            <option v-for="y in allYears" :key="y" :value="y">{{ y }} 年 · {{ getYearData(y).event }}</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-ink-sub mb-1">你的回忆一句话：</label>
+          <textarea v-model="modalContent" rows="3" placeholder="例如：那年夏天下大雨，和同桌在屋檐下听着卡带等雨停..."
+            class="w-full text-xs p-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:border-navy font-serif"></textarea>
+        </div>
+
+        <p v-if="modalRedlineError" class="text-xs text-amber-700 bg-amber-50 p-2.5 rounded-xl border border-amber-200">
+          ⚠️ {{ modalRedlineError }}
+        </p>
+      </div>
+
+      <div class="flex gap-3">
+        <button @click="submitModalPost" class="flex-1 bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono py-3 rounded-xl font-bold transition shadow">
+          🚀 确认钉在时空大公告板
+        </button>
+        <button @click="showAddModal = false" class="px-5 py-3 rounded-xl border border-stone-300 text-xs font-mono text-stone-600 hover:bg-stone-100 transition">
+          取消
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. 页脚 -->
+  <footer class="w-full max-w-7xl px-6 md:px-12 py-12 border-t border-gold/30 mt-12 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs font-mono text-ink-sub">
+    <div class="flex items-center space-x-3">
+      <img src="../assets/enso-seal-official.png" class="w-6 h-6 rounded border border-gold/30">
+      <span class="font-display font-bold text-navy">ENSO SHIDE</span>
+      <span>· 尘埃里抬头，把光传下去</span>
+    </div>
+    <div class="flex space-x-6">
+      <a href="https://x.com/ensoshide" target="_blank" class="hover:text-cinnabar">X</a>
+      <a href="https://www.youtube.com/@EnsoShide" target="_blank" class="hover:text-cinnabar">YouTube</a>
+      <a href="https://www.instagram.com/ensoshide" target="_blank" class="hover:text-cinnabar">Instagram</a>
+      <a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" target="_blank" class="hover:text-cinnabar">Spotify</a>
+    </div>
+  </footer>
+
+</div>
+
+<!-- 引入 1980-2026 核心数据与时空引擎 -->
+<script src="../assets/chronoscope-data.js"></script>
+
+<script>
+  const { createApp, ref, computed } = Vue;
+
+  createApp({
+    setup() {
+      const db = window.ShideChronoscope ? window.ShideChronoscope.YEAR_DATABASE : {};
+      const allPosts = ref(window.ShideChronoscope ? window.ShideChronoscope.getSpacetimeWall() : []);
+      const selectedYearFilter = ref('all');
+      const selectedTag = ref('all');
+      const searchQuery = ref('');
+      const viewMode = ref('board');
+      
+      const showAddModal = ref(false);
+      const modalYear = ref(1998);
+      const modalContent = ref('');
+      const modalRedlineError = ref('');
+
+      const allYears = Array.from({ length: 47 }, (_, i) => 1980 + i);
+
+      const popularTags = ref([
+        '#1998千禧前夜', '#小霸王', '#周杰伦', '#Beyond', '#网吧通宵', '#温哥华', '#黑神话', '#老弄堂', '#小虎队'
+      ]);
+
+      const getYearData = (y) => {
+        return db[y] || { color: '#12365E', event: '时代记忆', verdict: '时间替你记着。' };
+      };
+
+      const getYearColor = (y) => {
+        return db[y] ? db[y].color : '#12365E';
+      };
+
+      const filteredPosts = computed(() => {
+        let list = allPosts.value;
+        const year = selectedYearFilter.value;
+        const tag = selectedTag.value;
+        const query = searchQuery.value.trim().toLowerCase();
+
+        // 1. 年代筛选
+        if (year !== 'all') {
+          list = list.filter(p => p.year === year);
+        }
+
+        // 2. 标签筛选
+        if (tag === 'hot') {
+          list = [...list].sort((a, b) => b.likes - a.likes);
+        } else if (tag !== 'all') {
+          list = list.filter(p => p.tags.some(t => t.toLowerCase() === tag.toLowerCase()));
+        }
+
+        // 3. 关键字模糊搜索
+        if (query) {
+          list = list.filter(p => 
+            p.content.toLowerCase().includes(query) ||
+            p.author.toLowerCase().includes(query) ||
+            p.reply.toLowerCase().includes(query) ||
+            String(p.year).includes(query) ||
+            p.tags.some(t => t.toLowerCase().includes(query))
+          );
+        }
+
+        return list;
+      });
+
+      const likePost = (post) => {
+        post.likes++;
+        post.justLiked = true;
+        setTimeout(() => {
+          post.justLiked = false;
+        }, 1500);
+        if (window.ShideChronoscope) {
+          window.ShideChronoscope.saveSpacetimeWall(allPosts.value);
+        }
+      };
+
+      const drawRandomMemory = () => {
+        const posts = filteredPosts.value;
+        if (posts.length === 0) return;
+        const randIdx = Math.floor(Math.random() * posts.length);
+        const target = posts[randIdx];
+        
+        const cardEl = document.getElementById('card-' + target.id);
+        if (cardEl) {
+          cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          cardEl.classList.add('ring-4', 'ring-gold', 'scale-105');
+          setTimeout(() => {
+            cardEl.classList.remove('ring-4', 'ring-gold', 'scale-105');
+          }, 2500);
+        }
+      };
+
+      const resetFilters = () => {
+        selectedYearFilter.value = 'all';
+        selectedTag.value = 'all';
+        searchQuery.value = '';
+      };
+
+      const submitModalPost = () => {
+        const text = modalContent.value.trim();
+        if (!text) {
+          alert('请先输入回忆内容');
+          return;
+        }
+
+        if (window.ShideChronoscope) {
+          const check = window.ShideChronoscope.checkRedline(text);
+          if (!check.pass) {
+            modalRedlineError.value = check.reason;
+            return;
+          }
+        }
+        modalRedlineError.value = '';
+
+        const y = modalYear.value;
+        const yData = getYearData(y);
+        const autoTags = window.ShideChronoscope 
+          ? window.ShideChronoscope.extractTags(y, text, yData.eventCode) 
+          : [`#${y}${yData.tag || '时代'}`, `#EV-${y}`];
+
+        const tilts = [-1.5, 1.8, -0.8, 1.2, -1.2, 0.8, 1.5];
+        const randomTilt = tilts[Math.floor(Math.random() * tilts.length)];
+        const pinTypes = ['tape', 'pin', 'clip'];
+        const randomPin = pinTypes[Math.floor(Math.random() * pinTypes.length)];
+
+        const newPost = {
+          id: `post-${y}-${Date.now()}`,
+          year: y,
+          author: `时空漫步者 #${Math.floor(1000 + Math.random() * 9000)}`,
+          avatar: ['🏮', '📻', '🎸', '🕹️', '🚲', '🌊', '☕', '🥢'][Math.floor(Math.random() * 8)],
+          timestamp: '刚刚',
+          content: text,
+          reply: yData.verdict, // 纯净手记，无“沈拾调侃：”前缀
+          likes: 1,
+          pinType: randomPin,
+          tilt: randomTilt,
+          tags: autoTags
+        };
+
+        allPosts.value.unshift(newPost);
+        if (window.ShideChronoscope) {
+          window.ShideChronoscope.saveSpacetimeWall(allPosts.value);
+        }
+
+        modalContent.value = '';
+        showAddModal.value = false;
+        alert('🎉 你的便签已成功钉在时空大公告板上！');
+      };
+
+      return {
+        allPosts,
+        allYears,
+        popularTags,
+        selectedYearFilter,
+        selectedTag,
+        searchQuery,
+        viewMode,
+        filteredPosts,
+        showAddModal,
+        modalYear,
+        modalContent,
+        modalRedlineError,
+        getYearData,
+        getYearColor,
+        likePost,
+        drawRandomMemory,
+        resetFilters,
+        submitModalPost
+      };
+    }
+  }).mount('#app');
+</script>
+
+</body>
+</html>

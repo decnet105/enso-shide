@@ -657,48 +657,71 @@
     </div>
   </section>
 
-  <!-- 5.5 【时代回声 · 时空留言墙】(Spacetime Message Wall with Auto-Tagging & Redline Governance) -->
+  <!-- 5.5 【时代便签 · 时空留声墙】(Interactive Spacetime Bulletin Board) -->
   <section id="spacetime-wall" class="w-full max-w-7xl px-6 md:px-12 py-16 border-t border-gold/25">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
       <div>
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase mb-2">
-          <span>SPACETIME WALL // COMMUNITY MEMORY STREAM</span>
+          <span>SPACETIME BULLETIN BOARD // 47-YEAR MEMORY STREAM</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy">
-          时代回声 · 时空留言墙
+          时代便签 · 时空留声墙
         </h2>
         <p class="text-xs sm:text-sm text-ink-sub font-serif mt-1">
-          每个人都是一粒微尘，但只要被记下，便在时间的长河里有了姓名。点击任意标签探索同类时空印记。
+          每个人都是一粒微尘，只要被记下，便在时间的长河里有了姓名。把你的时代便签钉在墙上，探索同类印记。
         </p>
       </div>
 
-      <!-- 快速发布一条时空留痕 -->
-      <div class="flex items-center gap-3">
-        <a href="#portal" class="bg-navy hover:bg-navy-deep text-white text-xs font-mono py-2.5 px-4 rounded-xl font-bold transition flex items-center gap-1.5 shadow">
+      <!-- 快捷操作栏 -->
+      <div class="flex flex-wrap items-center gap-3">
+        <button @click="drawRandomMemory" class="bg-paper hover:bg-gold/15 text-navy border border-gold/40 text-xs font-mono py-2.5 px-4 rounded-xl font-bold transition flex items-center gap-1.5 shadow-sm">
+          <span>🎲 随手抽一张便签</span>
+        </button>
+        <a href="#radar" class="bg-navy hover:bg-navy-deep text-white text-xs font-mono py-2.5 px-4 rounded-xl font-bold transition flex items-center gap-1.5 shadow">
           <span>✍️ 我也要去显影上墙</span>
+        </a>
+        <a href="./spacetime-wall/index.html" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono py-2.5 px-4 rounded-xl font-bold transition flex items-center gap-1.5 shadow">
+          <span>🌐 全屏大公告板 ›</span>
         </a>
       </div>
     </div>
 
-    <!-- 标签筛选栏 (Interactive Tag Filtering) -->
-    <div class="bg-paper-tint/60 border border-gold/30 rounded-2xl p-4 mb-8 space-y-3">
-      <div class="flex items-center justify-between">
-        <span class="text-xs font-mono text-ink-sub uppercase tracking-wider flex items-center gap-1.5">
-          <span>🏷️ 智能时空标签索引：</span>
-          <span v-if="selectedWallTag !== 'all'" class="text-cinnabar font-bold font-serif">
-            当前筛选：{{ selectedWallTag }}
-          </span>
-        </span>
-        <button v-if="selectedWallTag !== 'all'" @click="filterWallByTag('all')" class="text-xs font-mono text-stone-500 hover:text-navy underline">
-          重置全部
-        </button>
+    <!-- 交互控制面板：视图切换、年代飞梭与搜索 -->
+    <div class="bg-paper-tint/70 border border-gold/35 rounded-2xl p-4 sm:p-5 mb-8 space-y-4 shadow-sm">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-gold/25 pb-3">
+        <!-- 视图切换 -->
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono text-ink-sub">展示模式：</span>
+          <div class="inline-flex rounded-xl bg-white border border-gold/30 p-0.5 text-xs font-mono">
+            <button @click="boardViewMode = 'board'"
+              :class="boardViewMode === 'board' ? 'bg-navy text-white font-bold' : 'text-stone-600 hover:text-navy'"
+              class="px-3 py-1 rounded-lg transition flex items-center gap-1">
+              <span>📌 便签公告板</span>
+            </button>
+            <button @click="boardViewMode = 'grid'"
+              :class="boardViewMode === 'grid' ? 'bg-navy text-white font-bold' : 'text-stone-600 hover:text-navy'"
+              class="px-3 py-1 rounded-lg transition flex items-center gap-1">
+              <span>📰 典雅画卷流</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 快速搜索 -->
+        <div class="relative w-full sm:w-64">
+          <input type="text" v-model="searchQuery" placeholder="搜索年代/人名/地点/小事..."
+            class="w-full text-xs pl-8 pr-3 py-1.5 rounded-lg border border-stone-300 focus:outline-none focus:border-navy bg-white/90">
+          <span class="absolute left-2.5 top-1.5 text-stone-400 text-xs">🔍</span>
+          <button v-if="searchQuery" @click="searchQuery = ''" class="absolute right-2.5 top-1.5 text-stone-400 hover:text-navy text-xs">✕</button>
+        </div>
       </div>
 
-      <div class="flex flex-wrap gap-2">
+      <!-- 智能标签胶囊 -->
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-xs font-mono text-ink-sub mr-1">🏷️ 标签索引:</span>
         <button @click="filterWallByTag('all')" 
-          :class="selectedWallTag === 'all' ? 'bg-navy text-white' : 'bg-white text-navy hover:bg-gold/15'"
+          :class="selectedWallTag === 'all' && !searchQuery ? 'bg-navy text-white' : 'bg-white text-navy hover:bg-gold/15'"
           class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition">
-          全部时空 ({{ allWallPosts.length }})
+          全部 ({{ allWallPosts.length }})
         </button>
         <button @click="filterWallByTag('hot')" 
           :class="selectedWallTag === 'hot' ? 'bg-cinnabar text-white' : 'bg-white text-navy hover:bg-gold/15'"
@@ -713,71 +736,94 @@
       </div>
     </div>
 
-    <!-- 留言墙瀑布流卡片网格 (Masonry-style Grid) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div v-for="post in filteredWallPosts" :key="post.id"
-        class="bg-white/95 border border-gold/35 rounded-2xl p-5 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4 relative group">
-        
-        <!-- Top Info Header -->
-        <div class="flex items-start justify-between border-b border-gold/25 pb-3">
-          <div class="flex items-center gap-2.5">
-            <span class="text-2xl">{{ post.avatar || '🏮' }}</span>
-            <div>
-              <div class="text-xs font-serif font-bold text-navy">{{ post.author }}</div>
-              <div class="text-[10px] font-mono text-ink-sub">{{ post.timestamp }}</div>
+    <!-- 东方木纹/宣纸质感公告板容器 (Tactile Bulletin Corkboard Canvas) -->
+    <div :class="boardViewMode === 'board' ? 'bg-stone-100/90 border-2 border-gold/40 rounded-3xl p-6 sm:p-10 shadow-inner' : ''">
+      
+      <!-- 卡片网格瀑布流 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6">
+        <div v-for="(post, idx) in visibleWallPosts" :key="post.id" :id="'card-' + post.id"
+          class="bg-white border border-gold/35 rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between space-y-4 relative group"
+          :class="boardViewMode === 'board' ? 'transform hover:scale-[1.03] hover:rotate-0 hover:z-30' : ''"
+          :style="boardViewMode === 'board' ? { transform: 'rotate(' + (post.tilt || (idx % 2 === 0 ? -1.5 : 1.2)) + 'deg)' } : {}">
+          
+          <!-- 便签顶部胶带 / 图钉 (Washi Tape or Pushpin) -->
+          <div v-if="boardViewMode === 'board'" class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-5 opacity-85 shadow-sm rounded-sm z-20 pointer-events-none"
+            :style="{ backgroundColor: getYearColor(post.year) + '45', border: '1px dashed ' + getYearColor(post.year) }">
+          </div>
+
+          <!-- Top Info Header -->
+          <div class="flex items-start justify-between border-b border-gold/20 pb-3 pt-1">
+            <div class="flex items-center gap-2.5">
+              <span class="text-2xl">{{ post.avatar || '🏮' }}</span>
+              <div>
+                <div class="text-xs font-serif font-bold text-navy">{{ post.author }}</div>
+                <div class="text-[10px] font-mono text-ink-sub">{{ post.timestamp }}</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono font-bold text-white shadow-sm"
+                :style="{ backgroundColor: getYearColor(post.year) }">
+                {{ post.year }} 年
+              </span>
             </div>
           </div>
-          <div class="text-right">
-            <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold text-white shadow-sm"
-              :style="{ backgroundColor: getYearColor(post.year) }">
-              {{ post.year }} 年
-            </span>
+
+          <!-- User Memory Note -->
+          <div class="text-xs sm:text-sm font-serif text-ink leading-relaxed font-medium">
+            {{ post.content }}
           </div>
-        </div>
 
-        <!-- User Memory Note -->
-        <div class="text-xs sm:text-sm font-serif text-ink leading-relaxed">
-          {{ post.content }}
-        </div>
-
-        <!-- Shen Shi Sticky Humorous Reply (沈拾调侃神评) -->
-        <div class="bg-paper-tint/90 p-3 rounded-xl border border-gold/30 text-[11px] font-serif text-navy space-y-1">
-          <div class="flex items-center justify-between text-[10px] font-mono text-cinnabar font-bold">
-            <span>✨ 沈拾 · 修复师回帖</span>
-            <span>SHENSHI REPLY</span>
+          <!-- 修复师手记随笔（纯净无多余“沈拾调侃”字样） -->
+          <div class="bg-paper-tint/70 p-3 rounded-xl border-l-2 border-cinnabar/70 text-xs font-serif text-ink-sub italic leading-relaxed">
+            “{{ post.reply }}”
           </div>
-          <p class="italic leading-snug text-ink-sub">
-            {{ post.reply }}
-          </p>
-        </div>
 
-        <!-- Tags List -->
-        <div class="flex flex-wrap gap-1.5 pt-1">
-          <button v-for="tag in post.tags" :key="tag" @click.stop="filterWallByTag(tag)"
-            class="px-2 py-0.5 rounded-md text-[10px] font-mono bg-paper hover:bg-gold/20 text-stone-600 hover:text-navy border border-stone-200 transition">
-            {{ tag }}
-          </button>
-        </div>
+          <!-- Tags List -->
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <button v-for="tag in post.tags" :key="tag" @click.stop="filterWallByTag(tag)"
+              class="px-2 py-0.5 rounded-md text-[10px] font-mono bg-paper hover:bg-gold/20 text-stone-600 hover:text-navy border border-stone-200 transition">
+              {{ tag }}
+            </button>
+          </div>
 
-        <!-- Bottom Action Bar -->
-        <div class="flex items-center justify-between pt-2 border-t border-gold/20 text-[11px] font-mono text-ink-sub">
-          <button @click="likePost(post)" class="hover:text-cinnabar transition flex items-center gap-1.5 group/btn">
-            <span class="group-hover/btn:scale-125 transition-transform">❤️</span>
-            <span class="font-bold">{{ post.likes }} 钤印共鸣</span>
-          </button>
-          <span class="text-[10px] text-stone-400">#时光信笺</span>
-        </div>
+          <!-- Bottom Action Bar -->
+          <div class="flex items-center justify-between pt-2 border-t border-gold/20 text-[11px] font-mono text-ink-sub">
+            <button @click="likePost(post)" class="hover:text-cinnabar transition flex items-center gap-1.5 group/btn relative">
+              <span class="group-hover/btn:scale-125 transition-transform">❤️</span>
+              <span class="font-bold">{{ post.likes }} 钤印共鸣</span>
+              <!-- 钤印动画效果 -->
+              <span v-if="post.justLiked" class="absolute -top-6 left-2 text-cinnabar font-serif font-bold text-xs animate-ping">
+                印
+              </span>
+            </button>
+            <span class="text-[10px] text-stone-400 font-mono">#时光便签</span>
+          </div>
 
+        </div>
       </div>
+
+      <!-- 帖子太多时的分页与展开机制 (Show More / Full View) -->
+      <div v-if="filteredWallPosts.length > displayLimit" class="text-center pt-8">
+        <button @click="displayLimit += 6" class="px-6 py-3 rounded-xl bg-white border border-gold/40 text-navy hover:bg-gold/15 text-xs font-mono font-bold transition shadow-sm inline-flex items-center gap-2">
+          <span>👇 展开更多时代便签 (还有 {{ filteredWallPosts.length - displayLimit }} 条)</span>
+        </button>
+      </div>
+
+      <div v-else-if="displayLimit > 6 && filteredWallPosts.length > 6" class="text-center pt-8">
+        <button @click="displayLimit = 6" class="px-5 py-2.5 rounded-xl bg-white border border-stone-300 text-stone-600 hover:text-navy text-xs font-mono transition">
+          <span>收起部分便签</span>
+        </button>
+      </div>
+
     </div>
 
     <!-- Empty State -->
     <div v-if="filteredWallPosts.length === 0" class="text-center py-16 bg-white/50 rounded-2xl border border-gold/30 my-4">
       <span class="text-4xl block mb-2">📜</span>
-      <p class="text-sm font-serif text-navy font-bold">该标签下暂无更多留言</p>
-      <p class="text-xs font-serif text-ink-sub mt-1">去时空显影机输入你的回忆，成为首位留下该印记的先锋吧！</p>
-      <button @click="filterWallByTag('all')" class="mt-4 px-4 py-2 rounded-xl bg-navy text-white text-xs font-mono font-bold">
-        查看全部留言
+      <p class="text-sm font-serif text-navy font-bold">该筛选条件下暂无便签</p>
+      <p class="text-xs font-serif text-ink-sub mt-1">去上方时空显影机输入你的回忆，成为首位留下该印记的先锋吧！</p>
+      <button @click="filterWallByTag('all'); searchQuery = ''" class="mt-4 px-4 py-2 rounded-xl bg-navy text-white text-xs font-mono font-bold">
+        查看全部便签
       </button>
     </div>
   </section>
@@ -1180,9 +1226,12 @@
       const generatedProCode = ref('');
       const codeCopied = ref(false);
 
-      // 时空留言墙状态
+      // 时空留言墙与公告板状态
       const allWallPosts = ref(window.ShideChronoscope ? window.ShideChronoscope.getSpacetimeWall() : []);
       const selectedWallTag = ref('all');
+      const boardViewMode = ref('board');
+      const searchQuery = ref('');
+      const displayLimit = ref(6);
       const popularTags = ref([
         '#1998千禧前夜', '#小霸王', '#周杰伦', '#Beyond', '#网吧通宵', '#温哥华', '#黑神话', '#老弄堂', '#小虎队'
       ]);
@@ -1298,10 +1347,10 @@
           }
         }
         redlineWarning.value = '';
-        boundMemoryOutput.value = `“${text}” —— 1980年代至今的文化长河中，你这句话已被收录，沈拾为你盖印见证。`;
+        boundMemoryOutput.value = `“${text}” —— 1980年代至今的文化长河中，你这句话已被收录，为你盖印见证。`;
       };
 
-      // 贴到时空留言墙核心逻辑
+      // 贴到时空留言墙核心逻辑 (纯净无多余前缀)
       const createWallPost = (userText) => {
         const text = userText || userMemoryInput.value.trim();
         if (!text) {
@@ -1322,6 +1371,11 @@
           ? window.ShideChronoscope.extractTags(y, text, cData.eventCode) 
           : [`#${y}${cData.tag}`, `#${cData.eventCode}`];
 
+        const tilts = [-1.5, 1.8, -0.8, 1.2, -1.2, 0.8, 1.5];
+        const randomTilt = tilts[Math.floor(Math.random() * tilts.length)];
+        const pinTypes = ['tape', 'pin', 'clip'];
+        const randomPin = pinTypes[Math.floor(Math.random() * pinTypes.length)];
+
         const newPost = {
           id: `post-${y}-${Date.now()}`,
           year: y,
@@ -1329,8 +1383,10 @@
           avatar: ['🏮', '📻', '🎸', '🕹️', '🚲', '🌊', '☕', '🥢'][Math.floor(Math.random() * 8)],
           timestamp: '刚刚',
           content: text,
-          reply: `沈拾调侃：${cData.verdict}`,
+          reply: cData.verdict, // 纯净手记，无“沈拾调侃：”前缀
           likes: 1,
+          pinType: randomPin,
+          tilt: randomTilt,
           tags: autoTags
         };
 
@@ -1346,7 +1402,7 @@
         if (post) {
           userMemoryInput.value = '';
           boundMemoryOutput.value = '';
-          alert('🎉 已成功贴到时空留言墙！正在前往留言墙围观～');
+          alert('🎉 已成功贴到时空留声墙！正在前往便签板围观～');
           const el = document.getElementById('spacetime-wall');
           if (el) el.scrollIntoView({ behavior: 'smooth' });
         }
@@ -1361,12 +1417,36 @@
         }
       };
 
-      // 留言墙筛选与互动
+      // 留言墙筛选与搜索计算属性
       const filteredWallPosts = computed(() => {
+        let list = allWallPosts.value;
         const tag = selectedWallTag.value;
-        if (tag === 'all') return allWallPosts.value;
-        if (tag === 'hot') return [...allWallPosts.value].sort((a, b) => b.likes - a.likes);
-        return allWallPosts.value.filter(p => p.tags.some(t => t.toLowerCase() === tag.toLowerCase()));
+        const query = searchQuery.value.trim().toLowerCase();
+
+        // 标签筛选
+        if (tag === 'hot') {
+          list = [...list].sort((a, b) => b.likes - a.likes);
+        } else if (tag !== 'all') {
+          list = list.filter(p => p.tags.some(t => t.toLowerCase() === tag.toLowerCase()));
+        }
+
+        // 关键字搜索筛选
+        if (query) {
+          list = list.filter(p => 
+            p.content.toLowerCase().includes(query) ||
+            p.author.toLowerCase().includes(query) ||
+            p.reply.toLowerCase().includes(query) ||
+            String(p.year).includes(query) ||
+            p.tags.some(t => t.toLowerCase().includes(query))
+          );
+        }
+
+        return list;
+      });
+
+      // 限制首页展示数量，避免帖子太多造成页面冗长
+      const visibleWallPosts = computed(() => {
+        return filteredWallPosts.value.slice(0, displayLimit.value);
       });
 
       const filterWallByTag = (tag) => {
@@ -1375,9 +1455,37 @@
 
       const likePost = (post) => {
         post.likes++;
+        post.justLiked = true;
+        setTimeout(() => {
+          post.justLiked = false;
+        }, 1500);
         if (window.ShideChronoscope) {
           window.ShideChronoscope.saveSpacetimeWall(allWallPosts.value);
         }
+      };
+
+      // 互动：随手抽一张便签
+      const drawRandomMemory = () => {
+        const posts = filteredWallPosts.value;
+        if (posts.length === 0) return;
+        const randIdx = Math.floor(Math.random() * posts.length);
+        const target = posts[randIdx];
+        
+        // 确保目标在当前展示范围内
+        if (randIdx >= displayLimit.value) {
+          displayLimit.value = randIdx + 1;
+        }
+
+        setTimeout(() => {
+          const cardEl = document.getElementById('card-' + target.id);
+          if (cardEl) {
+            cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            cardEl.classList.add('ring-4', 'ring-gold', 'scale-105');
+            setTimeout(() => {
+              cardEl.classList.remove('ring-4', 'ring-gold', 'scale-105');
+            }, 2500);
+          }
+        }, 100);
       };
 
       const exportPoster = () => {
