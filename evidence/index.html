@@ -7,18 +7,18 @@
   <meta name="description" content="拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#a4472d">
-  <link rel="canonical" href="https://shide.app/evidence/">
+  <link rel="canonical" href="../evidence/index.html">
   <!-- geo:hreflang:start -->
-  <link rel="alternate" hreflang="zh-Hans" href="https://shide.app/evidence/">
+  <link rel="alternate" hreflang="zh-Hans" href="../evidence/index.html">
   <link rel="alternate" hreflang="zh-Hant" href="https://shide.app/zh-Hant/evidence/">
   <link rel="alternate" hreflang="en" href="https://shide.app/en/evidence/">
   <link rel="alternate" hreflang="ja" href="https://shide.app/ja/evidence/">
-  <link rel="alternate" hreflang="x-default" href="https://shide.app/evidence/">
+  <link rel="alternate" hreflang="x-default" href="../evidence/index.html">
   <!-- geo:hreflang:end -->
   <link rel="alternate" type="text/markdown" href="https://shide.app/evidence.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
-  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <link rel="icon" type="image/png" href="../assets/enso-seal-official.png">
+  <link rel="apple-touch-icon" href="../assets/enso-seal-official.png">
+  <link rel="stylesheet" href="../assets/styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="宣传主张与工程证据如何对应">
   <meta property="og:description" content="拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。">
@@ -30,14 +30,20 @@
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
-    <nav aria-label="主导航"><a href="https://shide.app/">首页</a><a href="https://shide.app/features/">功能</a><a href="https://shide.app/privacy/">隐私边界</a><a href="https://shide.app/book-engine/">成书引擎</a><a href="https://shide.app/evidence/" aria-current="page">事实证据</a><a href="https://shide.app/faq/">问答</a></nav>
+    <div class="top-nav-bar">
+      <a href="../index.html" class="back-home-btn">← 回到 拾得 ENSŌ 官网首页</a>
+      <a href="../shenshi/index.html" class="artist-nav-btn">🎵 沈拾 · 原创音乐专区 ↗</a>
+    </div>
+    <div class="main-nav-row">
+    <a class="brand" href="../index.html"><img src="../assets/enso-seal-official.png" class="brand-seal-icon" alt="拾得 Ensō"><span>ENSŌ SHIDE</span></a>
+    <nav aria-label="主导航"><a href="../index.html">首页</a><a href="../features/index.html">功能</a><a href="../privacy/index.html">隐私边界</a><a href="../book-engine/index.html">成书引擎</a><a href="../evidence/index.html" aria-current="page">事实证据</a><a href="../faq/index.html">问答</a></nav>
     
-  <span class="language-switch"><strong class="language-link" aria-current="true">简体中文</strong> · <a class="language-link" href="https://shide.app/zh-Hant/evidence/" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="https://shide.app/en/evidence/" hreflang="en">English</a> · <a class="language-link" href="https://shide.app/ja/evidence/" hreflang="ja">日本語</a></span></header>
-  <main id="main"><p class="eyebrow">公开事实登记表</p><h1>宣传主张与工程证据如何对应</h1><p class="lede">这一页是官网内容的事实闸门。只有证据状态为“已验证”的条目可以用确定语气发布；其余必须带限定或保持不发布。</p><section><h2>内部审计基线</h2><p>本登记表依据 2026-07-16 对私有产品仓库 main 分支的发布审计更新（2026-08-16 复核：App Store 已上线）。私有源码不会因营销站上线而公开；公开页面只给出可核对的文件职责、边界结论与审计日期。</p><p class="callout">这是一份内部工程核验记录，不等同于第三方安全审计、App Store 审核或外部认证。</p></section><section><h2>主张登记</h2><div class="table-wrap"><table><thead><tr><th>主张</th><th>状态</th><th>证据</th><th>允许措辞</th></tr></thead><tbody><tr><td>核心 Memory 使用 SwiftData</td><td>已验证</td><td>Memory.swift / MystoryApp.swift</td><td>端上权威源</td></tr><tr><td>本机生成 A4 PDF</td><td>已验证</td><td>BookRenderer.swift</td><td>本机成书</td></tr><tr><td>中英内容字段</td><td>已验证</td><td>Memory.swift / BookEnvelope.swift</td><td>支持中英内容结构</td></tr><tr><td>所有功能均不联网</td><td>不成立</td><td>APIService.swift</td><td>不得发布</td></tr><tr><td>公开 v1 不需要账户</td><td>已验证</td><td>MystoryApp.swift / Release 编译条件</td><td>无需 Ensō 账户</td></tr><tr><td>在线 AI 成书（Ensō+ 订阅权益）</td><td>已验证</td><td>OnlinePremiumPolicy.swift + 生产后端</td><td>订阅权益·非免费 v1</td></tr><tr><td>通过外部隐私审计</td><td>无证据</td><td>尚无审计报告</td><td>不得发布</td></tr><tr><td>App Store 已公开上线</td><td>已验证</td><td>App Store id6787128369（2026-08-11 发布）</td><td>已上线，可下载</td></tr><tr><td>固定查询性能指标</td><td>未测量</td><td>尚无基准报告</td><td>不得发布数字</td></tr></tbody></table></div></section><section><h2>发布规则</h2><ul><li>版本、价格、评分和下载链接必须来自 App Store Connect 或公开页面。</li><li>性能数字必须附测试设备、数据规模、样本数和测量方法。</li><li>竞品比较必须引用竞品当前官方文档并标注核验日期。</li><li>搜索引擎提及率必须保存原始回答、模型、日期、地区与是否登录。</li></ul></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="https://shide.app/privacy/"><strong>隐私边界</strong><span>拾得 Ensō 公开 v1 的隐私政策：本机数据、可选联网功能、匿名分析、StoreKit 订阅、导出与删除。</span></a><a class="text-card" href="https://shide.app/faq/"><strong>GEO 常见问题</strong><span>直接回答拾得的数据保存、账户、网络、离线成书、双语内容、文化坐标和当前发布状态。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li>as-built 系统总览（内部代码审计）</li><li>免登录应用入口（内部代码审计）</li><li>网络服务（内部代码审计）</li></ol></section></main>
+  <span class="language-switch"><strong class="language-link" aria-current="true">简体中文</strong> · <a class="language-link" href="../zh-Hant/evidence/index.html" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="../en/evidence/index.html" hreflang="en">English</a> · <a class="language-link" href="../ja/evidence/index.html" hreflang="ja">日本語</a></span></div>
+  </header>
+  <main id="main"><p class="eyebrow">公开事实登记表</p><h1>宣传主张与工程证据如何对应</h1><p class="lede">这一页是官网内容的事实闸门。只有证据状态为“已验证”的条目可以用确定语气发布；其余必须带限定或保持不发布。</p><section><h2>内部审计基线</h2><p>本登记表依据 2026-07-16 对私有产品仓库 main 分支的发布审计更新（2026-08-16 复核：App Store 已上线）。私有源码不会因营销站上线而公开；公开页面只给出可核对的文件职责、边界结论与审计日期。</p><p class="callout">这是一份内部工程核验记录，不等同于第三方安全审计、App Store 审核或外部认证。</p></section><section><h2>主张登记</h2><div class="table-wrap"><table><thead><tr><th>主张</th><th>状态</th><th>证据</th><th>允许措辞</th></tr></thead><tbody><tr><td>核心 Memory 使用 SwiftData</td><td>已验证</td><td>Memory.swift / MystoryApp.swift</td><td>端上权威源</td></tr><tr><td>本机生成 A4 PDF</td><td>已验证</td><td>BookRenderer.swift</td><td>本机成书</td></tr><tr><td>中英内容字段</td><td>已验证</td><td>Memory.swift / BookEnvelope.swift</td><td>支持中英内容结构</td></tr><tr><td>所有功能均不联网</td><td>不成立</td><td>APIService.swift</td><td>不得发布</td></tr><tr><td>公开 v1 不需要账户</td><td>已验证</td><td>MystoryApp.swift / Release 编译条件</td><td>无需 Ensō 账户</td></tr><tr><td>在线 AI 成书（Ensō+ 订阅权益）</td><td>已验证</td><td>OnlinePremiumPolicy.swift + 生产后端</td><td>订阅权益·非免费 v1</td></tr><tr><td>通过外部隐私审计</td><td>无证据</td><td>尚无审计报告</td><td>不得发布</td></tr><tr><td>App Store 已公开上线</td><td>已验证</td><td>App Store id6787128369（2026-08-11 发布）</td><td>已上线，可下载</td></tr><tr><td>固定查询性能指标</td><td>未测量</td><td>尚无基准报告</td><td>不得发布数字</td></tr></tbody></table></div></section><section><h2>发布规则</h2><ul><li>版本、价格、评分和下载链接必须来自 App Store Connect 或公开页面。</li><li>性能数字必须附测试设备、数据规模、样本数和测量方法。</li><li>竞品比较必须引用竞品当前官方文档并标注核验日期。</li><li>搜索引擎提及率必须保存原始回答、模型、日期、地区与是否登录。</li></ul></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="../privacy/index.html"><strong>隐私边界</strong><span>拾得 Ensō 公开 v1 的隐私政策：本机数据、可选联网功能、匿名分析、StoreKit 订阅、导出与删除。</span></a><a class="text-card" href="../faq/index.html"><strong>GEO 常见问题</strong><span>直接回答拾得的数据保存、账户、网络、离线成书、双语内容、文化坐标和当前发布状态。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li>as-built 系统总览（内部代码审计）</li><li>免登录应用入口（内部代码审计）</li><li>网络服务（内部代码审计）</li></ol></section></main>
   <footer><p class="store-line"><a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">在 App Store 下载拾得</a></p><p class="social-line">关注：<a href="https://x.com/ensoshide" rel="external">X</a> · <a href="https://www.instagram.com/ensoshide" rel="external">Instagram</a> · <a href="https://www.youtube.com/@EnsoShide" rel="external">YouTube</a></p>
     <p>公开说明以已落地代码为准；愿景、实验功能与已上线能力分开标注。</p>
-    <p><a href="https://shide.app/evidence.md">阅读本页 Markdown</a> · 事实核验日期 2026-08-16</p>
+    <p><a href="../evidence.md">阅读本页 Markdown</a> · 事实核验日期 2026-08-16</p>
   </footer>
 </body>
 </html>

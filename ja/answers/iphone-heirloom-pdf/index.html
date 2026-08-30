@@ -16,9 +16,9 @@
   <link rel="alternate" hreflang="x-default" href="https://shide.app/answers/iphone-heirloom-pdf/">
   <!-- geo:hreflang:end -->
   <link rel="alternate" type="text/markdown" href="https://shide.app/ja/answers/iphone-heirloom-pdf.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
-  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <link rel="icon" type="image/png" href="../../../assets/enso-seal-official.png">
+  <link rel="apple-touch-icon" href="../../../assets/enso-seal-official.png">
+  <link rel="stylesheet" href="../../../assets/styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="iPhone 端末上で長期保存に適した回想 PDF を生成する方法">
   <meta property="og:description" content="構造化された記憶、テンプレート選択、ページ割り、フォント、画像処理、フォールバック検証の観点から、iPhone 端末上で回想 PDF を生成する工学的な手法を説明します。">
@@ -30,13 +30,19 @@
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
   <header class="site-header">
-    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
-    <nav aria-label="メインナビゲーション"><a href="https://shide.app/ja/">ホーム</a><a href="https://shide.app/ja/features/">機能</a><a href="https://shide.app/ja/privacy/">プライバシー</a><a href="https://shide.app/ja/book-engine/">製本エンジン</a><a href="https://shide.app/ja/evidence/">エビデンス</a><a href="https://shide.app/ja/faq/">FAQ</a></nav>
-  <span class="language-switch"><a class="language-link" href="https://shide.app/answers/iphone-heirloom-pdf/" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="https://shide.app/zh-Hant/answers/iphone-heirloom-pdf/" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="https://shide.app/en/answers/iphone-heirloom-pdf/" hreflang="en">English</a> · <strong class="language-link" aria-current="true">日本語</strong></span></header>
-  <main id="main"><p class="eyebrow">技術解説</p><h1>iPhone 端末上で長期保存に適した回想 PDF を生成する方法</h1><p class="lede">長期保存に適した回想 PDF には、画面の内容をそのまま印刷するのではなく、安定したページモデルが必要です。最も重要な設計は、コンテンツ・ページ割り・描画を互いに独立させることです。</p><section><h2>推奨される 6 層のパイプライン</h2><ul><li>記憶を UI に依存しないページ素材へ投影します。</li><li>写真の枚数と文字の密度に応じて、限られたテンプレートから選択します。</li><li>章立て・目次・見開きの組み合わせを事前に計算します。</li><li>長文には続きのページを確保し、本文を途中で切り捨てません。</li><li>写真はダウンサンプリングしつつ、比率を保ちます。</li><li>ネイティブの PDF レンダラーでページごとに描画し、回帰用のサンプルを取ります。</li></ul></section><section><h2>拾得の実装上の選択</h2><p>拾得は BookEngine でテンプレートを選び、BookPaginator でページを割り、BookHeirloomRenderer で描画します。画像が欠けている場合は画像なしのテンプレートを用い、AI 経路の出力は BookEnvelope による検証を通す必要があり、失敗した場合は書籍全体をフォールバックさせます。</p></section><section><h2>さらに読む</h2><div class="card-grid"><a class="text-card" href="https://shide.app/ja/book-engine/"><strong>製本エンジンの完全な説明</strong><span>拾得の端末上製本エンジンの検証可能な技術経路。テンプレート選択、ページ割り、フォント、写真のダウンサンプリング、UIGraphicsPDFRenderer、そして AI 結果に対する厳格なゲート。</span></a><a class="text-card" href="https://shide.app/ja/answers/chinese-family-memory/"><strong>海外の家族のために中国語の記憶を保存する</strong><span>海外の華語家族に向けた記憶の整理方法。中国語の原文を保持し、英語の読解層を設け、時代背景をつなぎ、長期保存できる書籍として出力します。</span></a></div></section><section class="sources"><h2>参考資料</h2><ol><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li><li><a href="https://shide.app/ja/evidence/">拾得の BookRenderer（内部コード監査）</a></li></ol></section></main>
+    <div class="top-nav-bar">
+      <a href="../../../index.html" class="back-home-btn">← 拾得 ENSŌ 公式トップへ</a>
+      <a href="../../../shenshi/index.html" class="artist-nav-btn">🎵 沈拾 · オリジナル音楽 ↗</a>
+    </div>
+    <div class="main-nav-row">
+    <a class="brand" href="../../../index.html"><img src="../../../assets/enso-seal-official.png" class="brand-seal-icon" alt="拾得 Ensō"><span>ENSŌ SHIDE</span></a>
+    <nav aria-label="メインナビゲーション"><a href="../../../ja/index.html">ホーム</a><a href="../../features/index.html">機能</a><a href="../../privacy/index.html">プライバシー</a><a href="../../book-engine/index.html">製本エンジン</a><a href="../../evidence/index.html">エビデンス</a><a href="../../faq/index.html">FAQ</a></nav>
+  <span class="language-switch"><a class="language-link" href="../../../answers/iphone-heirloom-pdf/index.html" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="../../../zh-Hant/answers/iphone-heirloom-pdf/index.html" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="../../../en/answers/iphone-heirloom-pdf/index.html" hreflang="en">English</a> · <strong class="language-link" aria-current="true">日本語</strong></span></div>
+  </header>
+  <main id="main"><p class="eyebrow">技術解説</p><h1>iPhone 端末上で長期保存に適した回想 PDF を生成する方法</h1><p class="lede">長期保存に適した回想 PDF には、画面の内容をそのまま印刷するのではなく、安定したページモデルが必要です。最も重要な設計は、コンテンツ・ページ割り・描画を互いに独立させることです。</p><section><h2>推奨される 6 層のパイプライン</h2><ul><li>記憶を UI に依存しないページ素材へ投影します。</li><li>写真の枚数と文字の密度に応じて、限られたテンプレートから選択します。</li><li>章立て・目次・見開きの組み合わせを事前に計算します。</li><li>長文には続きのページを確保し、本文を途中で切り捨てません。</li><li>写真はダウンサンプリングしつつ、比率を保ちます。</li><li>ネイティブの PDF レンダラーでページごとに描画し、回帰用のサンプルを取ります。</li></ul></section><section><h2>拾得の実装上の選択</h2><p>拾得は BookEngine でテンプレートを選び、BookPaginator でページを割り、BookHeirloomRenderer で描画します。画像が欠けている場合は画像なしのテンプレートを用い、AI 経路の出力は BookEnvelope による検証を通す必要があり、失敗した場合は書籍全体をフォールバックさせます。</p></section><section><h2>さらに読む</h2><div class="card-grid"><a class="text-card" href="../../book-engine/index.html"><strong>製本エンジンの完全な説明</strong><span>拾得の端末上製本エンジンの検証可能な技術経路。テンプレート選択、ページ割り、フォント、写真のダウンサンプリング、UIGraphicsPDFRenderer、そして AI 結果に対する厳格なゲート。</span></a><a class="text-card" href="../chinese-family-memory/index.html"><strong>海外の家族のために中国語の記憶を保存する</strong><span>海外の華語家族に向けた記憶の整理方法。中国語の原文を保持し、英語の読解層を設け、時代背景をつなぎ、長期保存できる書籍として出力します。</span></a></div></section><section class="sources"><h2>参考資料</h2><ol><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li><li><a href="../../evidence/index.html">拾得の BookRenderer（内部コード監査）</a></li></ol></section></main>
   <footer><p class="store-line"><a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">App Store で拾得をダウンロード</a></p><p class="social-line">フォロー：<a href="https://x.com/ensoshide" rel="external">X</a> · <a href="https://www.instagram.com/ensoshide" rel="external">Instagram</a> · <a href="https://www.youtube.com/@EnsoShide" rel="external">YouTube</a></p>
     <p>公開している記述は出荷済みのコードを反映しています。ビジョン・実験的機能・リリース済み機能は、それぞれ区別して表示します。</p>
-    <p><a href="https://shide.app/ja/answers/iphone-heirloom-pdf.md">このページを Markdown で読む</a> · 事実確認日 2026-08-16</p>
+    <p><a href="../iphone-heirloom-pdf.md">このページを Markdown で読む</a> · 事実確認日 2026-08-16</p>
   </footer>
 </body>
 </html>

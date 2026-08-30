@@ -1,44 +1,1319 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Pass Chinese Cultural Memory to the Next Generation — Bilingual Keepsake Book | 拾得 Ensō</title>
-  <meta name="description" content="Enso Shide maps four decades of shared Chinese cultural memory into coordinates across generations. Record your past, present, and future in a bilingual keepsake book. Local-first, no accounts, no uploads. AI animated stories and dramas are in the works.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Ensō Shide · Lift Heads From the Dust, Pass the Light Forward</title>
+  <meta name="description" content="Ensō Shide is the cultural coordinate of the Chinese world since 1980 — Heritage · Innovation. 4000+ cultural coordinates, 10 original soundtracks by Shen Shi, Eastern chrono-archaeology novel Nine Attestations, YouTube Shorts, and private on-device AI heirloom books.">
+  <meta name="keywords" content="Enso Shide, Shide, Cultural Coordinates, Heirloom Book, Shen Shi, Collective Memory, Nine Attestations, Time Restorer, Local-First Journal, Storyworth Alternative">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#a4472d">
+  <meta name="theme-color" content="#12365E">
   <link rel="canonical" href="https://shide.app/en/">
-  <!-- geo:hreflang:start -->
+
+  <!-- Language alternates -->
   <link rel="alternate" hreflang="zh-Hans" href="https://shide.app/">
   <link rel="alternate" hreflang="zh-Hant" href="https://shide.app/zh-Hant/">
   <link rel="alternate" hreflang="en" href="https://shide.app/en/">
   <link rel="alternate" hreflang="ja" href="https://shide.app/ja/">
   <link rel="alternate" hreflang="x-default" href="https://shide.app/">
-  <!-- geo:hreflang:end -->
-  <link rel="alternate" type="text/markdown" href="https://shide.app/en.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
-  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+
+  <!-- Official Seal Logo -->
+  <link rel="icon" type="image/png" href="../assets/enso-seal-official.png">
+  <link rel="apple-touch-icon" href="../assets/enso-seal-official.png">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Four decades of shared Chinese cultural memory, told well and shared widely with the generations to come">
-  <meta property="og:description" content="Enso Shide maps four decades of shared Chinese cultural memory into coordinates across generations. Record your past, present, and future in a bilingual keepsake book. Local-first, no accounts, no uploads. AI animated stories and dramas are in the works.">
+  <meta property="og:title" content="Ensō Shide · Lift Heads From the Dust, Pass the Light Forward">
+  <meta property="og:description" content="Discover your life milestones across 4000+ Chinese pop culture coordinates since 1980.">
   <meta property="og:url" content="https://shide.app/en/">
-  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
-  <meta name="twitter:card" content="summary">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://shide.app/#organization","name":"Enso Shide","url":"https://shide.app/","logo":"https://shide.app/assets/app-icon.png","sameAs":["https://x.com/ensoshide","https://www.instagram.com/ensoshide","https://www.youtube.com/@EnsoShide"]},{"@type":"WebSite","@id":"https://shide.app/#website","url":"https://shide.app/","name":"拾得 Ensō","publisher":{"@id":"https://shide.app/#organization"},"inLanguage":["zh-Hans","zh-Hant","en","ja"],"about":{"@id":"https://shide.app/#app"}},{"@type":"MobileApplication","@id":"https://shide.app/#app","name":"拾得 Ensō","alternateName":["Enso Shide","Shide","拾得"],"url":"https://shide.app/","downloadUrl":"https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8","operatingSystem":"iOS 17 or later","applicationCategory":"LifestyleApplication","publisher":{"@id":"https://shide.app/#organization"},"image":"https://shide.app/assets/app-icon.png","description":"「拾得」把 1980 年至今华人共同的文化记忆，整理成几代人的文化坐标，也让你记下过去、现在与未来，汇编成中英双语岁月书。本地优先，无账号、不上传。AI 漫剧与短剧正在打磨中。","inLanguage":["zh-Hans","zh-Hant","en","ja"],"featureList":["SwiftData on-device private memory store","On-device A4 PDF book rendering","Chinese and English memory fields","Public Chinese cultural timeline","Local guided-chat fallback","Validated bounded GenUI content protocol"]}]}</script>
+  <meta property="og:image" content="https://shide.app/assets/poster-hero-changfeng.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind & Vue -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800;900&family=Noto+Serif+SC:wght@300;400;600;900&family=Plus+Jakarta+Sans:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F8F6F0',
+            'paper-tint': '#F0ECE1',
+            ink: '#111111',
+            'ink-sub': '#55524E',
+            navy: '#12365E',
+            'navy-deep': '#091C33',
+            cinnabar: '#BC382C',
+            'cinnabar-glow': '#E04838',
+            gold: '#C5A059',
+            'gold-light': '#E8D5A3',
+            darksection: '#0A0E17',
+          },
+          fontFamily: {
+            serif: ['"Noto Serif SC"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            display: ['"Cinzel"', 'serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          boxShadow: {
+            'card-luxury': '0 30px 60px -15px rgba(18, 54, 94, 0.08), 0 0 0 1px rgba(197, 160, 89, 0.25)',
+            'portal': '0 40px 100px -20px rgba(18, 54, 94, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.8)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #F8F6F0;
+      color: #111111;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .bg-paper-texture {
+      background-image: 
+        radial-gradient(#E2DCCF 0.75px, transparent 0.75px),
+        linear-gradient(to bottom, #FAF8F4 0%, #F5F1E8 100%);
+      background-size: 24px 24px, 100% 100%;
+    }
+
+    .glass-capsule {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+    }
+
+    .timeline-rail::-webkit-scrollbar {
+      height: 4px;
+    }
+    .timeline-rail::-webkit-scrollbar-track {
+      background: rgba(197, 160, 89, 0.1);
+      border-radius: 999px;
+    }
+    .timeline-rail::-webkit-scrollbar-thumb {
+      background: #C5A059;
+      border-radius: 999px;
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://shide.app/#organization",
+        "name": "Enso Shide",
+        "url": "https://shide.app/en/",
+        "logo": "https://shide.app/assets/enso-seal-official.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://shide.app/en/#website",
+        "url": "https://shide.app/en/",
+        "name": "Ensō Shide English",
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
-    <nav aria-label="Main navigation"><a href="https://shide.app/en/">Home</a><a href="https://shide.app/en/features/">Features</a><a href="https://shide.app/en/privacy/">Privacy boundaries</a><a href="https://shide.app/en/book-engine/">Book engine</a><a href="https://shide.app/en/evidence/">Evidence</a><a href="https://shide.app/en/faq/">FAQ</a></nav>
+<body class="bg-paper-texture antialiased selection:bg-cinnabar selection:text-white">
+
+<div id="app" class="w-full flex flex-col items-center">
+
+  <!-- 1. Gallery Header -->
+  <header class="w-full max-w-7xl px-6 md:px-12 py-8 flex justify-between items-center z-40">
+    <a href="../index.html" class="flex items-center space-x-3.5 group">
+      <img src="../assets/enso-seal-official.png" alt="Ensō Shide Logo" 
+        class="w-11 h-11 rounded-lg shadow-sm border border-gold/40 group-hover:scale-105 transition-transform duration-300">
+      <div class="flex flex-col">
+        <span class="text-base md:text-xl font-black tracking-[0.25em] text-navy font-display">ENSŌ SHIDE</span>
+        <span class="text-[9px] uppercase tracking-[0.3em] text-ink-sub font-mono font-semibold">1980–2024 Cultural Coordinates</span>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center space-x-8 text-xs font-mono tracking-widest text-ink-sub">
+      <a href="#radar" class="hover:text-cinnabar transition">/01 Time Developer</a>
+      <a href="../shenshi/index.html" class="hover:text-cinnabar transition flex items-center gap-1.5 text-navy font-bold">
+        <span>/02 Shen Shi Music</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-cinnabar"></span>
+      </a>
+      <a href="#shorts" class="hover:text-cinnabar transition flex items-center gap-1.5 text-navy font-bold">
+        <span>/03 Shorts Matrix</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+      </a>
+      <a href="#novel-e1" class="hover:text-cinnabar transition">/04 Nine Attestations</a>
+      <a href="#app-book" class="hover:text-cinnabar transition">/05 Heirloom Book</a>
+      <a href="#geo-index" class="hover:text-cinnabar transition text-gold font-bold">/06 Knowledge Base</a>
+    </nav>
+
+    <div class="flex items-center space-x-3">
+      <a href="#app-book" class="bg-navy hover:bg-navy-deep text-white text-xs px-6 py-2.5 rounded-full font-mono tracking-wider transition shadow hover:shadow-lg">
+        TestFlight Access
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. Fine Art Hero -->
+  <section class="w-full max-w-7xl px-6 md:px-12 pt-4 pb-16">
+    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-[#FAF8F4] min-h-[580px] sm:min-h-[640px] flex flex-col justify-end p-8 sm:p-12 md:p-16">
+      
+      <img src="../assets/poster-hero-changfeng.jpg" alt="Golden Dust Ascending · Lift Heads From the Dust" 
+        class="absolute inset-0 w-full h-full object-cover object-center scale-100 hover:scale-105 transition-transform duration-1000 ease-out">
+      
+      <div class="absolute inset-0 bg-gradient-to-t from-paper/90 via-paper/40 to-transparent"></div>
+
+      <div class="absolute top-8 left-8 sm:left-12 flex items-center gap-3">
+        <span class="px-3.5 py-1.5 rounded-full bg-white/80 border border-gold/40 backdrop-blur-md text-[11px] font-mono text-navy uppercase tracking-widest font-bold">
+          CANONICAL // HERITAGE & INNOVATION
+        </span>
+        <span class="hidden sm:inline-block text-xs font-mono text-ink-sub">4000+ COORDINATES // 10 SOUNDTRACKS // SHORTS MATRIX</span>
+      </div>
+
+      <div class="relative z-10 max-w-3xl space-y-6">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-black text-navy leading-[1.2] tracking-tight">
+          We, passed over by history,<br>
+          wander heaven and earth,<br>
+          <span class="text-cinnabar font-serif">yet lift our heads from the dust,</span><br>
+          to pass the light forward.
+        </h1>
+
+        <p class="text-sm sm:text-base md:text-lg text-ink-sub font-serif leading-relaxed max-w-2xl">
+          Ensō Shide is the cultural coordinate of the Chinese world since 1980. Across 4000+ pop songs, films, games, and historic milestones, discover your own footsteps and bind them into a private, bilingual on-device heirloom book.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#radar" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm font-mono uppercase tracking-widest px-8 py-4 rounded-full font-bold transition shadow-2xl hover:-translate-y-0.5">
+            ⚡ Enter Time Developer (Play Instantly) ›
+          </a>
+          <a href="../shenshi/index.html" class="bg-white hover:bg-paper-tint text-navy border border-gold/40 text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-sm">
+            🎵 Shen Shi 10 Soundtracks ↗
+          </a>
+          <a href="#shorts" class="bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-sm">
+            🎬 YouTube Shorts Matrix ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. Timeline Section -->
+  <section class="w-full bg-darksection text-white py-16 px-6 md:px-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <span class="text-xs font-mono text-gold tracking-[0.25em] uppercase">TIMELINE OF MEMORY</span>
+        <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white mt-1">4000+ Cultural Coordinates River</h2>
+      </div>
+      <p class="text-xs sm:text-sm text-stone-400 font-serif max-w-md">
+        From 1980 green trains and cassettes to 1998 dial-up internet and millennium mobile eras. Slide the track to reveal historical echoes.
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto timeline-rail flex gap-4 overflow-x-auto pb-6 pt-2">
+      <div v-for="item in timelineList" :key="item.year"
+        @click="selectYearFromRail(item.year)"
+        :class="selectedYear === item.year ? 'border-cinnabar bg-white/10 ring-2 ring-cinnabar scale-105' : 'border-white/10 bg-white/5 hover:border-gold/50'"
+        class="flex-shrink-0 w-64 p-6 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between h-72">
+        
+        <div>
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-3xl font-black font-display tracking-wider" :class="selectedYear === item.year ? 'text-cinnabar' : 'text-gold'">
+              {{ item.year }}
+            </span>
+            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-white/10 text-stone-300">{{ item.tag }}</span>
+          </div>
+          <h4 class="text-base font-serif font-bold text-white mb-2">{{ item.title }}</h4>
+          <p class="text-xs text-stone-400 font-serif line-clamp-3 leading-relaxed">{{ item.desc }}</p>
+        </div>
+
+        <div class="pt-4 border-t border-white/10 flex justify-between items-center text-[11px] font-mono">
+          <span class="text-stone-400">View Restorer Note</span>
+          <span :class="selectedYear === item.year ? 'text-cinnabar' : 'text-gold'">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Shorts Matrix Showcase -->
+  <section id="shorts" class="w-full max-w-7xl px-6 md:px-12 py-20 border-b border-gold/25">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase mb-2">
+          <span>TRAFFIC ACQUISITION // VISUAL SHORTS & MEMORY MATRIX</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-navy">Shide Shorts · Awakening Collective Memory</h2>
+      </div>
+      <div class="space-y-2 text-left md:text-right">
+        <p class="text-xs sm:text-sm text-ink-sub font-serif max-w-md">
+          Pioneering 4.2s brand tail-hooks and authentic archival retention narratives on YouTube & TikTok.
+        </p>
+        <a href="https://www.youtube.com/@EnsoShide" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-cinnabar font-bold hover:underline">
+          <span>Visit YouTube @EnsoShide Channel</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Short 1: Beyond -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/xjemS0zb-Vk" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-beyond.jpg" alt="Beyond Boundless Oceans Vast Skies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-cinnabar/90 group-hover:bg-cinnabar text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-cinnabar text-white px-2 py-0.5 rounded font-bold">Top Hit</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-wider bg-cinnabar/10 px-2.5 py-0.5 rounded-full">
+              E01 // Music Biopic
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">100% Authentic Archives</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">One Month After Boundless Oceans, Its Creator Left</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            Wong Ka Kui passed away one month after writing Boundless Oceans Vast Skies. Zero AI, penetrating the stubborn youth of a generation.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(1993)" class="text-navy font-bold hover:text-cinnabar">⚡ Reveal 1993 ›</a>
+          <a href="https://youtube.com/shorts/xjemS0zb-Vk" target="_blank" class="text-cinnabar font-bold hover:underline">Play on YT ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 2: Tang Dynasty -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/jp7wLFTtJOs" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-tangchao.jpg" alt="A Dream Return to Tang Dynasty" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-gold/90 group-hover:bg-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-gold text-white px-2 py-0.5 rounded font-bold">Rock Legend</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-gold font-bold uppercase tracking-wider bg-gold/10 px-2.5 py-0.5 rounded-full">
+              X01 // Time Travel
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">Heavy Metal Dawn</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">Dream Return to Tang Dynasty: Peak Chinese Rock</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            Time-traveling back to the early 1990s rock surge, reliving the ground-breaking power of Chinese heavy metal.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(1993)" class="text-navy font-bold hover:text-cinnabar">⚡ Reveal Rock Era ›</a>
+          <a href="https://youtube.com/shorts/jp7wLFTtJOs" target="_blank" class="text-cinnabar font-bold hover:underline">Play on YT ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 3: Teresa Teng -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/Mk3kCe4j0cw" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-dengliujun.jpg" alt="Teresa Teng Tian Mi Mi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-navy/90 group-hover:bg-navy text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-navy text-white px-2 py-0.5 rounded font-bold">3 Real Voices</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-navy font-bold uppercase tracking-wider bg-navy/10 px-2.5 py-0.5 rounded-full">
+              E06 // Chinese Legend
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">Cold Knowledge</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">Listen to Old Deng by Day, Little Deng by Night</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            Three authentic vocal echoes. Unveiling the Indonesian folk origins of Tian Mi Mi and the gentle voice that comforted a billion hearts.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(1988)" class="text-navy font-bold hover:text-cinnabar">⚡ Reveal 1988 ›</a>
+          <a href="https://youtube.com/shorts/Mk3kCe4j0cw" target="_blank" class="text-cinnabar font-bold hover:underline">Play on YT ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 4: Pu Shu -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/mLO-HGyMvGA" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-pushu.jpg" alt="Pu Shu Vanished 10 Years" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-cinnabar/90 group-hover:bg-cinnabar text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-cinnabar text-white px-2 py-0.5 rounded font-bold">84% Retention</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-wider bg-cinnabar/10 px-2.5 py-0.5 rounded-full">
+              E04 // Deep Biopic
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">Highest Completion</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">Pu Shu: Vanished for 10 Years Just to Stay True</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            The completion king of the channel. A musical poet holding onto truth in a noisy world, touching the softest corner of the heart.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(2003)" class="text-navy font-bold hover:text-cinnabar">⚡ Reveal 2003 ›</a>
+          <a href="https://youtube.com/shorts/mLO-HGyMvGA" target="_blank" class="text-cinnabar font-bold hover:underline">Play on YT ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 5: Slam Dunk -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/ZQerFWKhFa8" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-slamdunk.jpg" alt="Slam Dunk Summer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-gold/90 group-hover:bg-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-gold text-white px-2 py-0.5 rounded font-bold">Youth Memory</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-gold font-bold uppercase tracking-wider bg-gold/10 px-2.5 py-0.5 rounded-full">
+              X04 // Anime Travel
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">Passionate Dark Horse</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">Back Then I Truly Believed I Could Dunk</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            Running home after school to watch TV. Red-haired Hanamichi Sakuragi and Until the End of the World defined our youth.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(1998)" class="text-navy font-bold hover:text-cinnabar">⚡ Reveal 1998 ›</a>
+          <a href="https://youtube.com/shorts/ZQerFWKhFa8" target="_blank" class="text-cinnabar font-bold hover:underline">Play on YT ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 6: Leslie Cheung -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/jV7VH-EKUTg" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-leslie.jpg" alt="Leslie Cheung" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-navy/90 group-hover:bg-navy text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-navy text-white px-2 py-0.5 rounded font-bold">Cantopop Icon</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-navy font-bold uppercase tracking-wider bg-navy/10 px-2.5 py-0.5 rounded-full">
+              E02 // Cantopop Legend
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">Eternal Echo</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">That April Fool's Day, Hong Kong Fell Silent</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            "I am what I am, fireworks of a different hue." Remembering the superstar who was twenty years ahead of his era.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(2003)" class="text-navy font-bold hover:text-cinnabar">⚡ Reveal 2003 ›</a>
+          <a href="https://youtube.com/shorts/jV7VH-EKUTg" target="_blank" class="text-cinnabar font-bold hover:underline">Play on YT ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Time-Space Developer -->
+  <section id="radar" class="w-full max-w-7xl px-6 md:px-12 py-20 relative">
     
-  <span class="language-switch"><a class="language-link" href="https://shide.app/" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="https://shide.app/zh-Hant/" hreflang="zh-Hant">繁體中文</a> · <strong class="language-link" aria-current="true">English</strong> · <a class="language-link" href="https://shide.app/ja/" hreflang="ja">日本語</a></span></header>
-  <main id="main"><div class="hero"><div class="hero-copy"><p class="eyebrow">Culture · Innovation · Legacy</p><h1>Four decades of shared Chinese cultural memory, told well and shared widely with the generations to come</h1><p class="lede">Enso Shide maps four decades of Chinese songs, shows, books, games, and milestone events into cultural coordinates shared across generations. It is also a space to record your own journey: the years behind, the present moment, and future hopes—crafted into a bilingual keepsake book the next generation can truly connect with. Built local-first with zero accounts or uploads. AI-driven animated stories and dramas are currently in the works: a new medium to share these memories widely with the generations to come.</p><p class="hero-actions"><a class="primary-cta" href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">Download on the App Store</a><a class="secondary-cta" href="https://shide.app/en/features/">Explore current features</a></p></div><img class="app-mark" src="https://shide.app/assets/app-icon.png" width="360" height="360" alt="拾得 Ensō app icon"></div><section class="showcase-wrap"><h2>A look inside</h2><p class="showcase-lead">These screens are from the iOS app. Swipe through the years home, on-device book making, the spacetime map, Future Mail, cultural tides, and the companion.</p><div class="showcase" aria-label="Enso Shide app screenshots"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/en/01-home.webp" alt="Home screen"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/en/02-book.webp" alt="On-device A4 book"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/en/03-shanhe.webp" alt="Spacetime map"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/en/04-future.webp" alt="Future Mail"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/en/05-tide.webp" alt="Cultural tides"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/en/06-companion.webp" alt="Companion"></div><p class="showcase-hint">Swipe for more →</p></section><section><h2>What the current code supports</h2><ul><li>On-device Memory, Profile, Keepsake and CompanionState models.</li><li>A deterministic on-device A4 PDF rendering path.</li><li>Chinese and English content fields for intergenerational reading.</li><li>Read-only public cultural context delivered over the network.</li><li>A local guided-chat path; online AI structuring and book generation are an optional Ensō+ subscription capability, used only when you invoke them.</li></ul></section><section><h2>A precise privacy description</h2><p>The core memory model is local-first and the public v1 requires no Ensō account. Public cultural content, Future Mail, and optional anonymous analytics use the network; online AI structuring and book generation are an optional Ensō+ subscription capability, used only when you invoke them.</p></section><section><h2>Keep reading</h2><div class="card-grid"><a class="text-card" href="https://shide.app/en/features/"><strong>Features</strong><span>A code-backed account of Enso Shide&#x27;s local memory store, cultural context, map, bounded companion interface and two-path book engine.</span></a><a class="text-card" href="https://shide.app/en/privacy/"><strong>Privacy boundaries</strong><span>The privacy policy for the accountless Mystory Ensō v1: on-device data, optional online features, anonymous analytics, StoreKit subscriptions, export, and deletion.</span></a><a class="text-card" href="https://shide.app/en/book-engine/"><strong>On-device book engine</strong><span>The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, and UIGraphicsPDFRenderer.</span></a></div></section><section class="sources"><h2>Sources</h2><ol><li><a href="https://shide.app/en/evidence/">As-built system overview (internal code audit)</a></li><li><a href="https://developer.apple.com/documentation/swiftdata" rel="external">Apple SwiftData documentation</a></li></ol></section></main>
-  <footer><p class="store-line"><a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">Download Shide on the App Store</a></p>
-    <p class="social-line">Follow: <a href="https://x.com/ensoshide" rel="external">X</a> · <a href="https://www.instagram.com/ensoshide" rel="external">Instagram</a> · <a href="https://www.youtube.com/@EnsoShide" rel="external">YouTube</a></p>
-    <p>Public statements reflect shipped code; vision, experimental features, and released capabilities are labeled separately.</p>
-    <p><a href="https://shide.app/en.md">Read this page in Markdown</a> · Fact-checked 2026-08-16</p>
+    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-paper min-h-[720px] flex items-center justify-center p-6 sm:p-12">
+      
+      <img src="../assets/poster-portal-sundial.jpg" alt="Sundial Craft & Vermilion Seal" 
+        class="absolute inset-0 w-full h-full object-cover object-center opacity-90">
+      
+      <div class="relative z-10 glass-capsule rounded-3xl p-6 sm:p-10 md:p-12 shadow-portal max-w-2xl w-full border border-gold/40 space-y-6">
+        
+        <div class="text-center space-y-2">
+          <span class="bg-navy text-white text-[10px] font-mono font-bold px-3.5 py-1 rounded-full tracking-widest uppercase">
+            INTERACTIVE TIME-SPACE DEVELOPER
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy">Time Developer · Claim Your Epoch Note</h2>
+          <p class="text-xs sm:text-sm text-ink-sub font-serif">
+            Input a personal milestone to bind with 4000+ cultural coordinates & Shen Shi's notes on 4K rice-paper poster.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center pt-2">
+          <div class="flex items-center gap-6 mb-3">
+            <button @click="stepYear(-1)" class="w-10 h-10 rounded-full bg-white border border-gold/40 text-navy hover:bg-gold/10 flex items-center justify-center text-xl font-bold transition shadow-sm">‹</button>
+            <div class="text-center min-w-[140px]">
+              <span class="text-5xl sm:text-6xl font-display font-black text-cinnabar tracking-wider block">{{ selectedYear }}</span>
+              <span class="text-[11px] font-mono text-ink-sub tracking-widest uppercase block">{{ currentEraSubtitle }}</span>
+            </div>
+            <button @click="stepYear(1)" class="w-10 h-10 rounded-full bg-white border border-gold/40 text-navy hover:bg-gold/10 flex items-center justify-center text-xl font-bold transition shadow-sm">›</button>
+          </div>
+          <input type="range" min="1980" max="2024" v-model.number="selectedYear" class="w-full max-w-sm accent-cinnabar cursor-pointer h-2 bg-stone-200 rounded-lg">
+        </div>
+
+        <!-- Result Note -->
+        <div class="bg-paper-tint/90 border border-gold/40 rounded-2xl p-5 sm:p-6 space-y-4 shadow-inner">
+          <div class="flex justify-between items-start border-b border-gold/30 pb-3">
+            <div>
+              <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-widest">COORDINATE // NO.{{ selectedYear }}</span>
+              <h3 class="text-lg sm:text-xl font-serif font-bold text-navy mt-0.5">{{ currentData.event }}</h3>
+            </div>
+            <img src="../assets/enso-seal-official.png" class="w-8 h-8 rounded shadow-sm border border-gold/30">
+          </div>
+
+          <div>
+            <span class="text-[9px] font-mono text-ink-sub uppercase tracking-widest block mb-0.5">【ECHO OF THE ERA】</span>
+            <p class="text-sm sm:text-base font-serif italic text-ink leading-relaxed">
+              “{{ currentData.quote }}”
+            </p>
+          </div>
+
+          <!-- Restorer Note -->
+          <div class="bg-white p-4 rounded-xl border-l-4 border-cinnabar shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-serif font-bold text-navy flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-cinnabar"></span>
+                Shen Shi · Restorer Note
+              </span>
+              <span class="text-[9px] font-mono text-gold font-bold uppercase tracking-wider">RESTORER NOTE</span>
+            </div>
+            <p class="text-xs sm:text-sm font-serif text-ink leading-relaxed font-medium">
+              {{ currentData.verdict }}
+            </p>
+          </div>
+
+          <!-- Interaction -->
+          <div class="bg-white/90 p-3.5 rounded-xl border border-gold/30">
+            <label class="text-[11px] font-serif font-bold text-navy block mb-1.5">
+              ✍️ Reveal Your Story (Enter a memory from that year):
+            </label>
+            <div class="flex gap-2">
+              <input type="text" v-model="userMemoryInput" :placeholder="currentData.placeholder"
+                class="flex-1 text-xs px-3 py-2 rounded-lg border border-stone-300 focus:outline-none focus:border-navy bg-paper">
+              <button @click="bindMemory" class="bg-navy hover:bg-navy-deep text-white text-xs font-mono px-4 py-2 rounded-lg font-bold transition">
+                Reveal
+              </button>
+            </div>
+            <p v-if="boundMemoryOutput" class="mt-2 text-xs font-serif text-cinnabar leading-relaxed border-t border-gold/20 pt-1.5 font-medium">
+              ⚡ Your Private Attestation: {{ boundMemoryOutput }}
+            </p>
+          </div>
+
+          <!-- Action buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-1">
+            <button @click="exportPoster" :disabled="isExporting"
+              class="flex-1 bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm py-3.5 px-4 rounded-xl font-mono font-bold tracking-wider transition shadow-lg flex items-center justify-center gap-2">
+              <span>📸 Export My Epoch Poster</span>
+              <span v-if="isExporting" class="animate-spin text-xs">⏳</span>
+            </button>
+            <a href="#app-book"
+              class="flex-1 bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm py-3.5 px-4 rounded-xl font-mono font-bold tracking-wider text-center transition shadow-lg flex items-center justify-center">
+              <span>📖 Bind to Heirloom Book ›</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Novel Universe Section -->
+  <section id="novel-e1" class="w-full max-w-7xl px-6 md:px-12 py-20 border-t border-gold/25">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div>
+        <span class="text-xs font-mono text-gold tracking-[0.25em] uppercase">NOVEL UNIVERSE // SEASON 1</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-navy mt-1">Shide Archives: Nine Attestations</h2>
+      </div>
+      <p class="text-xs sm:text-sm text-ink-sub font-serif max-w-md">
+        Season 1 outline locked. E1 Chapter 1 "A Train Arriving Beneath the Museum" deploying soon. Time is not linear. Truth never drafts the living.
+      </p>
+    </div>
+
+    <div class="w-full rounded-3xl border border-gold/40 bg-navy-deep p-8 sm:p-12 mb-8 shadow-2xl relative overflow-hidden">
+      <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
+        <div class="space-y-4 max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-gold/30 text-[11px] font-mono text-gold uppercase">
+            <span>E1 Chapter 1 // A Train Arriving Beneath the Museum</span>
+          </div>
+          <h3 class="text-2xl sm:text-4xl font-serif font-bold text-white leading-tight">
+            Shanhe Museum B3 Sub-level · Black Engineering Car
+          </h3>
+          <p class="text-xs sm:text-base text-stone-300 font-serif leading-relaxed">
+            August 2026. Less than 9 hours before the opening. 31 faceless figures trapped in a temporal crevice. Shen Shi's rule: "Recover truth, and prevent truth from conscripting the living."
+          </p>
+        </div>
+
+        <div class="flex-shrink-0 flex flex-col items-start md:items-end gap-3">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-gold/40 text-xs font-mono text-gold backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+            <span>Target Sept 5 Pipeline</span>
+          </span>
+          <span class="text-[11px] font-mono text-stone-400">30s trailer pipeline ready for quota reset</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- E1 Core Artifacts & Keyframe Gallery -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- Left: 3 Official 30s Trailer Keyframes -->
+      <div class="lg:col-span-6 space-y-3">
+        <div class="flex justify-between items-center px-1">
+          <span class="text-[11px] font-mono text-navy font-bold uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-cinnabar animate-pulse"></span>
+            30s Trailer Keyframes (TR30 · SH001-SH003)
+          </span>
+          <span class="text-[10px] font-mono text-ink-sub">V12 CANONICAL KEYFRAMES</span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <!-- Frame 1 -->
+          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-card-luxury border border-gold/40 group bg-navy-deep">
+            <img src="../assets/novel-e1-keyframe-01.png" alt="SH001 Access Corridor · Shen Shi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
+              <span class="text-[9px] font-mono text-gold font-bold">SH001</span>
+              <span class="text-[11px] font-serif text-white font-bold leading-tight">Access Gate</span>
+              <span class="text-[8px] font-mono text-stone-300">Entering underground</span>
+            </div>
+          </div>
+
+          <!-- Frame 2 -->
+          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-card-luxury border border-gold/40 group bg-navy-deep">
+            <img src="../assets/novel-e1-keyframe-02.png" alt="SH002 Editing Suite · Zhou Lidong & Shen Shi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
+              <span class="text-[9px] font-mono text-gold font-bold">SH002</span>
+              <span class="text-[11px] font-serif text-white font-bold leading-tight">Archive Suite</span>
+              <span class="text-[8px] font-mono text-stone-300">Reviewing 31 souls</span>
+            </div>
+          </div>
+
+          <!-- Frame 3 -->
+          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-card-luxury border border-gold/40 group bg-navy-deep">
+            <img src="../assets/novel-e1-keyframe-03.png" alt="SH003 Corridor Anomaly · Qin Haisheng" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
+              <span class="text-[9px] font-mono text-gold font-bold">SH003</span>
+              <span class="text-[11px] font-serif text-white font-bold leading-tight">Time Probe</span>
+              <span class="text-[8px] font-mono text-stone-300">Spotting engineering car</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Narrative Rules -->
+      <div class="lg:col-span-6 space-y-5 bg-white p-8 sm:p-10 rounded-3xl border border-gold/30 shadow-card-luxury">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-cinnabar"></span>
+            <h4 class="text-xl sm:text-2xl font-serif font-bold text-navy">Chrono-Craft · Time Attestation</h4>
+          </div>
+          <span class="text-[10px] font-mono text-gold font-bold bg-gold/10 px-2.5 py-0.5 rounded-full">CHRONO-CRAFT</span>
+        </div>
+
+        <p class="text-xs sm:text-sm text-ink-sub font-serif leading-relaxed">
+          Restoring "who came before and who after" from worn, halted clock movements. Returning forgotten people to their rightful moments in time. Restorer's iron rule: <strong class="text-navy font-bold">Never calibrate unlived moments into the record.</strong>
+        </p>
+
+        <div class="pt-4 border-t border-gold/20 space-y-2.5 text-xs font-serif text-ink-sub">
+          <div class="flex items-start gap-2">
+            <span class="font-bold text-navy flex-shrink-0">Soundtracks:</span>
+            <span>Changfeng, Sheltering Under Heaven (Original by Shen Shi · Available on Spotify)</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="font-bold text-navy flex-shrink-0">Characters:</span>
+            <span>Shen Shi (Time Restorer), Zhou Lidong (Editor), Qin Haisheng (Inspector), Xu An (Electrician)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 7. Heirloom Book Section -->
+  <section id="app-book" class="w-full max-w-7xl px-6 md:px-12 py-20">
+    <div class="bg-navy-deep text-white rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-gold/30 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Authentic Heirloom Book Photo Wall & Editorial Showcase -->
+      <div class="lg:col-span-6 relative flex flex-col items-center justify-center">
+        <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-2 border-gold/40 group bg-navy/60 backdrop-blur-sm flex items-center justify-center p-2">
+          <img src="../assets/book-photowall-spread.png" alt="Ensō Shide Heirloom Book Authentic Photo Wall & Magazine Spreads" 
+            class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute bottom-4 left-4 bg-navy-deep/90 border border-gold/30 px-3.5 py-1.5 rounded-full text-[10px] font-mono text-gold-light backdrop-blur-md flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>HEIRLOOM BOOK // Real A4 Bilingual Magazine Spreads</span>
+          </div>
+        </div>
+        <!-- Sample Description Badges -->
+        <div class="grid grid-cols-4 gap-2 w-full mt-3 text-center">
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            01 Cover · Wit
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            02 Cover · Mystery
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            03 Top Golden Songs
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            04 Daily Life Memoir
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-gold/30 text-xs font-mono text-gold uppercase">
+          <span>LOCAL-FIRST // NO ACCOUNT // ON-DEVICE AI</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
+          Bind Your Lifetime Journey<br>Into an Authentic Heirloom Book
+        </h2>
+
+        <p class="text-sm sm:text-base text-stone-300 font-serif leading-relaxed">
+          Ensō Shide iOS 2.0 sprint underway. Voice memoirs powered by on-device Whisper and 4000+ cultural coordinates, rendering print-ready bilingual A4 magazines. <strong class="text-gold">Zero cloud uploads, absolute lifelong privacy.</strong>
+        </p>
+
+        <!-- Reservation Card -->
+        <div class="bg-white/10 p-5 rounded-2xl border border-white/20 max-w-md backdrop-blur-md">
+          <!-- Pro Perk Banner -->
+          <div class="mb-3.5 p-2.5 rounded-xl bg-gold/15 border border-gold/40 flex items-start gap-2.5">
+            <span class="text-base flex-shrink-0">🎁</span>
+            <div class="text-[11px] font-serif text-stone-200 leading-snug">
+              <strong class="text-gold block font-mono uppercase tracking-wider text-[10px]">PROMPTED PRO PASS</strong>
+              Early access reservations include a complimentary <span class="text-gold font-bold">1-Week Prompted Pro Pass Code</span> unlocking lossless vector A4 magazine rendering.
+            </div>
+          </div>
+
+          <div v-if="!subscribed">
+            <label class="text-xs font-mono text-stone-200 block mb-2">Request iOS 2.0 TestFlight Early Access:</label>
+            <div class="flex gap-2">
+              <input type="email" v-model="emailInput" placeholder="Enter Apple ID Email"
+                class="flex-1 px-4 py-2.5 rounded-xl text-xs bg-white text-navy focus:outline-none focus:ring-2 focus:ring-gold font-mono">
+              <button @click="submitEmail" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono px-5 py-2.5 rounded-xl font-bold transition flex items-center gap-1 flex-shrink-0">
+                <span>Request</span>
+                <span>›</span>
+              </button>
+            </div>
+            <div class="flex items-center justify-between text-[10px] text-stone-400 font-serif mt-2.5">
+              <span>🔒 Zero spam guaranteed · Limited to 500 pioneers</span>
+              <button @click="openAdminWaitlist" class="text-stone-400/60 hover:text-gold font-mono text-[9px] transition">
+                [Admin]
+              </button>
+            </div>
+          </div>
+          
+          <!-- Success State -->
+          <div v-else class="py-2 space-y-3">
+            <div class="flex items-center gap-2 text-gold font-serif font-bold text-sm">
+              <span>🎉</span>
+              <span>Reservation Confirmed! Pioneer Spot Locked</span>
+            </div>
+            
+            <div class="bg-navy-deep/90 border border-gold/40 rounded-xl p-3 space-y-1.5">
+              <span class="text-[10px] font-mono text-stone-300 block uppercase tracking-wider">Your 1-Week Prompted Pro Pass Code:</span>
+              <div class="flex items-center justify-between bg-black/40 px-3 py-2 rounded-lg border border-gold/30">
+                <span class="font-mono text-sm font-bold text-gold tracking-widest">{{ generatedProCode }}</span>
+                <button @click="copyProCode" class="text-[10px] font-mono px-2.5 py-1 rounded bg-gold/20 hover:bg-gold/30 text-gold-light border border-gold/40 transition">
+                  {{ codeCopied ? 'Copied √' : 'Copy Code' }}
+                </button>
+              </div>
+            </div>
+            
+            <p class="text-[11px] text-stone-300 font-serif leading-tight">
+              Code registered to <span class="text-gold font-mono">{{ emailInput }}</span>. Redeemable directly in iOS 2.0 settings upon launch.
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" target="_blank"
+            class="inline-flex items-center gap-1.5 text-xs text-stone-300 hover:text-white font-mono border-b border-stone-400/40 pb-0.5">
+            <span>View Ensō Shide 1.0 on App Store</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. Knowledge Base & Protocols -->
+  <section id="geo-index" class="w-full max-w-7xl px-6 md:px-12 py-16 border-t border-gold/30 bg-paper-tint/40 rounded-3xl my-8">
+    <div class="mb-10 space-y-2">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase">
+        <span>KNOWLEDGE GRAPH // GEO & AI SEARCH INDEX</span>
+      </div>
+      <h3 class="text-2xl sm:text-3xl font-serif font-bold text-navy">Knowledge Graph & Fact Register</h3>
+      <p class="text-xs sm:text-sm text-ink-sub font-serif">
+        Public statements verified against production codebase. Knowledge endpoints for AI models and overseas families.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Col 1 -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-mono font-bold text-navy uppercase tracking-widest border-b border-gold/30 pb-2">
+          01 // Core Architecture
+        </h4>
+        <ul class="space-y-2 text-xs font-serif text-ink-sub">
+          <li><a href="./features/index.html" class="hover:text-cinnabar transition">· Implemented Feature Boundaries</a></li>
+          <li><a href="./book-engine/index.html" class="hover:text-cinnabar transition">· On-Device A4 Book Engine Mechanics</a></li>
+          <li><a href="./evidence/index.html" class="hover:text-cinnabar transition">· Verified Engineering Evidence</a></li>
+          <li><a href="./privacy/index.html" class="hover:text-cinnabar transition">· Local-First Privacy Boundaries</a></li>
+          <li><a href="./faq/index.html" class="hover:text-cinnabar transition">· Frequently Asked Questions (FAQ)</a></li>
+          <li><a href="./compare/index.html" class="hover:text-cinnabar transition">· Shide vs Day One / Apple Journal</a></li>
+          <li><a href="./best-private-journal-apps/index.html" class="hover:text-cinnabar transition">· 2026 Privacy Journal Comparison</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-mono font-bold text-navy uppercase tracking-widest border-b border-gold/30 pb-2">
+          02 // Family Memory & Healing
+        </h4>
+        <ul class="space-y-2 text-xs font-serif text-ink-sub">
+          <li><a href="./answers/chinese-family-memory/index.html" class="hover:text-cinnabar transition">· Passing Chinese Memoirs to Next Gen</a></li>
+          <li><a href="./answers/storyworth-alternative-chinese-families/index.html" class="hover:text-cinnabar transition">· Storyworth Chinese Alternative</a></li>
+          <li><a href="./answers/day-one-alternative-private-bilingual/index.html" class="hover:text-cinnabar transition">· Day One Bilingual Private Alternative</a></li>
+          <li><a href="./answers/iphone-heirloom-pdf/index.html" class="hover:text-cinnabar transition">· iPhone Long-Term PDF Archiving</a></li>
+          <li><a href="./answers/reminiscence-therapy-chinese-elders/index.html" class="hover:text-cinnabar transition">· Reminiscence Therapy for Elders</a></li>
+          <li><a href="./answers/preserve-parents-memories-illness/index.html" class="hover:text-cinnabar transition">· Preserving Memories During Illness</a></li>
+          <li><a href="./answers/local-first-journal/index.html" class="hover:text-cinnabar transition">· How to Evaluate True Local-First</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-mono font-bold text-navy uppercase tracking-widest border-b border-gold/30 pb-2">
+          03 // Timelines & Shen Shi Music
+        </h4>
+        <ul class="space-y-2 text-xs font-serif text-ink-sub">
+          <li><a href="../shenshi/index.html" class="hover:text-cinnabar transition font-bold text-navy">· Shen Shi Artist Profile (Spotify)</a></li>
+          <li><a href="./timeline/1995/index.html" class="hover:text-cinnabar transition">· 1995 Collective Memory Timeline</a></li>
+          <li><a href="./timeline/1998/index.html" class="hover:text-cinnabar transition">· 1998 Collective Memory Timeline</a></li>
+          <li><a href="./timeline/2008/index.html" class="hover:text-cinnabar transition">· 2008 Collective Memory Timeline</a></li>
+          <li><a href="./answers/private-journal-architecture/index.html" class="hover:text-cinnabar transition">· Separating Private Memoirs & Public River</a></li>
+          <li><a href="./answers/local-vs-cloud-notes/index.html" class="hover:text-cinnabar transition">· Local-First vs Cloud Notes Deep Dive</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4 -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-mono font-bold text-navy uppercase tracking-widest border-b border-gold/30 pb-2">
+          04 // Languages & AI Protocols
+        </h4>
+        
+        <div class="space-y-1.5 text-xs font-serif text-ink-sub">
+          <p class="text-[11px] font-mono text-ink-sub">Language Editions:</p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <a href="../index.html" class="px-2.5 py-1 rounded bg-white border border-gold/30 hover:border-cinnabar transition">简体中文</a>
+            <a href="../zh-Hant/index.html" class="px-2.5 py-1 rounded bg-white border border-gold/30 hover:border-cinnabar transition">繁體中文</a>
+            <a href="../ja/index.html" class="px-2.5 py-1 rounded bg-white border border-gold/30 hover:border-cinnabar transition">日本語</a>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-gold/20 space-y-2">
+          <p class="text-[11px] font-mono text-ink-sub">LLM Feeds & Crawler Protocols:</p>
+          <div class="flex flex-col gap-1.5 font-mono text-[11px]">
+            <a href="../llms.txt" class="flex justify-between items-center px-3 py-1.5 rounded-lg bg-white border border-gold/30 hover:border-cinnabar transition group">
+              <span class="text-navy group-hover:text-cinnabar">LLMs Knowledge Index</span>
+              <span class="text-[10px] text-ink-sub bg-paper px-1.5 py-0.5 rounded">llms.txt</span>
+            </a>
+            <a href="../llms-full.txt" class="flex justify-between items-center px-3 py-1.5 rounded-lg bg-white border border-gold/30 hover:border-cinnabar transition group">
+              <span class="text-navy group-hover:text-cinnabar">Full LLM Corpus</span>
+              <span class="text-[10px] text-ink-sub bg-paper px-1.5 py-0.5 rounded">llms-full.txt</span>
+            </a>
+            <a href="../sitemap.xml" class="flex justify-between items-center px-3 py-1.5 rounded-lg bg-white border border-gold/30 hover:border-cinnabar transition group">
+              <span class="text-navy group-hover:text-cinnabar">Search Engine Sitemap</span>
+              <span class="text-[10px] text-ink-sub bg-paper px-1.5 py-0.5 rounded">sitemap.xml</span>
+            </a>
+            <a href="../robots.txt" class="flex justify-between items-center px-3 py-1.5 rounded-lg bg-white border border-gold/30 hover:border-cinnabar transition group">
+              <span class="text-navy group-hover:text-cinnabar">Robots Indexing Protocol</span>
+              <span class="text-[10px] text-ink-sub bg-paper px-1.5 py-0.5 rounded">robots.txt</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. Modal -->
+  <div v-if="showModal" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-md">
+    <div class="bg-paper rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl relative border border-gold/40">
+      <button @click="showModal = false" class="absolute top-4 right-4 text-stone-400 hover:text-navy text-xl font-bold">✕</button>
+      <h3 class="text-lg font-serif font-bold text-navy mb-3">Your Epoch Poster is Ready</h3>
+      <div class="rounded-2xl overflow-hidden shadow-lg border border-gold/40 mb-4 bg-white">
+        <img :src="posterSrc" alt="Epoch Poster" class="w-full h-auto block">
+      </div>
+      <p class="text-xs font-serif text-ink-sub mb-4">Press and hold to save or share with family</p>
+      <a :href="posterSrc" :download="'Enso-Shide-Epoch-' + selectedYear + '.png'"
+        class="block w-full bg-navy text-white text-xs font-mono py-3.5 rounded-xl font-bold hover:bg-navy-deep transition shadow">
+        💾 Save HD Poster to Album
+      </a>
+    </div>
+  </div>
+
+  <!-- 10. Admin Waitlist Modal -->
+  <div v-if="showAdminModal" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-md">
+    <div class="bg-paper rounded-3xl max-w-lg w-full p-6 shadow-2xl relative border border-gold/40 text-navy">
+      <button @click="showAdminModal = false" class="absolute top-4 right-4 text-stone-400 hover:text-navy text-xl font-bold">✕</button>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-lg">📋</span>
+        <h3 class="text-lg font-serif font-bold text-navy">iOS 2.0 TestFlight Waitlist Admin</h3>
+      </div>
+      <p class="text-xs text-ink-sub font-serif mb-4">
+        Total <strong class="text-cinnabar">{{ waitlistData.length }}</strong> pioneer registrations captured (synced to decnet105@gmail.com & local cache).
+      </p>
+
+      <div class="max-h-60 overflow-y-auto border border-gold/30 rounded-xl bg-white/70 p-3 mb-4 space-y-2 text-xs font-mono">
+        <div v-if="waitlistData.length === 0" class="text-stone-400 text-center py-4 font-serif">
+          No waitlist records yet. Submit a test registration above!
+        </div>
+        <div v-for="(item, idx) in waitlistData" :key="idx" class="flex items-center justify-between p-2 rounded-lg bg-stone-50 border border-stone-200">
+          <div>
+            <div class="font-bold text-navy">{{ item.email }}</div>
+            <div class="text-[10px] text-stone-500">{{ item.timestamp }} · Pro Code: {{ item.code }}</div>
+          </div>
+          <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">Synced</span>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <button @click="exportWaitlistCSV" class="flex-1 bg-navy hover:bg-navy-deep text-white text-xs font-mono py-3 rounded-xl font-bold transition flex items-center justify-center gap-1.5 shadow">
+          <span>📥 Download Waitlist CSV</span>
+        </button>
+        <button @click="showAdminModal = false" class="px-5 py-3 rounded-xl border border-stone-300 text-xs font-mono text-stone-600 hover:bg-stone-100 transition">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="exportCanvas" width="750" height="1100" class="hidden"></canvas>
+
+  <!-- 10. Footer -->
+  <footer class="w-full max-w-7xl px-6 md:px-12 py-12 border-t border-gold/30 mt-8 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs font-mono text-ink-sub">
+    <div class="flex items-center space-x-3">
+      <img src="../assets/enso-seal-official.png" class="w-6 h-6 rounded border border-gold/30">
+      <span class="font-display font-bold text-navy">ENSO SHIDE</span>
+      <span>· Lift Heads From the Dust, Pass the Light Forward</span>
+    </div>
+    <div class="flex space-x-6">
+      <a href="https://x.com/ensoshide" target="_blank" class="hover:text-cinnabar">X</a>
+      <a href="https://www.youtube.com/@EnsoShide" target="_blank" class="hover:text-cinnabar">YouTube</a>
+      <a href="https://www.instagram.com/ensoshide" target="_blank" class="hover:text-cinnabar">Instagram</a>
+      <a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" target="_blank" class="hover:text-cinnabar">Spotify</a>
+    </div>
   </footer>
+
+</div>
+
+<!-- Vue 3 App -->
+<script>
+  const { createApp, ref, computed } = Vue;
+
+  createApp({
+    setup() {
+      const selectedYear = ref(1998);
+      const userMemoryInput = ref('');
+      const boundMemoryOutput = ref('');
+      const isExporting = ref(false);
+      const showModal = ref(false);
+      const posterSrc = ref('');
+      const emailInput = ref('');
+      const subscribed = ref(false);
+      const showAdminModal = ref(false);
+      const waitlistData = ref([]);
+      const generatedProCode = ref('');
+      const codeCopied = ref(false);
+
+      // Load waitlist from localStorage on init
+      try {
+        const stored = localStorage.getItem('shide_waitlist');
+        if (stored) {
+          waitlistData.value = JSON.parse(stored);
+        }
+      } catch (e) {}
+
+      const generateCode = () => {
+        const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+        let res = '';
+        for (let i = 0; i < 6; i++) {
+          res += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return 'SHIDE-PRO-7D-' + res;
+      };
+
+      const copyProCode = () => {
+        if (navigator.clipboard && generatedProCode.value) {
+          navigator.clipboard.writeText(generatedProCode.value);
+          codeCopied.value = true;
+          setTimeout(() => { codeCopied.value = false; }, 3000);
+        }
+      };
+
+      const openAdminWaitlist = () => {
+        try {
+          const stored = localStorage.getItem('shide_waitlist');
+          if (stored) {
+            waitlistData.value = JSON.parse(stored);
+          }
+        } catch (e) {}
+        showAdminModal.value = true;
+      };
+
+      const exportWaitlistCSV = () => {
+        if (waitlistData.value.length === 0) {
+          alert('No waitlist records to export');
+          return;
+        }
+        let csvContent = 'data:text/csv;charset=utf-8,Email,ProCode,Timestamp,Language\n';
+        waitlistData.value.forEach(row => {
+          csvContent += `"${row.email}","${row.code}","${row.timestamp}","${row.lang || 'en'}"\n`;
+        });
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement('a');
+        link.setAttribute('href', encodedUri);
+        link.setAttribute('download', `shide-waitlist-${new Date().toISOString().slice(0,10)}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
+
+      const timelineList = [
+        { year: 1988, tag: "Slow Train Era", title: "Seagull Watch & Green Train", desc: "Platform radio playing Fei Xiang's songs, tickets were small hard cardboards with red serial numbers." },
+        { year: 1993, tag: "Chinese Rock", title: "Beyond Boundless Oceans & Cassettes", desc: "Transparent cassette spinning in Walkmans; rewinding with pencils was our stubborn youth." },
+        { year: 1997, tag: "Handover Night", title: "Victoria Harbour Fireworks & Happy Together", desc: "Fireworks over the TV, streets singing Pearl of the Orient. Everyone wondering about the next era." },
+        { year: 1998, tag: "Millennium Eve", title: "Internet Cafe Dial-up & Early OICQ", desc: "Rushing to net cafes after school, modem screeching, typing 'hello' to a stranger for the first time." },
+        { year: 2000, tag: "Millennium Wave", title: "Y2K Myth & Jay Chou Debut Album", desc: "Starry Mood intro on the radio; we finally stepped into the 21st century safely." },
+        { year: 2003, tag: "Isolated Spring", title: "SARS Suspension & In the Name of the Father", desc: "Temperature checks as daily ritual, 800 million tuned into radio for Jay Chou's pan-Asian broadcast." },
+        { year: 2008, tag: "Tears & Triumphs", title: "Bird's Nest Fireworks & Olympic Games", desc: "Tears, pride, and national unity. You sat in front of the TV all summer long." },
+        { year: 2015, tag: "Mobile Boom", title: "4G Everywhere & Red Packet Craze", desc: "Smartphones opened up the entire world, yet we sat down for face-to-face talks less often." },
+        { year: 2024, tag: "Heritage Awakening", title: "AI Emergence & Memory Rebirth", desc: "Algorithms synthesize endless illusions, but only you can attest to the life you've truly lived." }
+      ];
+
+      const yearDatabase = {
+        1988: {
+          event: "Seagull Double Lion Watch & Green Train",
+          quote: "Platform speakers played Fei Xiang's winter fire; train tickets were stiff cardboard with stamped red numbers.",
+          verdict: "You were in a rush that year, leaving half your youth in the rocking hard-seat carriage.",
+          placeholder: "e.g. Taking the green train to the capital for the first time"
+        },
+        1993: {
+          event: "Beyond Boundless Oceans & Cassette Tapes",
+          quote: "Transparent cassette tapes spinning in Walkmans, rewinding with pencils was our stubborn youth.",
+          verdict: "Forgive me this life of uninhibited freedom. The singer is gone, but the flame he left behind lights up our darkest nights.",
+          placeholder: "e.g. Listening to music under the blanket with a single earphone"
+        },
+        1997: {
+          event: "Hong Kong Handover Night & Happy Together",
+          quote: "Fireworks over the screen, streets humming Pearl of the Orient. Everyone wondered what the new century would bring.",
+          verdict: "The harbor breeze cleared the mist. Some chose to stay, while others boarded long-haul flights.",
+          placeholder: "e.g. Family gathered around the TV that evening"
+        },
+        1998: {
+          event: "Dial-up Sounds & Early OICQ Online",
+          quote: "Rushing to the internet cafe after school, modems squeaking, typing 'hello' to a stranger for the first time.",
+          verdict: "Saving breakfast money for hourly internet cards. The world was small enough to connect through a phone line.",
+          placeholder: "e.g. First all-nighter playing Red Alert"
+        },
+        2000: {
+          event: "Y2K Myth Dispelled & Jay Chou's Debut",
+          quote: "Radio broadcasting the gentle guitar of Starry Mood; we safely entered the 21st century.",
+          verdict: "The world didn't stop on millennium eve, and you were young, believing every tomorrow would be glorious.",
+          placeholder: "e.g. Where you were during the millennium countdown"
+        },
+        2003: {
+          event: "SARS Class Suspensions & Pan-Asian Radio Debut",
+          quote: "Temperature checks became daily ritual; 800 million tuned in for an opera-like Chinese pop premiere.",
+          verdict: "Spring confined in rooms was long, but sunlight outside the window was more precious than ever.",
+          placeholder: "e.g. Doing homework and reading books at home during school closure"
+        },
+        2008: {
+          event: "Bird's Nest Fireworks & Beijing Welcomes You",
+          quote: "A year of tears and unprecedented pride. You stayed in front of the TV all summer.",
+          verdict: "Everyone was running forward, believing everything would only get better. The warmest chapter of our collective memory.",
+          placeholder: "e.g. Who you watched the opening ceremony with on August 8"
+        },
+        2015: {
+          event: "4G Ubiquity & Mobile Craze",
+          quote: "Smartphones revealed the whole world, but face-to-face long talks became rarer.",
+          verdict: "Dizzying speed in a sea of likes; you began missing the days when a handwritten letter took weeks.",
+          placeholder: "e.g. Buying your first high-end smartphone"
+        },
+        2024: {
+          event: "The Age of AI & Awakening of Personal Memory",
+          quote: "Algorithms generate endless illusions, but the roads you walked and love you gave can only be testified by you.",
+          verdict: "We, passed over by history, wander heaven and earth, yet lift our heads from the dust to pass the light forward.",
+          placeholder: "e.g. Today I wrote my first memory on this website"
+        }
+      };
+
+      const currentEraSubtitle = computed(() => {
+        const y = selectedYear.value;
+        if (y < 1990) return "80s · Enlightenment";
+        if (y < 2000) return "90s · Pop Surge";
+        if (y < 2010) return "00s · Momentum";
+        if (y < 2020) return "10s · Acceleration";
+        return "20s · Heritage";
+      });
+
+      const currentData = computed(() => {
+        return yearDatabase[selectedYear.value] || {
+          event: `Epoch Coordinates ${selectedYear.value}`,
+          quote: "Music spun on cassettes and CDs; under streetlamps, some bid farewell while others set off.",
+          verdict: "Time never stops. All footsteps bypassed by history are preserved by the cultural river.",
+          placeholder: "e.g. An unforgettable event that year"
+        };
+      });
+
+      const stepYear = (delta) => {
+        const next = selectedYear.value + delta;
+        if (next >= 1980 && next <= 2024) {
+          selectedYear.value = next;
+          boundMemoryOutput.value = '';
+        }
+      };
+
+      const selectYearFromRail = (y) => {
+        selectedYear.value = y;
+        boundMemoryOutput.value = '';
+        document.getElementById('radar').scrollIntoView({ behavior: 'smooth' });
+      };
+
+      const bindMemory = () => {
+        if (!userMemoryInput.value.trim()) {
+          alert('Please enter a short memory first');
+          return;
+        }
+        boundMemoryOutput.value = `“${userMemoryInput.value.trim()}” —— Recorded in the cultural coordinates since 1980, attested by Shen Shi.`;
+      };
+
+      const exportPoster = () => {
+        isExporting.value = true;
+        const canvas = document.getElementById('exportCanvas');
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = '#F8F6F0';
+        ctx.fillRect(0, 0, 750, 1100);
+
+        ctx.strokeStyle = '#C5A059';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(36, 36, 678, 1028);
+
+        ctx.strokeStyle = 'rgba(197, 160, 89, 0.4)';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(44, 44, 662, 1012);
+
+        ctx.fillStyle = '#12365E';
+        ctx.font = 'bold 24px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'left';
+        ctx.fillText('ENSŌ SHIDE', 70, 95);
+
+        ctx.fillStyle = '#55524E';
+        ctx.font = '13px "Space Grotesk", monospace';
+        ctx.fillText('1980–2024 CULTURAL COORDINATES', 70, 122);
+
+        ctx.fillStyle = '#BC382C';
+        ctx.font = 'bold 88px "Cinzel", serif';
+        ctx.fillText(String(selectedYear.value), 70, 235);
+
+        ctx.fillStyle = '#C5A059';
+        ctx.font = 'bold 15px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText(currentEraSubtitle.value, 300, 230);
+
+        ctx.fillStyle = '#12365E';
+        ctx.font = 'bold 26px "Plus Jakarta Sans", sans-serif';
+        wrap(ctx, currentData.value.event, 70, 295, 610, 32);
+
+        ctx.fillStyle = '#111111';
+        ctx.font = 'italic 17px Georgia, serif';
+        wrap(ctx, `“${currentData.value.quote}”`, 70, 375, 610, 28);
+
+        ctx.fillStyle = '#F0ECE1';
+        ctx.fillRect(70, 480, 610, 220);
+        ctx.strokeStyle = '#BC382C';
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(70, 480);
+        ctx.lineTo(70, 700);
+        ctx.stroke();
+
+        ctx.fillStyle = '#BC382C';
+        ctx.font = 'bold 15px "Space Grotesk", monospace';
+        ctx.fillText('SHEN SHI · RESTORER NOTE:', 95, 520);
+
+        ctx.fillStyle = '#111111';
+        ctx.font = '16px "Plus Jakarta Sans", sans-serif';
+        wrap(ctx, currentData.value.verdict, 95, 560, 560, 26);
+
+        if (boundMemoryOutput.value) {
+          ctx.fillStyle = '#12365E';
+          ctx.font = '14px "Plus Jakarta Sans", sans-serif';
+          wrap(ctx, `[My Private Attestation] ${boundMemoryOutput.value}`, 70, 750, 610, 24);
+        }
+
+        ctx.strokeStyle = 'rgba(197, 160, 89, 0.4)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(70, 930);
+        ctx.lineTo(680, 930);
+        ctx.stroke();
+
+        ctx.fillStyle = '#12365E';
+        ctx.font = 'bold 16px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('Lift Heads From the Dust, Pass the Light Forward', 375, 975);
+
+        ctx.fillStyle = '#55524E';
+        ctx.font = '12px "Space Grotesk", monospace';
+        ctx.fillText('https://shide.app/en/ · Claim Your Epoch Coordinates & Heirloom Book', 375, 1010);
+
+        setTimeout(() => {
+          posterSrc.value = canvas.toDataURL('image/png');
+          isExporting.value = false;
+          showModal.value = true;
+        }, 300);
+      };
+
+      function wrap(c, text, x, y, maxW, lineH) {
+        let words = text.split(' ');
+        let line = '';
+        for (let n = 0; n < words.length; n++) {
+          let testLine = line + words[n] + ' ';
+          let metrics = c.measureText(testLine);
+          let testWidth = metrics.width;
+          if (testWidth > maxW && n > 0) {
+            c.fillText(line, x, y);
+            line = words[n] + ' ';
+            y += lineH;
+          } else {
+            line = testLine;
+          }
+        }
+        c.fillText(line, x, y);
+      }
+
+      const submitEmail = () => {
+        if (!emailInput.value.includes('@')) {
+          alert('Please enter a valid email address');
+          return;
+        }
+        const code = generateCode();
+        generatedProCode.value = code;
+        const newRecord = {
+          email: emailInput.value.trim(),
+          code: code,
+          timestamp: new Date().toLocaleString(),
+          lang: 'en'
+        };
+
+        // 1. LocalStorage save
+        waitlistData.value.unshift(newRecord);
+        try {
+          localStorage.setItem('shide_waitlist', JSON.stringify(waitlistData.value));
+        } catch (e) {}
+
+        // 2. Webhook delivery to admin email
+        try {
+          fetch('https://formsubmit.co/ajax/decnet105@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              email: newRecord.email,
+              code: newRecord.code,
+              timestamp: newRecord.timestamp,
+              platform: 'Shide App 2.0 TestFlight Waitlist (en)',
+              _subject: `[Shide Waitlist Reservation] New User: ${newRecord.email}`
+            })
+          }).catch(() => {});
+        } catch (e) {}
+
+        subscribed.value = true;
+      };
+
+      return {
+        selectedYear,
+        userMemoryInput,
+        boundMemoryOutput,
+        isExporting,
+        showModal,
+        showAdminModal,
+        waitlistData,
+        generatedProCode,
+        codeCopied,
+        copyProCode,
+        openAdminWaitlist,
+        exportWaitlistCSV,
+        posterSrc,
+        emailInput,
+        subscribed,
+        timelineList,
+        currentEraSubtitle,
+        currentData,
+        stepYear,
+        selectYearFromRail,
+        bindMemory,
+        exportPoster,
+        submitEmail
+      };
+    }
+  }).mount('#app');
+</script>
 </body>
 </html>

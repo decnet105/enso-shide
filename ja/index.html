@@ -1,42 +1,1318 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>華人の文化の記憶を次の世代へ — 中国語・英語の歳月の書 | 拾得 Ensō</title>
-  <meta name="description" content="拾得 Ensō は、1980 年から現在まで華人が共有してきた文化の記憶を、世代を越える文化の座標として整理。過去・現在・未来を書き留め、中国語と英語の歳月の書に編めます。ローカルファースト、アカウント不要、アップロードなし。AI アニメドラマ・ショートドラマは開発中です。">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>拾得 ENSŌ · 塵の中から顔を上げ、光を未来へ継いでゆく</title>
+  <meta name="description" content="「拾得（Ensō）」は1980年以降の中華文化の座標——継承と革新。4000以上の文化座標、沈拾による10曲のオリジナル楽曲、東洋時間考古学小説『九証天下』、YouTubeショートドラマ、そして端末内ローカルAI家宝の書。">
+  <meta name="keywords" content="拾得, Enso Shide, 文化座標, 家宝の書, 沈拾, 時代記憶, 九証天下, 時間修復師, ローカルファースト日記, ライフログ">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#a4472d">
+  <meta name="theme-color" content="#12365E">
   <link rel="canonical" href="https://shide.app/ja/">
-  <!-- geo:hreflang:start -->
+
+  <!-- 言語タグ -->
   <link rel="alternate" hreflang="zh-Hans" href="https://shide.app/">
   <link rel="alternate" hreflang="zh-Hant" href="https://shide.app/zh-Hant/">
   <link rel="alternate" hreflang="en" href="https://shide.app/en/">
   <link rel="alternate" hreflang="ja" href="https://shide.app/ja/">
   <link rel="alternate" hreflang="x-default" href="https://shide.app/">
-  <!-- geo:hreflang:end -->
-  <link rel="alternate" type="text/markdown" href="https://shide.app/ja.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
-  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+
+  <!-- 公式印章ロゴ -->
+  <link rel="icon" type="image/png" href="../assets/enso-seal-official.png">
+  <link rel="apple-touch-icon" href="../assets/enso-seal-official.png">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="華人が共有する文化の記憶を、広く未来の世代へ伝え、分かち合う">
-  <meta property="og:description" content="拾得 Ensō は、1980 年から現在まで華人が共有してきた文化の記憶を、世代を越える文化の座標として整理。過去・現在・未来を書き留め、中国語と英語の歳月の書に編めます。ローカルファースト、アカウント不要、アップロードなし。AI アニメドラマ・ショートドラマは開発中です。">
+  <meta property="og:title" content="拾得 ENSŌ · 塵の中から顔を上げ、光を未来へ継いでゆく">
+  <meta property="og:description" content="1980年以降の4000以上の文化座標とともに、あなた自身の人生の足跡を発見する。">
   <meta property="og:url" content="https://shide.app/ja/">
-  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
-  <meta name="twitter:card" content="summary">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://shide.app/#organization","name":"Enso Shide","url":"https://shide.app/","logo":"https://shide.app/assets/app-icon.png","sameAs":["https://x.com/ensoshide","https://www.instagram.com/ensoshide","https://www.youtube.com/@EnsoShide"]},{"@type":"WebSite","@id":"https://shide.app/#website","url":"https://shide.app/","name":"拾得 Ensō","publisher":{"@id":"https://shide.app/#organization"},"inLanguage":["zh-Hans","zh-Hant","en","ja"],"about":{"@id":"https://shide.app/#app"}},{"@type":"MobileApplication","@id":"https://shide.app/#app","name":"拾得 Ensō","alternateName":["Enso Shide","Shide","拾得"],"url":"https://shide.app/","downloadUrl":"https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8","operatingSystem":"iOS 17 or later","applicationCategory":"LifestyleApplication","publisher":{"@id":"https://shide.app/#organization"},"image":"https://shide.app/assets/app-icon.png","description":"「拾得」把 1980 年至今华人共同的文化记忆，整理成几代人的文化坐标，也让你记下过去、现在与未来，汇编成中英双语岁月书。本地优先，无账号、不上传。AI 漫剧与短剧正在打磨中。","inLanguage":["zh-Hans","zh-Hant","en","ja"],"featureList":["SwiftData on-device private memory store","On-device A4 PDF book rendering","Chinese and English memory fields","Public Chinese cultural timeline","Local guided-chat fallback","Validated bounded GenUI content protocol"]}]}</script>
+  <meta property="og:image" content="https://shide.app/assets/poster-hero-changfeng.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind & Vue -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800;900&family=Noto+Serif+JP:wght@300;400;600;900&family=Plus+Jakarta+Sans:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F8F6F0',
+            'paper-tint': '#F0ECE1',
+            ink: '#111111',
+            'ink-sub': '#55524E',
+            navy: '#12365E',
+            'navy-deep': '#091C33',
+            cinnabar: '#BC382C',
+            'cinnabar-glow': '#E04838',
+            gold: '#C5A059',
+            'gold-light': '#E8D5A3',
+            darksection: '#0A0E17',
+          },
+          fontFamily: {
+            serif: ['"Noto Serif JP"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            display: ['"Cinzel"', 'serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          boxShadow: {
+            'card-luxury': '0 30px 60px -15px rgba(18, 54, 94, 0.08), 0 0 0 1px rgba(197, 160, 89, 0.25)',
+            'portal': '0 40px 100px -20px rgba(18, 54, 94, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.8)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #F8F6F0;
+      color: #111111;
+      font-family: "Plus Jakarta Sans", "Noto Serif JP", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .bg-paper-texture {
+      background-image: 
+        radial-gradient(#E2DCCF 0.75px, transparent 0.75px),
+        linear-gradient(to bottom, #FAF8F4 0%, #F5F1E8 100%);
+      background-size: 24px 24px, 100% 100%;
+    }
+
+    .glass-capsule {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+    }
+
+    .timeline-rail::-webkit-scrollbar {
+      height: 4px;
+    }
+    .timeline-rail::-webkit-scrollbar-track {
+      background: rgba(197, 160, 89, 0.1);
+      border-radius: 999px;
+    }
+    .timeline-rail::-webkit-scrollbar-thumb {
+      background: #C5A059;
+      border-radius: 999px;
+    }
+  </style>
+
+  <!-- Schema.org 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://shide.app/#organization",
+        "name": "Enso Shide",
+        "url": "https://shide.app/ja/",
+        "logo": "https://shide.app/assets/enso-seal-official.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://shide.app/ja/#website",
+        "url": "https://shide.app/ja/",
+        "name": "拾得 Ensō 日本語版",
+        "inLanguage": "ja"
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">本文へスキップ</a>
-  <header class="site-header">
-    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
-    <nav aria-label="メインナビゲーション"><a href="https://shide.app/ja/">ホーム</a><a href="https://shide.app/ja/features/">機能</a><a href="https://shide.app/ja/privacy/">プライバシー</a><a href="https://shide.app/ja/book-engine/">製本エンジン</a><a href="https://shide.app/ja/evidence/">エビデンス</a><a href="https://shide.app/ja/faq/">FAQ</a></nav>
-  <span class="language-switch"><a class="language-link" href="https://shide.app/" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="https://shide.app/zh-Hant/" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="https://shide.app/en/" hreflang="en">English</a> · <strong class="language-link" aria-current="true">日本語</strong></span></header>
-  <main id="main"><div class="hero"><div class="hero-copy"><p class="eyebrow">文化・革新・継承</p><h1>華人が共有する文化の記憶を、広く未来の世代へ伝え、分かち合う</h1><p class="lede">拾得 Ensō は、1980 年から現在までの歌・映像作品・本・ゲーム、そして時代の出来事を、世代を越えて華人が共有する文化の座標として整理しています。歩んできた歳月、いまの暮らし、これからへの願いをここに書き留めれば、中国語と英語の二言語による歳月の書に編むことができます。アプリはローカルファーストを貫き、アカウント不要、アップロードもありません。いま AI アニメドラマ・ショートドラマを開発中で、まったく新しいかたちでこれらの記憶を広く未来の世代へ伝え、分かち合うことを目指しています。</p><p class="hero-actions"><a class="primary-cta" href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">App Store でダウンロード</a><a class="secondary-cta" href="https://shide.app/ja/features/">現在の機能を見る</a></p></div><img class="app-mark" src="https://shide.app/assets/app-icon.png" width="360" height="360" alt="拾得 Ensō アプリアイコン"></div><section class="showcase-wrap"><h2>アプリを覗く</h2><p class="showcase-lead">以下は iOS アプリの画面です。横にスワイプしてご覧ください。歳月のホーム、端末での製本、時空の山河、フューチャーメール、文化の潮、そしてコンパニオン。</p><div class="showcase" aria-label="拾得 Ensō アプリのスクリーンショット"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/ja/01-home.webp" alt="ホーム画面"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/ja/02-book.webp" alt="端末での A4 製本"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/ja/03-shanhe.webp" alt="時空マップ"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/ja/04-future.webp" alt="フューチャーメール"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/ja/05-tide.webp" alt="文化の潮"><img class="shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/ja/06-companion.webp" alt="コンパニオン"></div><p class="showcase-hint">横にスワイプ →</p></section><section><h2>現在のコードが備える機能</h2><ul><li>端末内の Memory・Profile・Keepsake・CompanionState モデル。</li><li>決定論的な端末内 A4 PDF レンダリング経路。</li><li>世代を越えて読むための、中国語・英語のコンテンツ欄。</li><li>ネットワーク経由で届く、読み取り専用の公開文化コンテキスト。</li><li>ローカルのガイド付きチャット経路。オンライン AI は任意の Ensō+ サブスクリプション機能として提供されます。</li></ul></section><section><h2>正確なプライバシーの説明</h2><p>中核の記憶モデルはローカルファーストで、公開版 v1 に Ensō アカウントは不要です。公開文化コンテンツ・未来への手紙・任意の匿名分析はネットワークを使用します。オンライン AI は任意の Ensō+ サブスクリプション機能として提供されます。</p></section><section><h2>関連ページ</h2><div class="card-grid"><a class="text-card" href="https://shide.app/ja/features/"><strong>機能</strong><span>拾得 Ensō のローカル記憶ストア、文化コンテキスト、地図、限定的なコンパニオン画面、2 経路の製本エンジンを、コードに基づいて説明します。</span></a><a class="text-card" href="https://shide.app/ja/privacy/"><strong>プライバシーの境界</strong><span>アカウント不要の Mystory Ensō v1 のプライバシーポリシー：端末内データ、任意のオンライン機能、匿名分析、StoreKit サブスクリプション、エクスポート、削除。</span></a><a class="text-card" href="https://shide.app/ja/book-engine/"><strong>端末内の製本エンジン</strong><span>コードに基づく拾得 Ensō の製本パイプライン：構造化されたページソース、決定論的テンプレート、ページ割り、画像処理、UIGraphicsPDFRenderer。</span></a></div></section><section class="sources"><h2>参考資料</h2><ol><li><a href="https://shide.app/ja/evidence/">実装準拠のシステム概要（内部コード監査）</a></li><li><a href="https://developer.apple.com/documentation/swiftdata" rel="external">Apple SwiftData ドキュメント</a></li></ol></section></main>
-  <footer><p class="store-line"><a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">App Store で拾得をダウンロード</a></p><p class="social-line">フォロー：<a href="https://x.com/ensoshide" rel="external">X</a> · <a href="https://www.instagram.com/ensoshide" rel="external">Instagram</a> · <a href="https://www.youtube.com/@EnsoShide" rel="external">YouTube</a></p>
-    <p>公開している記述は出荷済みのコードを反映しています。ビジョン・実験的機能・リリース済み機能は、それぞれ区別して表示します。</p>
-    <p><a href="https://shide.app/ja.md">このページを Markdown で読む</a> · 事実確認日 2026-08-16</p>
+<body class="bg-paper-texture antialiased selection:bg-cinnabar selection:text-white">
+
+<div id="app" class="w-full flex flex-col items-center">
+
+  <!-- 1. ヘッダーナビゲーション -->
+  <header class="w-full max-w-7xl px-6 md:px-12 py-8 flex justify-between items-center z-40">
+    <a href="../index.html" class="flex items-center space-x-3.5 group">
+      <img src="../assets/enso-seal-official.png" alt="拾得 Ensō Logo" 
+        class="w-11 h-11 rounded-lg shadow-sm border border-gold/40 group-hover:scale-105 transition-transform duration-300">
+      <div class="flex flex-col">
+        <span class="text-base md:text-xl font-black tracking-[0.25em] text-navy font-display">ENSŌ SHIDE</span>
+        <span class="text-[9px] uppercase tracking-[0.3em] text-ink-sub font-mono font-semibold">1980–2024 Cultural Coordinates</span>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center space-x-8 text-xs font-mono tracking-widest text-ink-sub">
+      <a href="#radar" class="hover:text-cinnabar transition">/01 時空現像機</a>
+      <a href="../shenshi/index.html" class="hover:text-cinnabar transition flex items-center gap-1.5 text-navy font-bold">
+        <span>/02 沈拾·音楽</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-cinnabar"></span>
+      </a>
+      <a href="#shorts" class="hover:text-cinnabar transition flex items-center gap-1.5 text-navy font-bold">
+        <span>/03 ショートドラマ</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+      </a>
+      <a href="#novel-e1" class="hover:text-cinnabar transition">/04 九証天下</a>
+      <a href="#app-book" class="hover:text-cinnabar transition">/05 AI 家宝の書</a>
+      <a href="#geo-index" class="hover:text-cinnabar transition text-gold font-bold">/06 ナレッジベース</a>
+    </nav>
+
+    <div class="flex items-center space-x-3">
+      <a href="#app-book" class="bg-navy hover:bg-navy-deep text-white text-xs px-6 py-2.5 rounded-full font-mono tracking-wider transition shadow hover:shadow-lg">
+        TestFlight 予約
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. ファインアート Hero -->
+  <section class="w-full max-w-7xl px-6 md:px-12 pt-4 pb-16">
+    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-[#FAF8F4] min-h-[580px] sm:min-h-[640px] flex flex-col justify-end p-8 sm:p-12 md:p-16">
+      
+      <img src="../assets/poster-hero-changfeng.jpg" alt="金塵の舞い上がり · 塵の中から顔を上げ、光を未来へ継いでゆく" 
+        class="absolute inset-0 w-full h-full object-cover object-center scale-100 hover:scale-105 transition-transform duration-1000 ease-out">
+      
+      <div class="absolute inset-0 bg-gradient-to-t from-paper/90 via-paper/40 to-transparent"></div>
+
+      <div class="absolute top-8 left-8 sm:left-12 flex items-center gap-3">
+        <span class="px-3.5 py-1.5 rounded-full bg-white/80 border border-gold/40 backdrop-blur-md text-[11px] font-mono text-navy uppercase tracking-widest font-bold">
+          CANONICAL // 継承と革新
+        </span>
+        <span class="hidden sm:inline-block text-xs font-mono text-ink-sub">4000+ COORDINATES // 10 SOUNDTRACKS // SHORTS MATRIX</span>
+      </div>
+
+      <div class="relative z-10 max-w-3xl space-y-6">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-black text-navy leading-[1.2] tracking-tight">
+          歴史に書き流された私たちも、<br>
+          天地を巡り、<br>
+          <span class="text-cinnabar font-serif">塵の中から顔を上げて、</span><br>
+          その光を未来へ継いでゆく。
+        </h1>
+
+        <p class="text-sm sm:text-base md:text-lg text-ink-sub font-serif leading-relaxed max-w-2xl">
+          「拾得（Ensō）」は1980年以降の中華文化の座標です。4000以上の名曲、映画、ゲーム、歴史的大事件の中で、あなた自身の歩みを再発見し、端末内だけで完結するプライベートな家宝の書へと製本します。
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#radar" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm font-mono uppercase tracking-widest px-8 py-4 rounded-full font-bold transition shadow-2xl hover:-translate-y-0.5">
+            ⚡ 時空現像機を起動する（登録不要・即体験） ›
+          </a>
+          <a href="../shenshi/index.html" class="bg-white hover:bg-paper-tint text-navy border border-gold/40 text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-sm">
+            🎵 沈拾 10曲のオリジナル楽曲 ↗
+          </a>
+          <a href="#shorts" class="bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-sm">
+            🎬 YouTube ショートドラマ ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. タイムライン -->
+  <section class="w-full bg-darksection text-white py-16 px-6 md:px-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <span class="text-xs font-mono text-gold tracking-[0.25em] uppercase">TIMELINE OF MEMORY</span>
+        <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white mt-1">4000+ 文化座標の記憶絵巻</h2>
+      </div>
+      <p class="text-xs sm:text-sm text-stone-400 font-serif max-w-md">
+        1980年の緑皮列車とカセットテープから、1998年のダイヤルアップ接続、ミレニアムの狂騒まで。時間をスライドして、時代の残響を呼び覚ます。
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto timeline-rail flex gap-4 overflow-x-auto pb-6 pt-2">
+      <div v-for="item in timelineList" :key="item.year"
+        @click="selectYearFromRail(item.year)"
+        :class="selectedYear === item.year ? 'border-cinnabar bg-white/10 ring-2 ring-cinnabar scale-105' : 'border-white/10 bg-white/5 hover:border-gold/50'"
+        class="flex-shrink-0 w-64 p-6 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between h-72">
+        
+        <div>
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-3xl font-black font-display tracking-wider" :class="selectedYear === item.year ? 'text-cinnabar' : 'text-gold'">
+              {{ item.year }}
+            </span>
+            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-white/10 text-stone-300">{{ item.tag }}</span>
+          </div>
+          <h4 class="text-base font-serif font-bold text-white mb-2">{{ item.title }}</h4>
+          <p class="text-xs text-stone-400 font-serif line-clamp-3 leading-relaxed">{{ item.desc }}</p>
+        </div>
+
+        <div class="pt-4 border-t border-white/10 flex justify-between items-center text-[11px] font-mono">
+          <span class="text-stone-400">修復師の手記を表示</span>
+          <span :class="selectedYear === item.year ? 'text-cinnabar' : 'text-gold'">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ショートドラマ展台 -->
+  <section id="shorts" class="w-full max-w-7xl px-6 md:px-12 py-20 border-b border-gold/25">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase mb-2">
+          <span>TRAFFIC ACQUISITION // ショートドラマ＆記憶マトリクス</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-navy">拾光ショート · 世代を超えた記憶を呼び覚ます</h2>
+      </div>
+      <div class="space-y-2 text-left md:text-right">
+        <p class="text-xs sm:text-sm text-ink-sub font-serif max-w-md">
+          4.2秒のブランドフックと本物のアーカイブ映像で綴る、YouTube＆TikTok公式チャンネルの話題作。
+        </p>
+        <a href="https://www.youtube.com/@EnsoShide" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-cinnabar font-bold hover:underline">
+          <span>YouTube @EnsoShide チャンネルへ</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 6枚のカード -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Short 1: Beyond -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/xjemS0zb-Vk" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-beyond.jpg" alt="Beyond 海闊天空" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-cinnabar/90 group-hover:bg-cinnabar text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-cinnabar text-white px-2 py-0.5 rounded font-bold">大ヒット</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-wider bg-cinnabar/10 px-2.5 py-0.5 rounded-full">
+              伝-01 // 音楽伝記
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">100% 実在記録</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">『海闊天空』発表から一ヶ月、作者は旅立った</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            黄家駒がこの曲を書き上げた一ヶ月後の別れ。完全な本物の記録で、世代の不屈の青春を撃ち抜く。
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(1993)" class="text-navy font-bold hover:text-cinnabar">⚡ 1993年の座標を表示 ›</a>
+          <a href="https://youtube.com/shorts/xjemS0zb-Vk" target="_blank" class="text-cinnabar font-bold hover:underline">YTで再生 ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 2: 唐朝 -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/jp7wLFTtJOs" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-tangchao.jpg" alt="夢回唐朝" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-gold/90 group-hover:bg-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-gold text-white px-2 py-0.5 rounded font-bold">ロックの頂点</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-gold font-bold uppercase tracking-wider bg-gold/10 px-2.5 py-0.5 rounded-full">
+              穿-01 // 時空タイムトラベル
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">ヘヴィメタルの夜明け</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">夢回唐朝：なぜ中国ロックの最高峰と呼ばれるのか</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            1990年代初頭のロックの熱狂へタイムトラベル。中国ヘヴィメタルが大地を揺るがした瞬間を追体験。
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(1993)" class="text-navy font-bold hover:text-cinnabar">⚡ ロックの時代を表示 ›</a>
+          <a href="https://youtube.com/shorts/jp7wLFTtJOs" target="_blank" class="text-cinnabar font-bold hover:underline">YTで再生 ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 3: テレサ・テン -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/Mk3kCe4j0cw" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-dengliujun.jpg" alt="テレサ・テン 甜蜜蜜" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-navy/90 group-hover:bg-navy text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-navy text-white px-2 py-0.5 rounded font-bold">肉声アーカイブ</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-navy font-bold uppercase tracking-wider bg-navy/10 px-2.5 py-0.5 rounded-full">
+              伝-06 // 永遠の伝説
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">秘められた歴史</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">昼は老鄧を聴き、夜は小鄧を聴く</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            3つの本物の肉声。『甜蜜蜜』の原曲となったインドネシア民謡のルーツと、10億人の心を癒した歌声。
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(1988)" class="text-navy font-bold hover:text-cinnabar">⚡ 1988年を表示 ›</a>
+          <a href="https://youtube.com/shorts/Mk3kCe4j0cw" target="_blank" class="text-cinnabar font-bold hover:underline">YTで再生 ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 4: 朴樹 -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/mLO-HGyMvGA" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-pushu.jpg" alt="朴樹 10年の空白" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-cinnabar/90 group-hover:bg-cinnabar text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-cinnabar text-white px-2 py-0.5 rounded font-bold">完走率 84%</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-wider bg-cinnabar/10 px-2.5 py-0.5 rounded-full">
+              伝-04 // 深層伝記
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">チャンネル最高完走率</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">朴樹：嫌いな自分にならないため、10年間姿を消した</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            騒がしい世界で純粋さを守り抜いた吟遊詩人。心の奥の最も柔らかい場所に語りかける。
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(2003)" class="text-navy font-bold hover:text-cinnabar">⚡ 2003年を表示 ›</a>
+          <a href="https://youtube.com/shorts/mLO-HGyMvGA" target="_blank" class="text-cinnabar font-bold hover:underline">YTで再生 ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 5: スラムダンク -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/ZQerFWKhFa8" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-slamdunk.jpg" alt="スラムダンク" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-gold/90 group-hover:bg-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-gold text-white px-2 py-0.5 rounded font-bold">熱血の記憶</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-gold font-bold uppercase tracking-wider bg-gold/10 px-2.5 py-0.5 rounded-full">
+              穿-04 // 青春アニメ
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">熱血ダークホース</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">あの頃、本気でダンクシュートができると信じていた</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            放課後にテレビへ駆け戻った少年時代。赤い髪の桜木花道と『世界が終るまでは…』が刻んだ青春。
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(1998)" class="text-navy font-bold hover:text-cinnabar">⚡ 1998年を表示 ›</a>
+          <a href="https://youtube.com/shorts/ZQerFWKhFa8" target="_blank" class="text-cinnabar font-bold hover:underline">YTで再生 ↗</a>
+        </div>
+      </div>
+
+      <!-- Short 6: レスリー・チャン -->
+      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+        <div>
+          <a href="https://youtube.com/shorts/jV7VH-EKUTg" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+            <img src="../assets/shorts-thumb-leslie.jpg" alt="レスリー・チャン" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-navy/90 group-hover:bg-navy text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+              <span class="bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+              <span class="bg-navy text-white px-2 py-0.5 rounded font-bold">香港ポップスの光</span>
+            </div>
+          </a>
+
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[10px] font-mono text-navy font-bold uppercase tracking-wider bg-navy/10 px-2.5 py-0.5 rounded-full">
+              伝-02 // 香港ポップスの伝説
+            </span>
+            <span class="text-[11px] font-mono text-ink-sub font-semibold">永遠の残響</span>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">あの年のエイプリルフール、香港中が静まり返った</h3>
+          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+            「私は私、人とは違う色の花火。」時代を20年先取りした伝説のスターを追憶する。
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <a href="#radar" @click="selectYearFromRail(2003)" class="text-navy font-bold hover:text-cinnabar">⚡ 2003年を表示 ›</a>
+          <a href="https://youtube.com/shorts/jV7VH-EKUTg" target="_blank" class="text-cinnabar font-bold hover:underline">YTで再生 ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. 時空現像機 -->
+  <section id="radar" class="w-full max-w-7xl px-6 md:px-12 py-20 relative">
+    
+    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-paper min-h-[720px] flex items-center justify-center p-6 sm:p-12">
+      
+      <img src="../assets/poster-portal-sundial.jpg" alt="日時計の工芸と朱印" 
+        class="absolute inset-0 w-full h-full object-cover object-center opacity-90">
+      
+      <div class="relative z-10 glass-capsule rounded-3xl p-6 sm:p-10 md:p-12 shadow-portal max-w-2xl w-full border border-gold/40 space-y-6">
+        
+        <div class="text-center space-y-2">
+          <span class="bg-navy text-white text-[10px] font-mono font-bold px-3.5 py-1 rounded-full tracking-widest uppercase">
+            INTERACTIVE TIME-SPACE DEVELOPER
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy">時空現像機 · あなたの時代印箋を受け取る</h2>
+          <p class="text-xs sm:text-sm text-ink-sub font-serif">
+            当時の出来事を入力し、4000以上の文化座標と沈拾の手記を結びつけて4K和紙ポスターを生成します。
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center pt-2">
+          <div class="flex items-center gap-6 mb-3">
+            <button @click="stepYear(-1)" class="w-10 h-10 rounded-full bg-white border border-gold/40 text-navy hover:bg-gold/10 flex items-center justify-center text-xl font-bold transition shadow-sm">‹</button>
+            <div class="text-center min-w-[140px]">
+              <span class="text-5xl sm:text-6xl font-display font-black text-cinnabar tracking-wider block">{{ selectedYear }}</span>
+              <span class="text-[11px] font-mono text-ink-sub tracking-widest uppercase block">{{ currentEraSubtitle }}</span>
+            </div>
+            <button @click="stepYear(1)" class="w-10 h-10 rounded-full bg-white border border-gold/40 text-navy hover:bg-gold/10 flex items-center justify-center text-xl font-bold transition shadow-sm">›</button>
+          </div>
+          <input type="range" min="1980" max="2024" v-model.number="selectedYear" class="w-full max-w-sm accent-cinnabar cursor-pointer h-2 bg-stone-200 rounded-lg">
+        </div>
+
+        <!-- 現像結果 -->
+        <div class="bg-paper-tint/90 border border-gold/40 rounded-2xl p-5 sm:p-6 space-y-4 shadow-inner">
+          <div class="flex justify-between items-start border-b border-gold/30 pb-3">
+            <div>
+              <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-widest">COORDINATE // NO.{{ selectedYear }}</span>
+              <h3 class="text-lg sm:text-xl font-serif font-bold text-navy mt-0.5">{{ currentData.event }}</h3>
+            </div>
+            <img src="../assets/enso-seal-official.png" class="w-8 h-8 rounded shadow-sm border border-gold/30">
+          </div>
+
+          <div>
+            <span class="text-[9px] font-mono text-ink-sub uppercase tracking-widest block mb-0.5">【時代の残響】</span>
+            <p class="text-sm sm:text-base font-serif italic text-ink leading-relaxed">
+              “{{ currentData.quote }}”
+            </p>
+          </div>
+
+          <!-- 沈拾の手記 -->
+          <div class="bg-white p-4 rounded-xl border-l-4 border-cinnabar shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-serif font-bold text-navy flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-cinnabar"></span>
+                沈拾 · 修復師の手記
+              </span>
+              <span class="text-[9px] font-mono text-gold font-bold uppercase tracking-wider">RESTORER NOTE</span>
+            </div>
+            <p class="text-xs sm:text-sm font-serif text-ink leading-relaxed font-medium">
+              {{ currentData.verdict }}
+            </p>
+          </div>
+
+          <!-- ユーザー入力 -->
+          <div class="bg-white/90 p-3.5 rounded-xl border border-gold/30">
+            <label class="text-[11px] font-serif font-bold text-navy block mb-1.5">
+              ✍️ あなたの記憶を現像する（当時の出来事を一言入力）：
+            </label>
+            <div class="flex gap-2">
+              <input type="text" v-model="userMemoryInput" :placeholder="currentData.placeholder"
+                class="flex-1 text-xs px-3 py-2 rounded-lg border border-stone-300 focus:outline-none focus:border-navy bg-paper">
+              <button @click="bindMemory" class="bg-navy hover:bg-navy-deep text-white text-xs font-mono px-4 py-2 rounded-lg font-bold transition">
+                現像
+              </button>
+            </div>
+            <p v-if="boundMemoryOutput" class="mt-2 text-xs font-serif text-cinnabar leading-relaxed border-t border-gold/20 pt-1.5 font-medium">
+              ⚡ あなたの印章：{{ boundMemoryOutput }}
+            </p>
+          </div>
+
+          <!-- アクション -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-1">
+            <button @click="exportPoster" :disabled="isExporting"
+              class="flex-1 bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm py-3.5 px-4 rounded-xl font-mono font-bold tracking-wider transition shadow-lg flex items-center justify-center gap-2">
+              <span>📸 時代印箋ポスターを生成</span>
+              <span v-if="isExporting" class="animate-spin text-xs">⏳</span>
+            </button>
+            <a href="#app-book"
+              class="flex-1 bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm py-3.5 px-4 rounded-xl font-mono font-bold tracking-wider text-center transition shadow-lg flex items-center justify-center">
+              <span>📖 家宝の書に綴じる ›</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 小説セクション -->
+  <section id="novel-e1" class="w-full max-w-7xl px-6 md:px-12 py-20 border-t border-gold/25">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div>
+        <span class="text-xs font-mono text-gold tracking-[0.25em] uppercase">NOVEL UNIVERSE // SEASON 1</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-navy mt-1">『拾物檔案：九証天下』</h2>
+      </div>
+      <p class="text-xs sm:text-sm text-ink-sub font-serif max-w-md">
+        第1シーズン全8話の大綱確定。第1話「博物館の地下に走る列車」近日公開。時間は直線ではない。真実は生者を徴用しない。
+      </p>
+    </div>
+
+    <div class="w-full rounded-3xl border border-gold/40 bg-navy-deep p-8 sm:p-12 mb-8 shadow-2xl relative overflow-hidden">
+      <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
+        <div class="space-y-4 max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-gold/30 text-[11px] font-mono text-gold uppercase">
+            <span>E1 第1話 // 博物館の地下に走る列車</span>
+          </div>
+          <h3 class="text-2xl sm:text-4xl font-serif font-bold text-white leading-tight">
+            山河博物館地下3階 · 黒い工務付随車
+          </h3>
+          <p class="text-xs sm:text-base text-stone-300 font-serif leading-relaxed">
+            2026年8月、南遷特別展開幕まで9時間を切る。時間の裂け目に取り残された31名の顔のない人々。沈拾の掟：「真実を取り戻し、真実が生者を徴用するのを防ぐ」。
+          </p>
+        </div>
+
+        <div class="flex-shrink-0 flex flex-col items-start md:items-end gap-3">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-gold/40 text-xs font-mono text-gold backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+            <span>Target Sept 5 Pipeline</span>
+          </span>
+          <span class="text-[11px] font-mono text-stone-400">30秒予告パイプライン配備完了</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- E1 核心物候とキーフレームギャラリー -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- 左側：3枚の30秒予告公式キーフレーム三連展示 -->
+      <div class="lg:col-span-6 space-y-3">
+        <div class="flex justify-between items-center px-1">
+          <span class="text-[11px] font-mono text-navy font-bold uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-cinnabar animate-pulse"></span>
+            30秒予告キーフレーム (TR30 · SH001-SH003)
+          </span>
+          <span class="text-[10px] font-mono text-ink-sub">V12 CANONICAL KEYFRAMES</span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <!-- Frame 1 -->
+          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-card-luxury border border-gold/40 group bg-navy-deep">
+            <img src="../assets/novel-e1-keyframe-01.png" alt="SH001 通路 · 沈拾" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
+              <span class="text-[9px] font-mono text-gold font-bold">SH001</span>
+              <span class="text-[11px] font-serif text-white font-bold leading-tight">カード認証</span>
+              <span class="text-[8px] font-mono text-stone-300">沈拾、地下通路へ</span>
+            </div>
+          </div>
+
+          <!-- Frame 2 -->
+          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-card-luxury border border-gold/40 group bg-navy-deep">
+            <img src="../assets/novel-e1-keyframe-02.png" alt="SH002 編集室 · 周立冬と沈拾" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
+              <span class="text-[9px] font-mono text-gold font-bold">SH002</span>
+              <span class="text-[11px] font-serif text-white font-bold leading-tight">機房照合</span>
+              <span class="text-[8px] font-mono text-stone-300">31名の顔のない人々</span>
+            </div>
+          </div>
+
+          <!-- Frame 3 -->
+          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-card-luxury border border-gold/40 group bg-navy-deep">
+            <img src="../assets/novel-e1-keyframe-03.png" alt="SH003 通路の異変 · 秦海生" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
+              <span class="text-[9px] font-mono text-gold font-bold">SH003</span>
+              <span class="text-[11px] font-serif text-white font-bold leading-tight">時証の探照</span>
+              <span class="text-[8px] font-mono text-stone-300">黒い工務付随車を発見</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右側：設定解説 -->
+      <div class="lg:col-span-6 space-y-5 bg-white p-8 sm:p-10 rounded-3xl border border-gold/30 shadow-card-luxury">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-cinnabar"></span>
+            <h4 class="text-xl sm:text-2xl font-serif font-bold text-navy">晷作 · 時証と九家の均衡</h4>
+          </div>
+          <span class="text-[10px] font-mono text-gold font-bold bg-gold/10 px-2.5 py-0.5 rounded-full">CHRONO-CRAFT</span>
+        </div>
+
+        <p class="text-xs sm:text-sm text-ink-sub font-serif leading-relaxed">
+          止まった時計の摩耗から「先と後」を復元し、歴史に無名として扱われた人々の刻まれた瞬間を本来の位置へ戻す。修復師の鉄則：<strong class="text-navy font-bold">起きていない時刻を決して記録へ校正しない。</strong>
+        </p>
+
+        <div class="pt-4 border-t border-gold/20 space-y-2.5 text-xs font-serif text-ink-sub">
+          <div class="flex items-start gap-2">
+            <span class="font-bold text-navy flex-shrink-0">主題歌：</span>
+            <span>『長風』『天地借宿』（沈拾オリジナル · Spotify / Apple Music で配信中）</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="font-bold text-navy flex-shrink-0">登場人物：</span>
+            <span>沈拾（時間修復師）、周立冬（編集）、秦海生（巡回員）、許安（機電工）</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 7. 家宝の書セクション -->
+  <section id="app-book" class="w-full max-w-7xl px-6 md:px-12 py-20">
+    <div class="bg-navy-deep text-white rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-gold/30 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- 実際の製本フォトウォール・雑誌誌面ギャラリー -->
+      <div class="lg:col-span-6 relative flex flex-col items-center justify-center">
+        <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-2 border-gold/40 group bg-navy/60 backdrop-blur-sm flex items-center justify-center p-2">
+          <img src="../assets/book-photowall-spread.png" alt="拾得 AI 家宝の書 実際の誌面フォトウォール＆マガジン組版" 
+            class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute bottom-4 left-4 bg-navy-deep/90 border border-gold/30 px-3.5 py-1.5 rounded-full text-[10px] font-mono text-gold-light backdrop-blur-md flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>HEIRLOOM BOOK // 実際のA4バイリンガルマガジン組版</span>
+          </div>
+        </div>
+        <!-- 誌面解説タグ -->
+        <div class="grid grid-cols-4 gap-2 w-full mt-3 text-center">
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            01 表紙《機鋒巻》
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            02 表紙《秘境巻》
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            03 見開き《十大金曲》
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            04 本文《心象サイン》
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-gold/30 text-xs font-mono text-gold uppercase">
+          <span>LOCAL-FIRST // NO ACCOUNT // ON-DEVICE AI</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
+          あなたの一生を、<br>一冊の本当の家宝の書へ
+        </h2>
+
+        <p class="text-sm sm:text-base text-stone-300 font-serif leading-relaxed">
+          拾得 iOS 2.0 開発推進中。端末内音声入力（Whisper＋精密校正）と4000以上の文化座標を結び、完全オフラインで日英・中英バイリンガルA4マガジンを生成。<strong class="text-gold">記憶はクラウドに送られず、一生涯の完全なプライバシーを守ります。</strong>
+        </p>
+
+        <!-- 予約カード -->
+        <div class="bg-white/10 p-5 rounded-2xl border border-white/20 max-w-md backdrop-blur-md">
+          <!-- 特典バナー -->
+          <div class="mb-3.5 p-2.5 rounded-xl bg-gold/15 border border-gold/40 flex items-start gap-2.5">
+            <span class="text-base flex-shrink-0">🎁</span>
+            <div class="text-[11px] font-serif text-stone-200 leading-snug">
+              <strong class="text-gold block font-mono uppercase tracking-wider text-[10px]">PROMPTED PRO PASS</strong>
+              先行予約特典として <span class="text-gold font-bold">1週間限定 Prompted Pro 体験コード</span>を進呈。端末内ロスレスA4ベクター製本と全文化座標を先行体験。
+            </div>
+          </div>
+
+          <div v-if="!subscribed">
+            <label class="text-xs font-mono text-stone-200 block mb-2">iOS 2.0 TestFlight 先行体験の予約：</label>
+            <div class="flex gap-2">
+              <input type="email" v-model="emailInput" placeholder="Apple ID メールアドレスを入力"
+                class="flex-1 px-4 py-2.5 rounded-xl text-xs bg-white text-navy focus:outline-none focus:ring-2 focus:ring-gold font-mono">
+              <button @click="submitEmail" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono px-5 py-2.5 rounded-xl font-bold transition flex items-center gap-1 flex-shrink-0">
+                <span>予約する</span>
+                <span>›</span>
+              </button>
+            </div>
+            <div class="flex items-center justify-between text-[10px] text-stone-400 font-serif mt-2.5">
+              <span>🔒 迷惑メールは送信しません · 限定500席</span>
+              <button @click="openAdminWaitlist" class="text-stone-400/60 hover:text-gold font-mono text-[9px] transition">
+                [管理]
+              </button>
+            </div>
+          </div>
+          
+          <!-- 予約完了と体験コード -->
+          <div v-else class="py-2 space-y-3">
+            <div class="flex items-center gap-2 text-gold font-serif font-bold text-sm">
+              <span>🎉</span>
+              <span>先行予約完了！席が確保されました</span>
+            </div>
+            
+            <div class="bg-navy-deep/90 border border-gold/40 rounded-xl p-3 space-y-1.5">
+              <span class="text-[10px] font-mono text-stone-300 block uppercase tracking-wider">あなたの 1 週間限定 Pro 体験コード：</span>
+              <div class="flex items-center justify-between bg-black/40 px-3 py-2 rounded-lg border border-gold/30">
+                <span class="font-mono text-sm font-bold text-gold tracking-widest">{{ generatedProCode }}</span>
+                <button @click="copyProCode" class="text-[10px] font-mono px-2.5 py-1 rounded bg-gold/20 hover:bg-gold/30 text-gold-light border border-gold/40 transition">
+                  {{ codeCopied ? 'コピー済 √' : 'コードをコピー' }}
+                </button>
+              </div>
+            </div>
+            
+            <p class="text-[11px] text-stone-300 font-serif leading-tight">
+              コードはお手元のメール <span class="text-gold font-mono">{{ emailInput }}</span> に紐付けられました。App 2.0 リリース後に設定画面で利用可能です。
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" target="_blank"
+            class="inline-flex items-center gap-1.5 text-xs text-stone-300 hover:text-white font-mono border-b border-stone-400/40 pb-0.5">
+            <span>App Store で 拾得 1.0 を見る</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. ナレッジベースとプロトコル -->
+  <section id="geo-index" class="w-full max-w-7xl px-6 md:px-12 py-16 border-t border-gold/30 bg-paper-tint/40 rounded-3xl my-8">
+    <div class="mb-10 space-y-2">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase">
+        <span>KNOWLEDGE GRAPH // GEO & AI SEARCH INDEX</span>
+      </div>
+      <h3 class="text-2xl sm:text-3xl font-serif font-bold text-navy">拾得ナレッジベース＆事実証拠インデックス</h3>
+      <p class="text-xs sm:text-sm text-ink-sub font-serif">
+        実装済みコードに基づいた公開情報。大規模言語モデルおよび家族向けの知識エントリ。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Col 1 -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-mono font-bold text-navy uppercase tracking-widest border-b border-gold/30 pb-2">
+          01 // コア機能とアーキテクチャ
+        </h4>
+        <ul class="space-y-2 text-xs font-serif text-ink-sub">
+          <li><a href="./features/index.html" class="hover:text-cinnabar transition">· 実装済み機能の境界</a></li>
+          <li><a href="./book-engine/index.html" class="hover:text-cinnabar transition">· 端末内A4製本エンジンの仕組み</a></li>
+          <li><a href="./evidence/index.html" class="hover:text-cinnabar transition">· 検証済みエンジニアリング証拠</a></li>
+          <li><a href="./privacy/index.html" class="hover:text-cinnabar transition">· ローカルファーストプライバシー方針</a></li>
+          <li><a href="./faq/index.html" class="hover:text-cinnabar transition">· よくある質問 (FAQ)</a></li>
+          <li><a href="./compare/index.html" class="hover:text-cinnabar transition">· 拾得 vs Day One / Apple ジャーナル</a></li>
+          <li><a href="./best-private-journal-apps/index.html" class="hover:text-cinnabar transition">· 2026年プライバシー重視日記アプリ比較</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-mono font-bold text-navy uppercase tracking-widest border-b border-gold/30 pb-2">
+          02 // 家族の記憶とライフログ
+        </h4>
+        <ul class="space-y-2 text-xs font-serif text-ink-sub">
+          <li><a href="./answers/chinese-family-memory/index.html" class="hover:text-cinnabar transition">· 親の人生の物語を次世代へ</a></li>
+          <li><a href="./answers/storyworth-alternative-chinese-families/index.html" class="hover:text-cinnabar transition">· Storyworth の代替となる選択肢</a></li>
+          <li><a href="./answers/day-one-alternative-private-bilingual/index.html" class="hover:text-cinnabar transition">· Day One バイリンガル対応代替</a></li>
+          <li><a href="./answers/iphone-heirloom-pdf/index.html" class="hover:text-cinnabar transition">· iPhone で長期保存用 PDF を作成</a></li>
+          <li><a href="./answers/reminiscence-therapy-chinese-elders/index.html" class="hover:text-cinnabar transition">· 回想法による記憶の呼び戻し</a></li>
+          <li><a href="./answers/preserve-parents-memories-illness/index.html" class="hover:text-cinnabar transition">· 家族の闘病中に記録を残す方法</a></li>
+          <li><a href="./answers/local-first-journal/index.html" class="hover:text-cinnabar transition">· 真のローカルファーストを見極める</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-mono font-bold text-navy uppercase tracking-widest border-b border-gold/30 pb-2">
+          03 // タイムラインと沈拾の音楽
+        </h4>
+        <ul class="space-y-2 text-xs font-serif text-ink-sub">
+          <li><a href="../shenshi/index.html" class="hover:text-cinnabar transition font-bold text-navy">· 沈拾 公式アーティストページ (Spotify)</a></li>
+          <li><a href="./timeline/1995/index.html" class="hover:text-cinnabar transition">· 1995年 集団記憶タイムライン</a></li>
+          <li><a href="./timeline/1998/index.html" class="hover:text-cinnabar transition">· 1998年 集団記憶タイムライン</a></li>
+          <li><a href="./timeline/2008/index.html" class="hover:text-cinnabar transition">· 2008年 集団記憶タイムライン</a></li>
+          <li><a href="./answers/private-journal-architecture/index.html" class="hover:text-cinnabar transition">· プライベート記録と公共知識の分離</a></li>
+          <li><a href="./answers/local-vs-cloud-notes/index.html" class="hover:text-cinnabar transition">· ローカル vs クラウドノート詳細比較</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4 -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-mono font-bold text-navy uppercase tracking-widest border-b border-gold/30 pb-2">
+          04 // 多言語＆AIクロール仕様
+        </h4>
+        
+        <div class="space-y-1.5 text-xs font-serif text-ink-sub">
+          <p class="text-[11px] font-mono text-ink-sub">言語バージョン：</p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <a href="../index.html" class="px-2.5 py-1 rounded bg-white border border-gold/30 hover:border-cinnabar transition">简体中文</a>
+            <a href="../zh-Hant/index.html" class="px-2.5 py-1 rounded bg-white border border-gold/30 hover:border-cinnabar transition">繁體中文</a>
+            <a href="../en/index.html" class="px-2.5 py-1 rounded bg-white border border-gold/30 hover:border-cinnabar transition">English</a>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-gold/20 space-y-2">
+          <p class="text-[11px] font-mono text-ink-sub">AIインデックス＆サイトマップ：</p>
+          <div class="flex flex-col gap-1.5 font-mono text-[11px]">
+            <a href="../llms.txt" class="flex justify-between items-center px-3 py-1.5 rounded-lg bg-white border border-gold/30 hover:border-cinnabar transition group">
+              <span class="text-navy group-hover:text-cinnabar">LLMs ナレッジインデックス</span>
+              <span class="text-[10px] text-ink-sub bg-paper px-1.5 py-0.5 rounded">llms.txt</span>
+            </a>
+            <a href="../llms-full.txt" class="flex justify-between items-center px-3 py-1.5 rounded-lg bg-white border border-gold/30 hover:border-cinnabar transition group">
+              <span class="text-navy group-hover:text-cinnabar">全量 AI コーパス</span>
+              <span class="text-[10px] text-ink-sub bg-paper px-1.5 py-0.5 rounded">llms-full.txt</span>
+            </a>
+            <a href="../sitemap.xml" class="flex justify-between items-center px-3 py-1.5 rounded-lg bg-white border border-gold/30 hover:border-cinnabar transition group">
+              <span class="text-navy group-hover:text-cinnabar">検索エンジン サイトマップ</span>
+              <span class="text-[10px] text-ink-sub bg-paper px-1.5 py-0.5 rounded">sitemap.xml</span>
+            </a>
+            <a href="../robots.txt" class="flex justify-between items-center px-3 py-1.5 rounded-lg bg-white border border-gold/30 hover:border-cinnabar transition group">
+              <span class="text-navy group-hover:text-cinnabar">クローラー プロトコル</span>
+              <span class="text-[10px] text-ink-sub bg-paper px-1.5 py-0.5 rounded">robots.txt</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. モーダル -->
+  <div v-if="showModal" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-md">
+    <div class="bg-paper rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl relative border border-gold/40">
+      <button @click="showModal = false" class="absolute top-4 right-4 text-stone-400 hover:text-navy text-xl font-bold">✕</button>
+      <h3 class="text-lg font-serif font-bold text-navy mb-3">時代印箋が現像されました</h3>
+      <div class="rounded-2xl overflow-hidden shadow-lg border border-gold/40 mb-4 bg-white">
+        <img :src="posterSrc" alt="時代印箋" class="w-full h-auto block">
+      </div>
+      <p class="text-xs font-serif text-ink-sub mb-4">画像を長押しして保存、またはシェアできます</p>
+      <a :href="posterSrc" :download="'拾得時代印箋-' + selectedYear + '.png'"
+        class="block w-full bg-navy text-white text-xs font-mono py-3.5 rounded-xl font-bold hover:bg-navy-deep transition shadow">
+        💾 高解像度ポスターを保存
+      </a>
+    </div>
+  </div>
+
+  <!-- 10. 管理者予約リストモーダル Admin Waitlist Modal -->
+  <div v-if="showAdminModal" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-md">
+    <div class="bg-paper rounded-3xl max-w-lg w-full p-6 shadow-2xl relative border border-gold/40 text-navy">
+      <button @click="showAdminModal = false" class="absolute top-4 right-4 text-stone-400 hover:text-navy text-xl font-bold">✕</button>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-lg">📋</span>
+        <h3 class="text-lg font-serif font-bold text-navy">iOS 2.0 TestFlight 先行予約リスト管理</h3>
+      </div>
+      <p class="text-xs text-ink-sub font-serif mb-4">
+        合計 <strong class="text-cinnabar">{{ waitlistData.length }}</strong> 件の予約を記録（decnet105@gmail.com およびローカルキャッシュと同期中）。
+      </p>
+
+      <div class="max-h-60 overflow-y-auto border border-gold/30 rounded-xl bg-white/70 p-3 mb-4 space-y-2 text-xs font-mono">
+        <div v-if="waitlistData.length === 0" class="text-stone-400 text-center py-4 font-serif">
+          まだ予約データがありません。上記フォームからテスト登録できます。
+        </div>
+        <div v-for="(item, idx) in waitlistData" :key="idx" class="flex items-center justify-between p-2 rounded-lg bg-stone-50 border border-stone-200">
+          <div>
+            <div class="font-bold text-navy">{{ item.email }}</div>
+            <div class="text-[10px] text-stone-500">{{ item.timestamp }} · 体験コード: {{ item.code }}</div>
+          </div>
+          <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">同期済</span>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <button @click="exportWaitlistCSV" class="flex-1 bg-navy hover:bg-navy-deep text-white text-xs font-mono py-3 rounded-xl font-bold transition flex items-center justify-center gap-1.5 shadow">
+          <span>📥 CSV ファイルをダウンロード</span>
+        </button>
+        <button @click="showAdminModal = false" class="px-5 py-3 rounded-xl border border-stone-300 text-xs font-mono text-stone-600 hover:bg-stone-100 transition">
+          閉じる
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="exportCanvas" width="750" height="1100" class="hidden"></canvas>
+
+  <!-- 10. フッター -->
+  <footer class="w-full max-w-7xl px-6 md:px-12 py-12 border-t border-gold/30 mt-8 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs font-mono text-ink-sub">
+    <div class="flex items-center space-x-3">
+      <img src="../assets/enso-seal-official.png" class="w-6 h-6 rounded border border-gold/30">
+      <span class="font-display font-bold text-navy">ENSO SHIDE</span>
+      <span>· 塵の中から顔を上げ、光を未来へ継いでゆく</span>
+    </div>
+    <div class="flex space-x-6">
+      <a href="https://x.com/ensoshide" target="_blank" class="hover:text-cinnabar">X</a>
+      <a href="https://www.youtube.com/@EnsoShide" target="_blank" class="hover:text-cinnabar">YouTube</a>
+      <a href="https://www.instagram.com/ensoshide" target="_blank" class="hover:text-cinnabar">Instagram</a>
+      <a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" target="_blank" class="hover:text-cinnabar">Spotify</a>
+    </div>
   </footer>
+
+</div>
+
+<!-- Vue 3 App -->
+<script>
+  const { createApp, ref, computed } = Vue;
+
+  createApp({
+    setup() {
+      const selectedYear = ref(1998);
+      const userMemoryInput = ref('');
+      const boundMemoryOutput = ref('');
+      const isExporting = ref(false);
+      const showModal = ref(false);
+      const posterSrc = ref('');
+      const emailInput = ref('');
+      const subscribed = ref(false);
+      const showAdminModal = ref(false);
+      const waitlistData = ref([]);
+      const generatedProCode = ref('');
+      const codeCopied = ref(false);
+
+      // Load waitlist from localStorage on init
+      try {
+        const stored = localStorage.getItem('shide_waitlist');
+        if (stored) {
+          waitlistData.value = JSON.parse(stored);
+        }
+      } catch (e) {}
+
+      const generateCode = () => {
+        const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+        let res = '';
+        for (let i = 0; i < 6; i++) {
+          res += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return 'SHIDE-PRO-7D-' + res;
+      };
+
+      const copyProCode = () => {
+        if (navigator.clipboard && generatedProCode.value) {
+          navigator.clipboard.writeText(generatedProCode.value);
+          codeCopied.value = true;
+          setTimeout(() => { codeCopied.value = false; }, 3000);
+        }
+      };
+
+      const openAdminWaitlist = () => {
+        try {
+          const stored = localStorage.getItem('shide_waitlist');
+          if (stored) {
+            waitlistData.value = JSON.parse(stored);
+          }
+        } catch (e) {}
+        showAdminModal.value = true;
+      };
+
+      const exportWaitlistCSV = () => {
+        if (waitlistData.value.length === 0) {
+          alert('エクスポート可能な予約データがありません');
+          return;
+        }
+        let csvContent = 'data:text/csv;charset=utf-8,Email,ProCode,Timestamp,Language\n';
+        waitlistData.value.forEach(row => {
+          csvContent += `"${row.email}","${row.code}","${row.timestamp}","${row.lang || 'ja'}"\n`;
+        });
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement('a');
+        link.setAttribute('href', encodedUri);
+        link.setAttribute('download', `shide-waitlist-${new Date().toISOString().slice(0,10)}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
+
+      const timelineList = [
+        { year: 1988, tag: "鈍行列車時代", title: "シーガル時計と緑皮列車", desc: "駅の構内放送から流れる流行歌。切符は赤い番号が押された硬券だった。" },
+        { year: 1993, tag: "中華ロック", title: "Beyond『海闊天空』とカセット", desc: "ウォークマンの中で回る透明カセット。鉛筆での巻き戻しは、青春の記憶。" },
+        { year: 1997, tag: "返還の夜", title: "ビクトリア港の花火と『ブエノスアイレス』", desc: "テレビに映る花火と街中に流れる歌。誰もが次の時代を予感していた。" },
+        { year: 1998, tag: "ミレニアム前夜", title: "ネットカフェの接続音と初期OICQ", desc: "放課後に駆け込んだネットカフェ。モデムの音と共に見知らぬ人へ送った「こんにちは」。" },
+        { year: 2000, tag: "2000年紀", title: "2000年問題とジェイ・チョウのデビュー", desc: "ラジオから流れる『星晴』のギター。私たちは無事に21世紀へと足を踏み入れた。" },
+        { year: 2003, tag: "隔離された春", title: "SARSによる休校と新曲の全土同時放送", desc: "毎日の検温が日課に。8億人がラジオに耳を傾け、オペラのような新曲を聴いた。" },
+        { year: 2008, tag: "涙と栄光", title: "鳥巣スタジアムの花火と五輪の夏", desc: "涙と誇りが交錯した夏。人々はテレビの前に釘付けになった。" },
+        { year: 2015, tag: "モバイル狂騒", title: "4G普及とスマホによる接続", desc: "スマホで世界中が見渡せるようになった反面、面と向かって語り合う時間は減っていった。" },
+        { year: 2024, tag: "記憶の覚醒", title: "AI時代の到来と個人の記憶の継承", desc: "アルゴリズムは無限の幻影を作るが、あなたが歩んだ本当の人生は、あなただけが証明できる。" }
+      ];
+
+      const yearDatabase = {
+        1988: {
+          event: "シーガル時計と緑皮鈍行列車",
+          quote: "駅のスピーカーから流れる歌。硬券の切符を握りしめ、揺れる車内で過ごした日々。",
+          verdict: "あの年、あなたは先を急ぎ、青春の半分を揺れる硬座車両に残してきた。",
+          placeholder: "例：初めて緑皮列車に乗って大都市へ出かけた日"
+        },
+        1993: {
+          event: "Beyond『海闊天空』とカセットテープ",
+          quote: "ウォークマンの中で回る透明カセットテープ。鉛筆で巻き戻す音が、青春の証だった。",
+          verdict: "自由を愛した歌い手は旅立ったが、彼が残した火種は、今も夜毎に私たちの心を照らす。",
+          placeholder: "例：布団の中で片耳イヤホンで聴いていた記憶"
+        },
+        1997: {
+          event: "香港返還の夜と『ブエノスアイレス』",
+          quote: "テレビの花火、街に響く『東方之珠』。誰もが次の時代に想いを馳せていた。",
+          verdict: "港の風が霧を払い、残る者と遠くへ旅立つ者に道が分かれた。",
+          placeholder: "例：あの晩、家族みんなでテレビを囲んでいた思い出"
+        },
+        1998: {
+          event: "ダイヤルアップ音とOICQの誕生",
+          quote: "放課後ネットカフェへ駆け込み、モデムのノイズを聴きながら初めて送った挨拶。",
+          verdict: "朝食代を節約して買ったネットカード。電話線一本で未来と繋がっていた。",
+          placeholder: "例：初めてネットゲームで夜明かしした日"
+        },
+        2000: {
+          event: "2000年問題の克服とジェイ・チョウの登場",
+          quote: "ラジオから流れる軽快な旋律。私たちは新しい世紀へと足を踏み入れた。",
+          verdict: "世界は止まらず、あなたは若く、明日はもっと輝かしいと信じていた。",
+          placeholder: "例：ミレニアムカウントダウンの時、どこにいたか"
+        },
+        2003: {
+          event: "SARSの春とラジオ全土同時放送",
+          quote: "検温が日課となった日々。部屋に閉じ込められた春、窓の外の陽射しが何より眩しかった。",
+          verdict: "春は長かったが、日常のありがたさを誰よりも深く噛みしめた。",
+          placeholder: "例：休校中に家で本を読んだり勉強していた思い出"
+        },
+        2008: {
+          event: "五輪の花火と『北京はあなたを歓迎する』",
+          quote: "涙と誇りに満ちた夏。テレビの前に座り、誰もが熱狂した。",
+          verdict: "みんなが前を向いて走り、すべてが良くなると信じていた、もっとも熱い記憶の一幕。",
+          placeholder: "例：8月8日の開会式を誰と見ていたか"
+        },
+        2015: {
+          event: "4Gの普及とスマートフォン時代",
+          quote: "スマホで世界が一瞬で繋がる一方、顔を合わせて深く語り合う機会は減っていった。",
+          verdict: "目まぐるしい速さの中で、手紙を何週間も待っていた昔が恋しくなり始めた。",
+          placeholder: "例：初めて自分のスマートフォンを手にした日"
+        },
+        2024: {
+          event: "AI時代と個人の生きた記憶の覚醒",
+          quote: "アルゴリズムは無数の幻を作れるが、あなたが歩いた道はあなたしか証明できない。",
+          verdict: "歴史に書き流された私たちも、天地を巡り、塵の中から顔を上げて、その光を未来へ継いでゆく。",
+          placeholder: "例：今日、このサイトで初めての記憶を書き留めた"
+        }
+      };
+
+      const currentEraSubtitle = computed(() => {
+        const y = selectedYear.value;
+        if (y < 1990) return "80年代 · 啓蒙と夜明け";
+        if (y < 2000) return "90年代 · 流行と潮流";
+        if (y < 2010) return "00年代 · 躍進と熱気";
+        if (y < 2020) return "10年代 · 加速と狂騒";
+        return "20年代 · 沈殿と継承";
+      });
+
+      const currentData = computed(() => {
+        return yearDatabase[selectedYear.value] || {
+          event: `${selectedYear.value}年の時代座標`,
+          quote: "カセットとCDの中で音楽が巡り、街角の街灯の下、ある者は別れ、ある者は旅立った。",
+          verdict: "時間は止まらない。歴史に省かれたすべての足跡を、文化の川は覚えている。",
+          placeholder: "例：その年にあった忘れられない出来事"
+        };
+      });
+
+      const stepYear = (delta) => {
+        const next = selectedYear.value + delta;
+        if (next >= 1980 && next <= 2024) {
+          selectedYear.value = next;
+          boundMemoryOutput.value = '';
+        }
+      };
+
+      const selectYearFromRail = (y) => {
+        selectedYear.value = y;
+        boundMemoryOutput.value = '';
+        document.getElementById('radar').scrollIntoView({ behavior: 'smooth' });
+      };
+
+      const bindMemory = () => {
+        if (!userMemoryInput.value.trim()) {
+          alert('当時の記憶を短く入力してください');
+          return;
+        }
+        boundMemoryOutput.value = `「${userMemoryInput.value.trim()}」 —— 1980年以降の文化座標にあなたの言葉が刻まれ、沈拾が手記を記しました。`;
+      };
+
+      const exportPoster = () => {
+        isExporting.value = true;
+        const canvas = document.getElementById('exportCanvas');
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = '#F8F6F0';
+        ctx.fillRect(0, 0, 750, 1100);
+
+        ctx.strokeStyle = '#C5A059';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(36, 36, 678, 1028);
+
+        ctx.strokeStyle = 'rgba(197, 160, 89, 0.4)';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(44, 44, 662, 1012);
+
+        ctx.fillStyle = '#12365E';
+        ctx.font = 'bold 24px "Noto Serif JP", serif';
+        ctx.textAlign = 'left';
+        ctx.fillText('拾得 ENSŌ SHIDE', 70, 95);
+
+        ctx.fillStyle = '#55524E';
+        ctx.font = '13px "Space Grotesk", monospace';
+        ctx.fillText('1980–2024 CULTURAL COORDINATES', 70, 122);
+
+        ctx.fillStyle = '#BC382C';
+        ctx.font = 'bold 88px "Cinzel", serif';
+        ctx.fillText(String(selectedYear.value), 70, 235);
+
+        ctx.fillStyle = '#C5A059';
+        ctx.font = 'bold 16px "Noto Serif JP", serif';
+        ctx.fillText(currentEraSubtitle.value, 300, 230);
+
+        ctx.fillStyle = '#12365E';
+        ctx.font = 'bold 28px "Noto Serif JP", serif';
+        ctx.fillText(currentData.value.event, 70, 305);
+
+        ctx.fillStyle = '#111111';
+        ctx.font = 'italic 18px "Noto Serif JP", serif';
+        wrap(ctx, `“${currentData.value.quote}”`, 70, 375, 610, 32);
+
+        ctx.fillStyle = '#F0ECE1';
+        ctx.fillRect(70, 480, 610, 220);
+        ctx.strokeStyle = '#BC382C';
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(70, 480);
+        ctx.lineTo(70, 700);
+        ctx.stroke();
+
+        ctx.fillStyle = '#BC382C';
+        ctx.font = 'bold 16px "Noto Serif JP", serif';
+        ctx.fillText('沈拾 · 修復師の手記：', 95, 520);
+
+        ctx.fillStyle = '#111111';
+        ctx.font = 'bold 18px "Noto Serif JP", serif';
+        wrap(ctx, currentData.value.verdict, 95, 565, 560, 30);
+
+        if (boundMemoryOutput.value) {
+          ctx.fillStyle = '#12365E';
+          ctx.font = '15px "Noto Serif JP", serif';
+          wrap(ctx, `【私の私的印箋】${boundMemoryOutput.value}`, 70, 750, 610, 26);
+        }
+
+        ctx.strokeStyle = 'rgba(197, 160, 89, 0.4)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(70, 930);
+        ctx.lineTo(680, 930);
+        ctx.stroke();
+
+        ctx.fillStyle = '#12365E';
+        ctx.font = 'bold 17px "Noto Serif JP", serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('塵の中から顔を上げ、光を未来へ継いでゆく', 375, 975);
+
+        ctx.fillStyle = '#55524E';
+        ctx.font = '13px "Space Grotesk", monospace';
+        ctx.fillText('https://shide.app/ja/ · 時代座標と家宝の書を体験する', 375, 1010);
+
+        setTimeout(() => {
+          posterSrc.value = canvas.toDataURL('image/png');
+          isExporting.value = false;
+          showModal.value = true;
+        }, 300);
+      };
+
+      function wrap(c, text, x, y, maxW, lineH) {
+        let chars = text.split('');
+        let line = '';
+        for (let i = 0; i < chars.length; i++) {
+          let test = line + chars[i];
+          if (c.measureText(test).width > maxW && i > 0) {
+            c.fillText(line, x, y);
+            line = chars[i];
+            y += lineH;
+          } else {
+            line = test;
+          }
+        }
+        c.fillText(line, x, y);
+      }
+
+      const submitEmail = () => {
+        if (!emailInput.value.includes('@')) {
+          alert('有効なメールアドレスを入力してください');
+          return;
+        }
+        const code = generateCode();
+        generatedProCode.value = code;
+        const newRecord = {
+          email: emailInput.value.trim(),
+          code: code,
+          timestamp: new Date().toLocaleString(),
+          lang: 'ja'
+        };
+
+        // 1. LocalStorage save
+        waitlistData.value.unshift(newRecord);
+        try {
+          localStorage.setItem('shide_waitlist', JSON.stringify(waitlistData.value));
+        } catch (e) {}
+
+        // 2. Webhook delivery to admin email
+        try {
+          fetch('https://formsubmit.co/ajax/decnet105@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              email: newRecord.email,
+              code: newRecord.code,
+              timestamp: newRecord.timestamp,
+              platform: 'Shide App 2.0 TestFlight Waitlist (ja)',
+              _subject: `[拾得先行予約] 新規ユーザー: ${newRecord.email}`
+            })
+          }).catch(() => {});
+        } catch (e) {}
+
+        subscribed.value = true;
+      };
+
+      return {
+        selectedYear,
+        userMemoryInput,
+        boundMemoryOutput,
+        isExporting,
+        showModal,
+        showAdminModal,
+        waitlistData,
+        generatedProCode,
+        codeCopied,
+        copyProCode,
+        openAdminWaitlist,
+        exportWaitlistCSV,
+        posterSrc,
+        emailInput,
+        subscribed,
+        timelineList,
+        currentEraSubtitle,
+        currentData,
+        stepYear,
+        selectYearFromRail,
+        bindMemory,
+        exportPoster,
+        submitEmail
+      };
+    }
+  }).mount('#app');
+</script>
 </body>
 </html>

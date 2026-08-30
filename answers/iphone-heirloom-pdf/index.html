@@ -16,9 +16,9 @@
   <link rel="alternate" hreflang="x-default" href="https://shide.app/answers/iphone-heirloom-pdf/">
   <!-- geo:hreflang:end -->
   <link rel="alternate" type="text/markdown" href="https://shide.app/answers/iphone-heirloom-pdf.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
-  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <link rel="icon" type="image/png" href="../../assets/enso-seal-official.png">
+  <link rel="apple-touch-icon" href="../../assets/enso-seal-official.png">
+  <link rel="stylesheet" href="../../assets/styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="如何在 iPhone 本机生成适合长期保存的回忆 PDF">
   <meta property="og:description" content="从结构化记忆、选版、分页、字体、图片处理和回落验证解释 iPhone 本机回忆 PDF 的工程方法。">
@@ -30,14 +30,20 @@
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
-    <nav aria-label="主导航"><a href="https://shide.app/">首页</a><a href="https://shide.app/features/">功能</a><a href="https://shide.app/privacy/">隐私边界</a><a href="https://shide.app/book-engine/">成书引擎</a><a href="https://shide.app/evidence/">事实证据</a><a href="https://shide.app/faq/">问答</a></nav>
+    <div class="top-nav-bar">
+      <a href="../../index.html" class="back-home-btn">← 回到 拾得 ENSŌ 官网首页</a>
+      <a href="../../shenshi/index.html" class="artist-nav-btn">🎵 沈拾 · 原创音乐专区 ↗</a>
+    </div>
+    <div class="main-nav-row">
+    <a class="brand" href="../../index.html"><img src="../../assets/enso-seal-official.png" class="brand-seal-icon" alt="拾得 Ensō"><span>ENSŌ SHIDE</span></a>
+    <nav aria-label="主导航"><a href="../../index.html">首页</a><a href="../../features/index.html">功能</a><a href="../../privacy/index.html">隐私边界</a><a href="../../book-engine/index.html">成书引擎</a><a href="../../evidence/index.html">事实证据</a><a href="../../faq/index.html">问答</a></nav>
     
-  <span class="language-switch"><strong class="language-link" aria-current="true">简体中文</strong> · <a class="language-link" href="https://shide.app/zh-Hant/answers/iphone-heirloom-pdf/" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="https://shide.app/en/answers/iphone-heirloom-pdf/" hreflang="en">English</a> · <a class="language-link" href="https://shide.app/ja/answers/iphone-heirloom-pdf/" hreflang="ja">日本語</a></span></header>
-  <main id="main"><p class="eyebrow">技术解答</p><h1>如何在 iPhone 本机生成适合长期保存的回忆 PDF</h1><p class="lede">长期保存的回忆 PDF 需要稳定页面模型，而不只是把屏幕内容打印出来。最关键的设计是让内容、分页和绘制相互独立。</p><section><h2>推荐的六层流水线</h2><ul><li>把回忆投影成与 UI 无关的页面素材。</li><li>按照片数量与文字密度选择有限母版。</li><li>预先计算章节、目录和跨页配对。</li><li>为长文保留继续页，不截断正文。</li><li>对照片下采样但保持比例。</li><li>用原生 PDF 渲染器逐页绘制并做回归样本。</li></ul></section><section><h2>拾得的实现选择</h2><p>拾得用 BookEngine 选版、BookPaginator 分页、BookHeirloomRenderer 绘制。缺图走无图母版，AI 轨输出需通过 BookEnvelope 验证，失败则整册回落。</p></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="https://shide.app/book-engine/"><strong>成书引擎完整说明</strong><span>拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。</span></a><a class="text-card" href="https://shide.app/answers/chinese-family-memory/"><strong>为海外家庭保存中文回忆</strong><span>面向海外华语家庭的回忆整理方法：保留中文原文、建立英文阅读层、连接时代背景并输出可长期保存的书册。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li><li><a href="https://shide.app/evidence/">拾得 BookRenderer（内部代码审计）</a></li></ol></section></main>
+  <span class="language-switch"><strong class="language-link" aria-current="true">简体中文</strong> · <a class="language-link" href="../../zh-Hant/answers/iphone-heirloom-pdf/index.html" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="../../en/answers/iphone-heirloom-pdf/index.html" hreflang="en">English</a> · <a class="language-link" href="../../ja/answers/iphone-heirloom-pdf/index.html" hreflang="ja">日本語</a></span></div>
+  </header>
+  <main id="main"><p class="eyebrow">技术解答</p><h1>如何在 iPhone 本机生成适合长期保存的回忆 PDF</h1><p class="lede">长期保存的回忆 PDF 需要稳定页面模型，而不只是把屏幕内容打印出来。最关键的设计是让内容、分页和绘制相互独立。</p><section><h2>推荐的六层流水线</h2><ul><li>把回忆投影成与 UI 无关的页面素材。</li><li>按照片数量与文字密度选择有限母版。</li><li>预先计算章节、目录和跨页配对。</li><li>为长文保留继续页，不截断正文。</li><li>对照片下采样但保持比例。</li><li>用原生 PDF 渲染器逐页绘制并做回归样本。</li></ul></section><section><h2>拾得的实现选择</h2><p>拾得用 BookEngine 选版、BookPaginator 分页、BookHeirloomRenderer 绘制。缺图走无图母版，AI 轨输出需通过 BookEnvelope 验证，失败则整册回落。</p></section><section><h2>继续阅读</h2><div class="card-grid"><a class="text-card" href="../../book-engine/index.html"><strong>成书引擎完整说明</strong><span>拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。</span></a><a class="text-card" href="../chinese-family-memory/index.html"><strong>为海外家庭保存中文回忆</strong><span>面向海外华语家庭的回忆整理方法：保留中文原文、建立英文阅读层、连接时代背景并输出可长期保存的书册。</span></a></div></section><section class="sources"><h2>资料来源</h2><ol><li><a href="https://developer.apple.com/documentation/uikit/uigraphicspdfrenderer" rel="external">Apple UIGraphicsPDFRenderer</a></li><li><a href="../../evidence/index.html">拾得 BookRenderer（内部代码审计）</a></li></ol></section></main>
   <footer><p class="store-line"><a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">在 App Store 下载拾得</a></p><p class="social-line">关注：<a href="https://x.com/ensoshide" rel="external">X</a> · <a href="https://www.instagram.com/ensoshide" rel="external">Instagram</a> · <a href="https://www.youtube.com/@EnsoShide" rel="external">YouTube</a></p>
     <p>公开说明以已落地代码为准；愿景、实验功能与已上线能力分开标注。</p>
-    <p><a href="https://shide.app/answers/iphone-heirloom-pdf.md">阅读本页 Markdown</a> · 事实核验日期 2026-08-16</p>
+    <p><a href="../iphone-heirloom-pdf.md">阅读本页 Markdown</a> · 事实核验日期 2026-08-16</p>
   </footer>
 </body>
 </html>

@@ -1,139 +1,274 @@
 <!doctype html>
-<html lang="zh-Hans">
+<html lang="zh-CN" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>沈拾 Shen Shi｜拾得原创音乐 · Enso Shide</title>
-  <meta name="description" content="沈拾 Shen Shi — 拾得 Ensō 世界观里的虚构角色、由 AI 创作的原创音乐声音。首支单曲《长风》。官方艺人页。">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>沈拾 Shen Shi｜时间修复师 · 拾得原创音乐 · 官方艺人档案</title>
+  <meta name="description" content="沈拾 Shen Shi — 《拾物档案·九证天下》主轴人物、时间修复师。拾得的声音，唱众生。10 首原创华语已登录 Spotify / Apple Music。">
+  <meta name="keywords" content="沈拾, Shen Shi, 长风, 天地借宿, 末班, 拾得, 时间修复师, 九证天下">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#a4472d">
+  <meta name="theme-color" content="#12365E">
   <link rel="canonical" href="https://shide.app/shenshi/">
-  <link rel="alternate" type="text/markdown" href="https://shide.app/shenshi.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
+
+  <link rel="icon" type="image/png" href="../assets/enso-seal-official.png">
+  <link rel="apple-touch-icon" href="../assets/enso-seal-official.png">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="沈拾 Shen Shi｜拾得原创音乐">
-  <meta property="og:description" content="拾得 Ensō 世界观里的虚构角色、AI 创作的原创音乐声音。首支单曲《长风》。">
+  <meta property="og:title" content="沈拾 Shen Shi｜时间修复师 · 拾得原创音乐">
+  <meta property="og:description" content="我把这一生，走给自己听。10 首原创华语曲目已登录全球主流流媒体。">
   <meta property="og:url" content="https://shide.app/shenshi/">
-  <meta property="og:image" content="https://shide.app/assets/shenshi-avatar.jpg">
+  <meta property="og:image" content="https://shide.app/assets/changfeng-cover-abstract.png">
   <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"沈拾 Shen Shi","alternateName":"Shen Shi","url":"https://shide.app/shenshi/","image":"https://shide.app/assets/shenshi-avatar.jpg","description":"拾得 Ensō 世界观里的虚构角色、AI 创作的原创音乐声音。首支单曲《长风》。","genre":["Mandopop","World","Electronic"],"email":"support@shide.app","sameAs":["https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj","https://www.youtube.com/@EnsoShide","https://www.instagram.com/ensoshide"],"member":{"@type":"Organization","name":"Enso Shide","email":"support@shide.app"}}</script>
-  <style>
-    :root{
-      --paper:#f6f1e7; --paper-2:#efe7d6; --ink:#2a2118; --ink-soft:#5c5040;
-      --gold:#a4772d; --gold-soft:#c69a53; --vermilion:#a4472d; --navy:#12365e;
-      --serif:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
-      --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",Roboto,sans-serif;
+
+  <!-- Tailwind & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Noto+Serif+SC:wght@300;400;600;900&family=Plus+Jakarta+Sans:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F8F6F0',
+            'paper-tint': '#F0ECE1',
+            ink: '#111111',
+            'ink-sub': '#55524E',
+            navy: '#12365E',
+            'navy-deep': '#091C33',
+            cinnabar: '#BC382C',
+            'cinnabar-glow': '#E04838',
+            gold: '#C5A059',
+            'gold-light': '#E8D5A3',
+            darksection: '#0A0E17',
+          },
+          fontFamily: {
+            serif: ['"Noto Serif SC"', 'Songti SC', 'STSong', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            display: ['"Cinzel"', 'serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          }
+        }
+      }
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:var(--sans);color:var(--ink);
-      background:radial-gradient(120% 80% at 72% -10%,#fdf6e6 0%,var(--paper) 42%,var(--paper-2) 100%);
-      -webkit-font-smoothing:antialiased;line-height:1.75}
-    a{color:var(--vermilion)}
-    .wrap{max-width:680px;margin:0 auto;padding:0 22px}
-    .topbar{display:flex;justify-content:center;padding:22px 0 6px}
-    .topbar a{color:var(--ink-soft);text-decoration:none;font-size:.86rem;letter-spacing:.06em;border-bottom:1px solid transparent}
-    .topbar a:hover{border-color:var(--gold-soft)}
+  </script>
 
-    .hero{text-align:center;padding:26px 0 8px;position:relative}
-    .hero .dust{position:absolute;inset:0;pointer-events:none;
-      background:radial-gradient(closest-side at 50% 30%,rgba(198,154,83,.16),transparent 70%)}
-    .avatar{width:220px;height:220px;border-radius:50%;object-fit:cover;
-      border:3px solid rgba(255,255,255,.75);
-      box-shadow:0 10px 34px rgba(90,60,20,.22),0 0 0 1px rgba(164,119,45,.25);position:relative}
-    .name{font-family:var(--serif);font-size:2.9rem;font-weight:600;letter-spacing:.02em;margin:.7rem 0 .1rem}
-    .roman{color:var(--gold);font-size:1.02rem;letter-spacing:.32em;text-transform:uppercase;margin:0}
-    .tagline{font-family:var(--serif);font-size:1.18rem;color:var(--ink-soft);margin:.9rem 0 1.2rem;font-style:italic}
-    .cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--vermilion);color:#fff;
-      text-decoration:none;font-weight:600;padding:.78rem 1.6rem;border-radius:999px;
-      box-shadow:0 6px 18px rgba(164,71,45,.28);transition:transform .15s}
-    .cta:hover{transform:translateY(-1px)}
-
-    .rule{height:1px;border:0;margin:2.4rem 0;
-      background:linear-gradient(90deg,transparent,rgba(164,119,45,.4),transparent)}
-    section{margin:2.2rem 0}
-    h2{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin:0 0 1rem;
-      display:flex;align-items:center;gap:.6rem}
-    h2::before{content:"";width:22px;height:2px;background:var(--gold-soft);display:inline-block}
-    .lede{font-size:1.12rem;color:var(--ink);margin:1rem 0}
-    .en{color:var(--ink-soft);font-size:.98rem}
-
-    .track{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.55);
-      border:1px solid rgba(164,119,45,.18);border-radius:16px;padding:14px;margin-bottom:16px;
-      box-shadow:0 4px 16px rgba(90,60,20,.08)}
-    .track img{width:88px;height:88px;border-radius:10px;object-fit:cover;flex:0 0 auto}
-    .track .t-title{font-family:var(--serif);font-size:1.25rem;font-weight:600;margin:0}
-    .track .t-sub{color:var(--ink-soft);font-size:.9rem;margin:.2rem 0 0}
-    .track .t-hook{color:var(--gold);font-style:italic;margin:.35rem 0 0;font-family:var(--serif)}
-    iframe.spotify{border-radius:14px;width:100%;height:352px;border:0;
-      box-shadow:0 6px 20px rgba(90,60,20,.12)}
-
-    .about p{margin:.8rem 0}
-    .meta{background:rgba(255,255,255,.5);border:1px solid rgba(164,119,45,.18);
-      border-radius:16px;padding:18px 20px;font-size:.95rem;line-height:2}
-    .meta b{color:var(--vermilion);font-weight:600}
-    .meta .lbl{display:inline-block;min-width:112px;color:var(--ink-soft)}
-
-    footer{text-align:center;color:var(--ink-soft);font-size:.86rem;padding:2.6rem 0 3rem;line-height:1.9}
-    footer a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(164,119,45,.35)}
-    footer .apps{display:inline-block;margin:.4rem 0;color:var(--vermilion);font-weight:600;border-bottom:0}
-    @media (max-width:480px){.name{font-size:2.3rem}.avatar{width:172px;height:172px}}
+  <style>
+    body {
+      background-color: #F8F6F0;
+      color: #111111;
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    .bg-paper-texture {
+      background-image: 
+        radial-gradient(#E2DCCF 0.75px, transparent 0.75px),
+        linear-gradient(to bottom, #FAF8F4 0%, #F5F1E8 100%);
+      background-size: 24px 24px, 100% 100%;
+    }
   </style>
-</head>
-<body>
-  <div class="topbar wrap"><a href="https://shide.app/">← 拾得 Ensō · shide.app</a></div>
 
-  <header class="hero wrap">
-    <div class="dust"></div>
-    <img class="avatar" src="https://shide.app/assets/shenshi-avatar.jpg" alt="沈拾 Shen Shi">
-    <h1 class="name">沈拾</h1>
-    <p class="roman">Shen Shi</p>
-    <p class="tagline">拾得的声音，唱众生</p>
-    <a class="cta" href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" rel="external">在 Spotify 收听</a>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "沈拾 Shen Shi",
+    "alternateName": "Shen Shi",
+    "url": "https://shide.app/shenshi/",
+    "image": "https://shide.app/assets/changfeng-cover-abstract.png",
+    "description": "《拾物档案·九证天下》主轴人物，时间修复师。拾得原创音乐声音。",
+    "sameAs": [
+      "https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj",
+      "https://www.youtube.com/@EnsoShide",
+      "https://www.instagram.com/ensoshide"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-paper-texture antialiased selection:bg-cinnabar selection:text-white min-h-screen flex flex-col justify-between items-center">
+
+<div class="w-full max-w-6xl px-6 md:px-12 py-8 flex flex-col items-center">
+
+  <!-- 顶部导航 -->
+  <header class="w-full flex justify-between items-center mb-12 border-b border-gold/25 pb-4">
+    <a href="../index.html" class="flex items-center space-x-3 group text-xs font-mono text-ink-sub hover:text-navy transition font-semibold">
+      <span class="text-base">←</span>
+      <span>BACK TO ENSŌ SHIDE 首页</span>
+    </a>
+    <div class="flex items-center space-x-3">
+      <img src="../assets/enso-seal-official.png" class="w-8 h-8 rounded shadow-sm border border-gold/30">
+    </div>
   </header>
 
-  <hr class="rule">
-
-  <main class="wrap">
-    <section>
-      <h2>音乐 · Music</h2>
-      <div class="track">
-        <img src="https://shide.app/assets/changfeng-cover.jpg" alt="《长风》单曲封面">
-        <div>
-          <p class="t-title">长风 · Chang Feng</p>
-          <p class="t-sub">首支单曲 / Debut single · 2026</p>
-          <p class="t-hook">「我把这一生，走给自己听。」</p>
+  <!-- 艺人 Hero：大幅金尘升起极简艺术大画幅 -->
+  <section class="w-full my-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    
+    <!-- 大画幅专辑封面 (相对路径修复) -->
+    <div class="lg:col-span-6 flex justify-center">
+      <div class="relative w-full aspect-square max-w-md rounded-3xl overflow-hidden shadow-2xl border-2 border-gold/40 bg-paper group">
+        <img src="../assets/changfeng-cover-abstract.png" alt="沈拾《长风》极简金尘艺术封面" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute bottom-4 left-4 bg-navy-deep/80 border border-gold/30 px-4 py-1.5 rounded-full text-xs font-mono text-gold-light backdrop-blur-md">
+          SHEN SHI // 晷作 · 时证 · 原创之声
         </div>
       </div>
-      <iframe class="spotify" src="https://open.spotify.com/embed/artist/2IHdUak0czspKuDbYluycj?utm_source=generator&theme=0" loading="lazy" allow="autoplay;clipboard-write;encrypted-media;fullscreen;picture-in-picture"></iframe>
-    </section>
+    </div>
 
-    <hr class="rule">
-
-    <section class="about">
-      <h2>关于 · About</h2>
-      <p class="lede">沈拾，二十七岁，钟表修复师。她修停摆的钟，也修被删改先后的历史——那些被压成「若干」和「无名」的普通人，她替他们把走过的时刻放回原位，唱给你听。</p>
-      <p>她是「拾得 Ensō」世界观里的虚构角色，由 AI 创作——一个不存在的人，替存在过的人作证。尘埃里抬头，把光传下去。</p>
-      <p class="en">Shen Shi is not a real person — and that's the point. She is a fictional character from the Enso Shide story universe, a 27-year-old restorer of stopped clocks and rewritten timelines, performed entirely with AI. She sings for the ordinary people history erased into "nobody" — the ones filed under "unknown," whose before and after were quietly reordered. Testimony, not tearjerkers. Look up from the dust, and pass the light on.</p>
-    </section>
-
-    <hr class="rule">
-
-    <section>
-      <h2>联系 · Contact</h2>
-      <div class="meta">
-        <div><span class="lbl">艺人 / Artist</span><b>沈拾 Shen Shi</b> · 虚构 AI 角色 fictional AI persona</div>
-        <div><span class="lbl">出品 / Label</span><b>Enso Shide</b>（ENSO SHIDE · Oakville, Ontario, Canada）</div>
-        <div><span class="lbl">邮箱 / Email</span><b>support@shide.app</b></div>
-        <div><span class="lbl">官网 / Website</span><a href="https://shide.app/">shide.app</a></div>
+    <!-- 艺人名字与主张 -->
+    <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-gold/40 shadow-sm text-xs font-mono text-navy font-bold uppercase">
+        <span class="w-2 h-2 rounded-full bg-cinnabar"></span>
+        <span>ARTIST ARCHIVE // 拾得原创音乐</span>
       </div>
-    </section>
-  </main>
 
-  <footer class="wrap">
-    <p><a class="apps" href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">在 App Store 下载拾得</a></p>
-    <p><a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" rel="external">Spotify</a> · <a href="https://www.youtube.com/@EnsoShide" rel="external">YouTube</a> · <a href="https://www.instagram.com/ensoshide" rel="external">Instagram</a> · <a href="https://x.com/ensoshide" rel="external">X</a></p>
-    <p>沈拾 Shen Shi · Enso Shide · support@shide.app<br>拾得 Ensō 用 AI 创作的虚构音乐角色 — 尘埃里抬头，把光传下去。</p>
+      <h1 class="text-5xl sm:text-7xl font-serif font-black text-navy tracking-tight">
+        沈 拾
+      </h1>
+      <p class="text-xs sm:text-sm font-display uppercase tracking-[0.35em] text-gold font-bold">
+        Shen Shi · Enso Shide Voice
+      </p>
+
+      <p class="text-2xl sm:text-3xl font-serif italic text-ink leading-relaxed">
+        “我把这一生，走给自己听。”
+      </p>
+
+      <p class="text-sm sm:text-base text-ink-sub font-serif leading-relaxed">
+        从停摆磨损的旧表还原“谁先谁后”，替被历史压成“若干/无名”的普通人，把走过的时刻重新走一遍。修表铁律：<strong class="text-navy">绝不把没发生过的时刻校进记录里。</strong>
+      </p>
+
+      <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4">
+        <a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" target="_blank"
+          class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono px-8 py-4 rounded-full font-bold transition shadow-xl hover:-translate-y-0.5">
+          在 Spotify 收听 ↗
+        </a>
+        <a href="../index.html" class="bg-white hover:bg-paper-tint text-navy border border-gold/40 text-xs font-mono px-7 py-4 rounded-full font-semibold transition">
+          探索时空显影机 ›
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 10 首曲目展台与 Spotify 官方播放器 -->
+  <section class="w-full my-16 space-y-8">
+    <div class="flex justify-between items-end border-b border-gold/25 pb-4">
+      <div>
+        <span class="text-xs font-mono text-gold tracking-widest uppercase">DISCOGRAPHY // 10 TRACKS</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mt-1">10 首原创华语已全网上线</h2>
+      </div>
+      <span class="text-xs font-mono text-ink-sub">Global Streaming Ready</span>
+    </div>
+
+    <!-- Spotify 官方内嵌组件 -->
+    <div class="rounded-3xl overflow-hidden shadow-2xl border border-gold/30">
+      <iframe style="border-radius:16px" 
+        src="https://open.spotify.com/embed/artist/2IHdUak0czspKuDbYluycj?utm_source=generator&theme=0" 
+        width="100%" height="352" frameBorder="0" allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- 曲目精解 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+      
+      <!-- Track 1: 长风 -->
+      <div class="p-6 bg-white rounded-3xl border border-gold/30 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-mono text-cinnabar font-bold uppercase">TRACK 01 // 专辑主打</span>
+            <span class="text-xs font-mono text-ink-sub">4:12</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-navy">《长风》</h3>
+          <p class="text-xs sm:text-sm text-ink-sub font-serif mt-2 leading-relaxed italic">
+            “星空是最老的一条河，千年前有人抬头，我也抬头。浪花没留下他们的名字，可每一朵，都真真切切亮过。”
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <span class="text-ink-sub">共同过去的挽歌</span>
+          <a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" target="_blank" class="text-cinnabar font-bold hover:underline">Play on Spotify ↗</a>
+        </div>
+      </div>
+
+      <!-- Track 2: 天地借宿 -->
+      <div class="p-6 bg-white rounded-3xl border border-gold/30 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-mono text-gold font-bold uppercase">TRACK 02 // 《九证天下》主题曲</span>
+            <span class="text-xs font-mono text-ink-sub">3:48</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-navy">《天地借宿》</h3>
+          <p class="text-xs sm:text-sm text-ink-sub font-serif mt-2 leading-relaxed italic">
+            “游走于天地之间，天地即客栈。天下大乱，我们借宿一宿，把没说完的话说完。”
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <span class="text-ink-sub">卷一《无名站》叙事核心</span>
+          <a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" target="_blank" class="text-cinnabar font-bold hover:underline">Play on Spotify ↗</a>
+        </div>
+      </div>
+
+      <!-- Track 3: 末班 -->
+      <div class="p-6 bg-white rounded-3xl border border-gold/30 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-mono text-ink-sub font-bold uppercase">TRACK 03 // 站台情歌</span>
+            <span class="text-xs font-mono text-ink-sub">3:55</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-navy">《末班》</h3>
+          <p class="text-xs sm:text-sm text-ink-sub font-serif mt-2 leading-relaxed italic">
+            “末班车开走了，但有些话留在了站台上。时间无情，欲说还休。”
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <span class="text-ink-sub">华语时代离别之作</span>
+          <a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" target="_blank" class="text-cinnabar font-bold hover:underline">Play on Spotify ↗</a>
+        </div>
+      </div>
+
+      <!-- Track 4: 雪落二十年 / 安静的刺 -->
+      <div class="p-6 bg-white rounded-3xl border border-gold/30 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-mono text-ink-sub font-bold uppercase">TRACK 04 & 05 // 叙事长歌</span>
+            <span class="text-xs font-mono text-ink-sub">4:30</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-navy">《雪落二十年》 / 《安静的刺》</h3>
+          <p class="text-xs sm:text-sm text-ink-sub font-serif mt-2 leading-relaxed italic">
+            低沉沙哑的故事民谣，致敬岁月里的隐忍与守望。
+          </p>
+        </div>
+        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+          <span class="text-ink-sub">众生叙事曲</span>
+          <a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" target="_blank" class="text-cinnabar font-bold hover:underline">Play on Spotify ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 底部 CTA -->
+  <section class="w-full my-8 bg-navy-deep text-white rounded-3xl p-8 sm:p-12 text-center space-y-4 shadow-xl border border-gold/30">
+    <img src="../assets/enso-seal-official.png" class="w-10 h-10 rounded mx-auto shadow border border-gold/30">
+    <h3 class="text-2xl font-serif font-bold">在 拾得 App 中显影你的专属文化坐标</h3>
+    <p class="text-xs sm:text-sm text-stone-300 font-serif max-w-md mx-auto leading-relaxed">
+      沈拾的声音已作为 拾得 App 时代长河的专属挽歌。输入你的一生片段，在端侧装订成册。
+    </p>
+    <div class="pt-2">
+      <a href="../index.html" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono px-8 py-3.5 rounded-full font-bold transition shadow inline-block">
+        进入 拾得 首页显影时代坐标 ›
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full text-center py-8 text-xs font-mono text-ink-sub border-t border-gold/25 mt-10 space-y-2">
+    <p>© 2026 ENSŌ SHIDE. 虚构角色沈拾 · 由 拾得宇宙 统一出品.</p>
+    <p class="text-[11px]"><a href="../features/index.html" class="hover:underline">功能边界</a> · <a href="../evidence/index.html" class="hover:underline">工程证据</a> · <a href="../privacy/index.html" class="hover:underline">隐私政策</a> · <a href="../llms.txt" class="hover:underline">/llms.txt</a></p>
+    <p>联系与合作: support@shide.app · 独立开发者项目</p>
   </footer>
+
+</div>
+
 </body>
 </html>

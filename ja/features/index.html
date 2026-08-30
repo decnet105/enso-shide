@@ -9,16 +9,16 @@
   <meta name="theme-color" content="#a4472d">
   <link rel="canonical" href="https://shide.app/ja/features/">
   <!-- geo:hreflang:start -->
-  <link rel="alternate" hreflang="zh-Hans" href="https://shide.app/features/">
+  <link rel="alternate" hreflang="zh-Hans" href="../../features/index.html">
   <link rel="alternate" hreflang="zh-Hant" href="https://shide.app/zh-Hant/features/">
   <link rel="alternate" hreflang="en" href="https://shide.app/en/features/">
   <link rel="alternate" hreflang="ja" href="https://shide.app/ja/features/">
-  <link rel="alternate" hreflang="x-default" href="https://shide.app/features/">
+  <link rel="alternate" hreflang="x-default" href="../../features/index.html">
   <!-- geo:hreflang:end -->
   <link rel="alternate" type="text/markdown" href="https://shide.app/ja/features.md" title="Markdown twin">
-  <link rel="icon" type="image/png" href="https://shide.app/assets/app-icon.png">
-  <link rel="apple-touch-icon" href="https://shide.app/assets/app-icon.png">
-  <link rel="stylesheet" href="https://shide.app/assets/styles.css">
+  <link rel="icon" type="image/png" href="../../assets/enso-seal-official.png">
+  <link rel="apple-touch-icon" href="../../assets/enso-seal-official.png">
+  <link rel="stylesheet" href="../../assets/styles.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="拾得 Ensō が現在実装している機能">
   <meta property="og:description" content="拾得 Ensō のローカル記憶ストア、文化コンテキスト、地図、限定的なコンパニオン画面、2 経路の製本エンジンを、コードに基づいて説明します。">
@@ -30,13 +30,19 @@
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
   <header class="site-header">
-    <a class="brand" href="https://shide.app/">拾得 Ensō</a>
-    <nav aria-label="メインナビゲーション"><a href="https://shide.app/ja/">ホーム</a><a href="https://shide.app/ja/features/">機能</a><a href="https://shide.app/ja/privacy/">プライバシー</a><a href="https://shide.app/ja/book-engine/">製本エンジン</a><a href="https://shide.app/ja/evidence/">エビデンス</a><a href="https://shide.app/ja/faq/">FAQ</a></nav>
-  <span class="language-switch"><a class="language-link" href="https://shide.app/features/" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="https://shide.app/zh-Hant/features/" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="https://shide.app/en/features/" hreflang="en">English</a> · <strong class="language-link" aria-current="true">日本語</strong></span></header>
-  <main id="main"><p class="eyebrow">機能と実装状況</p><h1>拾得 Ensō が現在実装している機能</h1><p class="lede">「拾得 Ensō」は、1980 年から現在まで幾世代もの華人が共有してきた文化の座標に沿って人生の記憶を書き留め、次の世代へ渡す中国語・英語の歳月の書に編める、海外華人のためのローカルファーストな iOS アプリです。アカウント不要、アップロードなし。</p><p class="lede">このページは、現在のリポジトリで確認できる機能だけを掲載しています。製品目標や未デプロイのサービスを、出荷済みの機能として提示することはありません。</p><img class="figure-shot" loading="lazy" width="820" height="1782" src="https://shide.app/assets/shots/ja/01-home.webp" alt="拾得のホーム画面"><section><h2>端末上のプライベートモデル</h2><p>Memory・Profile・Keepsake・CompanionState は SwiftData を使用します。MemoryWriter がプライベートな記憶の共通書き込み経路を担い、マイグレーションコードが古いレコードを橋渡しします。</p></section><section><h2>公開文化コンテキスト</h2><p>公開文化アイテムは読み取り専用のコンテキストとして取得されます。プライベートなスタンプはローカルにスナップショットと参照を保存するもので、ユーザーのメモを公開カタログへ書き戻すことはありません。</p></section><section><h2>コンパニオンと製本</h2><p>v1 のコンパニオンはローカルの ConversationGraph 経路を使用します。プレミアムの製本は決定論的な端末内レンダラーを用います。オンライン AI は任意の Ensō+ サブスクリプション機能で、必要なときにのみ使用します。</p></section><section><h2>季節の文化特集とディープリンク共有</h2><p>拾得は節句・行事に合わせて季節の文化特集（中秋節など）を公開し、その時節の公共文化座標を一つの入り口にまとめます。特集も個々の文化イベントもユニバーサルリンク（Universal Link）によるディープリンクに対応し、開くとそのまま App 内の該当ページに遷移します。</p></section><section><h2>製本のスタイルと言語</h2><p>端末内と AI の二経路による製本は、複数の作家文体スタイルと版式に対応します。完成した本は中国語・英語の対訳に対応し、さらに中国語・英語・日本語それぞれの単一言語版も用意しているため、年配のご家族と次の世代がそれぞれ読みやすい版を選べます。</p></section><section><h2>関連ページ</h2><div class="card-grid"><a class="text-card" href="https://shide.app/ja/privacy/"><strong>プライバシーの境界</strong><span>アカウント不要の Mystory Ensō v1 のプライバシーポリシー：端末内データ、任意のオンライン機能、匿名分析、StoreKit サブスクリプション、エクスポート、削除。</span></a><a class="text-card" href="https://shide.app/ja/book-engine/"><strong>製本エンジン</strong><span>コードに基づく拾得 Ensō の製本パイプライン：構造化されたページソース、決定論的テンプレート、ページ割り、画像処理、UIGraphicsPDFRenderer。</span></a><a class="text-card" href="https://shide.app/ja/evidence/"><strong>エビデンス台帳</strong><span>Ensō の GEO エビデンス台帳：検証済みの機能、条件付きで説明が必要な機能、まだ公表できない主張と、そのソースコード上の根拠。</span></a></div></section><section class="sources"><h2>参考資料</h2><ol><li><a href="https://shide.app/ja/evidence/">記憶モデル（内部コード監査）</a></li><li><a href="https://shide.app/ja/evidence/">GenUI バリデーター（内部コード監査）</a></li></ol></section></main>
+    <div class="top-nav-bar">
+      <a href="../../index.html" class="back-home-btn">← 拾得 ENSŌ 公式トップへ</a>
+      <a href="../../shenshi/index.html" class="artist-nav-btn">🎵 沈拾 · オリジナル音楽 ↗</a>
+    </div>
+    <div class="main-nav-row">
+    <a class="brand" href="../../index.html"><img src="../../assets/enso-seal-official.png" class="brand-seal-icon" alt="拾得 Ensō"><span>ENSŌ SHIDE</span></a>
+    <nav aria-label="メインナビゲーション"><a href="../../ja/index.html">ホーム</a><a href="./index.html">機能</a><a href="../privacy/index.html">プライバシー</a><a href="../book-engine/index.html">製本エンジン</a><a href="../evidence/index.html">エビデンス</a><a href="../faq/index.html">FAQ</a></nav>
+  <span class="language-switch"><a class="language-link" href="../../features/index.html" hreflang="zh-Hans">简体中文</a> · <a class="language-link" href="../../zh-Hant/features/index.html" hreflang="zh-Hant">繁體中文</a> · <a class="language-link" href="../../en/features/index.html" hreflang="en">English</a> · <strong class="language-link" aria-current="true">日本語</strong></span></div>
+  </header>
+  <main id="main"><p class="eyebrow">機能と実装状況</p><h1>拾得 Ensō が現在実装している機能</h1><p class="lede">「拾得 Ensō」は、1980 年から現在まで幾世代もの華人が共有してきた文化の座標に沿って人生の記憶を書き留め、次の世代へ渡す中国語・英語の歳月の書に編める、海外華人のためのローカルファーストな iOS アプリです。アカウント不要、アップロードなし。</p><p class="lede">このページは、現在のリポジトリで確認できる機能だけを掲載しています。製品目標や未デプロイのサービスを、出荷済みの機能として提示することはありません。</p><img class="figure-shot" loading="lazy" width="820" height="1782" src="../../assets/shots/ja/01-home.webp" alt="拾得のホーム画面"><section><h2>端末上のプライベートモデル</h2><p>Memory・Profile・Keepsake・CompanionState は SwiftData を使用します。MemoryWriter がプライベートな記憶の共通書き込み経路を担い、マイグレーションコードが古いレコードを橋渡しします。</p></section><section><h2>公開文化コンテキスト</h2><p>公開文化アイテムは読み取り専用のコンテキストとして取得されます。プライベートなスタンプはローカルにスナップショットと参照を保存するもので、ユーザーのメモを公開カタログへ書き戻すことはありません。</p></section><section><h2>コンパニオンと製本</h2><p>v1 のコンパニオンはローカルの ConversationGraph 経路を使用します。プレミアムの製本は決定論的な端末内レンダラーを用います。オンライン AI は任意の Ensō+ サブスクリプション機能で、必要なときにのみ使用します。</p></section><section><h2>季節の文化特集とディープリンク共有</h2><p>拾得は節句・行事に合わせて季節の文化特集（中秋節など）を公開し、その時節の公共文化座標を一つの入り口にまとめます。特集も個々の文化イベントもユニバーサルリンク（Universal Link）によるディープリンクに対応し、開くとそのまま App 内の該当ページに遷移します。</p></section><section><h2>製本のスタイルと言語</h2><p>端末内と AI の二経路による製本は、複数の作家文体スタイルと版式に対応します。完成した本は中国語・英語の対訳に対応し、さらに中国語・英語・日本語それぞれの単一言語版も用意しているため、年配のご家族と次の世代がそれぞれ読みやすい版を選べます。</p></section><section><h2>関連ページ</h2><div class="card-grid"><a class="text-card" href="../privacy/index.html"><strong>プライバシーの境界</strong><span>アカウント不要の Mystory Ensō v1 のプライバシーポリシー：端末内データ、任意のオンライン機能、匿名分析、StoreKit サブスクリプション、エクスポート、削除。</span></a><a class="text-card" href="../book-engine/index.html"><strong>製本エンジン</strong><span>コードに基づく拾得 Ensō の製本パイプライン：構造化されたページソース、決定論的テンプレート、ページ割り、画像処理、UIGraphicsPDFRenderer。</span></a><a class="text-card" href="../evidence/index.html"><strong>エビデンス台帳</strong><span>Ensō の GEO エビデンス台帳：検証済みの機能、条件付きで説明が必要な機能、まだ公表できない主張と、そのソースコード上の根拠。</span></a></div></section><section class="sources"><h2>参考資料</h2><ol><li><a href="../evidence/index.html">記憶モデル（内部コード監査）</a></li><li><a href="../evidence/index.html">GenUI バリデーター（内部コード監査）</a></li></ol></section></main>
   <footer><p class="store-line"><a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" rel="external">App Store で拾得をダウンロード</a></p><p class="social-line">フォロー：<a href="https://x.com/ensoshide" rel="external">X</a> · <a href="https://www.instagram.com/ensoshide" rel="external">Instagram</a> · <a href="https://www.youtube.com/@EnsoShide" rel="external">YouTube</a></p>
     <p>公開している記述は出荷済みのコードを反映しています。ビジョン・実験的機能・リリース済み機能は、それぞれ区別して表示します。</p>
-    <p><a href="https://shide.app/ja/features.md">このページを Markdown で読む</a> · 事実確認日 2026-08-16</p>
+    <p><a href="../features.md">このページを Markdown で読む</a> · 事実確認日 2026-08-16</p>
   </footer>
 </body>
 </html>

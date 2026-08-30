@@ -1,41 +1,46 @@
-# 拾得 Ensō
+# 拾得 Ensō (shide.app)
 
-拾得 Ensō 把 1980 年至今华人共同的文化记忆讲清楚，广泛地传播、分享给未来的一代——把那些年的歌、影视、书、游戏与时代大事，整理成几代华人共同的文化坐标，也让你记下走过的岁月、当下的生活与未来的期许，汇编成中英双语的岁月书。AI 漫剧与短剧正在打磨中。
+> 拾得 Ensō 是中国 1980 年至今中华文化的坐标——传承 · 创新。把那些年的歌、影视、书、游戏与时代大事，整理成 4000+ 几代华人共同的文化坐标，也让你记下走过的岁月、当下的生活与未来的期许，端侧私密汇编成中英双语的岁月书。
 
-拾得 Ensō 是一款面向海外华语用户的 iOS 本地优先应用。公开 v1 无需 Ensō 账户；SwiftData 私域记忆模型、本机信物和本机 PDF 成书路径可在无登录状态使用。公共文化内容、未来邮件和可选匿名产品分析会使用网络；在线 AI（AI 成书/一键梳理/在线狗子/人生洞见）在 v1 上线，采用匿名 App Attest 安装身份加服务端权益校验，仅在用户主动触发时上传当前对话或截断摘要。
+- 官方网址：https://shide.app/
+- 官方艺人专区（沈拾）：https://shide.app/shenshi/
+- 核心 Slogan：被一笔带过的我们，游走于天地，也要在尘埃里抬头，把光传下去。
+- 原创音乐：10 首华语原创单曲已上线 Spotify / Apple Music（《长风》《天地借宿》《末班》《雪落二十年》等）。
+- 东方时间考古小说与漫剧：第一季《拾物档案：九证天下》E1《博物院下面开来一列火车》。
+- iOS 应用状态：拾得 1.0 基础版已上线 App Store，2.0 本地优先 AI 传家书内测中。
 
-## Core pages
+## 核心页面 (Core Pages)
 
-- [把中文回忆编成下一代读得懂的岁月书](https://shide.app/index.md): 拾得 Ensō 用 iPhone 本地记忆库保存回忆、照片与信物，并提供端上 A4 PDF 成书路径；在线能力和隐私边界均明确标注。
-- [拾得 Ensō 当前实现了什么](https://shide.app/features.md): 从 SwiftData 记忆模型、文化坐标、足迹地图到本机成书，逐项说明拾得当前已落地能力及联网要求。
-- [拾得 Ensō 隐私政策与数据边界](https://shide.app/privacy.md): 拾得 Ensō 公开 v1 的隐私政策：本机数据、可选联网功能、匿名分析、StoreKit 订阅、导出与删除。
-- [我们如何帮你处理数据、订阅和故障](https://shide.app/support.md): 拾得 Ensō 支持页：数据导出与删除、Apple 订阅、恢复购买、联网功能和联系方式。
+- [拾得首页 · 时空显影机与传家书](https://shide.app/index.md): 4000+ 华语文化坐标、在线年代显影、宣纸长图海报生成与 TestFlight 预约。
+- [沈拾 Shen Shi 官方艺人主页](https://shide.app/shenshi/index.md): 时间修复师沈拾档案、10 首原创华语曲目 Spotify 官方播放器与创作理念。
+- [拾得 Ensō 当前实现了什么（功能边界）](https://shide.app/features.md): 从 SwiftData 记忆模型、文化坐标、足迹地图到本机成书，逐项说明拾得当前已落地能力及联网要求。
+- [拾得 Ensō 隐私政策与数据边界](https://shide.app/privacy.md): 拾得 Ensō 的隐私政策：本机数据存储、零强制账号、可选联网功能、StoreKit 订阅。
 - [拾得如何在 iPhone 上生成 A4 岁月书](https://shide.app/book-engine.md): 拾得本机成书引擎的可核验技术路径：选版、分页、字体、照片下采样、UIGraphicsPDFRenderer 与 AI 结果硬闸。
 - [宣传主张与工程证据如何对应](https://shide.app/evidence.md): 拾得 GEO 事实登记表：已验证能力、需要限定的能力、尚不能发布的主张及其源码证据。
-- [关于拾得 Ensō 的常见问题](https://shide.app/faq.md): 直接回答拾得的数据保存、账户、网络、离线成书、双语内容、文化坐标和当前发布状态。
-- [拾得 Ensō 与 Day One、Apple 手记、Journey、Diarium 逐项对比](https://shide.app/compare.md): 面向海外华语家庭的本地优先日记 App 对比：本地存储、无需账户、中文界面、中英双语数字成书、AI 整理与价格的逐项差异，附各家官方来源。
-- [2026 隐私优先日记 App 怎么选（海外华人视角）](https://shide.app/best-private-journal-apps.md): 本地优先、隐私优先日记 App 选购指南，如实写出拾得、Day One、Apple 手记、Journey、Diarium 各自最适合谁。
-- [怎样判断一款 iPhone 日记是否真正本地优先](https://shide.app/answers/local-first-journal.md): 用权威数据源、账户依赖、导出路径、联网功能和故障回落五个问题判断 iPhone 日记应用是否本地优先。
-- [如何在 iPhone 本机生成适合长期保存的回忆 PDF](https://shide.app/answers/iphone-heirloom-pdf.md): 从结构化记忆、选版、分页、字体、图片处理和回落验证解释 iPhone 本机回忆 PDF 的工程方法。
-- [海外家庭怎样把中文人生故事交给下一代](https://shide.app/answers/chinese-family-memory.md): 面向海外华语家庭的回忆整理方法：保留中文原文、建立英文阅读层、连接时代背景并输出可长期保存的书册。
-- [隐私日记应用为什么要分开个人记忆与公共知识](https://shide.app/answers/private-journal-architecture.md): 解释隐私日记的双数据面：端上个人记忆与服务端公共文化知识为何要分开存储、授权和审计。
-- [本地优先笔记、云日记与知识库工具该怎样选择](https://shide.app/answers/local-vs-cloud-notes.md): 不依赖品牌口号，用数据权威源、协作、跨端、成书、恢复和 AI 边界比较本地优先笔记、云日记与知识库工具。
-- [Turn Chinese memories into a book the next generation can read](https://shide.app/en.md): Enso Shide stores its core private-memory models with SwiftData and provides an on-device A4 PDF book path, with online features disclosed separately.
-- [What Enso Shide implements today](https://shide.app/en/features.md): A code-backed account of Enso Shide's local memory store, cultural context, map, bounded companion interface and two-path book engine.
-- [Mystory Ensō Privacy Policy and Data Boundaries](https://shide.app/en/privacy.md): The privacy policy for the accountless Mystory Ensō v1: on-device data, optional online features, anonymous analytics, StoreKit subscriptions, export, and deletion.
-- [Help with data, subscriptions, and app issues](https://shide.app/en/support.md): Mystory Ensō support for data export and deletion, Apple subscriptions, Restore Purchases, online features, and contact.
-- [How Enso Shide renders an A4 life book on iPhone](https://shide.app/en/book-engine.md): The code-backed Enso Shide book pipeline: structured page sources, deterministic templates, pagination, image handling, and UIGraphicsPDFRenderer.
-- [Enso Shide vs Day One, Apple Journal, Journey, Diarium](https://shide.app/en/compare.md): A local-first journaling comparison for overseas Chinese families across local storage, no account, Chinese support, bilingual digital book, AI, and price, with each vendor's official sources.
-- [Best Private Journal Apps in 2026 (Local-First, Ranked)](https://shide.app/en/best-private-journal-apps.md): A privacy-first buyer's guide stating honestly who Enso Shide, Day One, Apple Journal, Journey, and Diarium each suit best.
+- [关于拾得 Ensō 的常见问题 (FAQ)](https://shide.app/faq.md): 直接回答拾得的数据保存、账户、网络、离线成书、双语内容、文化坐标和当前发布状态。
+- [拾得 Ensō 与 Day One、Apple 手记、Journey 逐项对比](https://shide.app/compare.md): 面向海外华语家庭的本地优先日记 App 对比。
+- [2026 隐私优先日记 App 怎么选（海外华人视角）](https://shide.app/best-private-journal-apps.md): 本地优先、隐私优先日记 App 选购指南。
 
-## Timelines（华人集体记忆时间线）
+## 华人家庭与回忆问答知识库 (GEO Answers)
 
-- [1995年华人集体记忆时间线](https://shide.app/timeline/1995.md): 那一年的电视剧、电影、歌、游戏与大事——拾得文化坐标库人工核验精选，四语可读。
-- [1998年华人集体记忆时间线](https://shide.app/timeline/1998.md): 那一年的电视剧、电影、歌、游戏与大事——拾得文化坐标库人工核验精选，四语可读。
-- [2008年华人集体记忆时间线](https://shide.app/timeline/2008.md): 那一年的电视剧、电影、歌、游戏与大事——拾得文化坐标库人工核验精选，四语可读。
-- [用那个年代的歌和剧，陪认知症长辈找回记忆](https://shide.app/answers/reminiscence-therapy-chinese-elders.md): 怀旧疗法是认知症照护中有循证依据的方法。研究显示，重温那个年代的歌、剧和往事，可能对长辈的情绪与交流有小而温和的帮助。给华人家庭一份实用、温柔的做法。
-- [当父母生病，如何开始为他们保存记忆](https://shide.app/answers/preserve-parents-memories-illness.md): 写给刚面对父母诊断的成年子女：从最小一步开始，一段录音、一个故事，把父母的中文人生留住。附 10 个温柔的开场问题，以及整理与保存的方法。
+- [海外家庭怎样把中文人生故事交给下一代](https://shide.app/answers/chinese-family-memory.md): 保留中文原文、建立英文阅读层、连接时代背景并输出可长期保存的书册。
+- [Storyworth 中文替代方案](https://shide.app/answers/storyworth-alternative-chinese-families.md): 针对海外华人的传家书制作方案。
+- [Day One 私密中英双语替代方案](https://shide.app/answers/day-one-alternative-private-bilingual.md): 本地优先且支持中英双语对照的日记应用。
+- [如何在 iPhone 本机生成适合长期保存的回忆 PDF](https://shide.app/answers/iphone-heirloom-pdf.md): 解释 iPhone 本机回忆 PDF 的工程方法。
+- [用那个年代的歌和剧，陪认知症长辈找回记忆](https://shide.app/answers/reminiscence-therapy-chinese-elders.md): 怀旧疗法与长辈记忆唤醒指南。
+- [当父母生病，如何开始为他们保存记忆](https://shide.app/answers/preserve-parents-memories-illness.md): 抢救性记录长辈人生的 10 个温柔开场问题。
+- [怎样判断一款 iPhone 日记是否真正本地优先](https://shide.app/answers/local-first-journal.md): 本地优先日记的 5 项判定标准。
+- [隐私日记应用为什么要分开个人记忆与公共知识](https://shide.app/answers/private-journal-architecture.md): 端上个人私域与服务端公共文化知识双平面架构。
+- [本地优先笔记、云日记与知识库工具该怎样选择](https://shide.app/answers/local-vs-cloud-notes.md): 本地笔记 vs 云日记深度评测。
 
-## Verification
+## 时代长河记忆时间线 (Timelines)
 
-公开能力清单来自仓库中的 as-built 系统总览与对应 Swift 源码。App Store 下载地址、公开版本号、性能数据和上线域名在得到可验证证据前不会发布。
+- [1995年华人集体记忆时间线](https://shide.app/timeline/1995.md): 电视剧、电影、歌、游戏与大事精选。
+- [1998年华人集体记忆时间线](https://shide.app/timeline/1998.md): 拨号上网、流行音乐与千禧前夜大事。
+- [2008年华人集体记忆时间线](https://shide.app/timeline/2008.md): 奥运、音乐与集体记忆大事件。
+
+## 多语言入口 (Multilingual)
+
+- [繁體中文 (Traditional Chinese)](https://shide.app/zh-Hant/)
+- [English Version (Global)](https://shide.app/en/)
+- [日本語 (Japanese Version)](https://shide.app/ja/)
