@@ -821,7 +821,42 @@
                 印
               </span>
             </button>
-            <span class="text-[10px] text-stone-400 font-mono">#时光便签</span>
+            <button @click="toggleCommentBox(post.id)" class="hover:text-navy transition flex items-center gap-1 px-2 py-0.5 rounded hover:bg-gold/15">
+              <span>💬</span>
+              <span>{{ (post.comments && post.comments.length) ? post.comments.length + ' 条回帖' : '回帖' }}</span>
+            </button>
+          </div>
+
+          <!-- 展开已有回帖列表 (Existing Comments List) -->
+          <div v-if="post.comments && post.comments.length > 0" class="mt-2.5 pt-2.5 border-t border-dashed border-gold/30 space-y-2 bg-paper/60 p-2.5 rounded-xl text-xs">
+            <div v-for="c in post.comments" :key="c.id" class="flex items-start gap-2">
+              <span class="text-sm flex-shrink-0">{{ c.avatar || '🏮' }}</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between text-[10px] font-mono text-ink-sub">
+                  <span class="font-bold text-navy">{{ c.author }}</span>
+                  <span>{{ c.timestamp }}</span>
+                </div>
+                <p class="font-serif text-stone-800 text-xs mt-0.5 leading-snug break-words">{{ c.content }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 行内回帖输入框 (Inline Comment Box) -->
+          <div v-if="activeCommentPostId === post.id" class="mt-2.5 pt-2 border-t border-gold/30 space-y-2">
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input type="text" v-model="commentAuthorInput" placeholder="你的留名（选填）"
+                class="sm:w-1/3 text-[11px] font-mono px-2.5 py-1.5 rounded-lg border border-stone-300 bg-paper focus:outline-none focus:border-navy">
+              <div class="flex-1 flex gap-1.5">
+                <input type="text" v-model="commentTextInput" @keyup.enter="submitComment(post)" placeholder="写下你的回帖与共鸣..."
+                  class="flex-1 text-[11px] font-serif px-2.5 py-1.5 rounded-lg border border-stone-300 bg-paper focus:outline-none focus:border-navy">
+                <button @click="submitComment(post)" class="bg-navy hover:bg-navy-deep text-white text-[11px] font-mono px-3 py-1.5 rounded-lg font-bold transition flex-shrink-0">
+                  发送
+                </button>
+              </div>
+            </div>
+            <p v-if="commentError && activeCommentPostId === post.id" class="text-[10px] font-serif text-amber-700 bg-amber-50 p-1.5 rounded border border-amber-200">
+              ⚠️ {{ commentError }}
+            </p>
           </div>
 
         </div>
@@ -1219,7 +1254,9 @@
   createApp({
     setup() {
       const db = window.ShideChronoscope ? window.ShideChronoscope.YEAR_DATABASE : {};
-      const selectedYear = ref(1998);
+      // 每次打开首页，时空显影机随机显示 1980-2026 其中一年
+      const randomInitialYear = Math.floor(1980 + Math.random() * (2026 - 1980 + 1));
+      const selectedYear = ref(randomInitialYear);
       const userAuthorInput = ref('');
       const userMemoryInput = ref('');
       const boundMemoryOutput = ref('');
@@ -1668,7 +1705,75 @@
           }).catch(() => {});
         } catch (e) {}
 
-        subscribed.value = true;
+      const activeCommentPostId = ref(null);
+      const commentAuthorInput = ref('');
+      const commentTextInput = ref('');
+      const commentError = ref('');
+
+      const toggleCommentBox = (postId) => {
+        if (activeCommentPostId.value === postId) {
+          activeCommentPostId.value = null;
+          commentError.value = '';
+        } else {
+          activeCommentPostId.value = postId;
+          commentTextInput.value = '';
+          commentError.value = '';
+        }
+      };
+
+      const submitComment = (post) => {
+        const text = commentTextInput.value.trim();
+        if (!text) {
+          commentError.value = '请输入回帖内容';
+          return;
+        }
+        if (window.ShideChronoscope) {
+          const check = window.ShideChronoscope.checkRedline(text);
+          if (!check.pass) {
+            commentError.value = check.reason;
+            return;
+          }
+        }
+
+        let authorName = commentAuthorInput.value.trim();
+        if (authorName) {
+          if (window.ShideChronoscope) {
+            const authorCheck = window.ShideChronoscope.checkRedline(authorName);
+            if (!authorCheck.pass) {
+              commentError.value = authorCheck.reason;
+              return;
+            }
+          }
+        } else {
+          try {
+            let seq = parseInt(localStorage.getItem('shide_walker_seq') || '1001', 10);
+            if (isNaN(seq) || seq < 1001) seq = 1001;
+            authorName = `时空漫步者 #${seq}`;
+            localStorage.setItem('shide_walker_seq', String(seq + 1));
+          } catch(e) {
+            authorName = `时空漫步者 #${Math.floor(1000 + Math.random() * 9000)}`;
+          }
+        }
+
+        if (!Array.isArray(post.comments)) {
+          post.comments = [];
+        }
+
+        const newComment = {
+          id: `c-${Date.now()}-${Math.floor(Math.random()*1000)}`,
+          author: authorName,
+          avatar: ['🏮', '📻', '🎸', '🕹️', '🚲', '🌊', '☕', '🥢'][Math.floor(Math.random() * 8)],
+          content: text,
+          timestamp: '刚刚'
+        };
+
+        post.comments.push(newComment);
+        if (window.ShideChronoscope) {
+          window.ShideChronoscope.saveSpacetimeWall(allWallPosts.value);
+        }
+
+        commentTextInput.value = '';
+        commentError.value = '';
       };
 
       return {
@@ -1707,7 +1812,13 @@
         likePost,
         likedPostId,
         drawRandomMemory,
-        submitEmail
+        submitEmail,
+        activeCommentPostId,
+        commentAuthorInput,
+        commentTextInput,
+        commentError,
+        toggleCommentBox,
+        submitComment
       };
     }
   }).mount('#app');

@@ -918,7 +918,8 @@
 
   createApp({
     setup() {
-      const selectedYear = ref(1998);
+      const randomInitialYear = Math.floor(1980 + Math.random() * (2026 - 1980 + 1));
+      const selectedYear = ref(randomInitialYear);
       const userMemoryInput = ref('');
       const boundMemoryOutput = ref('');
       const isExporting = ref(false);

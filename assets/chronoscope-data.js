@@ -11804,10 +11804,15 @@
           const seedMap = new Map();
           SEED_WALL_POSTS.forEach(p => seedMap.set(p.id, { ...p }));
           
-          // 保留用户点赞过的共鸣数
+          // 保留用户点赞过的共鸣数与评论
           parsed.forEach(p => {
-            if (seedMap.has(p.id) && typeof p.likes === 'number') {
-              seedMap.get(p.id).likes = p.likes;
+            if (seedMap.has(p.id)) {
+              if (typeof p.likes === 'number') {
+                seedMap.get(p.id).likes = p.likes;
+              }
+              if (Array.isArray(p.comments)) {
+                seedMap.get(p.id).comments = p.comments;
+              }
             }
           });
           
