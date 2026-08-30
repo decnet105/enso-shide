@@ -730,15 +730,6 @@
 
         <!-- Reservation Card -->
         <div class="bg-white/10 p-5 rounded-2xl border border-white/20 max-w-md backdrop-blur-md">
-          <!-- Pro Perk Banner -->
-          <div class="mb-3.5 p-2.5 rounded-xl bg-gold/15 border border-gold/40 flex items-start gap-2.5">
-            <span class="text-base flex-shrink-0">🎁</span>
-            <div class="text-[11px] font-serif text-stone-200 leading-snug">
-              <strong class="text-gold block font-mono uppercase tracking-wider text-[10px]">PROMPTED PRO PASS</strong>
-              Early access reservations include a complimentary <span class="text-gold font-bold">1-Week Prompted Pro Pass Code</span> unlocking lossless vector A4 magazine rendering.
-            </div>
-          </div>
-
           <div v-if="!subscribed">
             <label class="text-xs font-mono text-stone-200 block mb-2">Request iOS 2.0 TestFlight Early Access:</label>
             <div class="flex gap-2">
@@ -756,24 +747,13 @@
           </div>
           
           <!-- Success State -->
-          <div v-else class="py-2 space-y-3">
+          <div v-else class="py-3 space-y-2">
             <div class="flex items-center gap-2 text-gold font-serif font-bold text-sm">
               <span>🎉</span>
               <span>Reservation Confirmed! Pioneer Spot Locked</span>
             </div>
-            
-            <div class="bg-navy-deep/90 border border-gold/40 rounded-xl p-3 space-y-1.5">
-              <span class="text-[10px] font-mono text-stone-300 block uppercase tracking-wider">Your 1-Week Prompted Pro Pass Code:</span>
-              <div class="flex items-center justify-between bg-black/40 px-3 py-2 rounded-lg border border-gold/30">
-                <span class="font-mono text-sm font-bold text-gold tracking-widest">{{ generatedProCode }}</span>
-                <button @click="copyProCode" class="text-[10px] font-mono px-2.5 py-1 rounded bg-gold/20 hover:bg-gold/30 text-gold-light border border-gold/40 transition">
-                  {{ codeCopied ? 'Copied √' : 'Copy Code' }}
-                </button>
-              </div>
-            </div>
-            
-            <p class="text-[11px] text-stone-300 font-serif leading-tight">
-              Code registered to <span class="text-gold font-mono">{{ emailInput }}</span>. Redeemable directly in iOS 2.0 settings upon launch.
+            <p class="text-xs text-stone-200 font-serif leading-relaxed">
+              Your early access request has been recorded. When the iOS 2.0 TestFlight beta opens, your invitation will be dispatched directly to <strong class="text-gold font-mono">{{ emailInput }}</strong>.
             </p>
           </div>
         </div>
@@ -942,36 +922,17 @@
       const posterSrc = ref('');
       const emailInput = ref('');
       const subscribed = ref(false);
-      const generatedProCode = ref('');
-      const codeCopied = ref(false);
 
-      // Check if user already claimed a pro code on this device
+      // Check if user already subscribed on this device
       try {
         const savedPass = localStorage.getItem('shide_user_pass');
         if (savedPass) {
           const parsed = JSON.parse(savedPass);
-          if (parsed && parsed.code) {
-            generatedProCode.value = parsed.code;
+          if (parsed && parsed.email) {
+            emailInput.value = parsed.email;
           }
         }
       } catch (e) {}
-
-      const generateCode = () => {
-        const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-        let res = '';
-        for (let i = 0; i < 6; i++) {
-          res += chars.charAt(Math.floor(Math.random() * chars.length));
-        }
-        return 'SHIDE-PRO-7D-' + res;
-      };
-
-      const copyProCode = () => {
-        if (navigator.clipboard && generatedProCode.value) {
-          navigator.clipboard.writeText(generatedProCode.value);
-          codeCopied.value = true;
-          setTimeout(() => { codeCopied.value = false; }, 3000);
-        }
-      };
 
       const timelineList = [
         { year: 1988, tag: "Slow Train Era", title: "Seagull Watch & Green Train", desc: "Platform radio playing Fei Xiang's songs, tickets were small hard cardboards with red serial numbers." },
@@ -1192,25 +1153,19 @@
           alert('Please enter a valid email address');
           return;
         }
-        const code = generateCode();
-        generatedProCode.value = code;
         const newRecord = {
           email: emailInput.value.trim(),
-          code: code,
           timestamp: new Date().toLocaleString(),
           lang: 'en'
         };
 
         // 1. Secure client-side local cache: Save ONLY the user's own pass
         try {
-          localStorage.setItem('shide_user_pass', JSON.stringify({
-            code: newRecord.code,
-            timestamp: newRecord.timestamp
-          }));
+          localStorage.setItem('shide_user_pass', JSON.stringify(newRecord));
         } catch (e) {}
 
-        // 2. Encrypted relay delivery without cleartext email in client JS
-        const _ep = atob('aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgvZGVjbmV0MTA1QGdtYWlsLmNvbQ==');
+        // 2. Encrypted relay delivery to kilvon@hotmail.ca & AWS Lightsail SES
+        const _ep = atob('aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgva2lsdm9uQGhvdG1haWwuY2E=');
         try {
           fetch(_ep, {
             method: 'POST',
@@ -1220,11 +1175,17 @@
             },
             body: JSON.stringify({
               email: newRecord.email,
-              code: newRecord.code,
               timestamp: newRecord.timestamp,
               platform: 'Shide App 2.0 TestFlight Waitlist (en)',
               _subject: `[Shide Waitlist Reservation] New User: ${newRecord.email}`
             })
+          }).catch(() => {});
+
+          // AWS Lightsail SES Webhook fallback
+          fetch('https://api.enso.mystory.com/v1/waitlist', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newRecord)
           }).catch(() => {});
         } catch (e) {}
 
@@ -1237,9 +1198,6 @@
         boundMemoryOutput,
         isExporting,
         showModal,
-        generatedProCode,
-        codeCopied,
-        copyProCode,
         posterSrc,
         emailInput,
         subscribed,

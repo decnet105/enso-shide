@@ -306,6 +306,12 @@
 
       <div class="space-y-3 mb-4">
         <div>
+          <label class="block text-xs font-mono text-ink-sub mb-1">你的留名 / ID（选填）：</label>
+          <input type="text" v-model="modalAuthor" placeholder="例如：@林夕海 / 留空则自动时空编号"
+            class="w-full text-xs px-3 py-2 rounded-xl border border-stone-300 bg-white focus:outline-none focus:border-navy font-mono">
+        </div>
+
+        <div>
           <label class="block text-xs font-mono text-ink-sub mb-1">选择年代 (1980–2026):</label>
           <select v-model="modalYear" class="w-full text-xs px-3 py-2 rounded-xl border border-stone-300 bg-white focus:outline-none focus:border-navy font-mono">
             <option v-for="y in allYears" :key="y" :value="y">{{ y }} 年 · {{ getYearData(y).event }}</option>
@@ -369,6 +375,7 @@
       const highlightedId = ref(null);
       
       const showAddModal = ref(false);
+      const modalAuthor = ref('');
       const modalYear = ref(1998);
       const modalContent = ref('');
       const modalRedlineError = ref('');
@@ -477,6 +484,27 @@
             return;
           }
         }
+
+        let authorName = modalAuthor.value.trim();
+        if (authorName) {
+          if (window.ShideChronoscope) {
+            const authorCheck = window.ShideChronoscope.checkRedline(authorName);
+            if (!authorCheck.pass) {
+              modalRedlineError.value = authorCheck.reason;
+              return;
+            }
+          }
+        } else {
+          try {
+            let seq = parseInt(localStorage.getItem('shide_walker_seq') || '1001', 10);
+            if (isNaN(seq) || seq < 1001) seq = 1001;
+            authorName = `时空漫步者 #${seq}`;
+            localStorage.setItem('shide_walker_seq', String(seq + 1));
+          } catch(e) {
+            authorName = `时空漫步者 #${Math.floor(1000 + Math.random() * 9000)}`;
+          }
+        }
+
         modalRedlineError.value = '';
 
         const y = modalYear.value;
@@ -493,7 +521,7 @@
         const newPost = {
           id: `post-${y}-${Date.now()}`,
           year: y,
-          author: `时空漫步者 #${Math.floor(1000 + Math.random() * 9000)}`,
+          author: authorName,
           avatar: ['🏮', '📻', '🎸', '🕹️', '🚲', '🌊', '☕', '🥢'][Math.floor(Math.random() * 8)],
           timestamp: '刚刚',
           content: text,
@@ -509,6 +537,7 @@
           window.ShideChronoscope.saveSpacetimeWall(allPosts.value);
         }
 
+        modalAuthor.value = '';
         modalContent.value = '';
         showAddModal.value = false;
         highlightedId.value = newPost.id;
@@ -551,6 +580,7 @@
         viewMode,
         filteredPosts,
         showAddModal,
+        modalAuthor,
         modalYear,
         modalContent,
         modalRedlineError,

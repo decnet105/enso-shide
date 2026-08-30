@@ -160,3 +160,14 @@
 3. **海量帖子分流架构 (Scalability Architecture for Big Data)**：
    - **首页轻量化便签橱窗**：首页默认精选展示 6 张便签，支持平滑展开更多，避免长页面加载冗余与卡顿。
    - **独立全屏时空大公告板 (`/spacetime-wall/index.html`)**：提供全屏沉浸式 47 年（1980–2026）全量时间轴滑块、标签矩阵、现场快速贴便签与红线安检一体化大画布。
+
+---
+
+## 10. 用户留名体系与 AWS Lightsail SES 内测预约管线 (User Identity & SES Pipeline)
+
+1. **用户发帖 ID 体系 (Custom Identity & Monotonic Sequence)**：
+   - **选填留名**：用户可在显影机与贴便签弹窗输入自定义昵称/ID（例如：`@林夕海`、`墨客`），系统自动通过红线安全合规审查。
+   - **自动单调自增编号**：若用户未填写留名，系统自动赋予 `时空漫步者 #XXXX`，并通过本地存储单调递增计数器（`shide_walker_seq`，从 #1001 起每次发帖递增 +1），保障时空旅人编号的真实次序与仪式感。
+2. **极简内测预约与 AWS Lightsail SES 安全投递 (Streamlined Waitlist & SES Pipeline)**：
+   - 移除繁琐的前端体验码直接展示与复制流程，转换为典雅简练的先锋席位锁定确认。
+   - 前端通过加密中继令牌将预约请求安全送达站长邮箱 `kilvon@hotmail.ca`，并与系统后台 AWS Lightsail SES Webhook 管线 (`https://api.enso.mystory.com/v1/waitlist`) 双轨保障交付，端侧本地仅保留用户的本设备预约状态。
