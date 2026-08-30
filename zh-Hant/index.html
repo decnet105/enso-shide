@@ -69,6 +69,10 @@
   </script>
 
   <style>
+    [v-cloak] {
+      display: none !important;
+    }
+
     body {
       background-color: #F8F6F0;
       color: #111111;
@@ -128,7 +132,7 @@
 </head>
 <body class="bg-paper-texture antialiased selection:bg-cinnabar selection:text-white">
 
-<div id="app" class="w-full flex flex-col items-center">
+<div id="app" v-cloak class="w-full flex flex-col items-center">
 
   <!-- 1. 頂奢畫冊式導航 -->
   <header class="w-full max-w-7xl px-6 md:px-12 py-8 flex justify-between items-center z-40">

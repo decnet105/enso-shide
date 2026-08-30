@@ -61,6 +61,10 @@
     .custom-scroll::-webkit-scrollbar-track {
       background: #F0ECE1;
     }
+    [v-cloak] {
+      display: none !important;
+    }
+
     .corkboard {
       background-color: #F2EDE4;
       background-image: radial-gradient(#E2D8C7 1.5px, transparent 1.5px);
@@ -78,7 +82,7 @@
 </head>
 <body class="min-h-screen flex flex-col items-center">
 
-<div id="app" class="w-full flex flex-col items-center">
+<div id="app" v-cloak class="w-full flex flex-col items-center">
 
   <!-- 1. 顶栏导航与返回首页 -->
   <header class="w-full max-w-7xl px-6 md:px-12 py-5 flex items-center justify-between border-b border-gold/30 bg-paper/90 backdrop-blur sticky top-0 z-40">
@@ -625,20 +629,30 @@
       };
 
       onMounted(() => {
-        // 检测 URL 是否带有新上墙的 post id
         const params = new URLSearchParams(window.location.search);
         const hl = params.get('highlight');
+        const action = params.get('action');
+
+        if (action === 'new') {
+          showAddModal.value = true;
+        }
+
         if (hl) {
-          setTimeout(() => {
-            const cardEl = document.getElementById('card-' + hl);
-            if (cardEl) {
-              cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              highlightedId.value = hl;
-              setTimeout(() => {
-                highlightedId.value = null;
-              }, 4000);
-            }
-          }, 300);
+          const yearNum = parseInt(hl, 10);
+          if (!isNaN(yearNum) && yearNum >= 1980 && yearNum <= 2026) {
+            selectedYearFilter.value = yearNum;
+          } else {
+            setTimeout(() => {
+              const cardEl = document.getElementById('card-' + hl);
+              if (cardEl) {
+                cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                highlightedId.value = hl;
+                setTimeout(() => {
+                  highlightedId.value = null;
+                }, 4000);
+              }
+            }, 300);
+          }
         }
       });
 
