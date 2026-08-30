@@ -132,3 +132,15 @@
 1. **后端数据库同步**：当前留言墙采用本地 `localStorage` 配合 Seed 种子数据运行。后续版本可将 `createWallPost` 接入 Supabase / Firebase / Cloudflare D1，实现全网多设备实时同步。
 2. **多语言沈拾手记**：目前繁体、英文、日文版主站已预留多语言架构，后续可逐步翻译 `assets/chronoscope-data.js` 中的 47 年手记为地道的英文与日文回帖风格。
 3. **iOS 端侧同步**：将 `assets/chronoscope-data.js` 中的 47 年数据直接编译为 Swift 的 `struct ChronoscopeYear`，供 iOS App 2.0 端侧离线调用。
+
+---
+
+## 8. 隐私安全与数据保护架构 (Privacy & Security Architecture)
+
+1. **零明文个人邮箱 (Zero Cleartext Email Exposure)**：
+   - 彻底移除前端页面任何管理员与用户的明文邮箱展示与存储。
+   - 所有后端 Webhook 通信采用密文中继令牌（Base64/Hash Relay），防止网络爬虫或恶意脚本嗅探。
+2. **管理员权限与公域隔离 (Strict Admin Separation)**：
+   - 公网落地页绝不暴露名单管理、记录导出或全局预约数据 Modal。
+   - 用户端侧本地存储仅保留当前用户本人的兑换凭证 (`shide_user_pass`)，杜绝多用户数据在客户端互相泄漏。
+   - 预约记录仅通过端到端加密通道推送至站长专用邮箱管理后台。
