@@ -745,6 +745,19 @@
           {{ tag }}
         </button>
       </div>
+
+      <!-- Top 10 最热闹年代 -->
+      <div class="pt-2 border-t border-gold/20 flex flex-wrap items-center gap-2">
+        <span class="text-xs font-serif font-bold text-navy mr-1 flex items-center gap-1">
+          <span>🔥 Top 10 留言年代:</span>
+        </span>
+        <a v-for="(item, rank) in top10Years" :key="item.year" :href="'./spacetime-wall/index.html?highlight=' + item.year"
+          class="px-2 py-0.5 rounded-lg text-[11px] font-mono bg-white hover:bg-gold/20 text-stone-700 border border-gold/30 transition flex items-center gap-1">
+          <span class="font-bold text-cinnabar">#{{ rank + 1 }}</span>
+          <span>{{ item.year }}</span>
+          <span class="text-[10px] text-stone-400">({{ item.count }}条)</span>
+        </a>
+      </div>
     </div>
 
     <!-- 东方木纹/宣纸质感公告板容器 (Tactile Bulletin Corkboard Canvas) -->
@@ -1442,6 +1455,17 @@
         return filteredWallPosts.value.slice(0, displayLimit.value);
       });
 
+      const top10Years = computed(() => {
+        const counts = {};
+        allWallPosts.value.forEach(p => {
+          counts[p.year] = (counts[p.year] || 0) + 1;
+        });
+        return Object.keys(counts)
+          .map(y => ({ year: parseInt(y, 10), count: counts[y] }))
+          .sort((a, b) => b.count - a.count || b.year - a.year)
+          .slice(0, 10);
+      });
+
       const filterWallByTag = (tag) => {
         selectedWallTag.value = tag;
       };
@@ -1671,6 +1695,7 @@
         searchQuery,
         displayLimit,
         popularTags,
+        top10Years,
         filterWallByTag,
         likePost,
         likedPostId,

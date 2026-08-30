@@ -129,13 +129,62 @@
       </div>
     </div>
 
-    <!-- 3. 年代横向滑动飞梭导轨 (1980–2026 47年快速筛选) -->
+    <!-- 2.5 全站时空统计看板与 Top 10 最热闹年代 -->
+    <div class="bg-gradient-to-r from-navy-deep via-navy to-navy-deep text-white border border-gold/40 rounded-3xl p-5 sm:p-6 mb-6 shadow-xl relative overflow-hidden">
+      <!-- 背景光晕装饰 -->
+      <div class="absolute -right-12 -top-12 w-48 h-48 bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <!-- 左侧：宏观数据 -->
+        <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-white/15 pb-4 md:pb-0 md:pr-6 flex items-center justify-around sm:justify-start gap-6">
+          <div>
+            <div class="text-[10px] font-mono text-gold tracking-widest uppercase mb-0.5">TOTAL ARCHIVES</div>
+            <div class="text-2xl sm:text-3xl font-serif font-black text-white flex items-baseline gap-1">
+              <span>{{ allPosts.length }}</span>
+              <span class="text-xs font-serif font-normal text-stone-300">张时光便签</span>
+            </div>
+            <div class="text-[10px] text-stone-300 font-mono mt-0.5">● 1980–2026 47年全量封存</div>
+          </div>
+          <div>
+            <div class="text-[10px] font-mono text-gold tracking-widest uppercase mb-0.5">AUTHENTIC TOKENS</div>
+            <div class="text-2xl sm:text-3xl font-serif font-black text-gold-light flex items-baseline gap-1">
+              <span>4,000+</span>
+              <span class="text-xs font-serif font-normal text-stone-300">历史信物</span>
+            </div>
+            <div class="text-[10px] text-stone-300 font-mono mt-0.5">● 独家端侧文化坐标</div>
+          </div>
+        </div>
+
+        <!-- 右侧：Top 10 最热闹留言年代 -->
+        <div class="md:col-span-8">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-serif font-bold text-gold flex items-center gap-1.5">
+              <span>🔥 Top 10 最热闹年代（点击直达）：</span>
+            </span>
+            <span class="text-[10px] font-mono text-stone-300">按留言数量排序</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button v-for="(item, rank) in top10Years" :key="item.year" @click="filterByTopYear(item.year)"
+              :class="selectedYearFilter === item.year ? 'bg-cinnabar text-white border-cinnabar font-bold shadow-lg scale-105' : 'bg-white/10 hover:bg-white/20 text-stone-200 border-white/20'"
+              class="px-2.5 py-1 rounded-xl text-xs font-mono border transition flex items-center gap-1.5 group">
+              <span class="font-bold text-[10px]" :class="rank === 0 ? 'text-amber-400' : (rank === 1 ? 'text-stone-300' : (rank === 2 ? 'text-amber-600' : 'text-stone-400'))">
+                #{{ rank + 1 }}
+              </span>
+              <span class="font-bold text-white">{{ item.year }}</span>
+              <span class="text-[10px] text-gold-light opacity-90">({{ item.count }}条)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. 年代横向滑动飞梭导轨 (1980–2026 47年快速筛选，带每年代数字) -->
     <div class="bg-paper-tint/80 border border-gold/30 rounded-2xl p-4 mb-6 shadow-sm">
       <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-mono text-ink-sub flex items-center gap-1">
           <span>⏱️ 年代飞梭筛选 (1980–2026):</span>
           <strong v-if="selectedYearFilter !== 'all'" class="text-cinnabar font-serif ml-1">
-            {{ selectedYearFilter }} 年 · {{ getYearData(selectedYearFilter).event }}
+            {{ selectedYearFilter }} 年 · {{ getYearData(selectedYearFilter).event }} ({{ getYearCount(selectedYearFilter) }} 条便签)
           </strong>
         </span>
         <button v-if="selectedYearFilter !== 'all'" @click="selectedYearFilter = 'all'" class="text-xs font-mono text-stone-500 hover:text-navy underline">
@@ -154,6 +203,7 @@
           class="px-2.5 py-1.5 rounded-lg text-xs font-mono border border-gold/30 flex-shrink-0 transition flex items-center gap-1">
           <span class="w-2 h-2 rounded-full inline-block" :style="{ backgroundColor: getYearColor(y) }"></span>
           <span>{{ y }}</span>
+          <span class="text-[10px] opacity-75 font-mono font-normal">({{ getYearCount(y) }})</span>
         </button>
       </div>
     </div>
@@ -394,6 +444,28 @@
         return db[y] ? db[y].color : '#12365E';
       };
 
+      const getYearCount = (year) => {
+        if (!allPosts.value) return 0;
+        return allPosts.value.filter(p => p.year === year).length;
+      };
+
+      const top10Years = computed(() => {
+        const counts = {};
+        allPosts.value.forEach(p => {
+          counts[p.year] = (counts[p.year] || 0) + 1;
+        });
+        return Object.keys(counts)
+          .map(y => ({ year: parseInt(y, 10), count: counts[y], data: getYearData(parseInt(y, 10)) }))
+          .sort((a, b) => b.count - a.count || b.year - a.year)
+          .slice(0, 10);
+      });
+
+      const filterByTopYear = (year) => {
+        selectedYearFilter.value = year;
+        selectedTag.value = 'all';
+        searchQuery.value = '';
+      };
+
       const filteredPosts = computed(() => {
         let list = allPosts.value;
         const year = selectedYearFilter.value;
@@ -588,6 +660,9 @@
         highlightedId,
         getYearData,
         getYearColor,
+        getYearCount,
+        top10Years,
+        filterByTopYear,
         likePost,
         drawRandomMemory,
         resetFilters,
