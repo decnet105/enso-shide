@@ -498,7 +498,7 @@
   <!-- 5. 【日晷刻度 极简几何海报：时空显影机】(Minimalist Sundial Portal Poster) -->
   <section id="radar" class="w-full max-w-7xl px-6 md:px-12 py-20 relative">
     
-    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-paper min-h-[720px] flex items-center justify-center p-6 sm:p-12">
+    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-paper min-h-[740px] flex items-center justify-center p-6 sm:p-12">
       
       <!-- 极简日晷与朱砂大图背景 -->
       <img src="./assets/poster-portal-sundial.jpg" alt="日晷天工与朱砂钤印" 
@@ -508,34 +508,86 @@
       <div class="relative z-10 glass-capsule rounded-3xl p-6 sm:p-10 md:p-12 shadow-portal max-w-2xl w-full border border-gold/40 space-y-6">
         
         <div class="text-center space-y-2">
-          <span class="bg-navy text-white text-[10px] font-mono font-bold px-3.5 py-1 rounded-full tracking-widest uppercase">
-            INTERACTIVE TIME-SPACE DEVELOPER
-          </span>
+          <div class="inline-flex items-center gap-2">
+            <span class="bg-navy text-white text-[10px] font-mono font-bold px-3.5 py-1 rounded-full tracking-widest uppercase">
+              1980–2026 // 47-YEAR CHRONOSCOPE
+            </span>
+            <span class="bg-gold/20 text-gold-deep border border-gold/40 text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full">
+              4000+ 文化坐标
+            </span>
+          </div>
           <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy">时空显影机 · 认领你的时代印笺</h2>
           <p class="text-xs sm:text-sm text-ink-sub font-serif">
-            输入当年的一件小事，实时绑定 4000+ 文化坐标与沈拾手记，生成 4K 宣纸长图
+            1980 至今 47 年文化印记全量覆盖。输入当年的一件小事，实时绑定公域坐标与沈拾手记
           </p>
         </div>
 
-        <!-- 年份滑块 -->
+        <!-- 快速年代跃迁与随机穿梭 Chips -->
+        <div class="flex flex-wrap justify-center items-center gap-2 pt-1">
+          <button @click="jumpDecade(1980)" :class="decadeActive('80s') ? 'bg-navy text-white' : 'bg-white/80 text-navy hover:bg-gold/20'" class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold border border-gold/30 transition">
+            '80s 慢车
+          </button>
+          <button @click="jumpDecade(1990)" :class="decadeActive('90s') ? 'bg-navy text-white' : 'bg-white/80 text-navy hover:bg-gold/20'" class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold border border-gold/30 transition">
+            '90s 摇滚
+          </button>
+          <button @click="jumpDecade(2000)" :class="decadeActive('00s') ? 'bg-navy text-white' : 'bg-white/80 text-navy hover:bg-gold/20'" class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold border border-gold/30 transition">
+            '00s 周董
+          </button>
+          <button @click="jumpDecade(2010)" :class="decadeActive('10s') ? 'bg-navy text-white' : 'bg-white/80 text-navy hover:bg-gold/20'" class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold border border-gold/30 transition">
+            '10s 移动
+          </button>
+          <button @click="jumpDecade(2020)" :class="decadeActive('20s') ? 'bg-navy text-white' : 'bg-white/80 text-navy hover:bg-gold/20'" class="px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold border border-gold/30 transition">
+            '20s 天命
+          </button>
+          <button @click="randomYear" class="px-3 py-1 rounded-lg text-[11px] font-mono font-bold bg-cinnabar text-white hover:bg-cinnabar-glow transition flex items-center gap-1 shadow-sm">
+            <span>🎲 随机穿梭</span>
+          </button>
+        </div>
+
+        <!-- 年份滑块与传统年色显影 -->
         <div class="flex flex-col items-center pt-2">
           <div class="flex items-center gap-6 mb-3">
             <button @click="stepYear(-1)" class="w-10 h-10 rounded-full bg-white border border-gold/40 text-navy hover:bg-gold/10 flex items-center justify-center text-xl font-bold transition shadow-sm">‹</button>
-            <div class="text-center min-w-[140px]">
-              <span class="text-5xl sm:text-6xl font-display font-black text-cinnabar tracking-wider block">{{ selectedYear }}</span>
-              <span class="text-[11px] font-mono text-ink-sub tracking-widest uppercase block">{{ currentEraSubtitle }}</span>
+            <div class="text-center min-w-[170px]">
+              <div class="flex items-center justify-center gap-2">
+                <span class="text-5xl sm:text-6xl font-display font-black tracking-wider block" :style="{ color: currentData.color || '#C41E3A' }">
+                  {{ selectedYear }}
+                </span>
+              </div>
+              <div class="flex items-center justify-center gap-2 mt-1">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold"
+                  :style="{ backgroundColor: currentData.color + '20', color: currentData.color, border: '1px solid ' + currentData.color }">
+                  <span class="w-1.5 h-1.5 rounded-full" :style="{ backgroundColor: currentData.color }"></span>
+                  年色 · {{ currentData.colorName }}
+                </span>
+                <span class="text-[10px] font-mono text-ink-sub bg-white/70 border border-gold/30 px-2 py-0.5 rounded-full">
+                  {{ currentData.tag }}
+                </span>
+              </div>
             </div>
             <button @click="stepYear(1)" class="w-10 h-10 rounded-full bg-white border border-gold/40 text-navy hover:bg-gold/10 flex items-center justify-center text-xl font-bold transition shadow-sm">›</button>
           </div>
-          <input type="range" min="1980" max="2024" v-model.number="selectedYear" class="w-full max-w-sm accent-cinnabar cursor-pointer h-2 bg-stone-200 rounded-lg">
+          <input type="range" min="1980" max="2026" v-model.number="selectedYear" class="w-full max-w-md accent-cinnabar cursor-pointer h-2 bg-stone-200 rounded-lg">
+          <div class="flex justify-between w-full max-w-md text-[10px] font-mono text-ink-sub mt-1 px-1">
+            <span>1980 庐山初吻</span>
+            <span>1998 千禧前夜</span>
+            <span>2008 鸟巢之夏</span>
+            <span>2026 丙午正新</span>
+          </div>
         </div>
 
         <!-- 显影结果纸片 -->
-        <div class="bg-paper-tint/90 border border-gold/40 rounded-2xl p-5 sm:p-6 space-y-4 shadow-inner">
+        <div class="bg-paper-tint/95 border border-gold/40 rounded-2xl p-5 sm:p-6 space-y-4 shadow-inner">
           <div class="flex justify-between items-start border-b border-gold/30 pb-3">
             <div>
-              <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-widest">COORDINATE // NO.{{ selectedYear }}</span>
-              <h3 class="text-lg sm:text-xl font-serif font-bold text-navy mt-0.5">{{ currentData.event }}</h3>
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] font-mono font-bold uppercase tracking-widest px-2 py-0.5 rounded"
+                  :style="{ backgroundColor: currentData.color + '25', color: currentData.color }">
+                  {{ currentData.eventCode }}
+                </span>
+                <span class="text-[10px] font-mono text-ink-sub">1980–2026 华语坐标</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-serif font-bold text-navy mt-1">{{ currentData.event }}</h3>
             </div>
             <img src="./assets/enso-seal-official.png" class="w-8 h-8 rounded shadow-sm border border-gold/30">
           </div>
@@ -547,11 +599,11 @@
             </p>
           </div>
 
-          <!-- 沈拾手记 -->
-          <div class="bg-white p-4 rounded-xl border-l-4 border-cinnabar shadow-sm">
+          <!-- 沈拾手记 (诙谐幽默调侃风格) -->
+          <div class="bg-white p-4 rounded-xl border-l-4 shadow-sm" :style="{ borderLeftColor: currentData.color }">
             <div class="flex items-center justify-between mb-1">
               <span class="text-xs font-serif font-bold text-navy flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-cinnabar"></span>
+                <span class="w-2 h-2 rounded-full" :style="{ backgroundColor: currentData.color }"></span>
                 沈拾 · 修复师手记
               </span>
               <span class="text-[9px] font-mono text-gold font-bold uppercase tracking-wider">RESTORER NOTE</span>
@@ -568,31 +620,165 @@
             </label>
             <div class="flex gap-2">
               <input type="text" v-model="userMemoryInput" :placeholder="currentData.placeholder"
+                @input="handleInputValidate"
                 class="flex-1 text-xs px-3 py-2 rounded-lg border border-stone-300 focus:outline-none focus:border-navy bg-paper">
               <button @click="bindMemory" class="bg-navy hover:bg-navy-deep text-white text-xs font-mono px-4 py-2 rounded-lg font-bold transition">
                 显影
               </button>
             </div>
-            <p v-if="boundMemoryOutput" class="mt-2 text-xs font-serif text-cinnabar leading-relaxed border-t border-gold/20 pt-1.5 font-medium">
-              ⚡ 你的专属印记：{{ boundMemoryOutput }}
+            
+            <!-- 红线敏感词拦截警告 -->
+            <p v-if="redlineWarning" class="mt-2 text-[11px] font-serif text-amber-700 bg-amber-50 p-2 rounded-lg border border-amber-200 leading-snug">
+              ⚠️ {{ redlineWarning }}
+            </p>
+
+            <p v-if="boundMemoryOutput && !redlineWarning" class="mt-2 text-xs font-serif text-cinnabar leading-relaxed border-t border-gold/20 pt-1.5 font-medium flex items-center justify-between">
+              <span>⚡ 你的专属印记：{{ boundMemoryOutput }}</span>
+              <span class="text-[10px] font-mono text-stone-400">已就绪</span>
             </p>
           </div>
 
-          <!-- 行动按钮 -->
+          <!-- 行动按钮：生成长图 & 直接上墙 -->
           <div class="flex flex-col sm:flex-row gap-3 pt-1">
             <button @click="exportPoster" :disabled="isExporting"
               class="flex-1 bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm py-3.5 px-4 rounded-xl font-mono font-bold tracking-wider transition shadow-lg flex items-center justify-center gap-2">
               <span>📸 生成我的《时代印笺》长图</span>
               <span v-if="isExporting" class="animate-spin text-xs">⏳</span>
             </button>
-            <a href="#app-book"
-              class="flex-1 bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm py-3.5 px-4 rounded-xl font-mono font-bold tracking-wider text-center transition shadow-lg flex items-center justify-center">
-              <span>📖 装订进 App 传家书 ›</span>
-            </a>
+            <button @click="postToWallDirectly"
+              class="flex-1 bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm py-3.5 px-4 rounded-xl font-mono font-bold tracking-wider text-center transition shadow-lg flex items-center justify-center gap-1.5">
+              <span>🚀 贴到时空留言墙围观</span>
+              <span>›</span>
+            </button>
           </div>
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- 5.5 【时代回声 · 时空留言墙】(Spacetime Message Wall with Auto-Tagging & Redline Governance) -->
+  <section id="spacetime-wall" class="w-full max-w-7xl px-6 md:px-12 py-16 border-t border-gold/25">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase mb-2">
+          <span>SPACETIME WALL // COMMUNITY MEMORY STREAM</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy">
+          时代回声 · 时空留言墙
+        </h2>
+        <p class="text-xs sm:text-sm text-ink-sub font-serif mt-1">
+          每个人都是一粒微尘，但只要被记下，便在时间的长河里有了姓名。点击任意标签探索同类时空印记。
+        </p>
+      </div>
+
+      <!-- 快速发布一条时空留痕 -->
+      <div class="flex items-center gap-3">
+        <a href="#portal" class="bg-navy hover:bg-navy-deep text-white text-xs font-mono py-2.5 px-4 rounded-xl font-bold transition flex items-center gap-1.5 shadow">
+          <span>✍️ 我也要去显影上墙</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 标签筛选栏 (Interactive Tag Filtering) -->
+    <div class="bg-paper-tint/60 border border-gold/30 rounded-2xl p-4 mb-8 space-y-3">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-mono text-ink-sub uppercase tracking-wider flex items-center gap-1.5">
+          <span>🏷️ 智能时空标签索引：</span>
+          <span v-if="selectedWallTag !== 'all'" class="text-cinnabar font-bold font-serif">
+            当前筛选：{{ selectedWallTag }}
+          </span>
+        </span>
+        <button v-if="selectedWallTag !== 'all'" @click="filterWallByTag('all')" class="text-xs font-mono text-stone-500 hover:text-navy underline">
+          重置全部
+        </button>
+      </div>
+
+      <div class="flex flex-wrap gap-2">
+        <button @click="filterWallByTag('all')" 
+          :class="selectedWallTag === 'all' ? 'bg-navy text-white' : 'bg-white text-navy hover:bg-gold/15'"
+          class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition">
+          全部时空 ({{ allWallPosts.length }})
+        </button>
+        <button @click="filterWallByTag('hot')" 
+          :class="selectedWallTag === 'hot' ? 'bg-cinnabar text-white' : 'bg-white text-navy hover:bg-gold/15'"
+          class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition flex items-center gap-1">
+          <span>🔥 最多共鸣</span>
+        </button>
+        <button v-for="tag in popularTags" :key="tag" @click="filterWallByTag(tag)"
+          :class="selectedWallTag === tag ? 'bg-navy text-white' : 'bg-white text-navy hover:bg-gold/15'"
+          class="px-3 py-1 rounded-full text-xs font-mono border border-gold/30 transition">
+          {{ tag }}
+        </button>
+      </div>
+    </div>
+
+    <!-- 留言墙瀑布流卡片网格 (Masonry-style Grid) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-for="post in filteredWallPosts" :key="post.id"
+        class="bg-white/95 border border-gold/35 rounded-2xl p-5 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4 relative group">
+        
+        <!-- Top Info Header -->
+        <div class="flex items-start justify-between border-b border-gold/25 pb-3">
+          <div class="flex items-center gap-2.5">
+            <span class="text-2xl">{{ post.avatar || '🏮' }}</span>
+            <div>
+              <div class="text-xs font-serif font-bold text-navy">{{ post.author }}</div>
+              <div class="text-[10px] font-mono text-ink-sub">{{ post.timestamp }}</div>
+            </div>
+          </div>
+          <div class="text-right">
+            <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold text-white shadow-sm"
+              :style="{ backgroundColor: getYearColor(post.year) }">
+              {{ post.year }} 年
+            </span>
+          </div>
+        </div>
+
+        <!-- User Memory Note -->
+        <div class="text-xs sm:text-sm font-serif text-ink leading-relaxed">
+          {{ post.content }}
+        </div>
+
+        <!-- Shen Shi Sticky Humorous Reply (沈拾调侃神评) -->
+        <div class="bg-paper-tint/90 p-3 rounded-xl border border-gold/30 text-[11px] font-serif text-navy space-y-1">
+          <div class="flex items-center justify-between text-[10px] font-mono text-cinnabar font-bold">
+            <span>✨ 沈拾 · 修复师回帖</span>
+            <span>SHENSHI REPLY</span>
+          </div>
+          <p class="italic leading-snug text-ink-sub">
+            {{ post.reply }}
+          </p>
+        </div>
+
+        <!-- Tags List -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <button v-for="tag in post.tags" :key="tag" @click.stop="filterWallByTag(tag)"
+            class="px-2 py-0.5 rounded-md text-[10px] font-mono bg-paper hover:bg-gold/20 text-stone-600 hover:text-navy border border-stone-200 transition">
+            {{ tag }}
+          </button>
+        </div>
+
+        <!-- Bottom Action Bar -->
+        <div class="flex items-center justify-between pt-2 border-t border-gold/20 text-[11px] font-mono text-ink-sub">
+          <button @click="likePost(post)" class="hover:text-cinnabar transition flex items-center gap-1.5 group/btn">
+            <span class="group-hover/btn:scale-125 transition-transform">❤️</span>
+            <span class="font-bold">{{ post.likes }} 钤印共鸣</span>
+          </button>
+          <span class="text-[10px] text-stone-400">#时光信笺</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div v-if="filteredWallPosts.length === 0" class="text-center py-16 bg-white/50 rounded-2xl border border-gold/30 my-4">
+      <span class="text-4xl block mb-2">📜</span>
+      <p class="text-sm font-serif text-navy font-bold">该标签下暂无更多留言</p>
+      <p class="text-xs font-serif text-ink-sub mt-1">去时空显影机输入你的回忆，成为首位留下该印记的先锋吧！</p>
+      <button @click="filterWallByTag('all')" class="mt-4 px-4 py-2 rounded-xl bg-navy text-white text-xs font-mono font-bold">
+        查看全部留言
+      </button>
     </div>
   </section>
 
@@ -724,19 +910,25 @@
             <span>HEIRLOOM BOOK // 真实成书 A4 杂志双语排版</span>
           </div>
         </div>
-        <!-- 样张说明角标 -->
-        <div class="grid grid-cols-4 gap-2 w-full mt-3 text-center">
+        <!-- 样张说明角标 (6大跨页) -->
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 w-full mt-3 text-center">
           <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
-            01 封面《机锋卷》
+            01 金曲榜单
           </div>
           <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
-            02 封面《秘境卷》
+            02 心象双栏
           </div>
           <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
-            03 跨页《十大金曲》
+            03 秘境灯塔
           </div>
           <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
-            04 正文《心象签到》
+            04 岁月信物
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            05 红土日常
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-300">
+            06 问道年谱
           </div>
         </div>
       </div>
@@ -928,15 +1120,23 @@
   <div v-if="showModal" class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-md">
     <div class="bg-paper rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl relative border border-gold/40">
       <button @click="showModal = false" class="absolute top-4 right-4 text-stone-400 hover:text-navy text-xl font-bold">✕</button>
-      <h3 class="text-lg font-serif font-bold text-navy mb-3">你的《时代印笺》已显影</h3>
+      <h3 class="text-lg font-serif font-bold text-navy mb-1">你的《时代印笺》已显影</h3>
+      <p class="text-[11px] font-mono text-cinnabar mb-3">{{ selectedYear }} · {{ currentData.eventCode }}</p>
       <div class="rounded-2xl overflow-hidden shadow-lg border border-gold/40 mb-4 bg-white">
         <img :src="posterSrc" alt="时代印笺" class="w-full h-auto block">
       </div>
-      <p class="text-xs font-serif text-ink-sub mb-4">长按图片可保存或分享至朋友圈 / Instagram</p>
-      <a :href="posterSrc" :download="'拾得时代印笺-' + selectedYear + '.png'"
-        class="block w-full bg-navy text-white text-xs font-mono py-3.5 rounded-xl font-bold hover:bg-navy-deep transition shadow">
-        💾 保存高清长图到相册
-      </a>
+      <p class="text-xs font-serif text-ink-sub mb-4">长按图片保存，或贴到时空留言墙与大家共鸣</p>
+      
+      <div class="flex flex-col gap-2.5">
+        <a :href="posterSrc" :download="'拾得时代印笺-' + selectedYear + '.png'"
+          class="block w-full bg-navy text-white text-xs font-mono py-3.5 rounded-xl font-bold hover:bg-navy-deep transition shadow text-center">
+          💾 保存高清长图到相册
+        </a>
+        <button @click="postToWallFromModal"
+          class="block w-full bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono py-3.5 rounded-xl font-bold transition shadow text-center flex items-center justify-center gap-1.5">
+          <span>🚀 贴到时空留言墙围观</span>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -996,15 +1196,20 @@
 
 </div>
 
+<!-- 引入 1980-2026 全量 47 年文化坐标与时空墙引擎 -->
+<script src="./assets/chronoscope-data.js"></script>
+
 <!-- Vue 3 核心状态与 Canvas 渲染 -->
 <script>
-  const { createApp, ref, computed } = Vue;
+  const { createApp, ref, computed, onMounted } = Vue;
 
   createApp({
     setup() {
+      const db = window.ShideChronoscope ? window.ShideChronoscope.YEAR_DATABASE : {};
       const selectedYear = ref(1998);
       const userMemoryInput = ref('');
       const boundMemoryOutput = ref('');
+      const redlineWarning = ref('');
       const isExporting = ref(false);
       const showModal = ref(false);
       const posterSrc = ref('');
@@ -1014,6 +1219,13 @@
       const waitlistData = ref([]);
       const generatedProCode = ref('');
       const codeCopied = ref(false);
+
+      // 时空留言墙状态
+      const allWallPosts = ref(window.ShideChronoscope ? window.ShideChronoscope.getSpacetimeWall() : []);
+      const selectedWallTag = ref('all');
+      const popularTags = ref([
+        '#1998千禧前夜', '#小霸王', '#周杰伦', '#Beyond', '#网吧通宵', '#温哥华', '#黑神话', '#老弄堂', '#小虎队'
+      ]);
 
       // Load waitlist from localStorage on init
       try {
@@ -1068,86 +1280,21 @@
         document.body.removeChild(link);
       };
 
-      const timelineList = [
-        { year: 1988, tag: "慢车时代", title: "海鸥双狮表与绿皮慢车", desc: "站台广播播着费翔的歌，车票还是一张硬纸板，上面印着红色的流水号。" },
-        { year: 1993, tag: "华语摇滚", title: "Beyond《海阔天空》与卡带", desc: "随身听里转动着透明卡带，用铅笔倒带的咔哒声，是一代人执拗的青春。" },
-        { year: 1997, tag: "回归之夜", title: "维港烟花与《春光乍泄》", desc: "电视机里放着烟花，大街小巷唱着东方之珠。所有人都在猜下一个时代。" },
-        { year: 1998, tag: "千禧前夜", title: "网吧拨号音与 OICQ 初代", desc: "放学直奔网吧，Modem 吱呀作响，你在 OICQ 上第一次跟陌生人说'你好'。" },
-        { year: 2000, tag: "千禧狂欢", title: "千年虫预言与周杰伦同名首专", desc: "收音机里传出《星晴》的前奏，我们终于安全地踏进了21世纪。" },
-        { year: 2003, tag: "隔绝春天", title: "非典停课与《以父之名》", desc: "量体温成了每天的仪式，八亿人守在电台前听周杰伦全亚洲首播。" },
-        { year: 2008, tag: "大喜大悲", title: "鸟巢烟花、汶川的雨与奥运", desc: "那一年有太多眼泪，也有前所未有的自豪。你守在电视机前看完了整个夏天。" },
-        { year: 2015, tag: "移动互联", title: "4G 普及与微信红包狂欢", desc: "手机终于可以看清全世界，我们坐下来面对面长聊的次数越来越少。" },
-        { year: 2024, tag: "回望传承", title: "AI 时代到来与个人记忆觉醒", desc: "算法可以生成无尽的幻象，但你走过的路，唯有你自己能作证。" }
-      ];
-
-      const yearDatabase = {
-        1988: {
-          event: "海鸥双狮表与绿皮慢车",
-          quote: "站台广播播着费翔的《冬天里的一把火》，车票还是一张硬纸板，上面印着红色的流水号。",
-          verdict: "那年你走得很急，把半个青春留在了晃晃荡荡的硬座车厢里。",
-          placeholder: "例如：那年第一次坐绿皮车去省城"
-        },
-        1993: {
-          event: "Beyond《海阔天空》与卡带旋钮",
-          quote: "随身听里转动着透明卡带，用铅笔倒带的咔哒声，是一代人执拗的青春。",
-          verdict: "原谅我这一生不羁放纵爱自由。写歌的人走了，但他留下的火种，在每一个深夜把我们点亮。",
-          placeholder: "例如：那年在被窝里用单耳耳机听歌"
-        },
-        1997: {
-          event: "香港回归夜与《春光乍泄》",
-          quote: "电视机里放着烟花，大街小巷都在唱着东方之珠。所有人都在猜，下一个时代会是什么样。",
-          verdict: "维港的风吹散了迷雾，有些人选择留下，有些人踏上了远洋的航班。",
-          placeholder: "例如：那晚全家人守在电视机前"
-        },
-        1998: {
-          event: "网吧拨号音与 OICQ 初代上线",
-          quote: "放学直奔网吧，Modem 吱呀作响，你在 OICQ 上第一次跟陌生人敲下'你好'。",
-          verdict: "早饭钱省成点卡，一小时一小时把你等亮。那时的世界很小，小到一根电话线就能连通未来。",
-          placeholder: "例如：那年第一次通宵玩红色警戒"
-        },
-        2000: {
-          event: "千年虫预言破灭与周杰伦同名专辑",
-          quote: "收音机里传出《星晴》的前奏，我们终于安全地踏进了21世纪。",
-          verdict: "世界没有在千禧夜停摆，而你正年轻，以为未来的每一天都会像新世纪一样灿烂。",
-          placeholder: "例如：千禧夜倒数的时候你在哪里"
-        },
-        2003: {
-          event: "非典停课与《以父之名》全亚洲首播",
-          quote: "量体温成了每天的仪式，八亿人守在电台前，听那首前奏像歌剧一样的华语新歌。",
-          verdict: "被困在房间里的春天格外漫长，但窗外的阳光比任何时候都更显珍贵。",
-          placeholder: "例如：那年停课在家里写作业看书"
-        },
-        2008: {
-          event: "鸟巢烟花、汶川的雨与《北京欢迎你》",
-          quote: "那一年有太多眼泪，也有前所未有的自豪。你守在电视机前看完了整个夏天。",
-          verdict: "所有人都在向前跑，你以为一切都会越来越好，那是我们集体记忆最炽热的一页。",
-          placeholder: "例如：那年8月8日晚上你在和谁看开幕式"
-        },
-        2015: {
-          event: "4G 普及与移动互联狂欢",
-          quote: "手机终于可以看清全世界，朋友圈里热闹非凡，但我们坐下来面对面长聊的次数越来越少。",
-          verdict: "速度快得让人眩晕，在点赞的浪潮里，你开始怀念那个写信要等半个月的从前。",
-          placeholder: "例如：那年买了自己的第一台智能手机"
-        },
-        2024: {
-          event: "AI 时代的到来与个人记忆的觉醒",
-          quote: "算法可以生成无尽的幻象，但你走过的路、爱过的人、流过的汗，唯有你自己能作证。",
-          verdict: "被一笔带过的我们，游走于天地，也要在尘埃里抬头，把光传下去。",
-          placeholder: "例如：今天我在这个网站写下了第一笔回忆"
-        }
-      };
-
       const currentEraSubtitle = computed(() => {
         const y = selectedYear.value;
-        if (y < 1990) return "80s · 启蒙与探索";
-        if (y < 2000) return "90s · 流行与浪潮";
-        if (y < 2010) return "00s · 跃进与炽热";
-        if (y < 2020) return "10s · 狂欢与加速";
-        return "20s · 沉淀与传承";
+        if (y < 1990) return "80s · 启蒙与慢车";
+        if (y < 2000) return "90s · 流行与摇滚";
+        if (y < 2010) return "00s · 千禧与大片";
+        if (y < 2020) return "10s · 移动与狂欢";
+        return "20s · 沉淀与天命";
       });
 
       const currentData = computed(() => {
-        return yearDatabase[selectedYear.value] || {
+        return db[selectedYear.value] || {
+          color: '#12365E',
+          colorName: '玄青',
+          tag: '时代长河',
+          eventCode: `EV-${selectedYear.value}`,
           event: `${selectedYear.value} 年的时代印记`,
           quote: "流行音乐在旧卡带与CD里翻转，街角的白炽灯下，有人正告别，有人刚出发。",
           verdict: "时间从未停摆，所有被历史一笔带过的脚步，长河都替你记着。",
@@ -1155,26 +1302,147 @@
         };
       });
 
+      const getYearColor = (y) => {
+        return db[y] ? db[y].color : '#12365E';
+      };
+
       const stepYear = (delta) => {
         const next = selectedYear.value + delta;
-        if (next >= 1980 && next <= 2024) {
+        if (next >= 1980 && next <= 2026) {
           selectedYear.value = next;
           boundMemoryOutput.value = '';
+          redlineWarning.value = '';
         }
       };
 
-      const selectYearFromRail = (y) => {
+      const jumpDecade = (y) => {
         selectedYear.value = y;
         boundMemoryOutput.value = '';
-        document.getElementById('radar').scrollIntoView({ behavior: 'smooth' });
+        redlineWarning.value = '';
+      };
+
+      const decadeActive = (decade) => {
+        const y = selectedYear.value;
+        if (decade === '80s') return y >= 1980 && y < 1990;
+        if (decade === '90s') return y >= 1990 && y < 2000;
+        if (decade === '00s') return y >= 2000 && y < 2010;
+        if (decade === '10s') return y >= 2010 && y < 2020;
+        if (decade === '20s') return y >= 2020 && y <= 2026;
+        return false;
+      };
+
+      const randomYear = () => {
+        const rand = 1980 + Math.floor(Math.random() * 47);
+        selectedYear.value = rand;
+        boundMemoryOutput.value = '';
+        redlineWarning.value = '';
+      };
+
+      const handleInputValidate = () => {
+        if (window.ShideChronoscope) {
+          const check = window.ShideChronoscope.checkRedline(userMemoryInput.value);
+          if (!check.pass) {
+            redlineWarning.value = check.reason;
+          } else {
+            redlineWarning.value = '';
+          }
+        }
       };
 
       const bindMemory = () => {
-        if (!userMemoryInput.value.trim()) {
+        const text = userMemoryInput.value.trim();
+        if (!text) {
           alert('请先输入一句你当年的小事');
           return;
         }
-        boundMemoryOutput.value = `“${userMemoryInput.value.trim()}” —— 1980年代至今的文化长河中，你这句话已被收录，沈拾为你盖印见证。`;
+        if (window.ShideChronoscope) {
+          const check = window.ShideChronoscope.checkRedline(text);
+          if (!check.pass) {
+            redlineWarning.value = check.reason;
+            return;
+          }
+        }
+        redlineWarning.value = '';
+        boundMemoryOutput.value = `“${text}” —— 1980年代至今的文化长河中，你这句话已被收录，沈拾为你盖印见证。`;
+      };
+
+      // 贴到时空留言墙核心逻辑
+      const createWallPost = (userText) => {
+        const text = userText || userMemoryInput.value.trim();
+        if (!text) {
+          alert('请先输入一句回忆再上墙');
+          return null;
+        }
+        if (window.ShideChronoscope) {
+          const check = window.ShideChronoscope.checkRedline(text);
+          if (!check.pass) {
+            alert(check.reason);
+            return null;
+          }
+        }
+
+        const y = selectedYear.value;
+        const cData = currentData.value;
+        const autoTags = window.ShideChronoscope 
+          ? window.ShideChronoscope.extractTags(y, text, cData.eventCode) 
+          : [`#${y}${cData.tag}`, `#${cData.eventCode}`];
+
+        const newPost = {
+          id: `post-${y}-${Date.now()}`,
+          year: y,
+          author: `时空漫步者 #${Math.floor(1000 + Math.random() * 9000)}`,
+          avatar: ['🏮', '📻', '🎸', '🕹️', '🚲', '🌊', '☕', '🥢'][Math.floor(Math.random() * 8)],
+          timestamp: '刚刚',
+          content: text,
+          reply: `沈拾调侃：${cData.verdict}`,
+          likes: 1,
+          tags: autoTags
+        };
+
+        allWallPosts.value.unshift(newPost);
+        if (window.ShideChronoscope) {
+          window.ShideChronoscope.saveSpacetimeWall(allWallPosts.value);
+        }
+        return newPost;
+      };
+
+      const postToWallDirectly = () => {
+        const post = createWallPost();
+        if (post) {
+          userMemoryInput.value = '';
+          boundMemoryOutput.value = '';
+          alert('🎉 已成功贴到时空留言墙！正在前往留言墙围观～');
+          const el = document.getElementById('spacetime-wall');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      const postToWallFromModal = () => {
+        showModal.value = false;
+        const post = createWallPost(userMemoryInput.value.trim() || `在那一年，我认领了属于自己的时代印笺《${currentData.value.event}》`);
+        if (post) {
+          const el = document.getElementById('spacetime-wall');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      // 留言墙筛选与互动
+      const filteredWallPosts = computed(() => {
+        const tag = selectedWallTag.value;
+        if (tag === 'all') return allWallPosts.value;
+        if (tag === 'hot') return [...allWallPosts.value].sort((a, b) => b.likes - a.likes);
+        return allWallPosts.value.filter(p => p.tags.some(t => t.toLowerCase() === tag.toLowerCase()));
+      });
+
+      const filterWallByTag = (tag) => {
+        selectedWallTag.value = tag;
+      };
+
+      const likePost = (post) => {
+        post.likes++;
+        if (window.ShideChronoscope) {
+          window.ShideChronoscope.saveSpacetimeWall(allWallPosts.value);
+        }
       };
 
       const exportPoster = () => {
@@ -1187,7 +1455,7 @@
         ctx.fillRect(0, 0, 750, 1100);
 
         // 2. 双金线边框
-        ctx.strokeStyle = '#C5A059';
+        ctx.strokeStyle = currentData.value.color || '#C5A059';
         ctx.lineWidth = 3;
         ctx.strokeRect(36, 36, 678, 1028);
 
@@ -1203,16 +1471,16 @@
 
         ctx.fillStyle = '#55524E';
         ctx.font = '14px "Space Grotesk", monospace';
-        ctx.fillText('1980–2024 CULTURAL COORDINATES', 70, 122);
+        ctx.fillText('1980–2026 CULTURAL COORDINATES', 70, 122);
 
-        // 4. 年份大字
-        ctx.fillStyle = '#BC382C';
+        // 4. 年份大字 (传统年色)
+        ctx.fillStyle = currentData.value.color || '#BC382C';
         ctx.font = 'bold 88px "Cinzel", serif';
         ctx.fillText(String(selectedYear.value), 70, 235);
 
         ctx.fillStyle = '#C5A059';
         ctx.font = 'bold 16px "Noto Serif SC", serif';
-        ctx.fillText(currentEraSubtitle.value, 300, 230);
+        ctx.fillText(`${currentData.value.colorName} · ${currentEraSubtitle.value}`, 300, 230);
 
         // 5. 事件标题
         ctx.fillStyle = '#12365E';
@@ -1227,14 +1495,14 @@
         // 7. 沈拾手记框
         ctx.fillStyle = '#F0ECE1';
         ctx.fillRect(70, 480, 610, 220);
-        ctx.strokeStyle = '#BC382C';
+        ctx.strokeStyle = currentData.value.color || '#BC382C';
         ctx.lineWidth = 4;
         ctx.beginPath();
         ctx.moveTo(70, 480);
         ctx.lineTo(70, 700);
         ctx.stroke();
 
-        ctx.fillStyle = '#BC382C';
+        ctx.fillStyle = currentData.value.color || '#BC382C';
         ctx.font = 'bold 16px "Noto Serif SC", serif';
         ctx.fillText('沈拾 · 修复师手记：', 95, 520);
 
@@ -1243,10 +1511,11 @@
         wrap(ctx, currentData.value.verdict, 95, 565, 560, 32);
 
         // 8. 私人印记
-        if (boundMemoryOutput.value) {
+        if (boundMemoryOutput.value || userMemoryInput.value.trim()) {
           ctx.fillStyle = '#12365E';
           ctx.font = '15px "Noto Serif SC", serif';
-          wrap(ctx, `【我的私人印记】${boundMemoryOutput.value}`, 70, 750, 610, 26);
+          const printText = boundMemoryOutput.value || `“${userMemoryInput.value.trim()}” —— 拾得为你盖印见证。`;
+          wrap(ctx, `【我的私人印记】${printText}`, 70, 750, 610, 26);
         }
 
         // 9. 底部 Slogan
@@ -1334,6 +1603,7 @@
         selectedYear,
         userMemoryInput,
         boundMemoryOutput,
+        redlineWarning,
         isExporting,
         showModal,
         showAdminModal,
@@ -1346,13 +1616,24 @@
         posterSrc,
         emailInput,
         subscribed,
-        timelineList,
         currentEraSubtitle,
         currentData,
+        getYearColor,
         stepYear,
-        selectYearFromRail,
+        jumpDecade,
+        decadeActive,
+        randomYear,
+        handleInputValidate,
         bindMemory,
         exportPoster,
+        postToWallDirectly,
+        postToWallFromModal,
+        allWallPosts,
+        filteredWallPosts,
+        selectedWallTag,
+        popularTags,
+        filterWallByTag,
+        likePost,
         submitEmail
       };
     }
