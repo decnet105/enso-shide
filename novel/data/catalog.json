@@ -1,0 +1,66 @@
+[
+  {
+    "id": "E1",
+    "label": "第一集",
+    "title": "博物院下面开来一列火车",
+    "char_count": 11403,
+    "paragraphs_count": 247,
+    "file": "e1.json"
+  },
+  {
+    "id": "E2",
+    "label": "第二集",
+    "title": "来路不明，暂缓出馆",
+    "char_count": 8863,
+    "paragraphs_count": 174,
+    "file": "e2.json"
+  },
+  {
+    "id": "E3",
+    "label": "第三集",
+    "title": "写上一个，少掉一个",
+    "char_count": 7729,
+    "paragraphs_count": 162,
+    "file": "e3.json"
+  },
+  {
+    "id": "E4",
+    "label": "第四集",
+    "title": "人少一个，不能发车",
+    "char_count": 6291,
+    "paragraphs_count": 130,
+    "file": "e4.json"
+  },
+  {
+    "id": "E5",
+    "label": "第五集",
+    "title": "第一个名字",
+    "char_count": 6493,
+    "paragraphs_count": 132,
+    "file": "e5.json"
+  },
+  {
+    "id": "E6",
+    "label": "第六集",
+    "title": "一九八八，无名站",
+    "char_count": 6090,
+    "paragraphs_count": 108,
+    "file": "e6.json"
+  },
+  {
+    "id": "E7",
+    "label": "第七集",
+    "title": "暂离七日，九十三年未归",
+    "char_count": 7199,
+    "paragraphs_count": 139,
+    "file": "e7.json"
+  },
+  {
+    "id": "E8",
+    "label": "第八集",
+    "title": "今天不让位",
+    "char_count": 8737,
+    "paragraphs_count": 159,
+    "file": "e8.json"
+  }
+]

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>拾物档案 · 第一季《无名站》在线共读 | 拾得 Ensō</title>
+  <meta name="description" content="《拾物档案》第一季全本共读：一九八八无名站，三十二个名字与九十三年未归的执念。首创免登录段落批注、共读弹幕与社区推测。">
+  <meta name="theme-color" content="#12365E">
+  <link rel="icon" type="image/png" href="../assets/enso-seal-official.png">
+  <link rel="apple-touch-icon" href="../assets/enso-seal-official.png">
+  <link rel="stylesheet" href="./styles.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="拾物档案 · 第一季《无名站》在线共读">
+  <meta property="og:description" content="华人时代记忆的文化悬疑：全本八集免费在线阅读，首创免登录段落共读批注与互动。">
+  <meta property="og:image" content="https://shide.app/assets/app-icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="theme-paper">
+
+  <!-- Top Reading Progress Bar -->
+  <div id="readProgressBar" class="read-progress-bar"></div>
+
+  <!-- Header Navigation -->
+  <header class="reader-header">
+    <div class="header-left">
+      <a href="../index.html" class="home-link" title="回到官网首页">
+        <img src="../assets/enso-seal-official.png" alt="拾得" class="header-logo">
+        <span class="header-brand">拾得 · 拾物档案</span>
+      </a>
+    </div>
+    
+    <div class="header-center">
+      <button id="btnTocToggle" class="header-btn chapter-select-btn" aria-label="打开目录">
+        <span id="currentChapterLabel" class="current-chapter-label">第一集 · 博物院下面开来一列火车</span>
+        <span class="dropdown-arrow">▾</span>
+      </button>
+    </div>
+
+    <div class="header-right">
+      <button id="btnSettingsToggle" class="header-btn icon-btn" title="阅读设置" aria-label="阅读设置">Aa</button>
+      <button id="btnShareNovel" class="header-btn icon-btn" title="分享本集" aria-label="分享本集">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Reading Settings Popup -->
+  <div id="settingsPopup" class="settings-popup hidden">
+    <div class="settings-row">
+      <span class="settings-label">主题背景</span>
+      <div class="theme-options">
+        <button class="theme-btn btn-theme-paper active" data-theme="theme-paper">宣纸米白</button>
+        <button class="theme-btn btn-theme-dark" data-theme="theme-dark">深墨夜读</button>
+        <button class="theme-btn btn-theme-bamboo" data-theme="theme-bamboo">青竹护眼</button>
+      </div>
+    </div>
+    <div class="settings-row">
+      <span class="settings-label">正文字号</span>
+      <div class="font-size-controls">
+        <button id="btnFontSmaller" class="ctrl-btn">A-</button>
+        <span id="fontSizeDisplay" class="font-size-val">19px</span>
+        <button id="btnFontLarger" class="ctrl-btn">A+</button>
+      </div>
+    </div>
+    <div class="settings-row">
+      <span class="settings-label">段落批注</span>
+      <div class="switch-control">
+        <label class="switch-label">
+          <input type="checkbox" id="chkShowAnnotations" checked>
+          <span class="switch-slider"></span>
+        </label>
+        <span class="switch-hint">显示读者批注气泡</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC Drawer Modal -->
+  <div id="tocOverlay" class="drawer-overlay hidden"></div>
+  <aside id="tocDrawer" class="toc-drawer hidden">
+    <div class="drawer-header">
+      <h3>第一季 · 目录大纲</h3>
+      <button id="btnCloseToc" class="close-drawer-btn" aria-label="关闭目录">✕</button>
+    </div>
+    <div class="novel-meta-card">
+      <div class="novel-title">《拾物档案 · 无名站》</div>
+      <div class="novel-subtitle">第一季全本（八集 · 6.5万字完结）</div>
+      <p class="novel-intro">一间只修「有执念」旧物的店。一块停在1988的海鸥表，引出平汉铁路地下九十三年未归的真相。</p>
+    </div>
+    <ul id="tocList" class="toc-list">
+      <!-- Generated via JS -->
+    </ul>
+  </aside>
+
+  <!-- Main Reader Container -->
+  <main id="readerContainer" class="reader-container">
+    <div class="article-wrapper">
+      <div class="episode-banner">
+        <div class="episode-badge">拾得原创悬疑小说 · 第一季</div>
+        <h1 id="episodeTitle" class="episode-title">加载中...</h1>
+        <div class="episode-meta">
+          <span id="epMetaWords">-- 字</span> · 
+          <span>免登录段落共读</span> · 
+          <span>点触段落右侧 <span class="gold-badge-demo">💬 批注</span> 参与探讨</span>
+        </div>
+      </div>
+
+      <!-- Episode Content Paragraphs -->
+      <article id="episodeBody" class="episode-body">
+        <div class="loading-spinner">正文载入中...</div>
+      </article>
+
+      <!-- Chapter Bottom Navigation -->
+      <nav class="chapter-nav-bottom">
+        <button id="btnPrevChapter" class="nav-chapter-btn">← 上一集</button>
+        <button id="btnOpenTocBottom" class="nav-chapter-btn toc-mid-btn">全季目录</button>
+        <button id="btnNextChapter" class="nav-chapter-btn primary-nav-btn">下一集 →</button>
+      </nav>
+
+      <!-- Feedback CTA Box -->
+      <section class="novel-feedback-box">
+        <div class="enso-seal-mark">
+          <img src="../assets/enso-seal-official.png" alt="印" width="48" height="48">
+        </div>
+        <h3>读完本集，你有怎样的推测？</h3>
+        <p>你觉得一九八八年无名站到底发生了什么？点击段落随时写下评语，无需登录，全网读者都能看见你的洞察。</p>
+        <div class="feedback-actions">
+          <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=novel_web&mt=8" class="primary-cta-btn" rel="external">在 拾得 iOS App 探索更多文化记忆 ↗</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Social Annotation Drawer / Bottom Sheet -->
+  <div id="annotationOverlay" class="drawer-overlay hidden"></div>
+  <section id="annotationDrawer" class="annotation-drawer hidden">
+    <div class="annotation-drawer-handle"></div>
+    <div class="annotation-drawer-header">
+      <div class="ann-header-title">
+        <span class="gold-tag">段落共读</span>
+        <span id="annParagraphId" class="ann-pid-label">第 1 段</span>
+      </div>
+      <button id="btnCloseAnnotation" class="close-drawer-btn" aria-label="关闭批注">✕</button>
+    </div>
+
+    <!-- Selected Quote Preview -->
+    <blockquote id="annQuotePreview" class="ann-quote-preview">
+      “引文正文内容预览...”
+    </blockquote>
+
+    <!-- Annotations List -->
+    <div id="annListContainer" class="ann-list-container">
+      <div class="empty-ann-state">
+        <p>这一段暂无读者批注</p>
+        <span>成为第一个在此段留下洞察与推测的读者吧！</span>
+      </div>
+    </div>
+
+    <!-- Annotation Input Form (Zero Login) -->
+    <form id="annForm" class="ann-form">
+      <div class="stamp-selector-bar">
+        <span class="stamp-hint">情绪印章：</span>
+        <button type="button" class="stamp-btn" data-stamp="🏮 细思极恐">🏮 细思极恐</button>
+        <button type="button" class="stamp-btn" data-stamp="🔥 拍案叫绝">🔥 拍案叫绝</button>
+        <button type="button" class="stamp-btn" data-stamp="⏳ 时代眼泪">⏳ 时代眼泪</button>
+        <button type="button" class="stamp-btn" data-stamp="🍶 借宿一问">🍶 借宿一问</button>
+        <button type="button" class="stamp-btn" data-stamp="🔍 发现伏笔">🔍 发现伏笔</button>
+      </div>
+
+      <div class="user-persona-row">
+        <span class="persona-label">你的代号：</span>
+        <input type="text" id="inputNickname" class="nickname-input" value="修表客_08" maxlength="20" title="点击可修改昵称">
+        <button type="button" id="btnRandomizeNickname" class="random-btn" title="随机生成江湖代号">🎲 换一个</button>
+      </div>
+
+      <div class="input-action-row">
+        <textarea id="inputComment" class="comment-textarea" rows="2" placeholder="免登录，直接写下你对此处的推测或共鸣..." required maxlength="500"></textarea>
+        <button type="submit" id="btnSubmitComment" class="submit-ann-btn">发表批注</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Quote Card Share Modal -->
+  <div id="quoteCardModal" class="quote-modal hidden">
+    <div class="quote-modal-content">
+      <div class="quote-modal-header">
+        <h4>生成金句分享卡片</h4>
+        <button id="btnCloseQuoteModal" class="close-drawer-btn">✕</button>
+      </div>
+      <div id="quoteCardCanvasContainer" class="quote-card-preview">
+        <!-- Styled Quote Bookmark -->
+        <div id="quoteCardDom" class="quote-card-dom">
+          <div class="card-brand-top">
+            <img src="../assets/enso-seal-official.png" alt="拾得" width="28" height="28">
+            <span>拾得 ·《拾物档案》</span>
+          </div>
+          <div class="card-quote-text" id="cardQuoteText">“正文金句”</div>
+          <div class="card-user-comment" id="cardUserComment" style="display:none;">
+            <span class="user-tag" id="cardUserTag">修表客_08 批注：</span>
+            <p id="cardCommentText"></p>
+          </div>
+          <div class="card-footer-meta">
+            <span id="cardChapterMeta">第一季 · 第一集</span>
+            <span class="card-url">shide.app/novel</span>
+          </div>
+        </div>
+      </div>
+      <div class="quote-modal-actions">
+        <button id="btnCopyQuoteText" class="modal-btn secondary-btn">复制纯文本</button>
+        <button id="btnDownloadCard" class="modal-btn primary-btn">长按卡片或截图分享</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
