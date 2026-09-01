@@ -256,6 +256,10 @@ h1 {
 
 /* ---------- Sections & Headings ---------- */
 section { margin-top: clamp(3rem, 6vw, 5rem); }
+.oauth-disclosure {
+  width: min(54rem, calc(100% - 2.5rem));
+  margin: 0 auto 4.5rem;
+}
 h2 {
   margin: 0 0 1.2rem;
   padding-top: 1.5rem;

@@ -18,6 +18,17 @@ Mystory Ensō is an accountless, local-first memory app. This policy separates d
 
 These online AI features (companion chat, AI structuring, AI book) are processed by **third-party AI providers**: primarily **OpenAI**, and, when it is unavailable, potentially Anthropic (Claude) or Google (Gemini). Only when you actively invoke a feature do we send the relevant derived text (the current conversation, the draft being structured, or a truncated book excerpt) over an encrypted connection to these providers to generate the result; **photos, your full archive, names, and contact details are never sent**. Per these providers' public terms, this data is not used to train their models.
 
+## Enso Shide Analytics and Google/YouTube data
+
+Enso Shide Analytics is a read-only tool for the owner of an Enso Shide channel or an operator whom that owner has authorized. It requests only `yt-analytics.readonly` and `youtube.readonly` to read authorized channel and video metadata, public statistics, YouTube Analytics reports, traffic sources, aggregate audience data, and subscriber gains.
+
+- The tool does not upload, edit, delete, or download YouTube videos, and does not access channel-member lists or payment information.
+- OAuth tokens, raw JSON reports, and derived analyses are stored on a local device or private workspace controlled by the authorized operator. They are not uploaded to the Shide app's user services.
+- Google/YouTube user data is not sold, used for advertising, used to train models, or shared with unrelated third parties.
+- Data is retained only as needed for channel analysis, trend comparison, and YPP operations. To stop use, delete the local token and reports and revoke Enso Shide Analytics from the third-party connections page of your Google Account. For deletion assistance, email privacy@shide.app.
+
+Enso Shide Analytics uses Google API data in accordance with the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
+
 ## Analytics and tracking
 
 When Help Improve Mystory is on, the app sends anonymous action types, short categories, app version, and a random installation identifier. Analytics events exclude memory text, photos, names, and contact details. You can turn analytics off, delete server analytics, and reset the identifier in Your Space > Privacy & Data. Raw anonymous events are designed for a 90-day retention period.
@@ -38,6 +49,7 @@ Camera and photo-library access is requested only when you choose to capture, se
 ## 继续阅读
 
 - [Support and contact](/en/support/)
+- [Terms of Service](/terms/)
 - [Current features](/en/features/)
 - [Evidence register](/en/evidence/)
 
@@ -52,4 +64,4 @@ Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshi
 
 ---
 页面语言：en
-事实核验日期：2026-08-16
+事实核验日期：2026-08-31

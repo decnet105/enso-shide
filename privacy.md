@@ -22,6 +22,17 @@
 
 这些联网 AI 功能（狗子对话、AI 梳理、AI 成书）由**第三方 AI 服务商**处理：主要是 **OpenAI**，在其不可用时可能改用 Anthropic（Claude）或 Google（Gemini）。仅在你主动调用该功能时，才把相关派生文本（当前对话、待梳理草稿、或截断的成书摘要）经加密传输发送给上述服务商生成结果；**照片、整册资料、姓名与联系方式从不发送**。按其公开条款，这些数据不会被用于训练模型。
 
+## Enso Shide Analytics 与 Google/YouTube 数据
+
+Enso Shide Analytics 是供拾得频道所有者或经授权运营者使用的只读分析工具。它只请求 `yt-analytics.readonly` 和 `youtube.readonly` 权限，用于读取经授权频道的频道与视频元数据、公开统计、YouTube Analytics 报告、流量来源、受众汇总和订阅增量。
+
+- 工具不上传、编辑、删除或下载 YouTube 视频，不读取频道会员名单或付费信息。
+- OAuth token、原始 JSON 报告和派生分析保存在获授权运营者控制的本机或私有工作区，不上传到拾得 App 用户服务。
+- Google/YouTube 用户数据不出售、不用于广告定向、不用于模型训练，也不与无关第三方共享。
+- 数据只在频道分析、趋势比较和 YPP 运营所需期间保留。停止使用时，可删除本机 token 与报告，并在 Google 账号的第三方连接页撤销授权。如需删除协助，联系 privacy@shide.app。
+
+Enso Shide Analytics 对 Google API 数据的使用遵守 [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy)，包括 Limited Use 要求。
+
 ## 可选匿名分析
 
 「帮助改进拾得」开启时，App 发送匿名操作类型、短枚举、App 版本和随机安装标识。分析事件不包含回忆正文、照片、姓名或联系方式。你可在「时空主页 → 隐私与数据」关闭分析，删除服务端匿名分析记录并重置标识。原始匿名事件的设计保留期为 90 天。
@@ -42,6 +53,7 @@
 ## 继续阅读
 
 - [支持与联系](/support/)
+- [服务条款](/terms/)
 - [查看工程证据](/evidence/)
 - [本地优先日记的判断方法](/answers/local-first-journal/)
 
@@ -55,6 +67,6 @@
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-08-16
+事实核验日期：2026-08-31
 
 关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide
