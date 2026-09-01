@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <title>拾得 ENSŌ · 尘埃里抬头，把光传下去</title>
-  <meta name="description" content="「拾得」是中国 1980 年至今中华文化的坐标——传承 · 创新。4000+ 华语流行文化坐标，沈拾 10 首原创华语音乐，东方时间考古小说《九证天下》，高播 YouTube 拾光短剧，端侧私密 AI 传家书。">
-  <meta name="keywords" content="拾得, Enso Shide, 文化长河, 传家书, 沈拾, 时代记忆, 九证天下, 时间修复师, 华语文化坐标, 本地优先日记, Storyworth替代">
+  <meta name="description" content="「拾得」是中国 1980 年至今中华文化的坐标——传承 · 创新。4000+ 华语流行文化坐标，随手记一笔看见自己走过的影子，端侧离线装订中英双语传家书。无账号，不上传。">
+  <meta name="keywords" content="拾得, Enso Shide, 拾得App, 传家书, 文化长河, 时代记忆, 华语文化坐标, 本地优先日记, 沈拾, 长风, Storyworth替代">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#12365E">
   <link rel="canonical" href="https://shide.app/">
@@ -24,7 +24,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="拾得 ENSŌ · 尘埃里抬头，把光传下去">
-  <meta property="og:description" content="在 1980 至今 4000+ 华语流行文化坐标里，自主发掘属于你的时代印记。">
+  <meta property="og:description" content="「拾得」是中国 1980 年至今中华文化的坐标。在 4000+ 华语流行文化坐标里，自主发掘属于你的时代印记，端侧私密装订成传家书。">
   <meta property="og:url" content="https://shide.app/">
   <meta property="og:image" content="https://shide.app/assets/poster-hero-changfeng.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -51,6 +51,7 @@
             'cinnabar-glow': '#E04838',
             gold: '#C5A059',
             'gold-light': '#E8D5A3',
+            'gold-deep': '#9B7A36',
             darksection: '#0A0E17',
           },
           fontFamily: {
@@ -107,7 +108,7 @@
     }
   </style>
 
-  <!-- Schema.org 结构化数据 (GEO & 爬虫优先) -->
+  <!-- Schema.org 结构化数据 (GEO & 搜索引擎) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -137,14 +138,14 @@
         "@type": "MobileApplication",
         "@id": "https://shide.app/#app",
         "name": "拾得 Ensō",
-        "alternateName": ["Enso Shide", "Shide", "拾得"],
+        "alternateName": ["Enso Shide", "Shide", "拾得", "拾得 App"],
         "url": "https://shide.app/",
         "downloadUrl": "https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8",
         "operatingSystem": "iOS 17 or later",
         "applicationCategory": "LifestyleApplication",
         "publisher": { "@id": "https://shide.app/#organization" },
         "image": "https://shide.app/assets/enso-seal-official.png",
-        "description": "「拾得」是中国 1980 年至今中华文化的坐标。4000+ 华语文化坐标，沈拾 10 首原创华语音乐，东方时间考古小说《九证天下》，端侧私密 AI 传家书。"
+        "description": "「拾得」是中国 1980 年至今中华文化的坐标。4000+ 华语文化坐标，端侧私密装订中英双语传家书，沈拾原创音乐《长风》，东方时间考古宇宙。"
       }
     ]
   }
@@ -154,42 +155,41 @@
 
 <div id="app" v-cloak class="w-full flex flex-col items-center">
 
-  <!-- 1. 顶奢画册式导航 (Gallery Header) -->
-  <header class="w-full max-w-7xl px-6 md:px-12 py-8 flex justify-between items-center z-40">
+  <!-- 1. 顶奢画册式导航 (Gallery Header - 突出 拾得 App 核心) -->
+  <header class="w-full max-w-7xl px-6 md:px-12 py-7 flex justify-between items-center z-40">
     <a href="./index.html" class="flex items-center space-x-3.5 group">
       <!-- 官方批准朱砂红 Ensō 印章 -->
       <img src="./assets/enso-seal-official.png" alt="拾得 Ensō Logo" 
         class="w-11 h-11 rounded-lg shadow-sm border border-gold/40 group-hover:scale-105 transition-transform duration-300">
       <div class="flex flex-col">
         <span class="text-base md:text-xl font-black tracking-[0.25em] text-navy font-display">ENSŌ SHIDE</span>
-        <span class="text-[9px] uppercase tracking-[0.3em] text-ink-sub font-mono font-semibold">1980–2024 Cultural Coordinates</span>
+        <span class="text-[9px] uppercase tracking-[0.3em] text-ink-sub font-mono font-semibold">1980–2026 Cultural Coordinates</span>
       </div>
     </a>
 
-    <nav class="hidden md:flex items-center space-x-8 text-xs font-mono tracking-widest text-ink-sub">
-      <a href="#radar" class="hover:text-cinnabar transition">/01 时空显影</a>
-      <a href="./shenshi/index.html" class="hover:text-cinnabar transition flex items-center gap-1.5 text-navy font-bold">
-        <span>/02 沈拾·音乐</span>
+    <nav class="hidden lg:flex items-center space-x-7 text-xs font-mono tracking-widest text-ink-sub">
+      <a href="#app-core" class="hover:text-cinnabar transition font-bold text-navy flex items-center gap-1">
+        <span>/01 拾得 App</span>
         <span class="w-1.5 h-1.5 rounded-full bg-cinnabar"></span>
       </a>
-      <a href="./novel/index.html" class="hover:text-cinnabar transition flex items-center gap-1.5 text-navy font-bold">
-        <span>/03 拾物档案·小说</span>
-        <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
-      </a>
-      <a href="#shorts" class="hover:text-cinnabar transition">/04 拾光短剧</a>
-      <a href="#app-book" class="hover:text-cinnabar transition">/05 AI 传家书</a>
-      <a href="#geo-index" class="hover:text-cinnabar transition text-gold font-bold">/06 知识库</a>
+      <a href="#timeline" class="hover:text-cinnabar transition">/02 文化坐标</a>
+      <a href="#radar" class="hover:text-cinnabar transition">/03 时空显影</a>
+      <a href="#spacetime-wall" class="hover:text-cinnabar transition">/04 留声墙</a>
+      <a href="#universe" class="hover:text-cinnabar transition">/05 原创宇宙</a>
+      <a href="#geo-index" class="hover:text-cinnabar transition text-gold-deep font-bold">/06 知识库</a>
     </nav>
 
     <div class="flex items-center space-x-3">
-      <a href="#app-book" class="bg-navy hover:bg-navy-deep text-white text-xs px-6 py-2.5 rounded-full font-mono tracking-wider transition shadow hover:shadow-lg">
-        TestFlight 预约
+      <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" target="_blank"
+        class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs px-5 py-2.5 rounded-full font-mono tracking-wider transition shadow-md hover:shadow-lg flex items-center gap-1.5 font-bold">
+        <span>🍎 App Store 下载</span>
+        <span class="text-xs">›</span>
       </a>
     </div>
   </header>
 
-  <!-- 2. 【大幅金尘极简艺术大画幅 Hero】(Abstract Golden Dust Fine Art Hero) -->
-  <section class="w-full max-w-7xl px-6 md:px-12 pt-4 pb-16">
+  <!-- 2. 【大幅金尘极简艺术大画幅 Hero - 聚焦 拾得 App 核心定位】 -->
+  <section class="w-full max-w-7xl px-6 md:px-12 pt-2 pb-14">
     <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-[#FAF8F4] min-h-[580px] sm:min-h-[640px] flex flex-col justify-end p-8 sm:p-12 md:p-16">
       
       <!-- 大幅金尘微粒上升艺术大图 -->
@@ -197,17 +197,20 @@
         class="absolute inset-0 w-full h-full object-cover object-center scale-100 hover:scale-105 transition-transform duration-1000 ease-out">
       
       <!-- 极奢渐变遮罩，保证文字完美易读 -->
-      <div class="absolute inset-0 bg-gradient-to-t from-paper/90 via-paper/40 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-paper/95 via-paper/50 to-transparent"></div>
 
       <!-- 顶角元数据标签 -->
       <div class="absolute top-8 left-8 sm:left-12 flex items-center gap-3">
-        <span class="px-3.5 py-1.5 rounded-full bg-white/80 border border-gold/40 backdrop-blur-md text-[11px] font-mono text-navy uppercase tracking-widest font-bold">
-          CANONICAL // 传承 · 创新
+        <span class="px-3.5 py-1.5 rounded-full bg-white/85 border border-gold/40 backdrop-blur-md text-[11px] font-mono text-navy uppercase tracking-widest font-bold flex items-center gap-1.5 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-cinnabar animate-pulse"></span>
+          <span>CANONICAL // 拾得 APP · 传承 · 创新</span>
         </span>
-        <span class="hidden sm:inline-block text-xs font-mono text-ink-sub">4000+ COORDINATES // 10 SOUNDTRACKS // SHORTS MATRIX</span>
+        <span class="hidden sm:inline-block text-xs font-mono text-ink-sub bg-white/70 px-3 py-1 rounded-full border border-gold/30">
+          1980 至今文化坐标 · 本地优先 AI 传家书
+        </span>
       </div>
 
-      <!-- Hero 核心文字与行动号召 -->
+      <!-- Hero 核心文字与主次行动号召 -->
       <div class="relative z-10 max-w-3xl space-y-6">
         <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-black text-navy leading-[1.2] tracking-tight">
           被一笔带过的我们，<br>
@@ -217,18 +220,38 @@
         </h1>
 
         <p class="text-sm sm:text-base md:text-lg text-ink-sub font-serif leading-relaxed max-w-2xl">
-          「拾得」是中国 1980 年至今中华文化的坐标。在 4000+ 流行歌、影视、游戏与时代大事里，自主发掘你走过的每一步，端侧私密装订成中英双语传家书。
+          「拾得」是中国 1980 年至今中华文化的坐标。把 4000+ 流行歌、影视、游戏与大事小事按年铺开；翻到哪一年，都有你认得的记忆在等你。随手记一笔，到年底在手机里排成一本中英双语传家书。<strong class="text-navy font-bold">无账号，不上传。</strong>
         </p>
 
-        <div class="flex flex-wrap gap-4 pt-2">
-          <a href="./novel/index.html" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm font-mono uppercase tracking-widest px-8 py-4 rounded-full font-bold transition shadow-2xl hover:-translate-y-0.5">
-            📖 拾物档案 · 全本小说共读 (免登录批注) ›
+        <!-- 主次分明的 Action Buttons: 核心突出 App 下载 -->
+        <div class="flex flex-wrap items-center gap-3.5 pt-2">
+          <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" target="_blank"
+            class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm font-mono tracking-wider px-8 py-4 rounded-full font-bold transition shadow-2xl hover:-translate-y-0.5 flex items-center gap-2">
+            <span>🍎 立即下载 拾得 App (App Store)</span>
+            <span class="text-base">›</span>
           </a>
-          <a href="./shenshi/index.html" class="bg-white hover:bg-paper-tint text-navy border border-gold/40 text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-sm">
-            🎵 沈拾 10 首原创华语专区 ↗
+          <a href="#radar" class="bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-md flex items-center gap-2">
+            <span>⏳ 在线显影我的时代印笺 (免安装试玩)</span>
+            <span>↓</span>
           </a>
-          <a href="#shorts" class="bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-sm">
-            🎬 拾光高播短剧矩阵 ↗
+        </div>
+
+        <!-- 推广宇宙生态轻量入口 -->
+        <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-ink-sub">
+          <span class="text-stone-400">推广与生态：</span>
+          <a href="./shenshi/index.html" class="hover:text-cinnabar transition underline underline-offset-4 decoration-gold/50 flex items-center gap-1">
+            <span>🎵 沈拾《长风》Spotify</span>
+            <span>↗</span>
+          </a>
+          <span class="text-stone-300">·</span>
+          <a href="#shorts-showcase" class="hover:text-cinnabar transition underline underline-offset-4 decoration-gold/50 flex items-center gap-1">
+            <span>🎬 拾光短剧矩阵</span>
+            <span>↓</span>
+          </a>
+          <span class="text-stone-300">·</span>
+          <a href="./novel/index.html" class="hover:text-cinnabar transition underline underline-offset-4 decoration-gold/50 flex items-center gap-1">
+            <span>📖 拾物档案·小说</span>
+            <span>↗</span>
           </a>
         </div>
       </div>
@@ -236,8 +259,148 @@
     </div>
   </section>
 
-  <!-- 3. 【东方宣纸纸雕横向时间轴】1980–2026 4000+ 华语文化坐标长卷 -->
-  <section class="w-full bg-gradient-to-b from-paper-base via-paper-soft to-paper-card text-ink py-16 px-6 md:px-12 relative overflow-hidden border-y border-gold/30">
+  <!-- 3. 【核心产品深度展区：拾得 App · 属于你一生的传家书】(Directly Below Hero) -->
+  <section id="app-core" class="w-full max-w-7xl px-6 md:px-12 py-16">
+    <div class="bg-gradient-to-br from-paper-base via-paper-soft to-paper-card text-ink rounded-3xl p-8 sm:p-12 md:p-16 shadow-xl border-2 border-gold/40 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- 左侧：真实成书照片墙 / 杂志画册画廊展台 -->
+      <div class="lg:col-span-6 relative flex flex-col items-center justify-center">
+        <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-lg border border-gold/35 group bg-white/60 backdrop-blur-sm flex items-center justify-center p-2">
+          <img src="./assets/book-photowall-spread-v3.png?v=20260830-spread-v3" alt="拾得 AI 传家书《秘境卷 · Mystery》真实成书封面与高清大跨页杂志排版样张" 
+            class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute bottom-3 left-3 bg-white/95 border border-gold/40 px-3.5 py-1.5 rounded-full text-[10px] font-mono text-navy font-bold shadow-sm backdrop-blur-md flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>HEIRLOOM BOOK // 真实成书 A4 杂志双语排版</span>
+          </div>
+        </div>
+        <!-- 样张说明角标 -->
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 w-full mt-3 text-center">
+          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
+            01 金曲榜单
+          </div>
+          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
+            02 心象双栏
+          </div>
+          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
+            03 秘境灯塔
+          </div>
+          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
+            04 岁月信物
+          </div>
+          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
+            05 红土日常
+          </div>
+          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
+            06 问道年谱
+          </div>
+        </div>
+      </div>
+
+      <!-- 右侧：拾得 App 核心价值四大支柱与下载/预约 -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/15 border border-gold/40 text-xs font-mono text-gold-deep uppercase font-bold">
+          <span>OUR CORE PRODUCT // 拾得 IOS APP</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-navy leading-tight">
+          把属于你的一生，<br>装订成一本真正的传家书
+        </h2>
+
+        <p class="text-sm sm:text-base text-ink-sub font-serif leading-relaxed">
+          不预设用途、不说教。在 1980 至今的中华文化长河里，自主找到共鸣、勾起自己的记忆。端侧离线排版渲染中英双语 A4 杂志画册（PDF）。<strong class="text-cinnabar">回忆不上云，一生私密守护。</strong>
+        </p>
+
+        <!-- 四大核心功能卡片 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+          <div class="bg-white/90 p-3.5 rounded-xl border border-gold/30 shadow-xs">
+            <div class="text-xs font-serif font-bold text-navy flex items-center gap-1.5 mb-1">
+              <span>🏛️</span>
+              <span>中华文化坐标</span>
+            </div>
+            <p class="text-[11px] text-ink-sub font-serif leading-relaxed">
+              1980 至今 4000+ 歌剧书游戏与大事小事，按年铺开，随时唤醒记忆。
+            </p>
+          </div>
+
+          <div class="bg-white/90 p-3.5 rounded-xl border border-gold/30 shadow-xs">
+            <div class="text-xs font-serif font-bold text-navy flex items-center gap-1.5 mb-1">
+              <span>✍️</span>
+              <span>随手记一笔</span>
+            </div>
+            <p class="text-[11px] text-ink-sub font-serif leading-relaxed">
+              看见走过的影子就记一句，今天的一句话，年底就是书里的一页。
+            </p>
+          </div>
+
+          <div class="bg-white/90 p-3.5 rounded-xl border border-gold/30 shadow-xs">
+            <div class="text-xs font-serif font-bold text-navy flex items-center gap-1.5 mb-1">
+              <span>📖</span>
+              <span>中英双语成书</span>
+            </div>
+            <p class="text-[11px] text-ink-sub font-serif leading-relaxed">
+              iPhone 本机排版 A4 杂志画册，离线即成，永久保存分享。
+            </p>
+          </div>
+
+          <div class="bg-white/90 p-3.5 rounded-xl border border-gold/30 shadow-xs">
+            <div class="text-xs font-serif font-bold text-navy flex items-center gap-1.5 mb-1">
+              <span>🔒</span>
+              <span>无账号，不上传</span>
+            </div>
+            <p class="text-[11px] text-ink-sub font-serif leading-relaxed">
+              真正本地优先，写的是自己的年代，完全由你自己攥在手里。
+            </p>
+          </div>
+        </div>
+
+        <!-- 转化区：App Store 下载与 2.0 TestFlight 预约 -->
+        <div class="bg-white p-5 rounded-2xl border border-gold/35 shadow-sm space-y-4">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" target="_blank"
+              class="flex-1 bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono py-3 px-4 rounded-xl font-bold transition shadow text-center flex items-center justify-center gap-1.5">
+              <span>🍎 在 App Store 获取 拾得 1.0</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <!-- 2.0 TestFlight 表单 -->
+          <div class="border-t border-gold/20 pt-3">
+            <div v-if="!subscribed">
+              <label class="text-[11px] font-mono text-navy font-bold block mb-1.5">预约 拾得 iOS 2.0 TestFlight 内测名额：</label>
+              <div class="flex gap-2">
+                <input type="email" v-model="emailInput" placeholder="输入 Apple ID 邮箱"
+                  class="flex-1 px-3.5 py-2 rounded-xl text-xs bg-paper border border-stone-300 text-navy placeholder:text-stone-400 focus:outline-none focus:border-navy font-mono">
+                <button @click="submitEmail" class="bg-navy hover:bg-navy-deep text-white text-xs font-mono px-4 py-2 rounded-xl font-bold transition flex items-center gap-1 flex-shrink-0 shadow-sm">
+                  <span>预约内测</span>
+                  <span>›</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between text-[9px] text-stone-500 font-serif mt-2">
+                <span>🔒 承诺不发营销垃圾邮件 · 限量 500 席位</span>
+                <span class="text-emerald-700 font-mono font-bold">● 端侧隐私守护</span>
+              </div>
+            </div>
+
+            <!-- 预约成功状态 -->
+            <div v-else class="py-1 space-y-1">
+              <div class="flex items-center gap-2 text-cinnabar font-serif font-bold text-xs">
+                <span>🎉</span>
+                <span>预约成功！内测资格已锁定</span>
+              </div>
+              <p class="text-[11px] text-ink-sub font-serif leading-relaxed">
+                我们已将您的预约登记入库。iOS 2.0 TestFlight 开放时将发送邀请至 <strong class="text-navy font-mono">{{ emailInput }}</strong>。
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. 【东方宣纸纸雕横向时间轴】1980–2026 4000+ 华语文化坐标长卷 -->
+  <section id="timeline" class="w-full bg-gradient-to-b from-paper-base via-paper-soft to-paper-card text-ink py-16 px-6 md:px-12 relative overflow-hidden border-y border-gold/30">
     <div class="max-w-7xl mx-auto mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
       <div>
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/40 text-[11px] font-mono text-gold-deep font-bold uppercase mb-2">
@@ -279,232 +442,7 @@
     </div>
   </section>
 
-  <!-- 4. 【公域破圈核心：拾光视觉短剧 / 高清画廊展示】(Zero Error 153 High-Def Shorts Showcase) -->
-  <section id="shorts" class="w-full max-w-7xl px-6 md:px-12 py-20 border-b border-gold/25">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase mb-2">
-          <span>TRAFFIC ACQUISITION // 视觉短剧 & 时代记忆矩阵</span>
-        </div>
-        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-navy">拾光短剧 · 唤醒几代人的集体记忆</h2>
-      </div>
-      <div class="space-y-2 text-left md:text-right">
-        <p class="text-xs sm:text-sm text-ink-sub font-serif max-w-md">
-          首创 4.2s 品牌 Tail-Hook 与真实档案留存叙事。在 YouTube、TikTok 官方频道持续破圈。
-        </p>
-        <a href="https://www.youtube.com/@EnsoShide" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-cinnabar font-bold hover:underline">
-          <span>访问 YouTube @EnsoShide 官方频道</span>
-          <span>↗</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- 6 支高清短剧展卡矩阵（带真实高清帧封面 + 播放悬浮徽章 + 一键显影年份） -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- Short 1: Beyond 黄家驹 -->
-      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
-        <div>
-          <!-- 高清封面展台 (原片 4K 帧，支持点击在 YouTube 播放) -->
-          <a href="https://youtube.com/shorts/xjemS0zb-Vk" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
-            <img src="./assets/shorts-thumb-beyond.jpg" alt="Beyond 海阔天空" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
-              <div class="w-14 h-14 rounded-full bg-cinnabar/90 group-hover:bg-cinnabar text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
-              <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
-              <span class="bg-cinnabar text-white px-2 py-0.5 rounded font-bold">全网爆款</span>
-            </div>
-          </a>
-
-          <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-wider bg-cinnabar/10 px-2.5 py-0.5 rounded-full">
-              传-01 // 音乐传记
-            </span>
-            <span class="text-[11px] font-mono text-ink-sub font-semibold">100% 真实档案</span>
-          </div>
-          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">《海阔天空》发行一个月，写它的人就走了</h3>
-          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
-            黄家驹写完《海阔天空》一个月离世。100% 真实档案零 AI，用旋律击穿华人共同的执拗青春。
-          </p>
-        </div>
-        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
-          <a href="#radar" @click="selectYearFromRail(1993)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影 1993 坐标 ›</a>
-          <a href="https://youtube.com/shorts/xjemS0zb-Vk" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
-        </div>
-      </div>
-
-      <!-- Short 2: 梦回唐朝 -->
-      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
-        <div>
-          <a href="https://youtube.com/shorts/jp7wLFTtJOs" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
-            <img src="./assets/shorts-thumb-tangchao.jpg" alt="梦回唐朝" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
-              <div class="w-14 h-14 rounded-full bg-gold/90 group-hover:bg-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
-              <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
-              <span class="bg-gold text-white px-2 py-0.5 rounded font-bold">摇滚天花板</span>
-            </div>
-          </a>
-
-          <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[10px] font-mono text-gold font-bold uppercase tracking-wider bg-gold/10 px-2.5 py-0.5 rounded-full">
-              穿-01 // 拾光穿越
-            </span>
-            <span class="text-[11px] font-mono text-ink-sub font-semibold">重金属破土</span>
-          </div>
-          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">梦回唐朝：为什么是中国摇滚的天花板？</h3>
-          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
-            强 IP 穿越视角重回 1990 年代初摇滚狂飙岁月，重温中国重金属破土而出的时代震撼。
-          </p>
-        </div>
-        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
-          <a href="#radar" @click="selectYearFromRail(1993)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影摇滚纪元 ›</a>
-          <a href="https://youtube.com/shorts/jp7wLFTtJOs" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
-        </div>
-      </div>
-
-      <!-- Short 3: 邓丽君 甜蜜蜜冷知识 -->
-      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
-        <div>
-          <a href="https://youtube.com/shorts/Mk3kCe4j0cw" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
-            <img src="./assets/shorts-thumb-dengliujun.jpg" alt="邓丽君 甜蜜蜜" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
-              <div class="w-14 h-14 rounded-full bg-navy/90 group-hover:bg-navy text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
-              <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
-              <span class="bg-navy text-white px-2 py-0.5 rounded font-bold">三段真声</span>
-            </div>
-          </a>
-
-          <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[10px] font-mono text-navy font-bold uppercase tracking-wider bg-navy/10 px-2.5 py-0.5 rounded-full">
-              传-06 // 华语传奇
-            </span>
-            <span class="text-[11px] font-mono text-ink-sub font-semibold">独家冷知识</span>
-          </div>
-          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">白天听老邓，晚上听小邓</h3>
-          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
-            三段真声回响。解密《甜蜜蜜》旋律原身印尼渔歌的历史溯源，见证一缕甜美歌声抚慰十亿人心。
-          </p>
-        </div>
-        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
-          <a href="#radar" @click="selectYearFromRail(1988)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影 1988 慢车时代 ›</a>
-          <a href="https://youtube.com/shorts/Mk3kCe4j0cw" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
-        </div>
-      </div>
-
-      <!-- Short 4: 朴树 消失十年 -->
-      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
-        <div>
-          <a href="https://youtube.com/shorts/mLO-HGyMvGA" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
-            <img src="./assets/shorts-thumb-pushu.jpg" alt="朴树 消失十年" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
-              <div class="w-14 h-14 rounded-full bg-cinnabar/90 group-hover:bg-cinnabar text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
-              <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
-              <span class="bg-cinnabar text-white px-2 py-0.5 rounded font-bold">完播率 84%</span>
-            </div>
-          </a>
-
-          <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-wider bg-cinnabar/10 px-2.5 py-0.5 rounded-full">
-              传-04 // 深度传记
-            </span>
-            <span class="text-[11px] font-mono text-ink-sub font-semibold">最高完播率</span>
-          </div>
-          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">朴树：消失十年，只为不变成讨厌的样子</h3>
-          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
-            全频道完播率之王。在繁杂世界里坚守真我的音乐诗人，直击内心深处最柔软的角落。
-          </p>
-        </div>
-        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
-          <a href="#radar" @click="selectYearFromRail(2003)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影千禧岁月 ›</a>
-          <a href="https://youtube.com/shorts/mLO-HGyMvGA" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
-        </div>
-      </div>
-
-      <!-- Short 5: 灌篮高手 -->
-      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
-        <div>
-          <a href="https://youtube.com/shorts/ZQerFWKhFa8" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
-            <img src="./assets/shorts-thumb-slamdunk.jpg" alt="灌篮高手" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
-              <div class="w-14 h-14 rounded-full bg-gold/90 group-hover:bg-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
-              <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
-              <span class="bg-gold text-white px-2 py-0.5 rounded font-bold">热血回忆</span>
-            </div>
-          </a>
-
-          <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[10px] font-mono text-gold font-bold uppercase tracking-wider bg-gold/10 px-2.5 py-0.5 rounded-full">
-              穿-04 // 青春动漫
-            </span>
-            <span class="text-[11px] font-mono text-ink-sub font-semibold">热血黑马</span>
-          </div>
-          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">那时候真以为自己能扣篮</h3>
-          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
-            放学狂奔回家守在电视前的少年时光。红发樱木与《直到世界尽头》，是多少人青春的注脚。
-          </p>
-        </div>
-        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
-          <a href="#radar" @click="selectYearFromRail(1998)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影 1998 年时光 ›</a>
-          <a href="https://youtube.com/shorts/ZQerFWKhFa8" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
-        </div>
-      </div>
-
-      <!-- Short 6: 张国荣 -->
-      <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
-        <div>
-          <a href="https://youtube.com/shorts/jV7VH-EKUTg" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
-            <img src="./assets/shorts-thumb-leslie.jpg" alt="张国荣" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
-              <div class="w-14 h-14 rounded-full bg-navy/90 group-hover:bg-navy text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
-              <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
-              <span class="bg-navy text-white px-2 py-0.5 rounded font-bold">永恒港乐</span>
-            </div>
-          </a>
-
-          <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[10px] font-mono text-navy font-bold uppercase tracking-wider bg-navy/10 px-2.5 py-0.5 rounded-full">
-              传-02 // 港乐传奇
-            </span>
-            <span class="text-[11px] font-mono text-ink-sub font-semibold">永恒回响</span>
-          </div>
-          <h3 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">那年愚人节，几分钟后全香港安静了</h3>
-          <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
-            “我就是我，是颜色不一样的烟火。” 追忆比时代早了二十年的传奇巨星。
-          </p>
-        </div>
-        <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
-          <a href="#radar" @click="selectYearFromRail(2003)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影 2003 年往事 ›</a>
-          <a href="https://youtube.com/shorts/jV7VH-EKUTg" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 5. 【日晷刻度 极简几何海报：时空显影机】(Minimalist Sundial Portal Poster) -->
+  <!-- 5. 【获客体验武器 · 时空显影机：免安装试玩 App 核心能力】 -->
   <section id="radar" class="w-full max-w-7xl px-6 md:px-12 py-20 relative">
     
     <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-paper min-h-[740px] flex items-center justify-center p-6 sm:p-12">
@@ -527,7 +465,7 @@
           </div>
           <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy">时空显影机 · 认领你的时代印笺</h2>
           <p class="text-xs sm:text-sm text-ink-sub font-serif">
-            1980 至今 47 年文化印记全量覆盖。输入当年的一件小事，实时绑定公域坐标与沈拾手记
+            免下载在线体验 拾得 App 时代检索。输入当年的一件小事，实时绑定公域坐标与沈拾手记
           </p>
         </div>
 
@@ -608,7 +546,7 @@
             </p>
           </div>
 
-          <!-- 沈拾手记 (诙谐幽默调侃风格) -->
+          <!-- 沈拾手记 -->
           <div class="bg-white p-4 rounded-xl border-l-4 shadow-sm" :style="{ borderLeftColor: currentData.color }">
             <div class="flex items-center justify-between mb-1">
               <span class="text-xs font-serif font-bold text-navy flex items-center gap-1.5">
@@ -668,13 +606,23 @@
               <span>›</span>
             </button>
           </div>
+
+          <!-- 转化引导 -->
+          <div class="text-center pt-2 border-t border-gold/20">
+            <p class="text-[11px] font-serif text-ink-sub">
+              想要把这些时代印笺永久装订成书？
+              <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" target="_blank" class="text-cinnabar font-bold hover:underline ml-1">
+                下载 拾得 App 开启本地 AI 成书 ›
+              </a>
+            </p>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- 5.5 【时代便签 · 时空留声墙】(Interactive Spacetime Bulletin Board) -->
+  <!-- 6. 【时代便签 · 时空留声墙：微尘共鸣社区】 -->
   <section id="spacetime-wall" class="w-full max-w-7xl px-6 md:px-12 py-16 border-t border-gold/25">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
       <div>
@@ -766,7 +714,7 @@
       </div>
     </div>
 
-    <!-- 东方木纹/宣纸质感公告板容器 (Tactile Bulletin Corkboard Canvas) -->
+    <!-- 东方木纹/宣纸质感公告板容器 -->
     <div :class="boardViewMode === 'board' ? 'bg-stone-100/90 border-2 border-gold/40 rounded-3xl p-6 sm:p-10 shadow-inner' : ''">
       
       <!-- 卡片网格瀑布流 -->
@@ -776,7 +724,7 @@
           :class="boardViewMode === 'board' ? 'transform hover:scale-[1.03] hover:rotate-0 hover:z-30' : ''"
           :style="boardViewMode === 'board' ? { transform: 'rotate(' + (post.tilt || (idx % 2 === 0 ? -1.5 : 1.2)) + 'deg)' } : {}">
           
-          <!-- 便签顶部胶带 / 图钉 (Washi Tape or Pushpin) -->
+          <!-- 便签顶部胶带 / 图钉 -->
           <div v-if="boardViewMode === 'board'" class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-5 opacity-85 shadow-sm rounded-sm z-20 pointer-events-none"
             :style="{ backgroundColor: getYearColor(post.year) + '45', border: '1px dashed ' + getYearColor(post.year) }">
           </div>
@@ -803,7 +751,7 @@
             {{ post.content }}
           </div>
 
-          <!-- 修复师手记随笔（纯净无多余“沈拾调侃”字样） -->
+          <!-- 修复师手记随笔 -->
           <div class="bg-paper-tint/70 p-3 rounded-xl border-l-2 border-cinnabar/70 text-xs font-serif text-ink-sub italic leading-relaxed">
             “{{ post.reply }}”
           </div>
@@ -821,7 +769,6 @@
             <button @click="likePost(post)" class="hover:text-cinnabar transition flex items-center gap-1.5 group/btn relative">
               <span class="group-hover/btn:scale-125 transition-transform">❤️</span>
               <span class="font-bold">{{ post.likes }} 钤印共鸣</span>
-              <!-- 钤印单次动画效果 -->
               <span v-if="likedPostId === post.id" class="absolute -top-6 left-2 text-cinnabar font-serif font-bold text-xs animate-ping pointer-events-none">
                 印
               </span>
@@ -834,11 +781,10 @@
             </button>
           </div>
 
-          <!-- 悬浮式回帖展开抽屉 (Floating Reply Popover - 绝对定位浮于下方，不破坏网格卡片等高排版) -->
+          <!-- 悬浮式回帖展开抽屉 -->
           <div v-if="activeCommentPostId === post.id" 
             class="absolute left-0 right-0 top-[calc(100%+8px)] z-40 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-2xl border-2 border-gold/40 space-y-3">
             
-            <!-- 抽屉头部 -->
             <div class="flex items-center justify-between border-b border-gold/20 pb-2">
               <span class="text-xs font-serif font-bold text-navy flex items-center gap-1.5">
                 <span>💬</span>
@@ -890,7 +836,7 @@
         </div>
       </div>
 
-      <!-- 帖子太多时的分页与展开机制 (Show More / Full View) -->
+      <!-- 展开更多 -->
       <div v-if="filteredWallPosts.length > displayLimit" class="text-center pt-8">
         <button @click="displayLimit += 6" class="px-6 py-3 rounded-xl bg-white border border-gold/40 text-navy hover:bg-gold/15 text-xs font-mono font-bold transition shadow-sm inline-flex items-center gap-2">
           <span>👇 展开更多时代便签 (还有 {{ filteredWallPosts.length - displayLimit }} 条)</span>
@@ -916,214 +862,309 @@
     </div>
   </section>
 
-  <!-- 6. 【东方时间考古小说《九证天下》E1】(Minimalist Editorial Novel Section) -->
-  <section id="novel-e1" class="w-full max-w-7xl px-6 md:px-12 py-20 border-t border-gold/25">
+  <!-- 7. 【拾得原创推广宇宙：音乐 · 短剧 · 小说 (生态辅助)】 -->
+  <section id="universe" class="w-full max-w-7xl px-6 md:px-12 py-20 border-t border-gold/25">
     
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-      <div>
-        <span class="text-xs font-mono text-gold tracking-[0.25em] uppercase">NOVEL UNIVERSE // SEASON 1</span>
-        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-navy mt-1">《拾物档案：九证天下》</h2>
+    <div class="mb-12 space-y-2">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase">
+        <span>ORIGINAL UNIVERSE // 拾得原创推广宇宙</span>
       </div>
-      <p class="text-xs sm:text-sm text-ink-sub font-serif max-w-md">
-        第一季 8 集总纲已锁定，E1 第一章《博物院下面开来一列火车》即将部署。时间不是直线，真相绝不征用活人。
+      <h2 class="text-3xl sm:text-5xl font-serif font-bold text-navy">
+        App 之外，同一束光烧向更远
+      </h2>
+      <p class="text-xs sm:text-sm text-ink-sub font-serif max-w-2xl leading-relaxed">
+        沈拾的原创音乐替尘埃中的人唱；拾光短剧重温那些年的老剧与经典；小说《拾物档案》探索东方时间考古。它们是 拾得 App 的公域故事触点，点亮几代人的文化共鸣。
       </p>
     </div>
 
-    <!-- E1 卷一核心信息展台 (纯净静奢暗调展板 · 静候官方剧照) -->
+    <!-- 7.1 沈拾音乐展台 -->
+    <div class="w-full rounded-3xl border border-gold/40 bg-white p-8 sm:p-12 mb-12 shadow-card-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-4 flex justify-center">
+        <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden shadow-2xl border-2 border-gold/40 group">
+          <img src="./assets/changfeng-cover.jpg" alt="沈拾《长风》封面" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <span class="w-12 h-12 rounded-full bg-cinnabar text-white flex items-center justify-center shadow-lg text-lg">▶</span>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-8 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/40 text-[10px] font-mono text-gold-deep font-bold uppercase">
+          <span>ORIGINAL SOUNDTRACK // SPOTIFY RELEASED</span>
+        </div>
+        <h3 class="text-2xl sm:text-3xl font-serif font-bold text-navy">
+          沈拾 · 原创华语音乐《长风》
+        </h3>
+        <p class="text-xs sm:text-sm text-ink-sub font-serif italic leading-relaxed">
+          “天地不问 星河不应，我把这一生 走给自己听。一粒尘埃 也有黎明，抬起头 满天都是我的星。”
+        </p>
+        <p class="text-xs text-ink-sub font-serif leading-relaxed">
+          沈拾是一个不存在的人，替尘埃中的人唱歌。《长风》与《天地借宿》已上线各大流媒体平台。
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj" target="_blank"
+            class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-mono px-5 py-2.5 rounded-xl font-bold transition flex items-center gap-1.5 shadow-sm">
+            <span>🟢 在 Spotify 聆听沈拾</span>
+            <span>↗</span>
+          </a>
+          <a href="./shenshi/index.html"
+            class="bg-paper hover:bg-paper-tint text-navy border border-gold/40 text-xs font-mono px-5 py-2.5 rounded-xl font-bold transition flex items-center gap-1">
+            <span>查看沈拾艺人主页</span>
+            <span>›</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7.2 拾光视觉短剧矩阵 (6 支视频卡片) -->
+    <div id="shorts-showcase" class="space-y-6 mb-16">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-mono text-gold-deep tracking-[0.25em] uppercase font-bold">SHORTS MATRIX</span>
+          <h3 class="text-2xl sm:text-3xl font-serif font-bold text-navy mt-1">拾光短剧 · 唤醒几代人的集体记忆</h3>
+        </div>
+        <a href="https://www.youtube.com/@EnsoShide" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-cinnabar font-bold hover:underline">
+          <span>访问 YouTube @EnsoShide 官方频道</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Short 1: Beyond 黄家驹 -->
+        <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+          <div>
+            <a href="https://youtube.com/shorts/xjemS0zb-Vk" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+              <img src="./assets/shorts-thumb-beyond.jpg" alt="Beyond 海阔天空" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+                <div class="w-14 h-14 rounded-full bg-cinnabar/90 group-hover:bg-cinnabar text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+                <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+                <span class="bg-cinnabar text-white px-2 py-0.5 rounded font-bold">全网爆款</span>
+              </div>
+            </a>
+
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-wider bg-cinnabar/10 px-2.5 py-0.5 rounded-full">
+                传-01 // 音乐传记
+              </span>
+              <span class="text-[11px] font-mono text-ink-sub font-semibold">100% 真实档案</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">《海阔天空》发行一个月，写它的人就走了</h4>
+            <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+              黄家驹写完《海阔天空》一个月离世。100% 真实档案零 AI，用旋律击穿华人共同的执拗青春。
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+            <a href="#radar" @click="selectYearFromRail(1993)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影 1993 坐标 ›</a>
+            <a href="https://youtube.com/shorts/xjemS0zb-Vk" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
+          </div>
+        </div>
+
+        <!-- Short 2: 梦回唐朝 -->
+        <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+          <div>
+            <a href="https://youtube.com/shorts/jp7wLFTtJOs" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+              <img src="./assets/shorts-thumb-tangchao.jpg" alt="梦回唐朝" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+                <div class="w-14 h-14 rounded-full bg-gold/90 group-hover:bg-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+                <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+                <span class="bg-gold text-white px-2 py-0.5 rounded font-bold">摇滚天花板</span>
+              </div>
+            </a>
+
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-[10px] font-mono text-gold font-bold uppercase tracking-wider bg-gold/10 px-2.5 py-0.5 rounded-full">
+                穿-01 // 拾光穿越
+              </span>
+              <span class="text-[11px] font-mono text-ink-sub font-semibold">重金属破土</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">梦回唐朝：为什么是中国摇滚的天花板？</h4>
+            <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+              强 IP 穿越视角重回 1990 年代初摇滚狂飙岁月，重温中国重金属破土而出的时代震撼。
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+            <a href="#radar" @click="selectYearFromRail(1993)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影摇滚纪元 ›</a>
+            <a href="https://youtube.com/shorts/jp7wLFTtJOs" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
+          </div>
+        </div>
+
+        <!-- Short 3: 邓丽君 甜蜜蜜冷知识 -->
+        <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+          <div>
+            <a href="https://youtube.com/shorts/Mk3kCe4j0cw" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+              <img src="./assets/shorts-thumb-dengliujun.jpg" alt="邓丽君 甜蜜蜜" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+                <div class="w-14 h-14 rounded-full bg-navy/90 group-hover:bg-navy text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+                <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+                <span class="bg-navy text-white px-2 py-0.5 rounded font-bold">三段真声</span>
+              </div>
+            </a>
+
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-[10px] font-mono text-navy font-bold uppercase tracking-wider bg-navy/10 px-2.5 py-0.5 rounded-full">
+                传-06 // 华语传奇
+              </span>
+              <span class="text-[11px] font-mono text-ink-sub font-semibold">独家冷知识</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">白天听老邓，晚上听小邓</h4>
+            <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+              三段真声回响。解密《甜蜜蜜》旋律原身印尼渔歌的历史溯源，见证一缕甜美歌声抚慰十亿人心。
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+            <a href="#radar" @click="selectYearFromRail(1988)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影 1988 慢车时代 ›</a>
+            <a href="https://youtube.com/shorts/Mk3kCe4j0cw" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
+          </div>
+        </div>
+
+        <!-- Short 4: 朴树 消失十年 -->
+        <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+          <div>
+            <a href="https://youtube.com/shorts/mLO-HGyMvGA" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+              <img src="./assets/shorts-thumb-pushu.jpg" alt="朴树 消失十年" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+                <div class="w-14 h-14 rounded-full bg-cinnabar/90 group-hover:bg-cinnabar text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+                <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+                <span class="bg-cinnabar text-white px-2 py-0.5 rounded font-bold">完播率 84%</span>
+              </div>
+            </a>
+
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-[10px] font-mono text-cinnabar font-bold uppercase tracking-wider bg-cinnabar/10 px-2.5 py-0.5 rounded-full">
+                传-04 // 深度传记
+              </span>
+              <span class="text-[11px] font-mono text-ink-sub font-semibold">最高完播率</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">朴树：消失十年，只为不变成讨厌的样子</h4>
+            <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+              全频道完播率之王。在繁杂世界里坚守真我的音乐诗人，直击内心深处最柔软的角落。
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+            <a href="#radar" @click="selectYearFromRail(2003)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影千禧岁月 ›</a>
+            <a href="https://youtube.com/shorts/mLO-HGyMvGA" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
+          </div>
+        </div>
+
+        <!-- Short 5: 灌篮高手 -->
+        <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+          <div>
+            <a href="https://youtube.com/shorts/ZQerFWKhFa8" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+              <img src="./assets/shorts-thumb-slamdunk.jpg" alt="灌篮高手" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+                <div class="w-14 h-14 rounded-full bg-gold/90 group-hover:bg-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+                <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+                <span class="bg-gold text-white px-2 py-0.5 rounded font-bold">热血回忆</span>
+              </div>
+            </a>
+
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-[10px] font-mono text-gold font-bold uppercase tracking-wider bg-gold/10 px-2.5 py-0.5 rounded-full">
+                穿-04 // 青春动漫
+              </span>
+              <span class="text-[11px] font-mono text-ink-sub font-semibold">热血黑马</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">那时候真以为自己能扣篮</h4>
+            <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+              放学狂奔回家守在电视前的少年时光。红发樱木与《直到世界尽头》，是多少人青春的注脚。
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+            <a href="#radar" @click="selectYearFromRail(1998)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影 1998 年时光 ›</a>
+            <a href="https://youtube.com/shorts/ZQerFWKhFa8" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
+          </div>
+        </div>
+
+        <!-- Short 6: 张国荣 -->
+        <div class="bg-white rounded-3xl border border-gold/30 p-5 shadow-card-luxury flex flex-col justify-between group hover:border-cinnabar transition-all duration-300">
+          <div>
+            <a href="https://youtube.com/shorts/jV7VH-EKUTg" target="_blank" class="block relative w-full aspect-[9/14] rounded-2xl overflow-hidden bg-navy-deep mb-4 shadow-inner group-hover:shadow-2xl transition">
+              <img src="./assets/shorts-thumb-leslie.jpg" alt="张国荣" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
+                <div class="w-14 h-14 rounded-full bg-navy/90 group-hover:bg-navy text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[10px] font-mono text-stone-200">
+                <span class="bg-navy-deep/80 text-white px-2.5 py-1 rounded backdrop-blur-sm">YouTube Short</span>
+                <span class="bg-navy text-white px-2 py-0.5 rounded font-bold">永恒港乐</span>
+              </div>
+            </a>
+
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-[10px] font-mono text-navy font-bold uppercase tracking-wider bg-navy/10 px-2.5 py-0.5 rounded-full">
+                传-02 // 港乐传奇
+              </span>
+              <span class="text-[11px] font-mono text-ink-sub font-semibold">永恒回响</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-navy group-hover:text-cinnabar transition">那年愚人节，几分钟后全香港安静了</h4>
+            <p class="text-xs text-ink-sub font-serif mt-2 leading-relaxed">
+              “我就是我，是颜色不一样的烟火。” 追忆比时代早了二十年的传奇巨星。
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-gold/20 flex justify-between items-center text-xs font-mono">
+            <a href="#radar" @click="selectYearFromRail(2003)" class="text-navy font-bold hover:text-cinnabar">⚡ 显影 2003 年往事 ›</a>
+            <a href="https://youtube.com/shorts/jV7VH-EKUTg" target="_blank" class="text-cinnabar font-bold hover:underline">在 YT 播放 ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 7.3 小说《拾物档案：九证天下》展台 -->
     <div class="w-full rounded-3xl border border-gold/40 bg-navy-deep p-8 sm:p-12 mb-8 shadow-2xl relative overflow-hidden">
       <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
         <div class="space-y-4 max-w-2xl">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-gold/30 text-[11px] font-mono text-gold uppercase">
-            <span>E1 第一章 // 博物院下面开来一列火车</span>
+            <span>NOVEL UNIVERSE // SEASON 1 · 拾物档案</span>
           </div>
           <h3 class="text-2xl sm:text-4xl font-serif font-bold text-white leading-tight">
-            山河博物院地下负三层 · 黑色工务附车
+            《拾物档案：九证天下》· 博物院下面开来一列火车
           </h3>
           <p class="text-xs sm:text-base text-stone-300 font-serif leading-relaxed">
-            2026年八月，距南迁特展开幕不到九小时。三十一名无脸旧人被困时间缝隙。沈拾主轴：“找回真相，也阻止真相征用活人”。修表铁律：绝不把没发生过的时刻校进记录里。
+            时间不是直线，真相绝不征用活人。沈拾与晷作九家，在停摆磨损的物件中寻找被历史抹去的名字。
           </p>
+          <div class="pt-2">
+            <a href="./novel/index.html" class="inline-flex items-center gap-2 bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono px-5 py-2.5 rounded-xl font-bold transition shadow-sm">
+              <span>📖 阅读小说全本与世界观设定</span>
+              <span>›</span>
+            </a>
+          </div>
         </div>
 
         <div class="flex-shrink-0 flex flex-col items-start md:items-end gap-3">
           <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-gold/40 text-xs font-mono text-gold backdrop-blur-md">
             <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-            <span>Target Sept 5 Pipeline</span>
+            <span>AI 短剧打磨规划中</span>
           </span>
-          <span class="text-[11px] font-mono text-stone-400">30s 预告管线已就绪 · 待额度重置</span>
+          <span class="text-[11px] font-mono text-stone-400">30s 预告管线已就绪 · 待发布</span>
         </div>
       </div>
-    </div>
-
-    <!-- E1 核心物候与关键帧画廊 (与右侧设定框完美平衡) -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      
-      <!-- 左侧：3 张 30s 预告官方关键帧三联屏 -->
-      <div class="lg:col-span-6 space-y-3">
-        <div class="flex justify-between items-center px-1">
-          <span class="text-[11px] font-mono text-navy font-bold uppercase tracking-wider flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-cinnabar animate-pulse"></span>
-            30s 预告关键帧 (TR30 · SH001-SH003)
-          </span>
-          <span class="text-[10px] font-mono text-ink-sub">V12 CANONICAL KEYFRAMES</span>
-        </div>
-
-        <div class="grid grid-cols-3 gap-3">
-          <!-- Frame 1 -->
-          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-card-luxury border border-gold/40 group bg-navy-deep">
-            <img src="./assets/novel-e1-keyframe-01.png" alt="SH001 门禁通道 · 沈拾" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
-              <span class="text-[9px] font-mono text-gold font-bold">SH001</span>
-              <span class="text-[11px] font-serif text-white font-bold leading-tight">门禁显影</span>
-              <span class="text-[8px] font-mono text-stone-300">沈拾进入地下通道</span>
-            </div>
-          </div>
-
-          <!-- Frame 2 -->
-          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-card-luxury border border-gold/40 group bg-navy-deep">
-            <img src="./assets/novel-e1-keyframe-02.png" alt="SH002 剪辑机房 · 周立冬与沈拾" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
-              <span class="text-[9px] font-mono text-gold font-bold">SH002</span>
-              <span class="text-[11px] font-serif text-white font-bold leading-tight">机房核验</span>
-              <span class="text-[8px] font-mono text-stone-300">调阅 31 名无脸旧人</span>
-            </div>
-          </div>
-
-          <!-- Frame 3 -->
-          <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-card-luxury border border-gold/40 group bg-navy-deep">
-            <img src="./assets/novel-e1-keyframe-03.png" alt="SH003 走廊异象 · 秦海生探照" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
-              <span class="text-[9px] font-mono text-gold font-bold">SH003</span>
-              <span class="text-[11px] font-serif text-white font-bold leading-tight">探照时证</span>
-              <span class="text-[8px] font-mono text-stone-300">巡检发现黑色工务附车</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 右侧：文字设定解析 -->
-      <div class="lg:col-span-6 space-y-5 bg-white p-8 sm:p-10 rounded-3xl border border-gold/30 shadow-card-luxury">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-cinnabar"></span>
-            <h4 class="text-xl sm:text-2xl font-serif font-bold text-navy">晷作 · 时证与九家制衡</h4>
-          </div>
-          <span class="text-[10px] font-mono text-gold font-bold bg-gold/10 px-2.5 py-0.5 rounded-full">CHRONO-CRAFT</span>
-        </div>
-
-        <p class="text-xs sm:text-sm text-ink-sub font-serif leading-relaxed">
-          从停摆磨损的钟表零件中还原“谁先谁后”，把被历史压成“若干/无名”的活人时刻放回正位。修表铁律：<strong class="text-navy font-bold">绝不把没发生过的时刻校进记录里。</strong>
-        </p>
-
-        <div class="pt-4 border-t border-gold/20 space-y-2.5 text-xs font-serif text-ink-sub">
-          <div class="flex items-start gap-2">
-            <span class="font-bold text-navy flex-shrink-0">首发主题曲：</span>
-            <span>《长风》《天地借宿》（沈拾原创 · 已上架 Spotify / Apple Music）</span>
-          </div>
-          <div class="flex items-start gap-2">
-            <span class="font-bold text-navy flex-shrink-0">登场人物：</span>
-            <span>沈拾（时间修复师）、周立冬（剪辑）、秦海生（巡检）、许安（机电工）</span>
-          </div>
-        </div>
-      </div>
-
     </div>
 
   </section>
 
-  <!-- 7. 【东方宣纸纸雕概念展区：拾得 App 2.0 传家书】(Minimalist Paper Sculpture Poster) -->
-  <section id="app-book" class="w-full max-w-7xl px-6 md:px-12 py-20">
-    <div class="bg-gradient-to-br from-paper-base via-paper-soft to-paper-card text-ink rounded-3xl p-8 sm:p-12 md:p-16 shadow-xl border-2 border-gold/40 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      
-      <!-- 真实成书照片墙 / 杂志画册画廊展台 -->
-      <div class="lg:col-span-6 relative flex flex-col items-center justify-center">
-        <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-lg border border-gold/35 group bg-white/60 backdrop-blur-sm flex items-center justify-center p-2">
-          <img src="./assets/book-photowall-spread-v3.png?v=20260830-spread-v3" alt="拾得 AI 传家书《秘境卷 · Mystery》真实成书封面与高清大跨页杂志排版样张" 
-            class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute bottom-3 left-3 bg-white/95 border border-gold/40 px-3.5 py-1.5 rounded-full text-[10px] font-mono text-navy font-bold shadow-sm backdrop-blur-md flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>HEIRLOOM BOOK // 真实成书 A4 杂志双语排版</span>
-          </div>
-        </div>
-        <!-- 样张说明角标 -->
-        <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 w-full mt-3 text-center">
-          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
-            01 金曲榜单
-          </div>
-          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
-            02 心象双栏
-          </div>
-          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
-            03 秘境灯塔
-          </div>
-          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
-            04 岁月信物
-          </div>
-          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
-            05 红土日常
-          </div>
-          <div class="bg-white/80 border border-gold/30 rounded-lg py-1 px-1.5 text-[9px] font-mono text-stone-700 font-medium shadow-xs">
-            06 问道年谱
-          </div>
-        </div>
-      </div>
-
-      <!-- 右侧：文字与 TestFlight 表单 -->
-      <div class="lg:col-span-6 space-y-6">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/15 border border-gold/40 text-xs font-mono text-gold-deep uppercase font-bold">
-          <span>LOCAL-FIRST // NO ACCOUNT // ON-DEVICE AI</span>
-        </div>
-
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-navy leading-tight">
-          把属于你的一生，<br>装订成一本真正的传家书
-        </h2>
-
-        <p class="text-sm sm:text-base text-ink-sub font-serif leading-relaxed">
-          拾得 iOS App 2.0 研发冲刺中。通过“说一嘴”语音输入（Apple 端侧私密计算 · Apple PCC）与 4000+ 文化长河坐标自动映射，端侧离线渲染中英双语 A4 杂志画册。<strong class="text-cinnabar">回忆不上云，一生私密守护。</strong>
-        </p>
-
-        <!-- 预约框 -->
-        <div class="bg-white p-6 rounded-2xl border border-gold/35 shadow-sm max-w-md">
-          <div v-if="!subscribed">
-            <label class="text-xs font-mono text-navy font-bold block mb-2">预约 iOS 2.0 TestFlight 内测名额：</label>
-            <div class="flex gap-2">
-              <input type="email" v-model="emailInput" placeholder="输入 Apple ID 邮箱"
-                class="flex-1 px-4 py-2.5 rounded-xl text-xs bg-paper border border-stone-300 text-navy placeholder:text-stone-400 focus:outline-none focus:border-navy font-mono">
-              <button @click="submitEmail" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs font-mono px-5 py-2.5 rounded-xl font-bold transition flex items-center gap-1 flex-shrink-0 shadow-sm">
-                <span>预约内测</span>
-                <span>›</span>
-              </button>
-            </div>
-            <div class="flex items-center justify-between text-[10px] text-stone-500 font-serif mt-2.5">
-              <span>🔒 承诺不发营销垃圾邮件 · 限量 500 席位</span>
-              <span class="text-emerald-700 font-mono text-[10px] font-bold">● 端侧隐私守护</span>
-            </div>
-          </div>
-          
-          <!-- 预约成功状态 -->
-          <div v-else class="py-2 space-y-2">
-            <div class="flex items-center gap-2 text-cinnabar font-serif font-bold text-sm">
-              <span>🎉</span>
-              <span>预约成功！内测资格已锁定</span>
-            </div>
-            <p class="text-xs text-ink-sub font-serif leading-relaxed">
-              我们已将您的预约登记入库。iOS 2.0 TestFlight 开放测试时，将通过专属邮件通道将邀请直接发送至 <strong class="text-navy font-mono">{{ emailInput }}</strong>。
-            </p>
-          </div>
-        </div>
-
-        <div class="pt-2">
-          <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" target="_blank"
-            class="inline-flex items-center gap-1.5 text-xs text-ink-sub hover:text-navy font-mono border-b border-stone-400 pb-0.5 transition">
-            <span>在 App Store 查看 拾得 1.0 基础版</span>
-            <span>↗</span>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 8. 【GEO 搜索与 AI 语义知识库全景索引】(GEO & AI Knowledge Graph Index) -->
+  <!-- 8. 【GEO 搜索与 AI 语义知识库全景索引】 -->
   <section id="geo-index" class="w-full max-w-7xl px-6 md:px-12 py-16 border-t border-gold/30 bg-paper-tint/40 rounded-3xl my-8">
     <div class="mb-10 space-y-2">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 border border-gold/30 text-xs font-mono text-navy font-bold uppercase">
@@ -1192,7 +1233,7 @@
         
         <!-- 多语言链接 -->
         <div class="space-y-1.5 text-xs font-serif text-ink-sub">
-          <p class="text-[11px] font-mono text-ink-sub">语言版本 (多语言页面待中文定稿后更新)：</p>
+          <p class="text-[11px] font-mono text-ink-sub">语言版本：</p>
           <div class="flex flex-wrap gap-2 text-xs font-mono">
             <a href="./zh-Hant/index.html" class="px-2.5 py-1 rounded bg-white border border-gold/30 hover:border-cinnabar transition">繁體中文</a>
             <a href="./en/index.html" class="px-2.5 py-1 rounded bg-white border border-gold/30 hover:border-cinnabar transition">English</a>
@@ -1200,7 +1241,7 @@
           </div>
         </div>
 
-        <!-- AI 爬虫端点 (专业命名与规范入口) -->
+        <!-- AI 爬虫端点 -->
         <div class="pt-3 border-t border-gold/20 space-y-2">
           <p class="text-[11px] font-mono text-ink-sub">大模型抓取与站点地图：</p>
           <div class="flex flex-col gap-1.5 font-mono text-[11px]">
@@ -1252,7 +1293,7 @@
     </div>
   </div>
 
-  <!-- 隐藏 Canvas -->
+  <!-- 隐藏 Canvas 用于生成 750x1100 高清海报 -->
   <canvas id="exportCanvas" width="750" height="1100" class="hidden"></canvas>
 
   <!-- 10. Footer -->
@@ -1307,6 +1348,20 @@
         '#1998千禧前夜', '#小霸王', '#周杰伦', '#Beyond', '#网吧通宵', '#温哥华', '#黑神话', '#老弄堂', '#小虎队'
       ]);
 
+      const timelineList = [
+        { year: 1980, tag: "庐山初吻", title: "庐山之恋与绿皮慢车", desc: "第一部彩色爱情片上映，站台广播播着李谷一的歌，车票是一张带红色流水号的硬纸板。" },
+        { year: 1988, tag: "慢车时代", title: "海鸥双狮表与绿皮慢车", desc: "站台广播播着费翔的《冬天里的一把火》，车票还是一张硬纸板，上面印着红色的流水号。" },
+        { year: 1993, tag: "华语摇滚", title: "Beyond《海阔天空》与卡带", desc: "随身听里转动着透明卡带，用铅笔倒带的咔哒声，是一代人执拗的青春。" },
+        { year: 1997, tag: "回归之夜", title: "维港烟花与《春光乍泄》", desc: "电视机里放着烟花，大街小巷唱着东方之珠。所有人都在猜下一个时代。" },
+        { year: 1998, tag: "千禧前夜", title: "网吧拨号音与 OICQ 初代", desc: "放学直奔网吧，Modem 吱呀作响，你在 OICQ 上第一次跟陌生人敲下'你好'。" },
+        { year: 2000, tag: "千禧狂欢", title: "千年虫预言与周杰伦首专", desc: "收音机里传出《星晴》的前奏，我们终于安全地踏进了21世纪。" },
+        { year: 2003, tag: "隔绝春天", title: "非典停课与《以父之名》", desc: "量体温成了每天的仪式，八亿人守在电台前听周杰伦全亚洲首播。" },
+        { year: 2008, tag: "大喜大悲", title: "鸟巢烟花、汶川的雨与奥运", desc: "那一年有太多眼泪，也有前所未有的自豪。你守在电视机前看完了整个夏天。" },
+        { year: 2015, tag: "移动互联", title: "4G 普及与微信红包狂欢", desc: "手机终于可以看清全世界，我们坐下来面对面长聊的次数越来越少。" },
+        { year: 2024, tag: "回望传承", title: "AI 时代到来与个人记忆觉醒", desc: "算法可以生成无尽的幻象，但你走过的路，唯有你自己能作证。" },
+        { year: 2026, tag: "丙午正新", title: "拾得传承 · 尘埃里抬头把光传下去", desc: "在 4000+ 文化坐标里找回自己，端侧私密装订成一本真正的传家书。" }
+      ];
+
       // Check if user already subscribed on this device
       try {
         const savedPass = localStorage.getItem('shide_user_pass');
@@ -1342,6 +1397,16 @@
 
       const getYearColor = (y) => {
         return db[y] ? db[y].color : '#12365E';
+      };
+
+      const selectYearFromRail = (y) => {
+        selectedYear.value = y;
+        boundMemoryOutput.value = '';
+        redlineWarning.value = '';
+        const radarEl = document.getElementById('radar');
+        if (radarEl) {
+          radarEl.scrollIntoView({ behavior: 'smooth' });
+        }
       };
 
       const stepYear = (delta) => {
@@ -1404,7 +1469,7 @@
         boundMemoryOutput.value = `“${text}” —— 1980年代至今的文化长河中，你这句话已被收录，为你盖印见证。`;
       };
 
-      // 贴到时空留言墙核心逻辑 (纯净无多余前缀)
+      // 贴到时空留言墙核心逻辑
       const createWallPost = (userText) => {
         const text = userText || userMemoryInput.value.trim();
         if (!text) {
@@ -1452,79 +1517,232 @@
         }
 
         const newPost = {
-          id: `post-${y}-${Date.now()}`,
+          id: `post-${Date.now()}-${Math.floor(Math.random()*1000)}`,
           year: y,
           author: authorName,
           avatar: ['🏮', '📻', '🎸', '🕹️', '🚲', '🌊', '☕', '🥢'][Math.floor(Math.random() * 8)],
           timestamp: '刚刚',
           content: text,
-          reply: cData.verdict, // 纯净手记，无“沈拾调侃：”前缀
+          reply: cData.verdict,
+          tags: autoTags,
           likes: 1,
-          pinType: randomPin,
           tilt: randomTilt,
-          tags: autoTags
+          pinType: randomPin,
+          comments: []
         };
 
-        allWallPosts.value.unshift(newPost);
         if (window.ShideChronoscope) {
-          window.ShideChronoscope.saveSpacetimeWall(allWallPosts.value);
+          const updated = window.ShideChronoscope.addPostToSpacetimeWall(newPost);
+          allWallPosts.value = updated;
+        } else {
+          allWallPosts.value.unshift(newPost);
         }
+
         return newPost;
       };
 
-      const likedPostId = ref(null);
-
       const postToWallDirectly = () => {
-        const text = userMemoryInput.value.trim();
-        if (text) {
-          const post = createWallPost(text);
-          if (post) {
-            userMemoryInput.value = '';
-            boundMemoryOutput.value = '';
-            window.location.href = `./spacetime-wall/index.html?highlight=${post.id}`;
-            return;
+        const post = createWallPost();
+        if (post) {
+          userMemoryInput.value = '';
+          boundMemoryOutput.value = '';
+          const wall = document.getElementById('spacetime-wall');
+          if (wall) {
+            wall.scrollIntoView({ behavior: 'smooth' });
           }
         }
-        // 未输入文字时，点击直接进入对应年份的时空大公告板
-        window.location.href = `./spacetime-wall/index.html?highlight=${selectedYear.value}`;
       };
 
       const postToWallFromModal = () => {
         showModal.value = false;
-        const post = createWallPost(userMemoryInput.value.trim() || `在那一年，我认领了属于自己的时代印笺《${currentData.value.event}》`);
-        if (post) {
-          window.location.href = `./spacetime-wall/index.html?highlight=${post.id}`;
-        }
+        postToWallDirectly();
       };
 
-      // 留言墙筛选与搜索计算属性
+      // 纯前端 Canvas 渲染 750×1100 宣纸时代印笺
+      const exportPoster = () => {
+        const text = userMemoryInput.value.trim() || currentData.value.quote;
+        if (window.ShideChronoscope) {
+          const check = window.ShideChronoscope.checkRedline(text);
+          if (!check.pass) {
+            alert(check.reason);
+            return;
+          }
+        }
+        isExporting.value = true;
+
+        setTimeout(() => {
+          try {
+            const canvas = document.getElementById('exportCanvas');
+            const ctx = canvas.getContext('2d');
+            const W = 750;
+            const H = 1100;
+
+            // 1. 宣纸底色与微粒
+            ctx.fillStyle = '#FAF8F4';
+            ctx.fillRect(0, 0, W, H);
+
+            // 暖宣纸边框与金线
+            ctx.strokeStyle = '#C5A059';
+            ctx.lineWidth = 4;
+            ctx.strokeRect(30, 30, W - 60, H - 60);
+
+            ctx.strokeStyle = '#E8D5A3';
+            ctx.lineWidth = 1;
+            ctx.strokeRect(40, 40, W - 80, H - 80);
+
+            // 2. 顶部眉标
+            ctx.font = 'bold 16px "Space Grotesk", sans-serif';
+            ctx.fillStyle = '#12365E';
+            ctx.fillText('SHIDE ENSŌ // 1980–2026 CHRONOSCOPE', 60, 85);
+
+            ctx.font = '14px "Space Grotesk", sans-serif';
+            ctx.fillStyle = '#C5A059';
+            ctx.fillText('CANONICAL CULTURAL COORDINATES', 60, 110);
+
+            // 3. 年份超大字与年色印块
+            ctx.font = '900 96px "Cinzel", serif';
+            ctx.fillStyle = currentData.value.color || '#BC382C';
+            ctx.fillText(String(selectedYear.value), 60, 220);
+
+            // 年色标签
+            ctx.fillStyle = currentData.value.color || '#BC382C';
+            ctx.fillRect(60, 245, 160, 30);
+            ctx.font = 'bold 14px "Noto Serif SC", serif';
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillText(`年色 · ${currentData.value.colorName}`, 75, 265);
+
+            // 时代标签
+            ctx.strokeStyle = '#12365E';
+            ctx.lineWidth = 1.5;
+            ctx.strokeRect(230, 245, 120, 30);
+            ctx.font = 'bold 14px "Noto Serif SC", serif';
+            ctx.fillStyle = '#12365E';
+            ctx.fillText(currentData.value.tag, 250, 265);
+
+            // 4. 事件标题
+            ctx.font = 'bold 28px "Noto Serif SC", serif';
+            ctx.fillStyle = '#12365E';
+            ctx.fillText(currentData.value.event, 60, 330);
+
+            // 5. 装饰横线
+            ctx.strokeStyle = '#C5A059';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(60, 360);
+            ctx.lineTo(W - 60, 360);
+            ctx.stroke();
+
+            // 6. 当年回声
+            ctx.font = 'italic 20px "Noto Serif SC", serif';
+            ctx.fillStyle = '#444444';
+            wrapText(ctx, `“${currentData.value.quote}”`, 60, 410, W - 120, 34);
+
+            // 7. 沈拾手记
+            ctx.fillStyle = '#F0ECE1';
+            ctx.fillRect(60, 520, W - 120, 160);
+            ctx.fillStyle = currentData.value.color || '#BC382C';
+            ctx.fillRect(60, 520, 6, 160);
+
+            ctx.font = 'bold 16px "Noto Serif SC", serif';
+            ctx.fillStyle = '#12365E';
+            ctx.fillText('沈拾 · 修复师手记', 85, 555);
+
+            ctx.font = '16px "Noto Serif SC", serif';
+            ctx.fillStyle = '#333333';
+            wrapText(ctx, currentData.value.verdict, 85, 595, W - 170, 28);
+
+            // 8. 访客显影小事
+            ctx.strokeStyle = '#BC382C';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(60, 720, W - 120, 160);
+
+            ctx.font = 'bold 16px "Noto Serif SC", serif';
+            ctx.fillStyle = '#BC382C';
+            let authorTag = userAuthorInput.value.trim() ? `【${userAuthorInput.value.trim()} 的时代显影】` : '【你在那一年留下的印记】';
+            ctx.fillText(authorTag, 85, 760);
+
+            ctx.font = 'bold 20px "Noto Serif SC", serif';
+            ctx.fillStyle = '#111111';
+            wrapText(ctx, `“${text}”`, 85, 805, W - 170, 32);
+
+            // 9. 底部朱砂印与品牌
+            ctx.fillStyle = '#12365E';
+            ctx.font = 'bold 18px "Noto Serif SC", serif';
+            ctx.fillText('拾得 ENSŌ · 尘埃里抬头，把光传下去', 60, 960);
+
+            ctx.font = '14px "Space Grotesk", sans-serif';
+            ctx.fillStyle = '#777777';
+            ctx.fillText('中国 1980 年至今中华文化坐标 · shide.app', 60, 990);
+
+            // 绘制朱砂印
+            const sealImg = new Image();
+            sealImg.crossOrigin = 'anonymous';
+            sealImg.onload = () => {
+              ctx.drawImage(sealImg, W - 160, 910, 100, 100);
+              posterSrc.value = canvas.toDataURL('image/png');
+              isExporting.value = false;
+              showModal.value = true;
+            };
+            sealImg.onerror = () => {
+              // 容错：直接绘制红色印章方块
+              ctx.fillStyle = '#BC382C';
+              ctx.fillRect(W - 150, 920, 80, 80);
+              ctx.font = 'bold 20px "Noto Serif SC", serif';
+              ctx.fillStyle = '#FFFFFF';
+              ctx.fillText('拾得', W - 130, 968);
+              posterSrc.value = canvas.toDataURL('image/png');
+              isExporting.value = false;
+              showModal.value = true;
+            };
+            sealImg.src = './assets/enso-seal-official.png';
+
+          } catch (err) {
+            console.error('Canvas export error:', err);
+            isExporting.value = false;
+            alert('海报生成失败，请刷新后重试');
+          }
+        }, 100);
+      };
+
+      // 辅助换行函数
+      const wrapText = (ctx, text, x, y, maxWidth, lineHeight) => {
+        let words = text.split('');
+        let line = '';
+        for (let n = 0; n < words.length; n++) {
+          let testLine = line + words[n];
+          let metrics = ctx.measureText(testLine);
+          let testWidth = metrics.width;
+          if (testWidth > maxWidth && n > 0) {
+            ctx.fillText(line, x, y);
+            line = words[n];
+            y += lineHeight;
+          } else {
+            line = testLine;
+          }
+        }
+        ctx.fillText(line, x, y);
+      };
+
+      // 社区留言墙计算属性与过滤
       const filteredWallPosts = computed(() => {
         let list = allWallPosts.value;
-        const tag = selectedWallTag.value;
-        const query = searchQuery.value.trim().toLowerCase();
-
-        // 标签筛选
-        if (tag === 'hot') {
-          list = [...list].sort((a, b) => b.likes - a.likes);
-        } else if (tag !== 'all') {
-          list = list.filter(p => p.tags.some(t => t.toLowerCase() === tag.toLowerCase()));
-        }
-
-        // 关键字搜索筛选
-        if (query) {
+        const q = searchQuery.value.trim().toLowerCase();
+        if (q) {
           list = list.filter(p => 
-            p.content.toLowerCase().includes(query) ||
-            p.author.toLowerCase().includes(query) ||
-            p.reply.toLowerCase().includes(query) ||
-            String(p.year).includes(query) ||
-            p.tags.some(t => t.toLowerCase().includes(query))
+            String(p.year).includes(q) ||
+            p.author.toLowerCase().includes(q) ||
+            p.content.toLowerCase().includes(q) ||
+            (p.tags && p.tags.some(t => t.toLowerCase().includes(q)))
           );
         }
-
+        if (selectedWallTag.value === 'hot') {
+          return [...list].sort((a, b) => (b.likes || 0) - (a.likes || 0));
+        } else if (selectedWallTag.value !== 'all') {
+          return list.filter(p => p.tags && p.tags.includes(selectedWallTag.value));
+        }
         return list;
       });
 
-      // 限制首页展示数量，避免帖子太多造成页面冗长
       const visibleWallPosts = computed(() => {
         return filteredWallPosts.value.slice(0, displayLimit.value);
       });
@@ -1536,167 +1754,41 @@
         });
         return Object.keys(counts)
           .map(y => ({ year: parseInt(y, 10), count: counts[y] }))
-          .sort((a, b) => b.count - a.count || b.year - a.year)
+          .sort((a, b) => b.count - a.count)
           .slice(0, 10);
       });
 
       const filterWallByTag = (tag) => {
         selectedWallTag.value = tag;
+        displayLimit.value = 6;
       };
 
+      const likedPostId = ref(null);
       const likePost = (post) => {
-        post.likes++;
+        post.likes = (post.likes || 0) + 1;
         likedPostId.value = post.id;
         setTimeout(() => {
-          if (likedPostId.value === post.id) {
-            likedPostId.value = null;
-          }
+          likedPostId.value = null;
         }, 1200);
         if (window.ShideChronoscope) {
           window.ShideChronoscope.saveSpacetimeWall(allWallPosts.value);
         }
       };
 
-      // 互动：随手抽一张便签
       const drawRandomMemory = () => {
-        const posts = filteredWallPosts.value;
-        if (posts.length === 0) return;
-        const randIdx = Math.floor(Math.random() * posts.length);
-        const target = posts[randIdx];
-        
-        // 确保目标在当前展示范围内
-        if (randIdx >= displayLimit.value) {
-          displayLimit.value = randIdx + 1;
+        if (allWallPosts.value.length === 0) return;
+        const rand = allWallPosts.value[Math.floor(Math.random() * allWallPosts.value.length)];
+        selectedWallTag.value = 'all';
+        searchQuery.value = rand.author;
+        const wall = document.getElementById('spacetime-wall');
+        if (wall) {
+          wall.scrollIntoView({ behavior: 'smooth' });
         }
-
-        setTimeout(() => {
-          const cardEl = document.getElementById('card-' + target.id);
-          if (cardEl) {
-            cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            cardEl.classList.add('ring-4', 'ring-gold', 'scale-105');
-            setTimeout(() => {
-              cardEl.classList.remove('ring-4', 'ring-gold', 'scale-105');
-            }, 2500);
-          }
-        }, 100);
       };
-
-      const exportPoster = () => {
-        isExporting.value = true;
-        const canvas = document.getElementById('exportCanvas');
-        const ctx = canvas.getContext('2d');
-
-        // 1. 宣纸底色
-        ctx.fillStyle = '#F8F6F0';
-        ctx.fillRect(0, 0, 750, 1100);
-
-        // 2. 双金线边框
-        ctx.strokeStyle = currentData.value.color || '#C5A059';
-        ctx.lineWidth = 3;
-        ctx.strokeRect(36, 36, 678, 1028);
-
-        ctx.strokeStyle = 'rgba(197, 160, 89, 0.4)';
-        ctx.lineWidth = 1;
-        ctx.strokeRect(44, 44, 662, 1012);
-
-        // 3. 顶部 Header
-        ctx.fillStyle = '#12365E';
-        ctx.font = 'bold 26px "Noto Serif SC", serif';
-        ctx.textAlign = 'left';
-        ctx.fillText('拾得 ENSŌ SHIDE', 70, 95);
-
-        ctx.fillStyle = '#55524E';
-        ctx.font = '14px "Space Grotesk", monospace';
-        ctx.fillText('1980–2026 CULTURAL COORDINATES', 70, 122);
-
-        // 4. 年份大字 (传统年色)
-        ctx.fillStyle = currentData.value.color || '#BC382C';
-        ctx.font = 'bold 88px "Cinzel", serif';
-        ctx.fillText(String(selectedYear.value), 70, 235);
-
-        ctx.fillStyle = '#C5A059';
-        ctx.font = 'bold 16px "Noto Serif SC", serif';
-        ctx.fillText(`${currentData.value.colorName} · ${currentEraSubtitle.value}`, 300, 230);
-
-        // 5. 事件标题
-        ctx.fillStyle = '#12365E';
-        ctx.font = 'bold 30px "Noto Serif SC", serif';
-        ctx.fillText(currentData.value.event, 70, 305);
-
-        // 6. 时代回声
-        ctx.fillStyle = '#111111';
-        ctx.font = 'italic 19px "Noto Serif SC", serif';
-        wrap(ctx, `“${currentData.value.quote}”`, 70, 375, 610, 34);
-
-        // 7. 沈拾手记框
-        ctx.fillStyle = '#F0ECE1';
-        ctx.fillRect(70, 480, 610, 220);
-        ctx.strokeStyle = currentData.value.color || '#BC382C';
-        ctx.lineWidth = 4;
-        ctx.beginPath();
-        ctx.moveTo(70, 480);
-        ctx.lineTo(70, 700);
-        ctx.stroke();
-
-        ctx.fillStyle = currentData.value.color || '#BC382C';
-        ctx.font = 'bold 16px "Noto Serif SC", serif';
-        ctx.fillText('沈拾 · 修复师手记：', 95, 520);
-
-        ctx.fillStyle = '#111111';
-        ctx.font = 'bold 19px "Noto Serif SC", serif';
-        wrap(ctx, currentData.value.verdict, 95, 565, 560, 32);
-
-        // 8. 私人印记
-        if (boundMemoryOutput.value || userMemoryInput.value.trim()) {
-          ctx.fillStyle = '#12365E';
-          ctx.font = '15px "Noto Serif SC", serif';
-          const printText = boundMemoryOutput.value || `“${userMemoryInput.value.trim()}” —— 拾得为你盖印见证。`;
-          wrap(ctx, `【我的私人印记】${printText}`, 70, 750, 610, 26);
-        }
-
-        // 9. 底部 Slogan
-        ctx.strokeStyle = 'rgba(197, 160, 89, 0.4)';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(70, 930);
-        ctx.lineTo(680, 930);
-        ctx.stroke();
-
-        ctx.fillStyle = '#12365E';
-        ctx.font = 'bold 18px "Noto Serif SC", serif';
-        ctx.textAlign = 'center';
-        ctx.fillText('尘埃里抬头，把光传下去', 375, 975);
-
-        ctx.fillStyle = '#55524E';
-        ctx.font = '13px "Space Grotesk", monospace';
-        ctx.fillText('https://shide.app · 认领你的时代坐标与传家书', 375, 1010);
-
-        setTimeout(() => {
-          posterSrc.value = canvas.toDataURL('image/png');
-          isExporting.value = false;
-          showModal.value = true;
-        }, 300);
-      };
-
-      function wrap(c, text, x, y, maxW, lineH) {
-        let chars = text.split('');
-        let line = '';
-        for (let i = 0; i < chars.length; i++) {
-          let test = line + chars[i];
-          if (c.measureText(test).width > maxW && i > 0) {
-            c.fillText(line, x, y);
-            line = chars[i];
-            y += lineH;
-          } else {
-            line = test;
-          }
-        }
-        c.fillText(line, x, y);
-      }
 
       const submitEmail = () => {
-        if (!emailInput.value.includes('@')) {
-          alert('请输入有效的邮箱地址');
+        if (!emailInput.value || !emailInput.value.includes('@')) {
+          alert('请输入有效的 Apple ID 邮箱');
           return;
         }
         const newRecord = {
@@ -1705,12 +1797,12 @@
           lang: 'zh-Hans'
         };
 
-        // 1. 本地安全缓存当前用户的预约状态
+        // 本地安全缓存
         try {
           localStorage.setItem('shide_user_pass', JSON.stringify(newRecord));
         } catch (e) {}
 
-        // 2. 安全投递至站长邮箱 (kilvon@hotmail.ca) 与 AWS Lightsail SES 备份管线
+        // 安全投递至站长邮箱与 AWS SES 备份
         const _ep = atob('aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgva2lsdm9uQGhvdG1haWwuY2E=');
         try {
           fetch(_ep, {
@@ -1727,7 +1819,6 @@
             })
           }).catch(() => {});
 
-          // 备用 AWS Lightsail SES 内部 Webhook 管线
           fetch('https://api.enso.mystory.com/v1/waitlist', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -1822,7 +1913,9 @@
         subscribed,
         currentEraSubtitle,
         currentData,
+        timelineList,
         getYearColor,
+        selectYearFromRail,
         stepYear,
         jumpDecade,
         decadeActive,
