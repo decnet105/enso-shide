@@ -1,0 +1,13 @@
+#!/bin/sh
+# shide.app 是 push 即上线。2026-09-03 之前有三次提交没跑闸就上线，
+# 累积 80 条 canonical/hreflang/JSON-LD 缺陷（涉及 25 个页面），
+# 直接妨碍搜索与 AI 把站点解析成单一实体。此闸就是为了不再发生。
+# 临时绕过：git push --no-verify（请确有理由）
+echo "pre-push: 跑 validate_geo_site.py …"
+python3 "$(git rev-parse --show-toplevel)/tools/validate_geo_site.py" || {
+  echo ""
+  echo "✗ 站点校验未通过，已拦住 push。"
+  echo "  修完再推；确需绕过用 git push --no-verify。"
+  exit 1
+}
+echo "✓ 校验通过，放行 push。"

@@ -24,9 +24,11 @@ LOCALE_DIRS = {"zh-Hant": "zh-Hant", "en": "en", "ja": "ja"}
 # ---- baseline snapshot (captured before patch, 2026-08-19) ----
 # 2026-08-19 Batch 2A: +2 pages (record-your-life-as-it-happens,
 # memory-app-vs-storytelling-service) × 4 locales = +8 html, +8 sitemap loc.
-BASE_HTML = 109
-BASE_LOCALE = {"zh-Hans": 28, "en": 27, "zh-Hant": 27, "ja": 27}
-BASE_SITEMAP = 108
+# 2026-09-03: 基线重置。此前几次提交(小说子站/spacetime-wall/首页改版)未跑本闸就上线，
+# 累积 80 条 canonical/hreflang/JSON-LD 缺陷；修复后连同 20 页 /v/ 视频文字记录一并重设基线。
+BASE_HTML = 134
+BASE_LOCALE = {"zh-Hans": 53, "en": 27, "zh-Hant": 27, "ja": 27}
+BASE_SITEMAP = 130
 BASE_ROBOTS_MD5 = "35a4f54e4501dceaad6c62538171fff8"
 
 # obsolete claims that must NOT remain anywhere

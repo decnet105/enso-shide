@@ -11,11 +11,13 @@
   <link rel="canonical" href="https://shide.app/zh-Hant/">
 
   <!-- 語言標記 -->
+  <!-- geo:hreflang:start -->
   <link rel="alternate" hreflang="zh-Hans" href="https://shide.app/">
   <link rel="alternate" hreflang="zh-Hant" href="https://shide.app/zh-Hant/">
   <link rel="alternate" hreflang="en" href="https://shide.app/en/">
   <link rel="alternate" hreflang="ja" href="https://shide.app/ja/">
   <link rel="alternate" hreflang="x-default" href="https://shide.app/">
+  <!-- geo:hreflang:end -->
 
   <!-- 官方印章 Logo -->
   <link rel="icon" type="image/png" href="../assets/enso-seal-official.png">
@@ -108,27 +110,45 @@
   </style>
 
   <!-- Schema.org 結構化資料 -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://shide.app/#organization",
-        "name": "Enso Shide",
-        "url": "https://shide.app/zh-Hant/",
-        "logo": "https://shide.app/assets/enso-seal-official.png"
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://shide.app/#organization",
+      "name": "Enso Shide",
+      "url": "https://shide.app/zh-Hant/",
+      "logo": "https://shide.app/assets/enso-seal-official.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://shide.app/zh-Hant/#website",
+      "url": "https://shide.app/zh-Hant/",
+      "name": "拾得 Ensō 繁體中文",
+      "inLanguage": "zh-Hant"
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://shide.app/#app",
+      "name": "拾得 Ensō",
+      "alternateName": [
+        "Enso Shide",
+        "Shide",
+        "拾得",
+        "拾得 App"
+      ],
+      "url": "https://shide.app/",
+      "downloadUrl": "https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8",
+      "operatingSystem": "iOS 17 or later",
+      "applicationCategory": "LifestyleApplication",
+      "publisher": {
+        "@id": "https://shide.app/#organization"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://shide.app/zh-Hant/#website",
-        "url": "https://shide.app/zh-Hant/",
-        "name": "拾得 Ensō 繁體中文",
-        "inLanguage": "zh-Hant"
-      }
-    ]
-  }
-  </script>
+      "image": "https://shide.app/assets/enso-seal-official.png",
+      "description": "「拾得」是中国 1980 年至今中华文化的坐标。4000+ 华语文化坐标，端侧私密装订中英双语传家书，沈拾原创音乐《长风》，东方时间考古宇宙。"
+    }
+  ]
+}</script>
 </head>
 <body class="bg-paper-texture antialiased selection:bg-cinnabar selection:text-white">
 
