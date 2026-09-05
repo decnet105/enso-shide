@@ -29,9 +29,9 @@ LOCALE_DIRS = {"zh-Hant": "zh-Hant", "en": "en", "ja": "ja"}
 # 2026-09-05: +2 页(山河静听1993/1980逐字稿页,/v/shanhe-1993/、/v/shanhe-1980/)
 # = +2 html, +2 zh-Hans(路径无语言前缀按站点惯例归zh-Hans桶,内容语言仍如实是
 # zh-Hant,见页面<html lang>与VideoObject.inLanguage), +2 sitemap loc。
-BASE_HTML = 136
-BASE_LOCALE = {"zh-Hans": 55, "en": 27, "zh-Hant": 27, "ja": 27}
-BASE_SITEMAP = 132
+BASE_HTML = 140  # 2026-09-06: +4 for v/index.html 视频总览枢纽页(4语)
+BASE_LOCALE = {"zh-Hans": 56, "en": 28, "zh-Hant": 28, "ja": 28}
+BASE_SITEMAP = 136
 BASE_ROBOTS_MD5 = "35a4f54e4501dceaad6c62538171fff8"
 
 # obsolete claims that must NOT remain anywhere
