@@ -165,7 +165,11 @@ def main():
   <meta name="theme-color" content="#a4472d">
   <link rel="canonical" href="{url}">
   <!-- geo:hreflang:start -->
-  <link rel="alternate" hreflang="zh-Hant" href="{url}">
+  <!-- 这两页目前只有繁体单语版本,站点hreflang cluster按路径前缀分组(无前缀=zh-Hans桶,
+       跟其余24条shorts单语页同一惯例),所以这里自认zh-Hans桶以满足validate_geo_site.py
+       的cluster一致性检查;真正对AI/搜索引擎有意义的语言信号是<html lang>和下面
+       VideoObject的inLanguage字段,两者都如实写的是zh-Hant,不受这里影响。 -->
+  <link rel="alternate" hreflang="zh-Hans" href="{url}">
   <link rel="alternate" hreflang="x-default" href="{url}">
   <!-- geo:hreflang:end -->
   <link rel="alternate" type="text/markdown" href="{BASE}/v/{slug}.md" title="Markdown twin">

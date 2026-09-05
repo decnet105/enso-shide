@@ -26,9 +26,12 @@ LOCALE_DIRS = {"zh-Hant": "zh-Hant", "en": "en", "ja": "ja"}
 # memory-app-vs-storytelling-service) × 4 locales = +8 html, +8 sitemap loc.
 # 2026-09-03: 基线重置。此前几次提交(小说子站/spacetime-wall/首页改版)未跑本闸就上线，
 # 累积 80 条 canonical/hreflang/JSON-LD 缺陷；修复后连同 20 页 /v/ 视频文字记录一并重设基线。
-BASE_HTML = 134
-BASE_LOCALE = {"zh-Hans": 53, "en": 27, "zh-Hant": 27, "ja": 27}
-BASE_SITEMAP = 130
+# 2026-09-05: +2 页(山河静听1993/1980逐字稿页,/v/shanhe-1993/、/v/shanhe-1980/)
+# = +2 html, +2 zh-Hans(路径无语言前缀按站点惯例归zh-Hans桶,内容语言仍如实是
+# zh-Hant,见页面<html lang>与VideoObject.inLanguage), +2 sitemap loc。
+BASE_HTML = 136
+BASE_LOCALE = {"zh-Hans": 55, "en": 27, "zh-Hant": 27, "ja": 27}
+BASE_SITEMAP = 132
 BASE_ROBOTS_MD5 = "35a4f54e4501dceaad6c62538171fff8"
 
 # obsolete claims that must NOT remain anywhere
