@@ -155,13 +155,13 @@
 <div id="app" v-cloak class="w-full flex flex-col items-center">
 
   <!-- 1. Gallery Header -->
-  <header class="w-full max-w-7xl px-6 md:px-12 py-8 flex justify-between items-center z-40">
-    <a href="../index.html" class="flex items-center space-x-3.5 group">
+  <header class="w-full max-w-7xl px-4 sm:px-6 md:px-12 py-4 sm:py-8 flex justify-between items-center z-40">
+    <a href="../index.html" class="flex items-center space-x-2.5 sm:space-x-3.5 group min-w-0">
       <img src="../assets/enso-seal-official.png" alt="Ensō Shide Logo" 
-        class="w-11 h-11 rounded-lg shadow-sm border border-gold/40 group-hover:scale-105 transition-transform duration-300">
-      <div class="flex flex-col">
-        <span class="text-base md:text-xl font-black tracking-[0.25em] text-navy font-display">ENSŌ SHIDE</span>
-        <span class="text-[9px] uppercase tracking-[0.3em] text-ink-sub font-mono font-semibold">1980–2024 Cultural Coordinates</span>
+        class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg shadow-sm border border-gold/40 group-hover:scale-105 transition-transform duration-300 shrink-0">
+      <div class="flex flex-col min-w-0">
+        <span class="text-sm sm:text-base md:text-xl font-black tracking-[0.18em] sm:tracking-[0.25em] text-navy font-display truncate">ENSŌ SHIDE</span>
+        <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.15em] sm:tracking-[0.3em] text-ink-sub font-mono font-semibold truncate">1980–2026 Cultural Coordinates</span>
       </div>
     </a>
 
@@ -180,49 +180,49 @@
       <a href="#geo-index" class="hover:text-cinnabar transition text-gold font-bold">/06 Knowledge Base</a>
     </nav>
 
-    <div class="flex items-center space-x-3">
-      <a href="#app-book" class="bg-navy hover:bg-navy-deep text-white text-xs px-6 py-2.5 rounded-full font-mono tracking-wider transition shadow hover:shadow-lg">
+    <div class="flex items-center space-x-3 shrink-0">
+      <a href="#app-book" class="bg-navy hover:bg-navy-deep text-white text-[11px] sm:text-xs px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-mono tracking-wider transition shadow hover:shadow-lg whitespace-nowrap shrink-0">
         TestFlight Access
       </a>
     </div>
   </header>
 
   <!-- 2. Fine Art Hero -->
-  <section class="w-full max-w-7xl px-6 md:px-12 pt-4 pb-16">
-    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-[#FAF8F4] min-h-[580px] sm:min-h-[640px] flex flex-col justify-end p-8 sm:p-12 md:p-16">
+  <section class="w-full max-w-7xl px-4 sm:px-6 md:px-12 pt-1 sm:pt-4 pb-12 sm:pb-16">
+    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-[#FAF8F4] min-h-[580px] sm:min-h-[640px] flex flex-col justify-between p-6 sm:p-12 md:p-16">
       
       <img src="../assets/poster-hero-changfeng.jpg" alt="Golden Dust Ascending · Lift Heads From the Dust" 
         class="absolute inset-0 w-full h-full object-cover object-center scale-100 hover:scale-105 transition-transform duration-1000 ease-out">
       
-      <div class="absolute inset-0 bg-gradient-to-t from-paper/90 via-paper/40 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-paper/95 via-paper/55 to-transparent"></div>
 
-      <div class="absolute top-8 left-8 sm:left-12 flex items-center gap-3">
-        <span class="px-3.5 py-1.5 rounded-full bg-white/80 border border-gold/40 backdrop-blur-md text-[11px] font-mono text-navy uppercase tracking-widest font-bold">
+      <div class="relative z-10 flex flex-wrap items-center gap-2.5 sm:gap-3 mb-6 sm:mb-10">
+        <span class="px-3.5 py-1.5 rounded-full bg-white/90 border border-gold/40 backdrop-blur-md text-[10px] sm:text-[11px] font-mono text-navy uppercase tracking-widest font-bold">
           CANONICAL // HERITAGE & INNOVATION
         </span>
-        <span class="hidden sm:inline-block text-xs font-mono text-ink-sub">4000+ COORDINATES // 10 SOUNDTRACKS // SHORTS MATRIX</span>
+        <span class="hidden sm:inline-block text-xs font-mono text-ink-sub bg-white/70 px-3 py-1 rounded-full border border-gold/30">4000+ COORDINATES // 10 SOUNDTRACKS // SHORTS MATRIX</span>
       </div>
 
-      <div class="relative z-10 max-w-3xl space-y-6">
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-black text-navy leading-[1.2] tracking-tight">
+      <div class="relative z-10 max-w-3xl space-y-5 sm:space-y-6">
+        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-black text-navy leading-[1.35] sm:leading-[1.2] tracking-tight">
           We, passed over by history,<br>
           wander heaven and earth,<br>
           <span class="text-cinnabar font-serif">yet lift our heads from the dust,</span><br>
           to pass the light forward.
         </h1>
 
-        <p class="text-sm sm:text-base md:text-lg text-ink-sub font-serif leading-relaxed max-w-2xl">
+        <p class="text-xs sm:text-base md:text-lg text-ink-sub font-serif leading-relaxed max-w-2xl">
           Ensō Shide is the cultural coordinate of the Chinese world since 1980. Across 4000+ pop songs, films, games, and historic milestones, discover your own footsteps and bind them into a private, bilingual on-device heirloom book.
         </p>
 
-        <div class="flex flex-wrap gap-4 pt-2">
-          <a href="#radar" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm font-mono uppercase tracking-widest px-8 py-4 rounded-full font-bold transition shadow-2xl hover:-translate-y-0.5">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1 sm:pt-2">
+          <a href="#radar" class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm font-mono uppercase tracking-widest px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold transition shadow-2xl hover:-translate-y-0.5 flex items-center justify-center whitespace-nowrap">
             ⚡ Enter Time Developer (Play Instantly) ›
           </a>
-          <a href="../shenshi/index.html" class="bg-white hover:bg-paper-tint text-navy border border-gold/40 text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-sm">
+          <a href="../shenshi/index.html" class="bg-white hover:bg-paper-tint text-navy border border-gold/40 text-xs sm:text-sm font-mono tracking-wider px-5 sm:px-7 py-3.5 sm:py-4 rounded-full font-bold transition shadow-sm flex items-center justify-center whitespace-nowrap">
             🎵 Shen Shi 10 Soundtracks ↗
           </a>
-          <a href="#shorts" class="bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-sm">
+          <a href="#shorts" class="bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm font-mono tracking-wider px-5 sm:px-7 py-3.5 sm:py-4 rounded-full font-bold transition shadow-sm flex items-center justify-center whitespace-nowrap">
             🎬 YouTube Shorts Matrix ↗
           </a>
         </div>

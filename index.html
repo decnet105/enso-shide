@@ -158,14 +158,14 @@
 <div id="app" v-cloak class="w-full flex flex-col items-center">
 
   <!-- 1. 顶奢画册式导航 (Gallery Header - 突出 拾得 App 核心) -->
-  <header class="w-full max-w-7xl px-6 md:px-12 py-7 flex justify-between items-center z-40">
-    <a href="./index.html" class="flex items-center space-x-3.5 group">
+  <header class="w-full max-w-7xl px-4 sm:px-6 md:px-12 py-4 sm:py-7 flex justify-between items-center z-40">
+    <a href="./index.html" class="flex items-center space-x-2.5 sm:space-x-3.5 group min-w-0">
       <!-- 官方批准朱砂红 Ensō 印章 -->
       <img src="./assets/enso-seal-official.png" alt="拾得 Ensō Logo" 
-        class="w-11 h-11 rounded-lg shadow-sm border border-gold/40 group-hover:scale-105 transition-transform duration-300">
-      <div class="flex flex-col">
-        <span class="text-base md:text-xl font-black tracking-[0.25em] text-navy font-display">ENSŌ SHIDE</span>
-        <span class="text-[9px] uppercase tracking-[0.3em] text-ink-sub font-mono font-semibold">1980–2026 Cultural Coordinates</span>
+        class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg shadow-sm border border-gold/40 group-hover:scale-105 transition-transform duration-300 shrink-0">
+      <div class="flex flex-col min-w-0">
+        <span class="text-sm sm:text-base md:text-xl font-black tracking-[0.18em] sm:tracking-[0.25em] text-navy font-display truncate">ENSŌ SHIDE</span>
+        <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.15em] sm:tracking-[0.3em] text-ink-sub font-mono font-semibold truncate">1980–2026 Cultural Coordinates</span>
       </div>
     </a>
 
@@ -181,9 +181,9 @@
       <a href="#geo-index" class="hover:text-cinnabar transition text-gold-deep font-bold">/06 知识库</a>
     </nav>
 
-    <div class="flex items-center space-x-3">
+    <div class="flex items-center space-x-3 shrink-0">
       <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" target="_blank"
-        class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs px-5 py-2.5 rounded-full font-mono tracking-wider transition shadow-md hover:shadow-lg flex items-center gap-1.5 font-bold">
+        class="bg-cinnabar hover:bg-cinnabar-glow text-white text-[11px] sm:text-xs px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full font-mono tracking-wider transition shadow-md hover:shadow-lg flex items-center gap-1 font-bold whitespace-nowrap shrink-0">
         <span>🍎 App Store 下载</span>
         <span class="text-xs">›</span>
       </a>
@@ -191,19 +191,19 @@
   </header>
 
   <!-- 2. 【大幅金尘极简艺术大画幅 Hero - 聚焦 拾得 App 核心定位】 -->
-  <section class="w-full max-w-7xl px-6 md:px-12 pt-2 pb-14">
-    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-[#FAF8F4] min-h-[580px] sm:min-h-[640px] flex flex-col justify-end p-8 sm:p-12 md:p-16">
+  <section class="w-full max-w-7xl px-4 sm:px-6 md:px-12 pt-1 sm:pt-2 pb-12 sm:pb-14">
+    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gold/40 bg-[#FAF8F4] min-h-[580px] sm:min-h-[640px] flex flex-col justify-between p-6 sm:p-12 md:p-16">
       
       <!-- 大幅金尘微粒上升艺术大图 -->
       <img src="./assets/poster-hero-changfeng.jpg" alt="金尘升起 · 尘埃里抬头 把光传下去" 
         class="absolute inset-0 w-full h-full object-cover object-center scale-100 hover:scale-105 transition-transform duration-1000 ease-out">
       
       <!-- 极奢渐变遮罩，保证文字完美易读 -->
-      <div class="absolute inset-0 bg-gradient-to-t from-paper/95 via-paper/50 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-paper/95 via-paper/55 to-transparent"></div>
 
-      <!-- 顶角元数据标签 -->
-      <div class="absolute top-8 left-8 sm:left-12 flex items-center gap-3">
-        <span class="px-3.5 py-1.5 rounded-full bg-white/85 border border-gold/40 backdrop-blur-md text-[11px] font-mono text-navy uppercase tracking-widest font-bold flex items-center gap-1.5 shadow-sm">
+      <!-- 顶角元数据标签 (In-flow relative, prevents overlap on mobile) -->
+      <div class="relative z-10 flex flex-wrap items-center gap-2.5 sm:gap-3 mb-6 sm:mb-10">
+        <span class="px-3.5 py-1.5 rounded-full bg-white/90 border border-gold/40 backdrop-blur-md text-[10px] sm:text-[11px] font-mono text-navy uppercase tracking-widest font-bold flex items-center gap-1.5 shadow-sm">
           <span class="w-2 h-2 rounded-full bg-cinnabar animate-pulse"></span>
           <span>CANONICAL // 拾得 APP · 传承 · 创新</span>
         </span>
@@ -213,33 +213,31 @@
       </div>
 
       <!-- Hero 核心文字与主次行动号召 -->
-      <div class="relative z-10 max-w-3xl space-y-6">
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-black text-navy leading-[1.2] tracking-tight">
-          被一笔带过的我们，<br>
-          游走于天地，<br>
-          <span class="text-cinnabar font-serif">也要在尘埃里抬头，</span><br>
-          把光传下去。
+      <div class="relative z-10 max-w-3xl space-y-5 sm:space-y-6">
+        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-black text-navy leading-[1.35] sm:leading-[1.2] tracking-tight">
+          被一笔带过的我们，游走于天地，<br>
+          <span class="text-cinnabar font-serif">也要在尘埃里抬头，</span>把光传下去。
         </h1>
 
-        <p class="text-sm sm:text-base md:text-lg text-ink-sub font-serif leading-relaxed max-w-2xl">
+        <p class="text-xs sm:text-base md:text-lg text-ink-sub font-serif leading-relaxed max-w-2xl">
           「拾得」是中国 1980 年至今中华文化的坐标。把 4000+ 流行歌、影视、游戏与大事小事按年铺开；翻到哪一年，都有你认得的记忆在等你。随手记一笔，到年底在手机里排成一本中英双语传家书。<strong class="text-navy font-bold">无账号，不上传。</strong>
         </p>
 
         <!-- 主次分明的 Action Buttons: 核心突出 App 下载 -->
-        <div class="flex flex-wrap items-center gap-3.5 pt-2">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1 sm:pt-2">
           <a href="https://apps.apple.com/app/apple-store/id6787128369?pt=129013055&ct=web&mt=8" target="_blank"
-            class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm font-mono tracking-wider px-8 py-4 rounded-full font-bold transition shadow-2xl hover:-translate-y-0.5 flex items-center gap-2">
+            class="bg-cinnabar hover:bg-cinnabar-glow text-white text-xs sm:text-sm font-mono tracking-wider px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold transition shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap">
             <span>🍎 立即下载 拾得 App (App Store)</span>
             <span class="text-base">›</span>
           </a>
-          <a href="#radar" class="bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm font-mono tracking-wider px-7 py-4 rounded-full font-bold transition shadow-md flex items-center gap-2">
+          <a href="#radar" class="bg-navy hover:bg-navy-deep text-white text-xs sm:text-sm font-mono tracking-wider px-5 sm:px-7 py-3.5 sm:py-4 rounded-full font-bold transition shadow-md flex items-center justify-center gap-2 whitespace-nowrap">
             <span>⏳ 在线显影我的时代印笺 (免安装试玩)</span>
             <span>↓</span>
           </a>
         </div>
 
         <!-- 推广宇宙生态轻量入口 -->
-        <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-ink-sub">
+        <div class="pt-1 sm:pt-2 flex flex-wrap items-center gap-2 sm:gap-3 text-[11px] sm:text-xs font-mono text-ink-sub">
           <span class="text-stone-400">推广与生态：</span>
           <a href="./shenshi/index.html" class="hover:text-cinnabar transition underline underline-offset-4 decoration-gold/50 flex items-center gap-1">
             <span>🎵 沈拾《长风》Spotify</span>

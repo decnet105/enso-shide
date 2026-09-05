@@ -24,8 +24,28 @@ ROOT = Path(__file__).resolve().parents[1]
 HOST = "shide.app"
 ENDPOINT = "https://api.indexnow.org/indexnow"
 
-# recently created / changed this session — worth a proactive crawl
+# 2026-09-03: 20 页 /v/ 视频文字记录页，新建后主动催抓（Google 不吃 IndexNow，走 GSC）。
 DEFAULT_URLS = [
+    f"https://{HOST}/v/story-01/",
+    f"https://{HOST}/v/story-03/",
+    f"https://{HOST}/v/music-01/",
+    f"https://{HOST}/v/music-02/",
+    f"https://{HOST}/v/music-03/",
+    f"https://{HOST}/v/music-04/",
+    f"https://{HOST}/v/music-05/",
+    f"https://{HOST}/v/music-06/",
+    f"https://{HOST}/v/music-07/",
+    f"https://{HOST}/v/music-08/",
+    f"https://{HOST}/v/screen-01/",
+    f"https://{HOST}/v/screen-02/",
+    f"https://{HOST}/v/crossover-01/",
+    f"https://{HOST}/v/crossover-02/",
+    f"https://{HOST}/v/crossover-05/",
+    f"https://{HOST}/v/ledger-01/",
+    f"https://{HOST}/v/ledger-02/",
+    f"https://{HOST}/v/ledger-03/",
+    f"https://{HOST}/v/ledger-04/",
+    f"https://{HOST}/v/ledger-05/",
     f"https://{HOST}/record-your-life-as-it-happens/",
     f"https://{HOST}/en/record-your-life-as-it-happens/",
     f"https://{HOST}/zh-Hant/record-your-life-as-it-happens/",
