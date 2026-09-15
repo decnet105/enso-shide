@@ -6,6 +6,7 @@
 
 User-agent: *
 Content-signal: search=yes, ai-input=yes, ai-train=no, use=reference
+Disallow: /*.md
 Allow: /
 
 # OpenAI — search and user-triggered access allowed
@@ -39,12 +40,15 @@ Allow: /
 
 # Traditional search engines
 User-agent: Googlebot
+Disallow: /*.md
 Allow: /
 
 User-agent: Bingbot
+Disallow: /*.md
 Allow: /
 
 User-agent: Applebot
+Disallow: /*.md
 Allow: /
 
 # AI training / bulk crawlers

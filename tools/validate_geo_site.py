@@ -29,10 +29,12 @@ LOCALE_DIRS = {"zh-Hant": "zh-Hant", "en": "en", "ja": "ja"}
 # 2026-09-05: +2 页(山河静听1993/1980逐字稿页,/v/shanhe-1993/、/v/shanhe-1980/)
 # = +2 html, +2 zh-Hans(路径无语言前缀按站点惯例归zh-Hans桶,内容语言仍如实是
 # zh-Hant,见页面<html lang>与VideoObject.inLanguage), +2 sitemap loc。
+# 2026-09-09: 修复 GSC 索引错误：补充 artifact/、novel/、spacetime-wall/ 3页至 sitemap (136->139)；
+# robots.txt 针对通用搜素引擎封禁 /*.md 避免 Markdown twin 索引污染 (md5 更新)。
 BASE_HTML = 140  # 2026-09-06: +4 for v/index.html 视频总览枢纽页(4语)
 BASE_LOCALE = {"zh-Hans": 56, "en": 28, "zh-Hant": 28, "ja": 28}
-BASE_SITEMAP = 136
-BASE_ROBOTS_MD5 = "35a4f54e4501dceaad6c62538171fff8"
+BASE_SITEMAP = 139
+BASE_ROBOTS_MD5 = "a49ad3bc6b3a346ef4c3b21a0014f5f3"
 
 # obsolete claims that must NOT remain anywhere
 OBSOLETE = [
