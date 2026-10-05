@@ -37,6 +37,7 @@ Enso Shide Analytics 对 Google API 数据的使用遵守 [Google API Services U
 
 Enso Shide Release Tool 是 ENSO SHIDE 自用的内部发布工具，只由拾得 YouTube 频道 @EnsoShide 的所有者使用，不对外提供。它通过 YouTube API Services 请求 `youtube.force-ssl` 权限，只用于管理我们自己频道的视频：设置标题、描述、标签、多语言元数据、自定义缩略图、定时发布时间和字幕轨。
 
+- 同一 Google OAuth 客户端也供 Enso Shide Analytics 使用，因此在 Google 授权页和 Google 账号的第三方连接页里，本工具显示的名称是“Enso Shide Analytics”。其中写入权限 `youtube.force-ssl` 只由本发布工具使用；只读权限 `youtube.readonly`、`yt-analytics.readonly` 只由分析工具使用。
 - 只访问 @EnsoShide 一个频道，不访问其他频道，也不收集观众或其他用户的数据。
 - 只在运行工具的本机保存我们自己视频的 ID 与发布状态；OAuth token 只保存在这台电脑上。
 - 相关数据不出售、不用于广告或模型训练，也不与第三方共享。

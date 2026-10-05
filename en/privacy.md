@@ -33,6 +33,7 @@ Enso Shide Analytics uses Google API data in accordance with the [Google API Ser
 
 Enso Shide Release Tool is an internal publishing tool used only by the owner of ENSO SHIDE's YouTube channel @EnsoShide; it is not offered to anyone else. It uses YouTube API Services with the `youtube.force-ssl` scope only to manage our own channel's videos: setting titles, descriptions, tags, localized metadata, custom thumbnails, scheduled publish times, and caption tracks.
 
+- It shares one Google OAuth client with Enso Shide Analytics, so on the Google consent screen and on the third-party connections page of the Google Account it appears under the name "Enso Shide Analytics". The write scope `youtube.force-ssl` is used only by this release tool; the read-only scopes `youtube.readonly` and `yt-analytics.readonly` are used only by the analytics tool.
 - It accesses only the @EnsoShide channel, no other channel, and does not collect data about viewers or other users.
 - It keeps only our own video IDs and release status, in local files on the computer that runs it; the OAuth token is stored only on that computer.
 - This data is not sold, not used for advertising or model training, and not shared with third parties.

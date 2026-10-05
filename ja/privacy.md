@@ -33,6 +33,7 @@ Enso Shide Analytics による Google API データの利用は、Limited Use �
 
 Enso Shide Release Tool は、ENSO SHIDE の YouTube チャンネル @EnsoShide の所有者だけが使う社内向け公開ツールで、外部には提供していません。YouTube API Services の `youtube.force-ssl` 権限を使い、自社チャンネルの動画の管理だけを行います（タイトル、説明、タグ、多言語メタデータ、カスタムサムネイル、予約公開日時、字幕トラックの設定）。
 
+- Enso Shide Analytics と同じ Google OAuth クライアントを使うため、Google の同意画面と Google アカウントのサードパーティ接続ページでは「Enso Shide Analytics」という名前で表示されます。書き込み権限 `youtube.force-ssl` は本ツールだけが、読み取り専用の `youtube.readonly` と `yt-analytics.readonly` は分析ツールだけが使用します。
 - アクセスするのは @EnsoShide チャンネルのみで、他のチャンネルにはアクセスせず、視聴者や他のユーザーのデータも収集しません。
 - 保存するのは自社動画の ID と公開状況のみで、ツールを実行する端末内のファイルに保存します。OAuth token もその端末にのみ保存されます。
 - これらのデータを販売、広告、モデル学習に使用せず、第三者とも共有しません。
