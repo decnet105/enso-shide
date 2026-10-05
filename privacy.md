@@ -33,6 +33,17 @@ Enso Shide Analytics 是供拾得频道所有者或经授权运营者使用的�
 
 Enso Shide Analytics 对 Google API 数据的使用遵守 [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy)，包括 Limited Use 要求。
 
+## Enso Shide Release Tool 与 YouTube API Services
+
+Enso Shide Release Tool 是 ENSO SHIDE 自用的内部发布工具，只由拾得 YouTube 频道 @EnsoShide 的所有者使用，不对外提供。它通过 YouTube API Services 请求 `youtube.force-ssl` 权限，只用于管理我们自己频道的视频：设置标题、描述、标签、多语言元数据、自定义缩略图、定时发布时间和字幕轨。
+
+- 只访问 @EnsoShide 一个频道，不访问其他频道，也不收集观众或其他用户的数据。
+- 只在运行工具的本机保存我们自己视频的 ID 与发布状态；OAuth token 只保存在这台电脑上。
+- 相关数据不出售、不用于广告或模型训练，也不与第三方共享。
+- 可随时删除本机 token，并在 Google 账号的[第三方连接页](https://myaccount.google.com/connections)撤销授权。如需删除协助，联系 privacy@shide.app。
+
+使用我们通过 YouTube API Services 提供的功能，即表示你同意受 [YouTube 服务条款](https://www.youtube.com/t/terms) 约束；Google 如何处理数据，见 [Google 隐私政策](https://policies.google.com/privacy)。本工具对 Google API 数据的使用遵守 [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy)，包括 Limited Use 要求。
+
 ## 可选匿名分析
 
 「帮助改进拾得」开启时，App 发送匿名操作类型、短枚举、App 版本和随机安装标识。分析事件不包含回忆正文、照片、姓名或联系方式。你可在「时空主页 → 隐私与数据」关闭分析，删除服务端匿名分析记录并重置标识。原始匿名事件的设计保留期为 90 天。
@@ -67,6 +78,6 @@ Enso Shide Analytics 对 Google API 数据的使用遵守 [Google API Services U
 
 ---
 页面语言：zh-Hans
-事实核验日期：2026-08-31
+事实核验日期：2026-10-05
 
 关注：X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshide · YouTube https://www.youtube.com/@EnsoShide

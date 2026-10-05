@@ -29,6 +29,17 @@ Enso Shide Analytics is a read-only tool for the owner of an Enso Shide channel 
 
 Enso Shide Analytics uses Google API data in accordance with the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
 
+## Enso Shide Release Tool and YouTube API Services
+
+Enso Shide Release Tool is an internal publishing tool used only by the owner of ENSO SHIDE's YouTube channel @EnsoShide; it is not offered to anyone else. It uses YouTube API Services with the `youtube.force-ssl` scope only to manage our own channel's videos: setting titles, descriptions, tags, localized metadata, custom thumbnails, scheduled publish times, and caption tracks.
+
+- It accesses only the @EnsoShide channel, no other channel, and does not collect data about viewers or other users.
+- It keeps only our own video IDs and release status, in local files on the computer that runs it; the OAuth token is stored only on that computer.
+- This data is not sold, not used for advertising or model training, and not shared with third parties.
+- The token can be deleted at any time and access revoked from the [third-party connections page](https://myaccount.google.com/connections) of the Google Account. For deletion assistance, email privacy@shide.app.
+
+By using features we provide through YouTube API Services, you agree to be bound by the [YouTube Terms of Service](https://www.youtube.com/t/terms). See the [Google Privacy Policy](https://policies.google.com/privacy) for how Google handles data. This tool's use of Google API data follows the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
+
 ## Analytics and tracking
 
 When Help Improve Mystory is on, the app sends anonymous action types, short categories, app version, and a random installation identifier. Analytics events exclude memory text, photos, names, and contact details. You can turn analytics off, delete server analytics, and reset the identifier in Your Space > Privacy & Data. Raw anonymous events are designed for a 90-day retention period.
@@ -64,4 +75,4 @@ Follow: X https://x.com/ensoshide · Instagram https://www.instagram.com/ensoshi
 
 ---
 页面语言：en
-事实核验日期：2026-08-31
+事实核验日期：2026-10-05

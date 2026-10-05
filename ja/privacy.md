@@ -29,6 +29,17 @@ Enso Shide Analytics は、拾得チャンネルの所有者または正式に�
 
 Enso Shide Analytics による Google API データの利用は、Limited Use 要件を含む [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) に従います。
 
+## Enso Shide Release Tool と YouTube API Services
+
+Enso Shide Release Tool は、ENSO SHIDE の YouTube チャンネル @EnsoShide の所有者だけが使う社内向け公開ツールで、外部には提供していません。YouTube API Services の `youtube.force-ssl` 権限を使い、自社チャンネルの動画の管理だけを行います（タイトル、説明、タグ、多言語メタデータ、カスタムサムネイル、予約公開日時、字幕トラックの設定）。
+
+- アクセスするのは @EnsoShide チャンネルのみで、他のチャンネルにはアクセスせず、視聴者や他のユーザーのデータも収集しません。
+- 保存するのは自社動画の ID と公開状況のみで、ツールを実行する端末内のファイルに保存します。OAuth token もその端末にのみ保存されます。
+- これらのデータを販売、広告、モデル学習に使用せず、第三者とも共有しません。
+- token はいつでも削除でき、Google アカウントの[サードパーティ接続ページ](https://myaccount.google.com/connections)でアクセスを取り消せます。削除の支援は privacy@shide.app へご連絡ください。
+
+YouTube API Services を通じて当社が提供する機能を使用することで、[YouTube 利用規約](https://www.youtube.com/t/terms)に同意したものとみなされます。Google によるデータの取り扱いは [Google プライバシーポリシー](https://policies.google.com/privacy)をご覧ください。本ツールによる Google API データの利用は、Limited Use 要件を含む [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) に従います。
+
 ## 分析とトラッキング
 
 「Mystory の改善に協力」をオンにすると、アプリは匿名の操作種別・短いカテゴリ・アプリバージョン・ランダムなインストール識別子を送信します。分析イベントに、記憶のテキスト・写真・氏名・連絡先は含まれません。分析はオフにでき、サーバー上の分析データの削除や識別子のリセットは「マイスペース ＞ プライバシーとデータ」で行えます。生の匿名イベントは 90 日間の保持期間を想定して設計されています。

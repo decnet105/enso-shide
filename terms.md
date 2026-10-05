@@ -1,14 +1,15 @@
 # 拾得 Ensō 服务条款
 
-生效日期：2026 年 8 月 31 日
+生效日期：2026 年 10 月 5 日
 
-本服务条款适用于 ENSO SHIDE 提供的拾得 Ensō iOS App、shide.app 公开网站和 Enso Shide Analytics 频道分析工具。使用上述服务即表示你同意本条款与[隐私政策](/privacy/)。如不同意，请停止使用。
+本服务条款适用于 ENSO SHIDE 提供的拾得 Ensō iOS App、shide.app 公开网站、Enso Shide Analytics 频道分析工具和 Enso Shide Release Tool 内部发布工具。使用上述服务即表示你同意本条款与[隐私政策](/privacy/)。如不同意，请停止使用。
 
 ## 1. 服务范围
 
 - 拾得 Ensō 是本地优先的记忆记录与数字成书应用；其中部分联网、AI、邮件和订阅功能会使用第三方服务。
 - shide.app 提供产品信息、公开文化内容和事实证据页。
 - Enso Shide Analytics 是只读频道分析工具，仅用于经 Google 账号持有者明确授权的 YouTube 频道。
+- Enso Shide Release Tool 是 ENSO SHIDE 自用的内部发布工具，只用于管理 ENSO SHIDE 自有 YouTube 频道 @EnsoShide 的视频元数据、缩略图、定时发布与字幕，不对外提供。
 
 ## 2. 合格使用与账号权限
 
@@ -16,7 +17,7 @@
 
 ## 3. Google 与 YouTube 服务
 
-Enso Shide Analytics 只请求业务所需的最小只读权限。你使用 Google 或 YouTube 服务时，仍受 [YouTube 服务条款](https://www.youtube.com/t/terms)、[Google 隐私政策](https://policies.google.com/privacy)及其当时有效的平台政策和决定约束。Google 或 YouTube 的 API、数据定义、配额、可用性和变现规则可随时改变，ENSO SHIDE 不控制这些变化。
+Enso Shide Analytics 只请求业务所需的最小只读权限；Enso Shide Release Tool 只请求管理自有频道视频所需的 `youtube.force-ssl` 权限，且只作用于 @EnsoShide。你使用 Google 或 YouTube 服务时，仍受 [YouTube 服务条款](https://www.youtube.com/t/terms)、[Google 隐私政策](https://policies.google.com/privacy)及其当时有效的平台政策和决定约束。Google 或 YouTube 的 API、数据定义、配额、可用性和变现规则可随时改变，ENSO SHIDE 不控制这些变化。
 
 ## 4. 频道分析的责任边界
 
@@ -32,7 +33,7 @@ Enso Shide Analytics 只请求业务所需的最小只读权限。你使用 Goog
 
 ## 7. 停止使用与撤销授权
 
-你可随时停止使用。对 Enso Shide Analytics，请删除本机 OAuth token 和报告，并在 Google 账号的第三方连接页撤销 Enso Shide Analytics 访问权。ENSO SHIDE 可为保护安全、遵守法律或第三方平台政策而限制或停止某项服务。
+你可随时停止使用。对 Enso Shide Analytics，请删除本机 OAuth token 和报告，并在 Google 账号的第三方连接页撤销 Enso Shide Analytics 访问权；Enso Shide Release Tool 同样可删除本机 token 并在该页撤销。ENSO SHIDE 可为保护安全、遵守法律或第三方平台政策而限制或停止某项服务。
 
 ## 8. 条款更新与联系
 
@@ -40,8 +41,8 @@ Enso Shide Analytics 只请求业务所需的最小只读权限。你使用 Goog
 
 ## English summary
 
-These Terms apply to the Shide iOS app, shide.app, and Enso Shide Analytics. Enso Shide Analytics is a read-only tool for a channel owner or an expressly authorized operator. You may connect only a YouTube channel that you own or are authorized to operate. The tool does not guarantee views, subscribers, YPP approval, revenue, or platform recommendations. Google and YouTube services remain governed by the [YouTube Terms of Service](https://www.youtube.com/t/terms), [Google Privacy Policy](https://policies.google.com/privacy), and their current platform policies. Google/YouTube data handling is described in our [Privacy Policy](/en/privacy/). You may stop using the tool at any time, delete local tokens and reports, and revoke access through your Google Account. Contact support@shide.app for service questions or privacy@shide.app for privacy and data requests.
+These Terms apply to the Shide iOS app, shide.app, Enso Shide Analytics, and Enso Shide Release Tool. Enso Shide Release Tool is an internal tool that manages only ENSO SHIDE's own YouTube channel @EnsoShide (video metadata, thumbnails, scheduling, and captions) with the youtube.force-ssl scope; it is not offered to others. Enso Shide Analytics is a read-only tool for a channel owner or an expressly authorized operator. You may connect only a YouTube channel that you own or are authorized to operate. The tool does not guarantee views, subscribers, YPP approval, revenue, or platform recommendations. Google and YouTube services remain governed by the [YouTube Terms of Service](https://www.youtube.com/t/terms), [Google Privacy Policy](https://policies.google.com/privacy), and their current platform policies. Google/YouTube data handling is described in our [Privacy Policy](/en/privacy/). You may stop using the tool at any time, delete local tokens and reports, and revoke access through your Google Account. Contact support@shide.app for service questions or privacy@shide.app for privacy and data requests.
 
 ---
 页面语言：zh-Hans 与 English
-事实核验日期：2026-08-31
+事实核验日期：2026-10-05
