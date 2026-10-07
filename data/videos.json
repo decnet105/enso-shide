@@ -1,40 +1,298 @@
 {
-  "version": "2026-10-07T01:16:22Z",
+  "version": "2026-10-07T20:09:09Z",
   "schema": 2,
   "channel": "Enso Shide",
-  "count": 123,
+  "count": 134,
   "videos": [
     {
-      "videoId": "shenshi-changfeng",
-      "url": "https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj",
+      "videoId": "shenshi-3hduMHTIP8zs2OntaJ26gV",
+      "url": "https://open.spotify.com/track/3hduMHTIP8zs2OntaJ26gV",
       "title": "长风",
       "rawTitle": "沈拾《长风》",
-      "year": null,
+      "year": 2026,
       "series": "music",
       "kind": "spotify",
-      "featured": true,
-      "subtitle": "沈拾原创 · 主题曲",
-      "thumbnail": "https://shide.app/data/changfeng-cover.jpg",
-      "publishedAt": "2026-08-26",
-      "durationSec": 0,
-      "views": 0,
+      "featured": false,
       "format": "music",
-      "era": null,
-      "people": [
-        "沈拾"
-      ],
-      "work": "长风",
+      "subtitle": "沈拾 · 《天地借宿》01",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 1,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 179,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
       "anchors": [
         {
-          "type": "person",
-          "value": "沈拾"
-        },
-        {
-          "type": "work",
-          "value": "长风"
+          "type": "year",
+          "value": 2026
         }
-      ],
-      "priority": "normal"
+      ]
+    },
+    {
+      "videoId": "shenshi-2fiieVaWCw44dyMGEk9NRZ",
+      "url": "https://open.spotify.com/track/2fiieVaWCw44dyMGEk9NRZ",
+      "title": "漫卷千骑过那岗",
+      "rawTitle": "沈拾《漫卷千骑过那岗》",
+      "year": 2026,
+      "series": "music",
+      "kind": "spotify",
+      "featured": false,
+      "format": "music",
+      "subtitle": "沈拾 · 《天地借宿》02",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 2,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 164,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2026
+        }
+      ]
+    },
+    {
+      "videoId": "shenshi-54YZAtopKj9J5Ckp4Tq2Mx",
+      "url": "https://open.spotify.com/track/54YZAtopKj9J5Ckp4Tq2Mx",
+      "title": "雪落二十年",
+      "rawTitle": "沈拾《雪落二十年》",
+      "year": 2026,
+      "series": "music",
+      "kind": "spotify",
+      "featured": false,
+      "format": "music",
+      "subtitle": "沈拾 · 《天地借宿》03",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 3,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 109,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2026
+        }
+      ]
+    },
+    {
+      "videoId": "shenshi-4TYXMlXmYl6UkF84E1NvXf",
+      "url": "https://open.spotify.com/track/4TYXMlXmYl6UkF84E1NvXf",
+      "title": "当年我们都以为自己会不一样",
+      "rawTitle": "沈拾《当年我们都以为自己会不一样》",
+      "year": 2026,
+      "series": "music",
+      "kind": "spotify",
+      "featured": false,
+      "format": "music",
+      "subtitle": "沈拾 · 《天地借宿》04",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 4,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 153,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2026
+        }
+      ]
+    },
+    {
+      "videoId": "shenshi-0ljyczWxdgGMaaxMYhTF1H",
+      "url": "https://open.spotify.com/track/0ljyczWxdgGMaaxMYhTF1H",
+      "title": "安静的刺",
+      "rawTitle": "沈拾《安静的刺》",
+      "year": 2026,
+      "series": "music",
+      "kind": "spotify",
+      "featured": false,
+      "format": "music",
+      "subtitle": "沈拾 · 《天地借宿》05",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 5,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 129,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2026
+        }
+      ]
+    },
+    {
+      "videoId": "shenshi-3VlbELNsoYHg6YUfNasmli",
+      "url": "https://open.spotify.com/track/3VlbELNsoYHg6YUfNasmli",
+      "title": "我把走散的人 记成半城灯火",
+      "rawTitle": "沈拾《我把走散的人 记成半城灯火》",
+      "year": 2026,
+      "series": "music",
+      "kind": "spotify",
+      "featured": false,
+      "format": "music",
+      "subtitle": "沈拾 · 《天地借宿》06",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 6,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 151,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2026
+        }
+      ]
+    },
+    {
+      "videoId": "shenshi-2QYRPpzTWCxl6dkv9IhATB",
+      "url": "https://open.spotify.com/track/2QYRPpzTWCxl6dkv9IhATB",
+      "title": "晚风都记得你的名字",
+      "rawTitle": "沈拾《晚风都记得你的名字》",
+      "year": 2026,
+      "series": "music",
+      "kind": "spotify",
+      "featured": false,
+      "format": "music",
+      "subtitle": "沈拾 · 《天地借宿》07",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 7,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 186,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2026
+        }
+      ]
+    },
+    {
+      "videoId": "shenshi-7JeJFtK9pGezj1XF834qRg",
+      "url": "https://open.spotify.com/track/7JeJFtK9pGezj1XF834qRg",
+      "title": "全勤",
+      "rawTitle": "沈拾《全勤》",
+      "year": 2026,
+      "series": "music",
+      "kind": "spotify",
+      "featured": false,
+      "format": "music",
+      "subtitle": "沈拾 · 《天地借宿》08",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 8,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 169,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2026
+        }
+      ]
+    },
+    {
+      "videoId": "shenshi-7g1FSqV1Ag7Z4RdrbiHS9J",
+      "url": "https://open.spotify.com/track/7g1FSqV1Ag7Z4RdrbiHS9J",
+      "title": "留下光",
+      "rawTitle": "沈拾《留下光》",
+      "year": 2026,
+      "series": "music",
+      "kind": "spotify",
+      "featured": false,
+      "format": "music",
+      "subtitle": "沈拾 · 《天地借宿》09",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 9,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 161,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2026
+        }
+      ]
+    },
+    {
+      "videoId": "shenshi-638wdLhaooiAcpCqyzkcUX",
+      "url": "https://open.spotify.com/track/638wdLhaooiAcpCqyzkcUX",
+      "title": "我在天地间借宿了一生",
+      "rawTitle": "沈拾《我在天地间借宿了一生》",
+      "year": 2026,
+      "series": "music",
+      "kind": "spotify",
+      "featured": false,
+      "format": "music",
+      "subtitle": "沈拾 · 《天地借宿》10",
+      "album": "天地借宿",
+      "albumUrl": "https://open.spotify.com/album/0gWhyN7J9731k7Pq4Jjzmd",
+      "trackNo": 10,
+      "people": [],
+      "work": null,
+      "thumbnail": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a3d80141503448799f18ffc6",
+      "publishedAt": "2026-10-01",
+      "durationSec": 171,
+      "views": 0,
+      "priority": "normal",
+      "era": "20s",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2026
+        }
+      ]
     },
     {
       "videoId": "Mk3kCe4j0cw",
@@ -1611,6 +1869,38 @@
       "priority": "normal"
     },
     {
+      "videoId": "shenshi-changfeng",
+      "url": "https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj",
+      "title": "长风",
+      "rawTitle": "沈拾《长风》",
+      "year": null,
+      "series": "music",
+      "kind": "spotify",
+      "featured": true,
+      "subtitle": "沈拾原创 · 主题曲",
+      "thumbnail": "https://shide.app/data/changfeng-cover.jpg",
+      "publishedAt": "2026-08-26",
+      "durationSec": 0,
+      "views": 0,
+      "format": "music",
+      "era": null,
+      "people": [
+        "沈拾"
+      ],
+      "work": "长风",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "沈拾"
+        },
+        {
+          "type": "work",
+          "value": "长风"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
       "videoId": "o2oDBjYZgd0",
       "url": "https://youtube.com/shorts/o2oDBjYZgd0",
       "title": "張國榮：你以為你認識他？ 一個比時代早了二十年的人",
@@ -1977,6 +2267,44 @@
         {
           "type": "work",
           "value": "甜蜜蜜/新不了情"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "or3frU-GvpA",
+      "url": "https://www.youtube.com/watch?v=or3frU-GvpA",
+      "title": "逃港青年、总华探长与旧香港的退场：《跛豪》《雷洛传》如何改写个人命运",
+      "rawTitle": "逃港青年、总华探长与旧香港的退场：《跛豪》《雷洛传》如何改写个人命运",
+      "year": 1991,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/or3frU-GvpA/hqdefault.jpg",
+      "publishedAt": "2026-10-02",
+      "durationSec": 704,
+      "views": 0,
+      "format": "long",
+      "era": "90s",
+      "people": [
+        "跛豪",
+        "雷洛"
+      ],
+      "work": "跛豪/雷洛传",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1991
+        },
+        {
+          "type": "person",
+          "value": "跛豪"
+        },
+        {
+          "type": "person",
+          "value": "雷洛"
+        },
+        {
+          "type": "work",
+          "value": "跛豪/雷洛传"
         }
       ],
       "priority": "normal"
