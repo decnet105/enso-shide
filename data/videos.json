@@ -1,8 +1,8 @@
 {
-  "version": "2026-10-07T20:09:09Z",
+  "version": "2026-10-07T20:09:46Z",
   "schema": 2,
   "channel": "Enso Shide",
-  "count": 134,
+  "count": 133,
   "videos": [
     {
       "videoId": "shenshi-3hduMHTIP8zs2OntaJ26gV",
@@ -1864,38 +1864,6 @@
         {
           "type": "work",
           "value": "漫卷千骑过那岗"
-        }
-      ],
-      "priority": "normal"
-    },
-    {
-      "videoId": "shenshi-changfeng",
-      "url": "https://open.spotify.com/artist/2IHdUak0czspKuDbYluycj",
-      "title": "长风",
-      "rawTitle": "沈拾《长风》",
-      "year": null,
-      "series": "music",
-      "kind": "spotify",
-      "featured": true,
-      "subtitle": "沈拾原创 · 主题曲",
-      "thumbnail": "https://shide.app/data/changfeng-cover.jpg",
-      "publishedAt": "2026-08-26",
-      "durationSec": 0,
-      "views": 0,
-      "format": "music",
-      "era": null,
-      "people": [
-        "沈拾"
-      ],
-      "work": "长风",
-      "anchors": [
-        {
-          "type": "person",
-          "value": "沈拾"
-        },
-        {
-          "type": "work",
-          "value": "长风"
         }
       ],
       "priority": "normal"
