@@ -1,7 +1,8 @@
 {
-  "version": "2026-09-25T10:00:00Z",
+  "version": "2026-10-07T01:16:22Z",
+  "schema": 2,
   "channel": "Enso Shide",
-  "count": 93,
+  "count": 123,
   "videos": [
     {
       "videoId": "shenshi-changfeng",
@@ -16,7 +17,24 @@
       "thumbnail": "https://shide.app/data/changfeng-cover.jpg",
       "publishedAt": "2026-08-26",
       "durationSec": 0,
-      "views": 0
+      "views": 0,
+      "format": "music",
+      "era": null,
+      "people": [
+        "沈拾"
+      ],
+      "work": "长风",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "沈拾"
+        },
+        {
+          "type": "work",
+          "value": "长风"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "Mk3kCe4j0cw",
@@ -28,19 +46,62 @@
       "thumbnail": "https://img.youtube.com/vi/Mk3kCe4j0cw/hqdefault.jpg",
       "publishedAt": "2026-08-29",
       "durationSec": 82,
-      "views": 1630
+      "views": 1630,
+      "format": "short",
+      "era": null,
+      "people": [
+        "邓丽君"
+      ],
+      "work": "甜蜜蜜",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "邓丽君"
+        },
+        {
+          "type": "work",
+          "value": "甜蜜蜜"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "xjemS0zb-Vk",
       "url": "https://youtube.com/shorts/xjemS0zb-Vk",
       "title": "《海阔天空》发行一个月，写它的人就走了——黄家驹的光辉岁月",
       "rawTitle": "《海阔天空》发行一个月，写它的人就走了——黄家驹的光辉岁月 #拾光音乐传记 #Beyond #黄家驹 #海阔天空 #光辉岁月 #真的爱你 #华语摇滚 #粤语歌 #回忆杀 #shorts",
-      "year": null,
+      "year": 1993,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/xjemS0zb-Vk/hqdefault.jpg",
       "publishedAt": "2026-08-25",
       "durationSec": 71,
-      "views": 1457
+      "views": 1457,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "黄家驹",
+        "Beyond"
+      ],
+      "work": "海阔天空",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1993
+        },
+        {
+          "type": "person",
+          "value": "黄家驹"
+        },
+        {
+          "type": "person",
+          "value": "Beyond"
+        },
+        {
+          "type": "work",
+          "value": "海阔天空"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "XhcwBYg0dLk",
@@ -52,43 +113,143 @@
       "thumbnail": "https://img.youtube.com/vi/XhcwBYg0dLk/hqdefault.jpg",
       "publishedAt": "2026-08-30",
       "durationSec": 71,
-      "views": 1395
+      "views": 1395,
+      "format": "short",
+      "era": null,
+      "people": [
+        "梅艳芳"
+      ],
+      "work": "夕阳之歌",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "梅艳芳"
+        },
+        {
+          "type": "work",
+          "value": "夕阳之歌"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "Zm1Ye3bds7Y",
       "url": "https://youtube.com/shorts/Zm1Ye3bds7Y",
       "title": "张雨生录〈姊妹〉，把阿妹的妈妈请进了录音室｜拾光音乐传记 09",
       "rawTitle": "张雨生录〈姊妹〉，把阿妹的妈妈请进了录音室｜拾光音乐传记 09 #张雨生 #张惠妹 #姊妹 #天天想你 #华语金曲 #台湾音乐 #拾光音乐传记 #shorts",
-      "year": null,
+      "year": 1996,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/Zm1Ye3bds7Y/hqdefault.jpg",
       "publishedAt": "2026-09-02",
       "durationSec": 76,
-      "views": 1373
+      "views": 1373,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "张雨生",
+        "张惠妹"
+      ],
+      "work": "姊妹",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1996
+        },
+        {
+          "type": "person",
+          "value": "张雨生"
+        },
+        {
+          "type": "person",
+          "value": "张惠妹"
+        },
+        {
+          "type": "work",
+          "value": "姊妹"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "DqlK9AElLeQ",
       "url": "https://youtube.com/shorts/DqlK9AElLeQ",
       "title": "《红豆》原本是写给张国荣的，为什么最后成了王菲的封神之作｜拾光音乐传记 11",
       "rawTitle": "《红豆》原本是写给张国荣的，为什么最后成了王菲的封神之作｜拾光音乐传记 11 #王菲 #红豆 #张国荣 #林夕 #拾光音乐传记 #华语金曲 #shorts",
-      "year": null,
+      "year": 1998,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/DqlK9AElLeQ/hqdefault.jpg",
       "publishedAt": "2026-09-05",
       "durationSec": 42,
-      "views": 1370
+      "views": 1370,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "王菲",
+        "张国荣",
+        "林夕"
+      ],
+      "work": "红豆",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1998
+        },
+        {
+          "type": "person",
+          "value": "王菲"
+        },
+        {
+          "type": "person",
+          "value": "张国荣"
+        },
+        {
+          "type": "person",
+          "value": "林夕"
+        },
+        {
+          "type": "work",
+          "value": "红豆"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "NJ3vAsn-7Yo",
       "url": "https://youtube.com/shorts/NJ3vAsn-7Yo",
       "title": "《梦醒时分》唱了30多年，竟然没有一个‘我’｜陈淑桦",
       "rawTitle": "《梦醒时分》唱了30多年，竟然没有一个‘我’｜陈淑桦 #陈淑桦 #梦醒时分 #李宗盛 #歌词解析 #华语金曲 #台湾音乐 拾光音乐传记  #shorts",
-      "year": null,
+      "year": 1990,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/NJ3vAsn-7Yo/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 34,
-      "views": 1342
+      "views": 1342,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "陈淑桦",
+        "李宗盛"
+      ],
+      "work": "梦醒时分",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1990
+        },
+        {
+          "type": "person",
+          "value": "陈淑桦"
+        },
+        {
+          "type": "person",
+          "value": "李宗盛"
+        },
+        {
+          "type": "work",
+          "value": "梦醒时分"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "jp7wLFTtJOs",
@@ -100,7 +261,28 @@
       "thumbnail": "https://img.youtube.com/vi/jp7wLFTtJOs/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 55,
-      "views": 1263
+      "views": 1263,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "唐朝乐队"
+      ],
+      "work": "梦回唐朝",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "唐朝乐队"
+        },
+        {
+          "type": "work",
+          "value": "梦回唐朝"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "JtDB3cVoWkE",
@@ -112,31 +294,94 @@
       "thumbnail": "https://img.youtube.com/vi/JtDB3cVoWkE/hqdefault.jpg",
       "publishedAt": "2026-09-02",
       "durationSec": 34,
-      "views": 1182
+      "views": 1182,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "罗大佑"
+      ],
+      "work": "恋曲1990",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1990
+        },
+        {
+          "type": "person",
+          "value": "罗大佑"
+        },
+        {
+          "type": "work",
+          "value": "恋曲1990"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "N8BJq-rGba4",
       "url": "https://youtube.com/shorts/N8BJq-rGba4",
       "title": "王杰唱浪子之前，他是真的替身｜拾光音乐传记 12",
       "rawTitle": "王杰唱浪子之前，他是真的替身｜拾光音乐传记 12 #王杰 #一场游戏一场梦 #浪子歌王 #邵氏 #华语金曲 #台湾音乐 #拾光音乐传记 #shorts",
-      "year": null,
+      "year": 1988,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/N8BJq-rGba4/hqdefault.jpg",
       "publishedAt": "2026-09-06",
       "durationSec": 81,
-      "views": 928
+      "views": 928,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "王杰"
+      ],
+      "work": "一场游戏一场梦",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1988
+        },
+        {
+          "type": "person",
+          "value": "王杰"
+        },
+        {
+          "type": "work",
+          "value": "一场游戏一场梦"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "6ltG1Yrhx8s",
       "url": "https://youtube.com/shorts/6ltG1Yrhx8s",
       "title": "何勇：《钟鼓楼》里那把三弦，是他父亲弹的｜拾光音乐传记 13",
       "rawTitle": "何勇：《钟鼓楼》里那把三弦，是他父亲弹的｜拾光音乐传记 13 #何勇 #钟鼓楼 #shorts",
-      "year": null,
+      "year": 1994,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/6ltG1Yrhx8s/hqdefault.jpg",
       "publishedAt": "2026-09-06",
       "durationSec": 29,
-      "views": 481
+      "views": 481,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "何勇"
+      ],
+      "work": "钟鼓楼",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1994
+        },
+        {
+          "type": "person",
+          "value": "何勇"
+        },
+        {
+          "type": "work",
+          "value": "钟鼓楼"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "-_6r6OtcOCc",
@@ -148,7 +393,43 @@
       "thumbnail": "https://img.youtube.com/vi/-_6r6OtcOCc/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 66,
-      "views": 340
+      "views": 340,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "窦唯",
+        "张楚",
+        "何勇",
+        "唐朝乐队"
+      ],
+      "work": "94红磡",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1994
+        },
+        {
+          "type": "person",
+          "value": "窦唯"
+        },
+        {
+          "type": "person",
+          "value": "张楚"
+        },
+        {
+          "type": "person",
+          "value": "何勇"
+        },
+        {
+          "type": "person",
+          "value": "唐朝乐队"
+        },
+        {
+          "type": "work",
+          "value": "94红磡"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "mLO-HGyMvGA",
@@ -160,23 +441,61 @@
       "thumbnail": "https://img.youtube.com/vi/mLO-HGyMvGA/hqdefault.jpg",
       "publishedAt": "2026-08-23",
       "durationSec": 50,
-      "views": 178
+      "views": 178,
+      "format": "short",
+      "era": null,
+      "people": [
+        "朴树"
+      ],
+      "work": "平凡之路",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "朴树"
+        },
+        {
+          "type": "work",
+          "value": "平凡之路"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "bO5sdoCAUZI",
-      "url": "https://youtube.com/shorts/bO5sdoCAUZI",
+      "url": "https://www.youtube.com/watch?v=bO5sdoCAUZI",
       "title": "何勇：那把三弦，是他父亲弹的｜拾光音乐传记 13",
       "rawTitle": "何勇：那把三弦，是他父亲弹的｜拾光音乐传记 13 #何勇 #钟鼓楼 #姑娘漂亮 #魔岩三杰 #红磡 #中国摇滚 #拾光音乐传记",
-      "year": null,
+      "year": 1994,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/bO5sdoCAUZI/hqdefault.jpg",
       "publishedAt": "2026-09-06",
       "durationSec": 254,
-      "views": 129
+      "views": 129,
+      "format": "long",
+      "era": "90s",
+      "people": [
+        "何勇"
+      ],
+      "work": "钟鼓楼",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1994
+        },
+        {
+          "type": "person",
+          "value": "何勇"
+        },
+        {
+          "type": "work",
+          "value": "钟鼓楼"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "t6ULwmO1Rtk",
-      "url": "https://youtube.com/shorts/t6ULwmO1Rtk",
+      "url": "https://www.youtube.com/watch?v=t6ULwmO1Rtk",
       "title": "沈拾《雪落二十年》Twenty Years of Snow 官方MV · 致敬日剧《初恋 First Love》",
       "rawTitle": "沈拾《雪落二十年》Twenty Years of Snow 官方MV · 致敬日剧《初恋 First Love》 #沈拾, #ShenShi, #拾得原创音乐,#初恋 #firstlove",
       "year": null,
@@ -184,23 +503,66 @@
       "thumbnail": "https://img.youtube.com/vi/t6ULwmO1Rtk/hqdefault.jpg",
       "publishedAt": "2026-08-26",
       "durationSec": 110,
-      "views": 85
+      "views": 85,
+      "format": "long",
+      "era": null,
+      "people": [
+        "沈拾"
+      ],
+      "work": "雪落二十年",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "沈拾"
+        },
+        {
+          "type": "work",
+          "value": "雪落二十年"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "VEPcRDWNTTE",
       "url": "https://youtube.com/shorts/VEPcRDWNTTE",
       "title": "把辛弃疾唱成金属的少年，后来把中国的笙吹进了格莱美",
       "rawTitle": "把辛弃疾唱成金属的少年，后来把中国的笙吹进了格莱美 #拾光音乐传记 #烽火扬州路 #轮回乐队 #吴彤 #辛弃疾 #中国摇滚 #民族摇滚 #90年代 #回忆杀 #shorts",
-      "year": null,
+      "year": 1994,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/VEPcRDWNTTE/hqdefault.jpg",
       "publishedAt": "2026-08-23",
       "durationSec": 62,
-      "views": 85
+      "views": 85,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "轮回乐队",
+        "吴彤"
+      ],
+      "work": "烽火扬州路",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1994
+        },
+        {
+          "type": "person",
+          "value": "轮回乐队"
+        },
+        {
+          "type": "person",
+          "value": "吴彤"
+        },
+        {
+          "type": "work",
+          "value": "烽火扬州路"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "lbLUQXFjwjY",
-      "url": "https://youtube.com/shorts/lbLUQXFjwjY",
+      "url": "https://www.youtube.com/watch?v=lbLUQXFjwjY",
       "title": "【1980・鄧麗君登上林肯中心那一年】古琴一小時 · 古琴・山水・書法 · 靜心・讀書・冥想・助眠・泡茶 · 69張年代題跋卡",
       "rawTitle": "【1980・鄧麗君登上林肯中心那一年】古琴一小時 · 古琴・山水・書法 · 靜心・讀書・冥想・助眠・泡茶 · 69張年代題跋卡",
       "year": 1980,
@@ -208,11 +570,28 @@
       "thumbnail": "https://img.youtube.com/vi/lbLUQXFjwjY/hqdefault.jpg",
       "publishedAt": "2026-09-05",
       "durationSec": 3601,
-      "views": 42
+      "views": 42,
+      "format": "ambient",
+      "code": "SHANHE-1980",
+      "pairId": "SHANHE-1980",
+      "era": "80s",
+      "people": [],
+      "work": "山河静听",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1980
+        },
+        {
+          "type": "work",
+          "value": "山河静听"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "wP_SzvhvGkc",
-      "url": "https://youtube.com/shorts/wP_SzvhvGkc",
+      "url": "https://www.youtube.com/watch?v=wP_SzvhvGkc",
       "title": "【1993・霸王別姬金棕櫚那一年】古琴一小時 · 古琴・山水・書法 · 靜心・讀書・冥想・助眠・泡茶 · 75張年代題跋卡",
       "rawTitle": "【1993・霸王別姬金棕櫚那一年】古琴一小時 · 古琴・山水・書法 · 靜心・讀書・冥想・助眠・泡茶 · 75張年代題跋卡",
       "year": 1993,
@@ -220,11 +599,28 @@
       "thumbnail": "https://img.youtube.com/vi/wP_SzvhvGkc/hqdefault.jpg",
       "publishedAt": "2026-09-05",
       "durationSec": 3601,
-      "views": 31
+      "views": 31,
+      "format": "ambient",
+      "code": "SHANHE-1993",
+      "pairId": "SHANHE-1993",
+      "era": "90s",
+      "people": [],
+      "work": "山河静听",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1993
+        },
+        {
+          "type": "work",
+          "value": "山河静听"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "YlpFdhP2yxE",
-      "url": "https://youtube.com/shorts/YlpFdhP2yxE",
+      "url": "https://www.youtube.com/watch?v=YlpFdhP2yxE",
       "title": "沈拾《安静的刺》Quiet Thorns 官方MV · 致敬韩剧《我的大叔》",
       "rawTitle": "沈拾《安静的刺》Quiet Thorns 官方MV · 致敬韩剧《我的大叔》#我的大叔, #mymister , #나의 아저씨, #安静的刺, #沈拾, #ShenShi, #拾得原创音乐",
       "year": null,
@@ -232,23 +628,240 @@
       "thumbnail": "https://img.youtube.com/vi/YlpFdhP2yxE/hqdefault.jpg",
       "publishedAt": "2026-08-26",
       "durationSec": 130,
-      "views": 25
+      "views": 25,
+      "format": "long",
+      "era": null,
+      "people": [
+        "沈拾"
+      ],
+      "work": "安静的刺",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "沈拾"
+        },
+        {
+          "type": "work",
+          "value": "安静的刺"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "fWPJ3eSXWqw",
+      "url": "https://youtube.com/shorts/fWPJ3eSXWqw",
+      "title": "罗大佑不是鹿港人，为什么写出《鹿港小镇》？",
+      "rawTitle": "罗大佑不是鹿港人，为什么写出《鹿港小镇》？ #shorts",
+      "year": 1982,
+      "series": "music",
+      "thumbnail": "https://img.youtube.com/vi/fWPJ3eSXWqw/hqdefault.jpg",
+      "publishedAt": "2026-10-03",
+      "durationSec": 50,
+      "views": 0,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "罗大佑"
+      ],
+      "work": "鹿港小镇",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1982
+        },
+        {
+          "type": "person",
+          "value": "罗大佑"
+        },
+        {
+          "type": "work",
+          "value": "鹿港小镇"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "9G5JtNIWkpU",
+      "url": "https://www.youtube.com/watch?v=9G5JtNIWkpU",
+      "title": "罗大佑从没住过鹿港，为什么《鹿港小镇》唱中了整整一代人？",
+      "rawTitle": "罗大佑从没住过鹿港，为什么《鹿港小镇》唱中了整整一代人？",
+      "year": 1982,
+      "series": "music",
+      "thumbnail": "https://img.youtube.com/vi/9G5JtNIWkpU/hqdefault.jpg",
+      "publishedAt": "2026-10-02",
+      "durationSec": 1143,
+      "views": 0,
+      "format": "long",
+      "era": "80s",
+      "people": [
+        "罗大佑"
+      ],
+      "work": "鹿港小镇",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1982
+        },
+        {
+          "type": "person",
+          "value": "罗大佑"
+        },
+        {
+          "type": "work",
+          "value": "鹿港小镇"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "qU5wRc1Yw20",
+      "url": "https://youtube.com/shorts/qU5wRc1Yw20",
+      "title": "《童年》最早唱的，不是罗大佑",
+      "rawTitle": "《童年》最早唱的，不是罗大佑 #罗大佑 #shorts",
+      "year": 1981,
+      "series": "music",
+      "thumbnail": "https://img.youtube.com/vi/qU5wRc1Yw20/hqdefault.jpg",
+      "publishedAt": "2026-09-26",
+      "durationSec": 11,
+      "views": 0,
+      "format": "short",
+      "code": "E-tongnian11",
+      "pairId": "E-tongnian11",
+      "era": "80s",
+      "people": [
+        "罗大佑",
+        "张艾嘉"
+      ],
+      "work": "童年",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1981
+        },
+        {
+          "type": "person",
+          "value": "罗大佑"
+        },
+        {
+          "type": "person",
+          "value": "张艾嘉"
+        },
+        {
+          "type": "work",
+          "value": "童年"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "NbeHV5VT5fQ",
+      "url": "https://www.youtube.com/watch?v=NbeHV5VT5fQ",
+      "title": "唐朝乐队《梦回唐朝》：起名的人没写一个音符，小样差点被扔掉",
+      "rawTitle": "唐朝乐队《梦回唐朝》：起名的人没写一个音符，小样差点被扔掉",
+      "year": 1992,
+      "series": "music",
+      "thumbnail": "https://img.youtube.com/vi/NbeHV5VT5fQ/hqdefault.jpg",
+      "publishedAt": "2026-09-25",
+      "durationSec": 452,
+      "views": 0,
+      "format": "long",
+      "era": "90s",
+      "people": [
+        "唐朝乐队"
+      ],
+      "work": "梦回唐朝",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "唐朝乐队"
+        },
+        {
+          "type": "work",
+          "value": "梦回唐朝"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "UU3fsyQ5-xU",
+      "url": "https://youtube.com/shorts/UU3fsyQ5-xU",
+      "title": "唐朝乐队《梦回唐朝》：起名的人一个音符也没写",
+      "rawTitle": "唐朝乐队《梦回唐朝》：起名的人一个音符也没写 #中国摇滚 #梦回唐朝",
+      "year": 1992,
+      "series": "music",
+      "thumbnail": "https://img.youtube.com/vi/UU3fsyQ5-xU/hqdefault.jpg",
+      "publishedAt": "2026-09-25",
+      "durationSec": 60,
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "唐朝乐队"
+      ],
+      "work": "梦回唐朝",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "唐朝乐队"
+        },
+        {
+          "type": "work",
+          "value": "梦回唐朝"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "T1JX5xIRE3s",
       "url": "https://youtube.com/shorts/T1JX5xIRE3s",
       "title": "《月亮代表我的心》最早录的，不是邓丽君",
       "rawTitle": "《月亮代表我的心》最早录的，不是邓丽君 #邓丽君 #shorts",
-      "year": null,
+      "year": 1977,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/T1JX5xIRE3s/hqdefault.jpg",
       "publishedAt": "2026-09-23",
       "durationSec": 11,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "E-moon11",
+      "pairId": "E-moon11",
+      "era": "70s",
+      "people": [
+        "邓丽君",
+        "陈芬兰"
+      ],
+      "work": "月亮代表我的心",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1977
+        },
+        {
+          "type": "person",
+          "value": "邓丽君"
+        },
+        {
+          "type": "person",
+          "value": "陈芬兰"
+        },
+        {
+          "type": "work",
+          "value": "月亮代表我的心"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "NGzEwQ9Ok7E",
-      "url": "https://youtube.com/shorts/NGzEwQ9Ok7E",
+      "url": "https://www.youtube.com/watch?v=NGzEwQ9Ok7E",
       "title": "【1988】秋田陪你讀書喝茶的一小時｜簫笛笙古風器樂",
       "rawTitle": "【1988】秋田陪你讀書喝茶的一小時｜簫笛笙古風器樂 #讀書音樂 #助眠 #靜心",
       "year": 1988,
@@ -256,7 +869,24 @@
       "thumbnail": "https://img.youtube.com/vi/NGzEwQ9Ok7E/hqdefault.jpg",
       "publishedAt": "2026-09-21",
       "durationSec": 3601,
-      "views": 0
+      "views": 0,
+      "format": "ambient",
+      "code": "SHANHE-1988",
+      "pairId": "SHANHE-1988",
+      "era": "80s",
+      "people": [],
+      "work": "山河静听",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1988
+        },
+        {
+          "type": "work",
+          "value": "山河静听"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "94R15XzdLSs",
@@ -268,11 +898,31 @@
       "thumbnail": "https://img.youtube.com/vi/94R15XzdLSs/hqdefault.jpg",
       "publishedAt": "2026-09-20",
       "durationSec": 53,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "SG0921-S",
+      "pairId": "SG0921",
+      "era": null,
+      "people": [
+        "萧煌奇",
+        "动力火车"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "萧煌奇"
+        },
+        {
+          "type": "person",
+          "value": "动力火车"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "mdO-7bYJkFA",
-      "url": "https://youtube.com/shorts/mdO-7bYJkFA",
+      "url": "https://www.youtube.com/watch?v=mdO-7bYJkFA",
       "title": "萧煌奇不看提词机，怎么唱完小巨蛋？",
       "rawTitle": "萧煌奇不看提词机，怎么唱完小巨蛋？#萧煌奇",
       "year": null,
@@ -280,23 +930,61 @@
       "thumbnail": "https://img.youtube.com/vi/mdO-7bYJkFA/hqdefault.jpg",
       "publishedAt": "2026-09-20",
       "durationSec": 339,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "code": "SG0921-L",
+      "pairId": "SG0921",
+      "era": null,
+      "people": [
+        "萧煌奇"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "萧煌奇"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "hEI6QI9QFR4",
       "url": "https://youtube.com/shorts/hEI6QI9QFR4",
       "title": "李宗盛說《山丘》寫給誰？答案是他的同齡人",
       "rawTitle": "李宗盛說《山丘》寫給誰？答案是他的同齡人 #shorts",
-      "year": null,
+      "year": 2007,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/hEI6QI9QFR4/hqdefault.jpg",
       "publishedAt": "2026-09-20",
       "durationSec": 33,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "SG0919-S",
+      "pairId": "SG0919",
+      "era": "00s",
+      "people": [
+        "李宗盛"
+      ],
+      "work": "山丘",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2007
+        },
+        {
+          "type": "person",
+          "value": "李宗盛"
+        },
+        {
+          "type": "work",
+          "value": "山丘"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "GBJBWlMZbaU",
-      "url": "https://youtube.com/shorts/GBJBWlMZbaU",
+      "url": "https://www.youtube.com/watch?v=GBJBWlMZbaU",
       "title": "1998・歌聲與新視窗走進日常｜1小時古風器樂",
       "rawTitle": "1998・歌聲與新視窗走進日常｜1小時古風器樂 #讀書音樂 #靜心 #1998",
       "year": 1998,
@@ -304,43 +992,149 @@
       "thumbnail": "https://img.youtube.com/vi/GBJBWlMZbaU/hqdefault.jpg",
       "publishedAt": "2026-09-19",
       "durationSec": 3601,
-      "views": 0
+      "views": 0,
+      "format": "ambient",
+      "code": "SHANHE-1998",
+      "pairId": "SHANHE-1998",
+      "era": "90s",
+      "people": [],
+      "work": "山河静听",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1998
+        },
+        {
+          "type": "work",
+          "value": "山河静听"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "I53aUNwhcWw",
-      "url": "https://youtube.com/shorts/I53aUNwhcWw",
+      "url": "https://www.youtube.com/watch?v=I53aUNwhcWw",
       "title": "李宗盛《山丘》寫給誰？他把話留給不擅開口的人",
       "rawTitle": "李宗盛《山丘》寫給誰？他把話留給不擅開口的人",
-      "year": null,
+      "year": 2007,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/I53aUNwhcWw/hqdefault.jpg",
       "publishedAt": "2026-09-19",
       "durationSec": 178,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "code": "SG0919-L",
+      "pairId": "SG0919",
+      "era": "00s",
+      "people": [
+        "李宗盛"
+      ],
+      "work": "山丘",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2007
+        },
+        {
+          "type": "person",
+          "value": "李宗盛"
+        },
+        {
+          "type": "work",
+          "value": "山丘"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "A174txnYPQ0",
       "url": "https://youtube.com/shorts/A174txnYPQ0",
       "title": "《其實你不懂我的心》原唱是裘海正，劉文正怎麼選中這首歌？",
       "rawTitle": "《其實你不懂我的心》原唱是裘海正，劉文正怎麼選中這首歌？ #shorts",
-      "year": null,
+      "year": 1988,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/A174txnYPQ0/hqdefault.jpg",
       "publishedAt": "2026-09-17",
       "durationSec": 46,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "SG0917-S",
+      "pairId": "SG0917",
+      "era": "80s",
+      "people": [
+        "童安格",
+        "裘海正",
+        "刘文正"
+      ],
+      "work": "其实你不懂我的心",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1988
+        },
+        {
+          "type": "person",
+          "value": "童安格"
+        },
+        {
+          "type": "person",
+          "value": "裘海正"
+        },
+        {
+          "type": "person",
+          "value": "刘文正"
+        },
+        {
+          "type": "work",
+          "value": "其实你不懂我的心"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "ZlcYi79151Y",
-      "url": "https://youtube.com/shorts/ZlcYi79151Y",
+      "url": "https://www.youtube.com/watch?v=ZlcYi79151Y",
       "title": "童安格《其實你不懂我的心》：這首歌怎麼先遇見裘海正？",
       "rawTitle": "童安格《其實你不懂我的心》：這首歌怎麼先遇見裘海正？",
-      "year": null,
+      "year": 1988,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/ZlcYi79151Y/hqdefault.jpg",
       "publishedAt": "2026-09-17",
       "durationSec": 389,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "code": "SG0917-L",
+      "pairId": "SG0917",
+      "era": "80s",
+      "people": [
+        "童安格",
+        "裘海正",
+        "刘文正"
+      ],
+      "work": "其实你不懂我的心",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1988
+        },
+        {
+          "type": "person",
+          "value": "童安格"
+        },
+        {
+          "type": "person",
+          "value": "裘海正"
+        },
+        {
+          "type": "person",
+          "value": "刘文正"
+        },
+        {
+          "type": "work",
+          "value": "其实你不懂我的心"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "CwnjK0gZ-jk",
@@ -352,11 +1146,30 @@
       "thumbnail": "https://img.youtube.com/vi/CwnjK0gZ-jk/hqdefault.jpg",
       "publishedAt": "2026-09-16",
       "durationSec": 48,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "TR0915-S",
+      "pairId": "TR0915",
+      "era": null,
+      "people": [
+        "杜德伟"
+      ],
+      "work": "脱掉",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "杜德伟"
+        },
+        {
+          "type": "work",
+          "value": "脱掉"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "MBDF4613mwo",
-      "url": "https://youtube.com/shorts/MBDF4613mwo",
+      "url": "https://www.youtube.com/watch?v=MBDF4613mwo",
       "title": "杜德伟台东：七万人怎么从听歌变成一起唱？",
       "rawTitle": "杜德伟台东：七万人怎么从听歌变成一起唱？#杜德伟",
       "year": null,
@@ -364,11 +1177,26 @@
       "thumbnail": "https://img.youtube.com/vi/MBDF4613mwo/hqdefault.jpg",
       "publishedAt": "2026-09-15",
       "durationSec": 375,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "code": "TR0915-L",
+      "pairId": "TR0915",
+      "era": null,
+      "people": [
+        "杜德伟"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "杜德伟"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "0feARKuLZho",
-      "url": "https://youtube.com/shorts/0feARKuLZho",
+      "url": "https://www.youtube.com/watch?v=0feARKuLZho",
       "title": "3小時深度睡眠音樂｜無鼓點、柔和中低頻｜貓眠星海 4K",
       "rawTitle": "3小時深度睡眠音樂｜無鼓點、柔和中低頻｜貓眠星海 4K",
       "year": null,
@@ -376,7 +1204,18 @@
       "thumbnail": "https://img.youtube.com/vi/0feARKuLZho/hqdefault.jpg",
       "publishedAt": "2026-09-15",
       "durationSec": 10800,
-      "views": 0
+      "views": 0,
+      "format": "ambient",
+      "era": null,
+      "people": [],
+      "work": "貓眠星海",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "貓眠星海"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "xpef5s8PkxM",
@@ -388,11 +1227,30 @@
       "thumbnail": "https://img.youtube.com/vi/xpef5s8PkxM/hqdefault.jpg",
       "publishedAt": "2026-09-14",
       "durationSec": 47,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "E21",
+      "pairId": "E21",
+      "era": null,
+      "people": [
+        "潘越云"
+      ],
+      "work": "天天天蓝",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "潘越云"
+        },
+        {
+          "type": "work",
+          "value": "天天天蓝"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "v2YS4lIGRk8",
-      "url": "https://youtube.com/shorts/v2YS4lIGRk8",
+      "url": "https://www.youtube.com/watch?v=v2YS4lIGRk8",
       "title": "靜夜思 · 三小時洞簫古琴睡眠音樂 · 二十分鐘後畫面漸暗 · 失眠的夜晚放這個",
       "rawTitle": "靜夜思 · 三小時洞簫古琴睡眠音樂 · 二十分鐘後畫面漸暗 · 失眠的夜晚放這個 #助眠音樂 #睡眠音樂 #洞簫",
       "year": null,
@@ -400,11 +1258,22 @@
       "thumbnail": "https://img.youtube.com/vi/v2YS4lIGRk8/hqdefault.jpg",
       "publishedAt": "2026-09-12",
       "durationSec": 10801,
-      "views": 0
+      "views": 0,
+      "format": "ambient",
+      "era": null,
+      "people": [],
+      "work": "静夜思",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "静夜思"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "wwsD3QeRvG8",
-      "url": "https://youtube.com/shorts/wwsD3QeRvG8",
+      "url": "https://www.youtube.com/watch?v=wwsD3QeRvG8",
       "title": "1997・香港回歸那一年】古琴領奏一小時古風器樂 · 靜心・讀書・泡茶・冥想・助眠 · 82張年代題跋卡",
       "rawTitle": "1997・香港回歸那一年】古琴領奏一小時古風器樂 · 靜心・讀書・泡茶・冥想・助眠 · 82張年代題跋卡 #古琴 #靜心音樂 #讀書音樂",
       "year": 1997,
@@ -412,7 +1281,24 @@
       "thumbnail": "https://img.youtube.com/vi/wwsD3QeRvG8/hqdefault.jpg",
       "publishedAt": "2026-09-12",
       "durationSec": 3601,
-      "views": 0
+      "views": 0,
+      "format": "ambient",
+      "code": "SHANHE-1997",
+      "pairId": "SHANHE-1997",
+      "era": "90s",
+      "people": [],
+      "work": "山河静听",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1997
+        },
+        {
+          "type": "work",
+          "value": "山河静听"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "FIuV9Z3s7Ac",
@@ -424,7 +1310,28 @@
       "thumbnail": "https://img.youtube.com/vi/FIuV9Z3s7Ac/hqdefault.jpg",
       "publishedAt": "2026-09-12",
       "durationSec": 54,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "齐豫"
+      ],
+      "work": "橄榄树",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1980
+        },
+        {
+          "type": "person",
+          "value": "齐豫"
+        },
+        {
+          "type": "work",
+          "value": "橄榄树"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "GrRJBFQaeU4",
@@ -436,23 +1343,65 @@
       "thumbnail": "https://img.youtube.com/vi/GrRJBFQaeU4/hqdefault.jpg",
       "publishedAt": "2026-09-11",
       "durationSec": 40,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "赵传"
+      ],
+      "work": "我是一只小小鸟",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1991
+        },
+        {
+          "type": "person",
+          "value": "赵传"
+        },
+        {
+          "type": "work",
+          "value": "我是一只小小鸟"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "qzTbT8YA2Xk",
       "url": "https://youtube.com/shorts/qzTbT8YA2Xk",
       "title": "苏芮《酒干倘卖无》：金马名单上没有她，也没有侯德健｜拾光音乐传记 16",
       "rawTitle": "苏芮《酒干倘卖无》：金马名单上没有她，也没有侯德健｜拾光音乐传记 16 #苏芮 #shorts",
-      "year": null,
+      "year": 1983,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/qzTbT8YA2Xk/hqdefault.jpg",
       "publishedAt": "2026-09-11",
       "durationSec": 40,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "苏芮"
+      ],
+      "work": "酒干倘卖无",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1983
+        },
+        {
+          "type": "person",
+          "value": "苏芮"
+        },
+        {
+          "type": "work",
+          "value": "酒干倘卖无"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "vo2T9ApBGdI",
-      "url": "https://youtube.com/shorts/vo2T9ApBGdI",
+      "url": "https://www.youtube.com/watch?v=vo2T9ApBGdI",
       "title": "【1987・八七版紅樓夢首播那一年】古琴一小時 · 古琴・山水・書法 · 靜心・讀書・冥想・助眠・泡茶 · 58張年代題跋卡",
       "rawTitle": "【1987・八七版紅樓夢首播那一年】古琴一小時 · 古琴・山水・書法 · 靜心・讀書・冥想・助眠・泡茶 · 58張年代題跋卡 #古琴 #靜心音樂 #讀書音樂",
       "year": 1987,
@@ -460,11 +1409,28 @@
       "thumbnail": "https://img.youtube.com/vi/vo2T9ApBGdI/hqdefault.jpg",
       "publishedAt": "2026-09-11",
       "durationSec": 3601,
-      "views": 0
+      "views": 0,
+      "format": "ambient",
+      "code": "SHANHE-1987",
+      "pairId": "SHANHE-1987",
+      "era": "80s",
+      "people": [],
+      "work": "山河静听",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1987
+        },
+        {
+          "type": "work",
+          "value": "山河静听"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "oCey10QQlKA",
-      "url": "https://youtube.com/shorts/oCey10QQlKA",
+      "url": "https://www.youtube.com/watch?v=oCey10QQlKA",
       "title": "【1996・《甜蜜蜜》上映那一年】琵琶領奏一小時古風器樂 · 靜心・讀書・泡茶・冥想・助眠 · 88張年代題跋卡",
       "rawTitle": "【1996・《甜蜜蜜》上映那一年】琵琶領奏一小時古風器樂 · 靜心・讀書・泡茶・冥想・助眠 · 88張年代題跋卡 #古琴 #靜心音樂 #讀書音樂",
       "year": 1996,
@@ -472,11 +1438,28 @@
       "thumbnail": "https://img.youtube.com/vi/oCey10QQlKA/hqdefault.jpg",
       "publishedAt": "2026-09-10",
       "durationSec": 3601,
-      "views": 0
+      "views": 0,
+      "format": "ambient",
+      "code": "SHANHE-1996",
+      "pairId": "SHANHE-1996",
+      "era": "90s",
+      "people": [],
+      "work": "山河静听",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1996
+        },
+        {
+          "type": "work",
+          "value": "山河静听"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "kqvS70a9WLM",
-      "url": "https://youtube.com/shorts/kqvS70a9WLM",
+      "url": "https://www.youtube.com/watch?v=kqvS70a9WLM",
       "title": "【1990・北京亞運會那一年】古箏領奏一小時古風器樂 · 靜心・讀書・泡茶・冥想・助眠 · 82張年代題跋卡",
       "rawTitle": "【1990・北京亞運會那一年】古箏領奏一小時古風器樂 · 靜心・讀書・泡茶・冥想・助眠 · 82張年代題跋卡 #古琴 #靜心音樂 #讀書音樂",
       "year": 1990,
@@ -484,23 +1467,61 @@
       "thumbnail": "https://img.youtube.com/vi/kqvS70a9WLM/hqdefault.jpg",
       "publishedAt": "2026-09-10",
       "durationSec": 3601,
-      "views": 0
+      "views": 0,
+      "format": "ambient",
+      "code": "SHANHE-1990",
+      "pairId": "SHANHE-1990",
+      "era": "90s",
+      "people": [],
+      "work": "山河静听",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1990
+        },
+        {
+          "type": "work",
+          "value": "山河静听"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "Usu19z2NdRk",
       "url": "https://youtube.com/shorts/Usu19z2NdRk",
       "title": "潘美辰《我想有个家》拿了年度歌曲，同届最佳女歌手入围名单没有她｜拾光音乐传记 15",
       "rawTitle": "潘美辰《我想有个家》拿了年度歌曲，同届最佳女歌手入围名单没有她｜拾光音乐传记 15 #潘美辰 #shorts",
-      "year": null,
+      "year": 1990,
       "series": "music",
       "thumbnail": "https://img.youtube.com/vi/Usu19z2NdRk/hqdefault.jpg",
       "publishedAt": "2026-09-10",
       "durationSec": 48,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "潘美辰"
+      ],
+      "work": "我想有个家",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1990
+        },
+        {
+          "type": "person",
+          "value": "潘美辰"
+        },
+        {
+          "type": "work",
+          "value": "我想有个家"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "sS-2o9dXN8E",
-      "url": "https://youtube.com/shorts/sS-2o9dXN8E",
+      "url": "https://www.youtube.com/watch?v=sS-2o9dXN8E",
       "title": "【1994・中國接上互聯網那一年】古琴一小時 · 古琴・山水・書法 · 靜心・讀書・冥想・助眠・泡茶 · 60張年代題跋卡",
       "rawTitle": "【1994・中國接上互聯網那一年】古琴一小時 · 古琴・山水・書法 · 靜心・讀書・冥想・助眠・泡茶 · 60張年代題跋卡 #古琴 #冥想 #讀書音樂",
       "year": 1994,
@@ -508,7 +1529,24 @@
       "thumbnail": "https://img.youtube.com/vi/sS-2o9dXN8E/hqdefault.jpg",
       "publishedAt": "2026-09-09",
       "durationSec": 3601,
-      "views": 0
+      "views": 0,
+      "format": "ambient",
+      "code": "SHANHE-1994",
+      "pairId": "SHANHE-1994",
+      "era": "90s",
+      "people": [],
+      "work": "山河静听",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1994
+        },
+        {
+          "type": "work",
+          "value": "山河静听"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "KJwLY_T-Qcg",
@@ -520,11 +1558,32 @@
       "thumbnail": "https://img.youtube.com/vi/KJwLY_T-Qcg/hqdefault.jpg",
       "publishedAt": "2026-09-09",
       "durationSec": 33,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "凤飞飞"
+      ],
+      "work": "掌声响起",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1986
+        },
+        {
+          "type": "person",
+          "value": "凤飞飞"
+        },
+        {
+          "type": "work",
+          "value": "掌声响起"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "iHUAP2_ULuA",
-      "url": "https://youtube.com/shorts/iHUAP2_ULuA",
+      "url": "https://www.youtube.com/watch?v=iHUAP2_ULuA",
       "title": "漫卷千骑过那岗，血是烫的剑是新的马是白的｜沈拾原创音乐 03",
       "rawTitle": "漫卷千骑过那岗，血是烫的剑是新的马是白的｜沈拾原创音乐 03",
       "year": null,
@@ -532,31 +1591,24 @@
       "thumbnail": "https://img.youtube.com/vi/iHUAP2_ULuA/hqdefault.jpg",
       "publishedAt": "2026-09-06",
       "durationSec": 165,
-      "views": 0
-    },
-    {
-      "videoId": "7NX2KNfQiS4",
-      "url": "https://youtube.com/shorts/7NX2KNfQiS4",
-      "title": "梅艳芳《女人花》写完两年才发，还差点不当主打",
-      "rawTitle": "梅艳芳《女人花》写完两年才发，还差点不当主打",
-      "year": null,
-      "series": "music",
-      "thumbnail": "https://img.youtube.com/vi/7NX2KNfQiS4/hqdefault.jpg",
-      "publishedAt": null,
-      "durationSec": 0,
-      "views": 0
-    },
-    {
-      "videoId": "ACzPRyVuaJM",
-      "url": "https://youtube.com/shorts/ACzPRyVuaJM",
-      "title": "梅艳芳抱着猫听完《女人花》，这首歌却差点不当主打",
-      "rawTitle": "梅艳芳抱着猫听完《女人花》，这首歌却差点不当主打 #梅艳芳 #女人花",
-      "year": null,
-      "series": "music",
-      "thumbnail": "https://img.youtube.com/vi/ACzPRyVuaJM/hqdefault.jpg",
-      "publishedAt": null,
-      "durationSec": 0,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "era": null,
+      "people": [
+        "沈拾"
+      ],
+      "work": "漫卷千骑过那岗",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "沈拾"
+        },
+        {
+          "type": "work",
+          "value": "漫卷千骑过那岗"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "o2oDBjYZgd0",
@@ -568,67 +1620,200 @@
       "thumbnail": "https://img.youtube.com/vi/o2oDBjYZgd0/hqdefault.jpg",
       "publishedAt": "2026-08-28",
       "durationSec": 36,
-      "views": 1571
+      "views": 1571,
+      "format": "short",
+      "era": null,
+      "people": [
+        "张国荣"
+      ],
+      "work": "阿飞正传",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "张国荣"
+        },
+        {
+          "type": "work",
+          "value": "阿飞正传"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "q0BgPufyWt0",
       "url": "https://youtube.com/shorts/q0BgPufyWt0",
       "title": "被骂\"文化垃圾\"、赔到公司倒闭,《大话西游》怎么就封神了?｜拾光影视 03",
       "rawTitle": "被骂\"文化垃圾\"、赔到公司倒闭,《大话西游》怎么就封神了?｜拾光影视 03 #拾得App #拾光影视系列 #大话西游 #周星驰 #朱茵 #紫霞仙子 #一万年 #90年代",
-      "year": null,
+      "year": 1995,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/q0BgPufyWt0/hqdefault.jpg",
       "publishedAt": "2026-08-31",
       "durationSec": 74,
-      "views": 1510
+      "views": 1510,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "周星驰",
+        "朱茵"
+      ],
+      "work": "大话西游",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1995
+        },
+        {
+          "type": "person",
+          "value": "周星驰"
+        },
+        {
+          "type": "person",
+          "value": "朱茵"
+        },
+        {
+          "type": "work",
+          "value": "大话西游"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "p-3shujqlJM",
       "url": "https://youtube.com/shorts/p-3shujqlJM",
       "title": "《青蛇》票房不到冠军1/4，它真正颠倒的不是人妖｜拾光影视02",
       "rawTitle": "《青蛇》票房不到冠军1/4，它真正颠倒的不是人妖｜拾光影视02 #青蛇 #张曼玉 #王祖贤 #徐克 #香港电影 #电影解说 #shorts",
-      "year": null,
+      "year": 1993,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/p-3shujqlJM/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 60,
-      "views": 587
+      "views": 587,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "张曼玉",
+        "王祖贤",
+        "徐克"
+      ],
+      "work": "青蛇",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1993
+        },
+        {
+          "type": "person",
+          "value": "张曼玉"
+        },
+        {
+          "type": "person",
+          "value": "王祖贤"
+        },
+        {
+          "type": "person",
+          "value": "徐克"
+        },
+        {
+          "type": "work",
+          "value": "青蛇"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "eB1KLmh8wTg",
       "url": "https://youtube.com/shorts/eB1KLmh8wTg",
       "title": "要不是有人病倒，就没有周润发的许文强《上海滩》幕后",
       "rawTitle": "要不是有人病倒，就没有周润发的许文强《上海滩》幕后#华人文化 #文化坐标 #80后 #90后 #chineseculture  #Shide拾得 #上海滩 #许文强 #周润发 #郑少秋 #黄沾",
-      "year": null,
+      "year": 1980,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/eB1KLmh8wTg/hqdefault.jpg",
       "publishedAt": "2026-08-24",
       "durationSec": 97,
-      "views": 537
+      "views": 537,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "周润发"
+      ],
+      "work": "上海滩",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1980
+        },
+        {
+          "type": "person",
+          "value": "周润发"
+        },
+        {
+          "type": "work",
+          "value": "上海滩"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "ALVXE3tlW9o",
       "url": "https://youtube.com/shorts/ALVXE3tlW9o",
       "title": "“我是假霸王”这句话，其实不是程蝶衣说的｜拾光影视 03",
       "rawTitle": "“我是假霸王”这句话，其实不是程蝶衣说的｜拾光影视 03 #霸王别姬 #张国荣 #程蝶衣 #段小楼 #金棕榈 #华语电影 #拾光影视 #shorts",
-      "year": null,
+      "year": 1993,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/ALVXE3tlW9o/hqdefault.jpg",
       "publishedAt": "2026-09-03",
       "durationSec": 91,
-      "views": 243
+      "views": 243,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "张国荣"
+      ],
+      "work": "霸王别姬",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1993
+        },
+        {
+          "type": "person",
+          "value": "张国荣"
+        },
+        {
+          "type": "work",
+          "value": "霸王别姬"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "jV7VH-EKUTg",
-      "url": "https://youtube.com/shorts/jV7VH-EKUTg",
+      "url": "https://www.youtube.com/watch?v=jV7VH-EKUTg",
       "title": "那年愚人節很多人笑著點開新聞，幾分鐘後全香港安靜了",
       "rawTitle": "那年愚人節很多人笑著點開新聞，幾分鐘後全香港安靜了 #張國榮, #LeslieCheung, #哥哥, #霸王別姬, #程蝶衣, #阿飛正傳, #Monica, #紅顏白髮, #我, #熱情演唱會",
-      "year": null,
+      "year": 2003,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/jV7VH-EKUTg/hqdefault.jpg",
       "publishedAt": "2026-08-29",
       "durationSec": 229,
-      "views": 130
+      "views": 130,
+      "format": "long",
+      "era": "00s",
+      "people": [
+        "张国荣"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2003
+        },
+        {
+          "type": "person",
+          "value": "张国荣"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "tAG-qdnsZ9s",
@@ -640,103 +1825,1132 @@
       "thumbnail": "https://img.youtube.com/vi/tAG-qdnsZ9s/hqdefault.jpg",
       "publishedAt": "2026-08-17",
       "durationSec": 13,
-      "views": 34
+      "views": 34,
+      "format": "short",
+      "era": null,
+      "people": [],
+      "work": null,
+      "anchors": [],
+      "priority": "normal"
+    },
+    {
+      "videoId": "9mo3QPSiGSk",
+      "url": "https://www.youtube.com/watch?v=9mo3QPSiGSk",
+      "title": "蓝洁瑛：从“靓绝五台山”到《大时代》，她如何拿回演员的判断权？",
+      "rawTitle": "蓝洁瑛：从“靓绝五台山”到《大时代》，她如何拿回演员的判断权？",
+      "year": 1992,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/9mo3QPSiGSk/hqdefault.jpg",
+      "publishedAt": "2026-10-03",
+      "durationSec": 481,
+      "views": 0,
+      "format": "long",
+      "era": "90s",
+      "people": [
+        "蓝洁瑛"
+      ],
+      "work": "大时代",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "蓝洁瑛"
+        },
+        {
+          "type": "work",
+          "value": "大时代"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "3mHjeYGKiX4",
+      "url": "https://www.youtube.com/watch?v=3mHjeYGKiX4",
+      "title": "从破产冷藏到黄金配角：吴孟达如何在香港电影盛世里把小人物演成主角",
+      "rawTitle": "从破产冷藏到黄金配角：吴孟达如何在香港电影盛世里把小人物演成主角",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/3mHjeYGKiX4/hqdefault.jpg",
+      "publishedAt": "2026-10-02",
+      "durationSec": 877,
+      "views": 0,
+      "format": "long",
+      "era": null,
+      "people": [
+        "吴孟达"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "吴孟达"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "ZfBz27l4k0I",
+      "url": "https://youtube.com/shorts/ZfBz27l4k0I",
+      "title": "吴孟达从没当过主角，靠的是哪一次改变？",
+      "rawTitle": "吴孟达从没当过主角，靠的是哪一次改变？",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/ZfBz27l4k0I/hqdefault.jpg",
+      "publishedAt": "2026-10-02",
+      "durationSec": 45,
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [
+        "吴孟达"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "吴孟达"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "-6tYSD0dBDo",
+      "url": "https://youtube.com/shorts/-6tYSD0dBDo",
+      "title": "刘尚谦为何今天热搜？《飘香梦》49年前封面重现",
+      "rawTitle": "刘尚谦为何今天热搜？《飘香梦》49年前封面重现 #刘尚谦 #蓝琪 #shorts",
+      "year": 1977,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/-6tYSD0dBDo/hqdefault.jpg",
+      "publishedAt": "2026-10-02",
+      "durationSec": 12,
+      "views": 0,
+      "format": "short",
+      "era": "70s",
+      "people": [
+        "刘尚谦",
+        "蓝琪"
+      ],
+      "work": "飘香梦",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1977
+        },
+        {
+          "type": "person",
+          "value": "刘尚谦"
+        },
+        {
+          "type": "person",
+          "value": "蓝琪"
+        },
+        {
+          "type": "work",
+          "value": "飘香梦"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "nANo-2V46I4",
+      "url": "https://youtube.com/shorts/nANo-2V46I4",
+      "title": "为什么越想留下，越容易错过？《甜蜜蜜》与《新不了情》",
+      "rawTitle": "为什么越想留下，越容易错过？《甜蜜蜜》与《新不了情》",
+      "year": 1996,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/nANo-2V46I4/hqdefault.jpg",
+      "publishedAt": "2026-10-02",
+      "durationSec": 46,
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [],
+      "work": "甜蜜蜜/新不了情",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1996
+        },
+        {
+          "type": "work",
+          "value": "甜蜜蜜/新不了情"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "a0uhkfAbhcc",
+      "url": "https://youtube.com/shorts/a0uhkfAbhcc",
+      "title": "《搭错车》之后，虞戡平把镜头转向部落｜金马63终身成就奖",
+      "rawTitle": "《搭错车》之后，虞戡平把镜头转向部落｜金马63终身成就奖",
+      "year": 1983,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/a0uhkfAbhcc/hqdefault.jpg",
+      "publishedAt": "2026-10-01",
+      "durationSec": 12,
+      "views": 0,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "虞戡平"
+      ],
+      "work": "搭错车",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1983
+        },
+        {
+          "type": "person",
+          "value": "虞戡平"
+        },
+        {
+          "type": "work",
+          "value": "搭错车"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "WCFG889rl8A",
+      "url": "https://www.youtube.com/watch?v=WCFG889rl8A",
+      "title": "《甜蜜蜜》与《新不了情》：温柔为什么更残酷？",
+      "rawTitle": "《甜蜜蜜》与《新不了情》：温柔为什么更残酷？",
+      "year": 1996,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/WCFG889rl8A/hqdefault.jpg",
+      "publishedAt": "2026-10-01",
+      "durationSec": 1287,
+      "views": 0,
+      "format": "long",
+      "era": "90s",
+      "people": [],
+      "work": "甜蜜蜜/新不了情",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1996
+        },
+        {
+          "type": "work",
+          "value": "甜蜜蜜/新不了情"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "SwErRD5wbUo",
+      "url": "https://youtube.com/shorts/SwErRD5wbUo",
+      "title": "侯湘婷淡出歌坛后把六年留给校园｜《秋天别来》《暧昧》",
+      "rawTitle": "侯湘婷淡出歌坛后把六年留给校园｜《秋天别来》《暧昧》",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/SwErRD5wbUo/hqdefault.jpg",
+      "publishedAt": "2026-10-01",
+      "durationSec": 12,
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [
+        "侯湘婷"
+      ],
+      "work": "秋天别来",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "侯湘婷"
+        },
+        {
+          "type": "work",
+          "value": "秋天别来"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "8HGNQCEKlCA",
+      "url": "https://youtube.com/shorts/8HGNQCEKlCA",
+      "title": "徐克的江湖为什么一响起，就让人听见九十年代香港？",
+      "rawTitle": "徐克的江湖为什么一响起，就让人听见九十年代香港？ #shorts",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/8HGNQCEKlCA/hqdefault.jpg",
+      "publishedAt": "2026-09-30",
+      "durationSec": 41,
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [
+        "徐克"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "徐克"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "JS96TkCfPOw",
+      "url": "https://www.youtube.com/watch?v=JS96TkCfPOw",
+      "title": "旧江湖如何回应新香港？徐克与胡伟立用声影重写一代人的英雄梦",
+      "rawTitle": "旧江湖如何回应新香港？徐克与胡伟立用声影重写一代人的英雄梦",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/JS96TkCfPOw/hqdefault.jpg",
+      "publishedAt": "2026-09-30",
+      "durationSec": 288,
+      "views": 0,
+      "format": "long",
+      "era": null,
+      "people": [
+        "徐克",
+        "胡伟立"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "徐克"
+        },
+        {
+          "type": "person",
+          "value": "胡伟立"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "mwmAlDJvjSc",
+      "url": "https://www.youtube.com/watch?v=mwmAlDJvjSc",
+      "title": "从《大时代》到股灾狂潮：韦家辉如何借丁蟹一家写透香港个体命运的癫狂与幻灭",
+      "rawTitle": "从《大时代》到股灾狂潮：韦家辉如何借丁蟹一家写透香港个体命运的癫狂与幻灭",
+      "year": 1992,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/mwmAlDJvjSc/hqdefault.jpg",
+      "publishedAt": "2026-09-30",
+      "durationSec": 1102,
+      "views": 0,
+      "format": "long",
+      "era": "90s",
+      "people": [
+        "韦家辉",
+        "郑少秋"
+      ],
+      "work": "大时代",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "韦家辉"
+        },
+        {
+          "type": "person",
+          "value": "郑少秋"
+        },
+        {
+          "type": "work",
+          "value": "大时代"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "bVzGuAQg27I",
+      "url": "https://youtube.com/shorts/bVzGuAQg27I",
+      "title": "丁蟹打死朋友后，为什么还能觉得自己有理？｜《大时代》",
+      "rawTitle": "丁蟹打死朋友后，为什么还能觉得自己有理？｜《大时代》 #shorts",
+      "year": 1992,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/bVzGuAQg27I/hqdefault.jpg",
+      "publishedAt": "2026-09-30",
+      "durationSec": 42,
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "郑少秋"
+      ],
+      "work": "大时代",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "郑少秋"
+        },
+        {
+          "type": "work",
+          "value": "大时代"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "NYd6TYw63Lw",
+      "url": "https://youtube.com/shorts/NYd6TYw63Lw",
+      "title": "蓝洁瑛最不喜欢“靓绝五台山”，观众后来为何记住罗慧玲？",
+      "rawTitle": "蓝洁瑛最不喜欢“靓绝五台山”，观众后来为何记住罗慧玲？ #shorts",
+      "year": 1992,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/NYd6TYw63Lw/hqdefault.jpg",
+      "publishedAt": "2026-09-30",
+      "durationSec": 40,
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "蓝洁瑛"
+      ],
+      "work": "大时代",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "蓝洁瑛"
+        },
+        {
+          "type": "work",
+          "value": "大时代"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "HI1vOhZCq1Q",
+      "url": "https://youtube.com/shorts/HI1vOhZCq1Q",
+      "title": "陈百强的声音很轻，为什么总把决定握在手里？",
+      "rawTitle": "陈百强的声音很轻，为什么总把决定握在手里？",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/HI1vOhZCq1Q/hqdefault.jpg",
+      "publishedAt": "2026-09-30",
+      "durationSec": 33,
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [
+        "陈百强"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "陈百强"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "NBiQ0hpIq0E",
+      "url": "https://youtube.com/shorts/NBiQ0hpIq0E",
+      "title": "李克勤未能按时抵达，侯浪临时连唱近20首救场｜包头演唱会",
+      "rawTitle": "李克勤未能按时抵达，侯浪临时连唱近20首救场｜包头演唱会 #shorts",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/NBiQ0hpIq0E/hqdefault.jpg",
+      "publishedAt": "2026-09-29",
+      "durationSec": 12,
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [
+        "李克勤",
+        "侯浪"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "李克勤"
+        },
+        {
+          "type": "person",
+          "value": "侯浪"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "mUN5GmDA_Zw",
+      "url": "https://youtube.com/shorts/mUN5GmDA_Zw",
+      "title": "胡瓜、巫启贤《钻石舞台之夜》公益演出｜募得3台到宅服务车及近500万元",
+      "rawTitle": "胡瓜、巫启贤《钻石舞台之夜》公益演出｜募得3台到宅服务车及近500万元 #Shorts",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/mUN5GmDA_Zw/hqdefault.jpg",
+      "publishedAt": "2026-09-29",
+      "durationSec": 12,
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [
+        "胡瓜",
+        "巫启贤"
+      ],
+      "work": "钻石舞台之夜",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "胡瓜"
+        },
+        {
+          "type": "person",
+          "value": "巫启贤"
+        },
+        {
+          "type": "work",
+          "value": "钻石舞台之夜"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "eR7KMwlHlE4",
+      "url": "https://www.youtube.com/watch?v=eR7KMwlHlE4",
+      "title": "陈百强｜从歌声里的落寞到时代回响",
+      "rawTitle": "陈百强｜从歌声里的落寞到时代回响",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/eR7KMwlHlE4/hqdefault.jpg",
+      "publishedAt": "2026-09-29",
+      "durationSec": 1319,
+      "views": 0,
+      "format": "long",
+      "era": null,
+      "people": [
+        "陈百强"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "陈百强"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "J0Yl6tbaums",
+      "url": "https://www.youtube.com/watch?v=J0Yl6tbaums",
+      "title": "林忆莲《至少还有你》电台只排第24，后来人人都会唱",
+      "rawTitle": "林忆莲《至少还有你》电台只排第24，后来人人都会唱",
+      "year": 1996,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/J0Yl6tbaums/hqdefault.jpg",
+      "publishedAt": "2026-09-27",
+      "durationSec": 297,
+      "views": 0,
+      "format": "long",
+      "era": "90s",
+      "people": [
+        "林忆莲",
+        "林夕"
+      ],
+      "work": "至少还有你",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1996
+        },
+        {
+          "type": "person",
+          "value": "林忆莲"
+        },
+        {
+          "type": "person",
+          "value": "林夕"
+        },
+        {
+          "type": "work",
+          "value": "至少还有你"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "OFxZsP7ono8",
+      "url": "https://youtube.com/shorts/OFxZsP7ono8",
+      "title": "林忆莲《至少还有你》电台只排第24，林夕说它写在地震之后",
+      "rawTitle": "林忆莲《至少还有你》电台只排第24，林夕说它写在地震之后 #林忆莲 #至少还有你",
+      "year": 1996,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/OFxZsP7ono8/hqdefault.jpg",
+      "publishedAt": "2026-09-27",
+      "durationSec": 58,
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "林忆莲",
+        "林夕"
+      ],
+      "work": "至少还有你",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1996
+        },
+        {
+          "type": "person",
+          "value": "林忆莲"
+        },
+        {
+          "type": "person",
+          "value": "林夕"
+        },
+        {
+          "type": "work",
+          "value": "至少还有你"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "zM-9dXR8qU8",
+      "url": "https://youtube.com/shorts/zM-9dXR8qU8",
+      "title": "《马永贞》捧红了他，陈观泰为何还要冒着官司拍《铁马骝》？",
+      "rawTitle": "《马永贞》捧红了他，陈观泰为何还要冒着官司拍《铁马骝》？",
+      "year": 1972,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/zM-9dXR8qU8/hqdefault.jpg",
+      "publishedAt": "2026-09-26",
+      "durationSec": 157,
+      "views": 0,
+      "format": "short",
+      "era": "70s",
+      "people": [
+        "陈观泰"
+      ],
+      "work": "马永贞",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1972
+        },
+        {
+          "type": "person",
+          "value": "陈观泰"
+        },
+        {
+          "type": "work",
+          "value": "马永贞"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "CMnQEIgH0rU",
+      "url": "https://youtube.com/shorts/CMnQEIgH0rU",
+      "title": "《铁马骝》只映一天：陈观泰为何仍坚持拍完？",
+      "rawTitle": "《铁马骝》只映一天：陈观泰为何仍坚持拍完？ #shorts",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/CMnQEIgH0rU/hqdefault.jpg",
+      "publishedAt": "2026-09-26",
+      "durationSec": 43,
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [
+        "陈观泰"
+      ],
+      "work": "铁马骝",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "陈观泰"
+        },
+        {
+          "type": "work",
+          "value": "铁马骝"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "o3l88oiljDU",
+      "url": "https://youtube.com/shorts/o3l88oiljDU",
+      "title": "唱红《好汉歌》以后，刘欢为什么还回学校上课？",
+      "rawTitle": "唱红《好汉歌》以后，刘欢为什么还回学校上课？ #shorts",
+      "year": 1998,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/o3l88oiljDU/hqdefault.jpg",
+      "publishedAt": "2026-09-26",
+      "durationSec": 39,
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "刘欢"
+      ],
+      "work": "好汉歌",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1998
+        },
+        {
+          "type": "person",
+          "value": "刘欢"
+        },
+        {
+          "type": "work",
+          "value": "好汉歌"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "vx_Vlq8IJ48",
+      "url": "https://www.youtube.com/watch?v=vx_Vlq8IJ48",
+      "title": "唱红《好汉歌》以后，刘欢为何把三十多年留给课堂？｜一代人的歌",
+      "rawTitle": "唱红《好汉歌》以后，刘欢为何把三十多年留给课堂？｜一代人的歌",
+      "year": 1998,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/vx_Vlq8IJ48/hqdefault.jpg",
+      "publishedAt": "2026-09-26",
+      "durationSec": 777,
+      "views": 0,
+      "format": "long",
+      "era": "90s",
+      "people": [
+        "刘欢"
+      ],
+      "work": "好汉歌",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1998
+        },
+        {
+          "type": "person",
+          "value": "刘欢"
+        },
+        {
+          "type": "work",
+          "value": "好汉歌"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "lUPIOArgYHM",
+      "url": "https://www.youtube.com/watch?v=lUPIOArgYHM",
+      "title": "游本昌：52歲演濟公，87歲自費去試《繁花》爺叔",
+      "rawTitle": "游本昌：52歲演濟公，87歲自費去試《繁花》爺叔",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/lUPIOArgYHM/hqdefault.jpg",
+      "publishedAt": "2026-09-25",
+      "durationSec": 425,
+      "views": 0,
+      "format": "long",
+      "era": null,
+      "people": [
+        "游本昌"
+      ],
+      "work": "济公/繁花",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "游本昌"
+        },
+        {
+          "type": "work",
+          "value": "济公/繁花"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "NXY45gy7mSU",
+      "url": "https://youtube.com/shorts/NXY45gy7mSU",
+      "title": "52岁济公，90岁爷叔：游本昌有三次可以停下来",
+      "rawTitle": "52岁济公，90岁爷叔：游本昌有三次可以停下来 #游本昌 #济公",
+      "year": null,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/NXY45gy7mSU/hqdefault.jpg",
+      "publishedAt": "2026-09-25",
+      "durationSec": 60,
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [
+        "游本昌"
+      ],
+      "work": "济公/繁花",
+      "anchors": [
+        {
+          "type": "person",
+          "value": "游本昌"
+        },
+        {
+          "type": "work",
+          "value": "济公/繁花"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "nD-sTr_kpJE",
+      "url": "https://www.youtube.com/watch?v=nD-sTr_kpJE",
+      "title": "聂小倩不是等来的：王祖贤如何争取，又如何离开",
+      "rawTitle": "聂小倩不是等来的：王祖贤如何争取，又如何离开",
+      "year": 1987,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/nD-sTr_kpJE/hqdefault.jpg",
+      "publishedAt": "2026-09-24",
+      "durationSec": 331,
+      "views": 0,
+      "format": "long",
+      "era": "80s",
+      "people": [
+        "王祖贤"
+      ],
+      "work": "倩女幽魂",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1987
+        },
+        {
+          "type": "person",
+          "value": "王祖贤"
+        },
+        {
+          "type": "work",
+          "value": "倩女幽魂"
+        }
+      ],
+      "priority": "normal"
+    },
+    {
+      "videoId": "q25zAhaWDdQ",
+      "url": "https://youtube.com/shorts/q25zAhaWDdQ",
+      "title": "王祖贤被徐克嫌太高，她又打了一通电话",
+      "rawTitle": "王祖贤被徐克嫌太高，她又打了一通电话 #王祖贤 #倩女幽魂",
+      "year": 1987,
+      "series": "misc",
+      "thumbnail": "https://img.youtube.com/vi/q25zAhaWDdQ/hqdefault.jpg",
+      "publishedAt": "2026-09-24",
+      "durationSec": 55,
+      "views": 0,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "王祖贤",
+        "徐克"
+      ],
+      "work": "倩女幽魂",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1987
+        },
+        {
+          "type": "person",
+          "value": "王祖贤"
+        },
+        {
+          "type": "person",
+          "value": "徐克"
+        },
+        {
+          "type": "work",
+          "value": "倩女幽魂"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "tcXnh4ZPOMY",
       "url": "https://youtube.com/shorts/tcXnh4ZPOMY",
       "title": "《重慶森林》話最多，《槍火》一句都沒說",
       "rawTitle": "《重慶森林》話最多，《槍火》一句都沒說 #香港電影 #shorts",
-      "year": null,
+      "year": 1994,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/tcXnh4ZPOMY/hqdefault.jpg",
       "publishedAt": "2026-09-21",
       "durationSec": 36,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "SG0922-S",
+      "pairId": "SG0922",
+      "era": "90s",
+      "people": [],
+      "work": "重庆森林",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1994
+        },
+        {
+          "type": "work",
+          "value": "重庆森林"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "09X3nxGbXzM",
-      "url": "https://youtube.com/shorts/09X3nxGbXzM",
+      "url": "https://www.youtube.com/watch?v=09X3nxGbXzM",
       "title": "看懂《重慶森林》與《槍火》，才明白成年人的孤獨有多準確",
       "rawTitle": "看懂《重慶森林》與《槍火》，才明白成年人的孤獨有多準確 #香港電影",
-      "year": null,
+      "year": 1994,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/09X3nxGbXzM/hqdefault.jpg",
       "publishedAt": "2026-09-20",
       "durationSec": 300,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "era": "90s",
+      "people": [],
+      "work": "重庆森林",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1994
+        },
+        {
+          "type": "work",
+          "value": "重庆森林"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "kJphhKk4iY8",
       "url": "https://youtube.com/shorts/kJphhKk4iY8",
       "title": "《英雄本色》宋子豪 vs 《無間道》劉建明：同一句心願，為何一個退得出去、一個回不了頭？",
       "rawTitle": "《英雄本色》宋子豪 vs 《無間道》劉建明：同一句心願，為何一個退得出去、一個回不了頭？ #shorts",
-      "year": null,
+      "year": 1986,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/kJphhKk4iY8/hqdefault.jpg",
       "publishedAt": "2026-09-20",
       "durationSec": 36,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "SG0920-S",
+      "pairId": "SG0920",
+      "era": "80s",
+      "people": [
+        "狄龙",
+        "刘德华"
+      ],
+      "work": "英雄本色",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1986
+        },
+        {
+          "type": "person",
+          "value": "狄龙"
+        },
+        {
+          "type": "person",
+          "value": "刘德华"
+        },
+        {
+          "type": "work",
+          "value": "英雄本色"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "66KuYhxOQS0",
-      "url": "https://youtube.com/shorts/66KuYhxOQS0",
+      "url": "https://www.youtube.com/watch?v=66KuYhxOQS0",
       "title": "《英雄本色》vs《無間道》：從高處摔下來，還有重新做人的機會嗎？",
       "rawTitle": "《英雄本色》vs《無間道》：從高處摔下來，還有重新做人的機會嗎？",
-      "year": null,
+      "year": 1986,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/66KuYhxOQS0/hqdefault.jpg",
       "publishedAt": "2026-09-19",
       "durationSec": 364,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "code": "SG0920-L",
+      "pairId": "SG0920",
+      "era": "80s",
+      "people": [
+        "狄龙",
+        "刘德华"
+      ],
+      "work": "英雄本色",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1986
+        },
+        {
+          "type": "person",
+          "value": "狄龙"
+        },
+        {
+          "type": "person",
+          "value": "刘德华"
+        },
+        {
+          "type": "work",
+          "value": "英雄本色"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "2nCRQfbnwlc",
       "url": "https://youtube.com/shorts/2nCRQfbnwlc",
       "title": "至尊宝说\"一万年\"时，究竟想要什么？｜大话西游",
       "rawTitle": "至尊宝说\"一万年\"时，究竟想要什么？｜大话西游 #shorts",
-      "year": null,
+      "year": 1995,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/2nCRQfbnwlc/hqdefault.jpg",
       "publishedAt": "2026-09-18",
       "durationSec": 56,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "SG0918-S",
+      "pairId": "SG0918",
+      "era": "90s",
+      "people": [
+        "周星驰"
+      ],
+      "work": "大话西游",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1995
+        },
+        {
+          "type": "person",
+          "value": "周星驰"
+        },
+        {
+          "type": "work",
+          "value": "大话西游"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "CZieSDDjzV0",
-      "url": "https://youtube.com/shorts/CZieSDDjzV0",
+      "url": "https://www.youtube.com/watch?v=CZieSDDjzV0",
       "title": "《大话西游》至尊宝为什么一定要戴上金箍？大话西游",
       "rawTitle": "《大话西游》至尊宝为什么一定要戴上金箍？大话西游 #周星驰",
-      "year": null,
+      "year": 1995,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/CZieSDDjzV0/hqdefault.jpg",
       "publishedAt": "2026-09-18",
       "durationSec": 477,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "code": "SG0918-L",
+      "pairId": "SG0918",
+      "era": "90s",
+      "people": [
+        "周星驰"
+      ],
+      "work": "大话西游",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1995
+        },
+        {
+          "type": "person",
+          "value": "周星驰"
+        },
+        {
+          "type": "work",
+          "value": "大话西游"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "mnrRHvLoEhU",
       "url": "https://youtube.com/shorts/mnrRHvLoEhU",
       "title": "《新龙门客栈》金镶玉：她的前身，藏在另一间客栈｜拾光影视",
       "rawTitle": "《新龙门客栈》金镶玉：她的前身，藏在另一间客栈｜拾光影视 #新龙门客栈 #shorts",
-      "year": null,
+      "year": 1992,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/mnrRHvLoEhU/hqdefault.jpg",
       "publishedAt": "2026-09-16",
       "durationSec": 52,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "code": "Y18-S1",
+      "pairId": "Y18",
+      "era": "90s",
+      "people": [
+        "张曼玉"
+      ],
+      "work": "新龙门客栈",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "张曼玉"
+        },
+        {
+          "type": "work",
+          "value": "新龙门客栈"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "ArBXq45rCSg",
-      "url": "https://youtube.com/shorts/ArBXq45rCSg",
+      "url": "https://www.youtube.com/watch?v=ArBXq45rCSg",
       "title": "《新龙门客栈》金镶玉：她最后为什么离开客栈？",
       "rawTitle": "《新龙门客栈》金镶玉：她最后为什么离开客栈？#张曼玉",
-      "year": null,
+      "year": 1992,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/ArBXq45rCSg/hqdefault.jpg",
       "publishedAt": "2026-09-16",
       "durationSec": 404,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "code": "Y18-L",
+      "pairId": "Y18",
+      "era": "90s",
+      "people": [
+        "张曼玉"
+      ],
+      "work": "新龙门客栈",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "张曼玉"
+        },
+        {
+          "type": "work",
+          "value": "新龙门客栈"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "U2kt4ayEr-k",
@@ -748,31 +2962,84 @@
       "thumbnail": "https://img.youtube.com/vi/U2kt4ayEr-k/hqdefault.jpg",
       "publishedAt": "2026-09-15",
       "durationSec": 32,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [],
+      "work": "貓眠星海",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "貓眠星海"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "cF4r-SMp2HE",
       "url": "https://youtube.com/shorts/cF4r-SMp2HE",
       "title": "任达华《岁月神偷》· 唯一一次金像奖影帝，不是警匪片｜拾光影视 12",
       "rawTitle": "任达华《岁月神偷》· 唯一一次金像奖影帝，不是警匪片｜拾光影视 12 #任达华 #shorts",
-      "year": null,
+      "year": 2010,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/cF4r-SMp2HE/hqdefault.jpg",
       "publishedAt": "2026-09-12",
       "durationSec": 49,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "10s",
+      "people": [
+        "任达华"
+      ],
+      "work": "岁月神偷",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2010
+        },
+        {
+          "type": "person",
+          "value": "任达华"
+        },
+        {
+          "type": "work",
+          "value": "岁月神偷"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "i0_Pt8nSBRQ",
       "url": "https://youtube.com/shorts/i0_Pt8nSBRQ",
       "title": "元秋《功夫》包租婆：香港把她列进女主角，台湾把奖发给女配角｜拾光影视 10",
       "rawTitle": "元秋《功夫》包租婆：香港把她列进女主角，台湾把奖发给女配角｜拾光影视 10 #元秋 #shorts",
-      "year": null,
+      "year": 2004,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/i0_Pt8nSBRQ/hqdefault.jpg",
       "publishedAt": "2026-09-12",
       "durationSec": 48,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "00s",
+      "people": [
+        "元秋"
+      ],
+      "work": "功夫",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 2004
+        },
+        {
+          "type": "person",
+          "value": "元秋"
+        },
+        {
+          "type": "work",
+          "value": "功夫"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "fLKDTG0zV-4",
@@ -784,11 +3051,24 @@
       "thumbnail": "https://img.youtube.com/vi/fLKDTG0zV-4/hqdefault.jpg",
       "publishedAt": "2026-09-11",
       "durationSec": 68,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": null,
+      "people": [
+        "雷宇扬"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "雷宇扬"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "ATQ42c4Qjp4",
-      "url": "https://youtube.com/shorts/ATQ42c4Qjp4",
+      "url": "https://www.youtube.com/watch?v=ATQ42c4Qjp4",
       "title": "雷宇扬：拍了约七十部鬼片的人，聊起家里人是这个样子｜拾光影视 38",
       "rawTitle": "雷宇扬：拍了约七十部鬼片的人，聊起家里人是这个样子｜拾光影视 38",
       "year": null,
@@ -796,19 +3076,53 @@
       "thumbnail": "https://img.youtube.com/vi/ATQ42c4Qjp4/hqdefault.jpg",
       "publishedAt": "2026-09-11",
       "durationSec": 161,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "era": null,
+      "people": [
+        "雷宇扬"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "雷宇扬"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "ivQrWNcAJUE",
       "url": "https://youtube.com/shorts/ivQrWNcAJUE",
       "title": "《英雄本色》资料馆记录里，演员栏第一位是狄龙｜拾光影视 11",
       "rawTitle": "《英雄本色》资料馆记录里，演员栏第一位是狄龙｜拾光影视 11 #狄龙 #shorts",
-      "year": null,
+      "year": 1986,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/ivQrWNcAJUE/hqdefault.jpg",
       "publishedAt": "2026-09-11",
       "durationSec": 48,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "狄龙"
+      ],
+      "work": "英雄本色",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1986
+        },
+        {
+          "type": "person",
+          "value": "狄龙"
+        },
+        {
+          "type": "work",
+          "value": "英雄本色"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "r-OPCowrOx4",
@@ -820,55 +3134,180 @@
       "thumbnail": "https://img.youtube.com/vi/r-OPCowrOx4/hqdefault.jpg",
       "publishedAt": "2026-09-11",
       "durationSec": 48,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "郎雄",
+        "李安"
+      ],
+      "work": "饮食男女",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1994
+        },
+        {
+          "type": "person",
+          "value": "郎雄"
+        },
+        {
+          "type": "person",
+          "value": "李安"
+        },
+        {
+          "type": "work",
+          "value": "饮食男女"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "24i-b6tpiR0",
       "url": "https://youtube.com/shorts/24i-b6tpiR0",
       "title": "林青霞的东方不败，金庸原著里只出场一回｜拾光影视 08",
       "rawTitle": "林青霞的东方不败，金庸原著里只出场一回｜拾光影视 08 #林青霞 #shorts",
-      "year": null,
+      "year": 1992,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/24i-b6tpiR0/hqdefault.jpg",
       "publishedAt": "2026-09-07",
       "durationSec": 89,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "林青霞"
+      ],
+      "work": "笑傲江湖II东方不败",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "林青霞"
+        },
+        {
+          "type": "work",
+          "value": "笑傲江湖II东方不败"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "Drud0vharL0",
       "url": "https://youtube.com/shorts/Drud0vharL0",
       "title": "《倩女幽魂》救人的关系其实是反的：8座奖里唯一的表演奖给了燕赤霞｜拾光影视 05",
       "rawTitle": "《倩女幽魂》救人的关系其实是反的：8座奖里唯一的表演奖给了燕赤霞｜拾光影视 05 ##倩女幽魂 #张国荣 #王祖贤 #午马 #黎明不要来 #拾光影视 #shorts",
-      "year": null,
+      "year": 1987,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/Drud0vharL0/hqdefault.jpg",
       "publishedAt": "2026-09-06",
       "durationSec": 115,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "张国荣",
+        "王祖贤",
+        "午马"
+      ],
+      "work": "倩女幽魂",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1987
+        },
+        {
+          "type": "person",
+          "value": "张国荣"
+        },
+        {
+          "type": "person",
+          "value": "王祖贤"
+        },
+        {
+          "type": "person",
+          "value": "午马"
+        },
+        {
+          "type": "work",
+          "value": "倩女幽魂"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "pL4rMSphj4U",
       "url": "https://youtube.com/shorts/pL4rMSphj4U",
       "title": "《射雕英雄传》83版其实是翻拍，第一部是对手台拍的｜拾光影视 07",
       "rawTitle": "《射雕英雄传》83版其实是翻拍，第一部是对手台拍的｜拾光影视 07 #射雕英雄传 #翁美玲 #黄日华 #铁血丹心 #金庸 #佳艺电视 #拾光影视 #shorts",
-      "year": null,
+      "year": 1983,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/pL4rMSphj4U/hqdefault.jpg",
       "publishedAt": "2026-09-06",
       "durationSec": 102,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "80s",
+      "people": [
+        "翁美玲",
+        "黄日华"
+      ],
+      "work": "射雕英雄传",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1983
+        },
+        {
+          "type": "person",
+          "value": "翁美玲"
+        },
+        {
+          "type": "person",
+          "value": "黄日华"
+        },
+        {
+          "type": "work",
+          "value": "射雕英雄传"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "3whMMmtGAWE",
       "url": "https://youtube.com/shorts/3whMMmtGAWE",
       "title": "叶童演的许仙，一次都没救过白素贞｜拾光影视 04",
       "rawTitle": "叶童演的许仙，一次都没救过白素贞｜拾光影视 04 #叶童 #新白娘子传奇 #shorts",
-      "year": null,
+      "year": 1992,
       "series": "misc",
       "thumbnail": "https://img.youtube.com/vi/3whMMmtGAWE/hqdefault.jpg",
       "publishedAt": "2026-09-06",
       "durationSec": 101,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "90s",
+      "people": [
+        "叶童"
+      ],
+      "work": "新白娘子传奇",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1992
+        },
+        {
+          "type": "person",
+          "value": "叶童"
+        },
+        {
+          "type": "work",
+          "value": "新白娘子传奇"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "ZQerFWKhFa8",
@@ -880,7 +3319,18 @@
       "thumbnail": "https://img.youtube.com/vi/ZQerFWKhFa8/hqdefault.jpg",
       "publishedAt": "2026-08-21",
       "durationSec": 21,
-      "views": 858
+      "views": 858,
+      "format": "short",
+      "era": null,
+      "people": [],
+      "work": "灌篮高手",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "灌篮高手"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "9CK0WcJvcsg",
@@ -892,11 +3342,26 @@
       "thumbnail": "https://img.youtube.com/vi/9CK0WcJvcsg/hqdefault.jpg",
       "publishedAt": "2026-08-21",
       "durationSec": 50,
-      "views": 130
+      "views": 130,
+      "format": "short",
+      "era": "90s",
+      "people": [],
+      "work": "OICQ",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1999
+        },
+        {
+          "type": "work",
+          "value": "OICQ"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "r7HhdH4Mh1I",
-      "url": "https://youtube.com/shorts/r7HhdH4Mh1I",
+      "url": "https://www.youtube.com/watch?v=r7HhdH4Mh1I",
       "title": "小叮噹為什麼突然改叫哆啦A夢?3個真相",
       "rawTitle": "小叮噹為什麼突然改叫哆啦A夢?3個真相  #小叮噹 #哆啦A夢 #台灣童年 #六年級生 #七年級生 #八年級生 #文化坐標 #青文 #藤子不二雄 #懷舊 #怀旧动画 #拾光穿越系列",
       "year": null,
@@ -904,7 +3369,18 @@
       "thumbnail": "https://img.youtube.com/vi/r7HhdH4Mh1I/hqdefault.jpg",
       "publishedAt": "2026-08-28",
       "durationSec": 300,
-      "views": 123
+      "views": 123,
+      "format": "long",
+      "era": null,
+      "people": [],
+      "work": "小叮当/哆啦A梦",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "小叮当/哆啦A梦"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "ZcD3Z0BIKlo",
@@ -916,7 +3392,18 @@
       "thumbnail": "https://img.youtube.com/vi/ZcD3Z0BIKlo/hqdefault.jpg",
       "publishedAt": "2026-08-28",
       "durationSec": 33,
-      "views": 78
+      "views": 78,
+      "format": "short",
+      "era": null,
+      "people": [],
+      "work": "小叮当/哆啦A梦",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "小叮当/哆啦A梦"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "lBqVWN4C3mg",
@@ -928,7 +3415,22 @@
       "thumbnail": "https://img.youtube.com/vi/lBqVWN4C3mg/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 22,
-      "views": 15
+      "views": 15,
+      "format": "short",
+      "era": "90s",
+      "people": [],
+      "work": "名侦探柯南",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1996
+        },
+        {
+          "type": "work",
+          "value": "名侦探柯南"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "yDX-j2rGemQ",
@@ -940,7 +3442,22 @@
       "thumbnail": "https://img.youtube.com/vi/yDX-j2rGemQ/hqdefault.jpg",
       "publishedAt": "2026-08-20",
       "durationSec": 30,
-      "views": 404
+      "views": 404,
+      "format": "short",
+      "era": "80s",
+      "people": [],
+      "work": "万元户",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1988
+        },
+        {
+          "type": "work",
+          "value": "万元户"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "v-CTizxDVvg",
@@ -952,7 +3469,18 @@
       "thumbnail": "https://img.youtube.com/vi/v-CTizxDVvg/hqdefault.jpg",
       "publishedAt": "2026-08-20",
       "durationSec": 35,
-      "views": 97
+      "views": 97,
+      "format": "short",
+      "era": "80s",
+      "people": [],
+      "work": null,
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1980
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "EcGaI4XXSm0",
@@ -964,7 +3492,18 @@
       "thumbnail": "https://img.youtube.com/vi/EcGaI4XXSm0/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 49,
-      "views": 42
+      "views": 42,
+      "format": "short",
+      "era": "70s",
+      "people": [],
+      "work": "结婚三大件",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "结婚三大件"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "E6XiTaCmTJM",
@@ -976,7 +3515,18 @@
       "thumbnail": "https://img.youtube.com/vi/E6XiTaCmTJM/hqdefault.jpg",
       "publishedAt": "2026-08-22",
       "durationSec": 47,
-      "views": 32
+      "views": 32,
+      "format": "short",
+      "era": "90s",
+      "people": [],
+      "work": "大哥大",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "大哥大"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "LX5W4ctIG_Q",
@@ -988,11 +3538,22 @@
       "thumbnail": "https://img.youtube.com/vi/LX5W4ctIG_Q/hqdefault.jpg",
       "publishedAt": "2026-08-21",
       "durationSec": 32,
-      "views": 6
+      "views": 6,
+      "format": "short",
+      "era": null,
+      "people": [],
+      "work": "第一份工资",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "第一份工资"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "I1SSwAE7M4k",
-      "url": "https://youtube.com/shorts/I1SSwAE7M4k",
+      "url": "https://www.youtube.com/watch?v=I1SSwAE7M4k",
       "title": "汇丰解密账本，真能证实胡雪岩被“跨国做空”？",
       "rawTitle": "汇丰解密账本，真能证实胡雪岩被“跨国做空”？",
       "year": null,
@@ -1000,23 +3561,51 @@
       "thumbnail": "https://img.youtube.com/vi/I1SSwAE7M4k/hqdefault.jpg",
       "publishedAt": "2026-09-13",
       "durationSec": 734,
-      "views": 0
+      "views": 0,
+      "format": "long",
+      "era": null,
+      "people": [
+        "胡雪岩"
+      ],
+      "work": null,
+      "anchors": [
+        {
+          "type": "person",
+          "value": "胡雪岩"
+        }
+      ],
+      "priority": "normal"
     },
     {
       "videoId": "SdSEujUW9bM",
-      "url": "https://youtube.com/shorts/SdSEujUW9bM",
+      "url": "https://www.youtube.com/watch?v=SdSEujUW9bM",
       "title": "1933年国宝南运，箱子一只没少，人却少了三十二个 · 《拾物档案：九证天下》预告",
       "rawTitle": "1933年国宝南运，箱子一只没少，人却少了三十二个 · 《拾物档案：九证天下》预告",
-      "year": null,
+      "year": 1933,
       "series": "artifact",
       "thumbnail": "https://img.youtube.com/vi/SdSEujUW9bM/hqdefault.jpg",
       "publishedAt": "2026-09-04",
       "durationSec": 60,
-      "views": 32
+      "views": 32,
+      "format": "audiobook",
+      "era": "30s",
+      "people": [],
+      "work": "国宝南运",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1933
+        },
+        {
+          "type": "work",
+          "value": "国宝南运"
+        }
+      ],
+      "priority": "low"
     },
     {
       "videoId": "Eyj_O__Zpt8",
-      "url": "https://youtube.com/shorts/Eyj_O__Zpt8",
+      "url": "https://www.youtube.com/watch?v=Eyj_O__Zpt8",
       "title": "E1 博物院下面开来一列火车｜31个没有脸的人｜《拾物档案：九证天下》01",
       "rawTitle": "E1 博物院下面开来一列火车｜31个没有脸的人｜《拾物档案：九证天下》01",
       "year": null,
@@ -1024,11 +3613,22 @@
       "thumbnail": "https://img.youtube.com/vi/Eyj_O__Zpt8/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 2980,
-      "views": 15
+      "views": 15,
+      "format": "audiobook",
+      "era": null,
+      "people": [],
+      "work": "拾物档案：九证天下",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "拾物档案：九证天下"
+        }
+      ],
+      "priority": "low"
     },
     {
       "videoId": "qgPV51adGtw",
-      "url": "https://youtube.com/shorts/qgPV51adGtw",
+      "url": "https://www.youtube.com/watch?v=qgPV51adGtw",
       "title": "E2 来路不明，暂缓出馆｜监控里的另一个他没回来｜《拾物档案：九证天下》02",
       "rawTitle": "E2 来路不明，暂缓出馆｜监控里的另一个他没回来｜《拾物档案：九证天下》02",
       "year": null,
@@ -1036,11 +3636,22 @@
       "thumbnail": "https://img.youtube.com/vi/qgPV51adGtw/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 2297,
-      "views": 12
+      "views": 12,
+      "format": "audiobook",
+      "era": null,
+      "people": [],
+      "work": "拾物档案：九证天下",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "拾物档案：九证天下"
+        }
+      ],
+      "priority": "low"
     },
     {
       "videoId": "jUlk6YCNI64",
-      "url": "https://youtube.com/shorts/jUlk6YCNI64",
+      "url": "https://www.youtube.com/watch?v=jUlk6YCNI64",
       "title": "E8 今天不让位｜最后43分钟，整座城不认识今天的人｜《拾物档案：九证天下》08",
       "rawTitle": "E8 今天不让位｜最后43分钟，整座城不认识今天的人｜《拾物档案：九证天下》08",
       "year": null,
@@ -1048,11 +3659,22 @@
       "thumbnail": "https://img.youtube.com/vi/jUlk6YCNI64/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 2298,
-      "views": 7
+      "views": 7,
+      "format": "audiobook",
+      "era": null,
+      "people": [],
+      "work": "拾物档案：九证天下",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "拾物档案：九证天下"
+        }
+      ],
+      "priority": "low"
     },
     {
       "videoId": "MWa51GQ5i2U",
-      "url": "https://youtube.com/shorts/MWa51GQ5i2U",
+      "url": "https://www.youtube.com/watch?v=MWa51GQ5i2U",
       "title": "E6 一九八八，无名站｜点名后还有第32道声音｜《拾物档案：九证天下》06",
       "rawTitle": "E6 一九八八，无名站｜点名后还有第32道声音｜《拾物档案：九证天下》06",
       "year": null,
@@ -1060,11 +3682,22 @@
       "thumbnail": "https://img.youtube.com/vi/MWa51GQ5i2U/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 1587,
-      "views": 4
+      "views": 4,
+      "format": "audiobook",
+      "era": null,
+      "people": [],
+      "work": "拾物档案：九证天下",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "拾物档案：九证天下"
+        }
+      ],
+      "priority": "low"
     },
     {
       "videoId": "6pPoQh5xViw",
-      "url": "https://youtube.com/shorts/6pPoQh5xViw",
+      "url": "https://www.youtube.com/watch?v=6pPoQh5xViw",
       "title": "E4 人少一个，不能发车｜归零还是拿活人补位？｜《拾物档案：九证天下》04",
       "rawTitle": "E4 人少一个，不能发车｜归零还是拿活人补位？｜《拾物档案：九证天下》04",
       "year": null,
@@ -1072,11 +3705,22 @@
       "thumbnail": "https://img.youtube.com/vi/6pPoQh5xViw/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 1677,
-      "views": 4
+      "views": 4,
+      "format": "audiobook",
+      "era": null,
+      "people": [],
+      "work": "拾物档案：九证天下",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "拾物档案：九证天下"
+        }
+      ],
+      "priority": "low"
     },
     {
       "videoId": "aQt3MTRdgw8",
-      "url": "https://youtube.com/shorts/aQt3MTRdgw8",
+      "url": "https://www.youtube.com/watch?v=aQt3MTRdgw8",
       "title": "E3 写上一个，少掉一个｜每块证据都是真的｜《拾物档案：九证天下》03",
       "rawTitle": "E3 写上一个，少掉一个｜每块证据都是真的｜《拾物档案：九证天下》03",
       "year": null,
@@ -1084,11 +3728,22 @@
       "thumbnail": "https://img.youtube.com/vi/aQt3MTRdgw8/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 2024,
-      "views": 4
+      "views": 4,
+      "format": "audiobook",
+      "era": null,
+      "people": [],
+      "work": "拾物档案：九证天下",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "拾物档案：九证天下"
+        }
+      ],
+      "priority": "low"
     },
     {
       "videoId": "jUWuBuYWksE",
-      "url": "https://youtube.com/shorts/jUWuBuYWksE",
+      "url": "https://www.youtube.com/watch?v=jUWuBuYWksE",
       "title": "E7 暂离七日，九十三年未归｜没人下过永久除名令｜《拾物档案：九证天下》07",
       "rawTitle": "E7 暂离七日，九十三年未归｜没人下过永久除名令｜《拾物档案：九证天下》07",
       "year": null,
@@ -1096,11 +3751,22 @@
       "thumbnail": "https://img.youtube.com/vi/jUWuBuYWksE/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 1895,
-      "views": 3
+      "views": 3,
+      "format": "audiobook",
+      "era": null,
+      "people": [],
+      "work": "拾物档案：九证天下",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "拾物档案：九证天下"
+        }
+      ],
+      "priority": "low"
     },
     {
       "videoId": "DSbvra5SIsk",
-      "url": "https://youtube.com/shorts/DSbvra5SIsk",
+      "url": "https://www.youtube.com/watch?v=DSbvra5SIsk",
       "title": "E5 第一个名字｜恢复的不是英雄｜《拾物档案：九证天下》05",
       "rawTitle": "E5 第一个名字｜恢复的不是英雄｜《拾物档案：九证天下》05",
       "year": null,
@@ -1108,19 +3774,45 @@
       "thumbnail": "https://img.youtube.com/vi/DSbvra5SIsk/hqdefault.jpg",
       "publishedAt": "2026-09-01",
       "durationSec": 1684,
-      "views": 3
+      "views": 3,
+      "format": "audiobook",
+      "era": null,
+      "people": [],
+      "work": "拾物档案：九证天下",
+      "anchors": [
+        {
+          "type": "work",
+          "value": "拾物档案：九证天下"
+        }
+      ],
+      "priority": "low"
     },
     {
       "videoId": "D4i-DvZGRmU",
       "url": "https://youtube.com/shorts/D4i-DvZGRmU",
       "title": "故宫南迁一万三千多箱，箱号连起来读是四个字：沪上寓公｜拾光说书 04",
       "rawTitle": "故宫南迁一万三千多箱，箱号连起来读是四个字：沪上寓公｜拾光说书 04 #故宫文物南迁 #shorts",
-      "year": null,
+      "year": 1933,
       "series": "artifact",
       "thumbnail": "https://img.youtube.com/vi/D4i-DvZGRmU/hqdefault.jpg",
       "publishedAt": "2026-09-07",
       "durationSec": 117,
-      "views": 0
+      "views": 0,
+      "format": "short",
+      "era": "30s",
+      "people": [],
+      "work": "故宫南迁",
+      "anchors": [
+        {
+          "type": "year",
+          "value": 1933
+        },
+        {
+          "type": "work",
+          "value": "故宫南迁"
+        }
+      ],
+      "priority": "normal"
     }
   ]
 }
